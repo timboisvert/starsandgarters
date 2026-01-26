@@ -1,307 +1,252 @@
 [
-    {
-        "date": "2026-01-03",
-        "time": "9:00 PM",
-        "show": "laugh-along-live"
-    },
-    {
-        "date": "2026-01-03",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-01-09",
-        "time": "9:00 PM",
-        "show": "my-cabaret"
-    },
-    {
-        "date": "2026-01-09",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-01-09",
-        "time": "11:30 PM",
-        "show": "the-graveyard-shift"
-    },
-    {
-        "date": "2026-01-10",
-        "time": "10:00 PM",
-        "show": "untethered-nights"
-    },
-    {
-        "date": "2026-01-12",
-        "time": "7:00 PM",
-        "show": "short-form-improv-workshop"
-    },
-    {
-        "date": "2026-01-13",
-        "time": "7:00 PM",
-        "show": "taskmaster-tuesdays"
-    },
-    {
-        "date": "2026-01-16",
-        "time": "7:00 PM",
-        "show": "comedy-pageant"
-    },
-    {
-        "date": "2026-01-16",
-        "time": "9:00 PM",
-        "show": "masterminds"
-    },
-    {
-        "date": "2026-01-16",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-01-16",
-        "time": "11:30 PM",
-        "show": "the-graveyard-shift"
-    },
-    {
-        "date": "2026-01-17",
-        "time": "5:00 PM",
-        "show": "chicago-workshop-mic"
-    },
-    {
-        "date": "2026-01-17",
-        "time": "9:00 PM",
-        "show": "laugh-along-live"
-    },
-    {
-        "date": "2026-01-17",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-01-19",
-        "time": "7:00 PM",
-        "show": "short-form-improv-workshop"
-    },
-    {
-        "date": "2026-01-20",
-        "time": "7:00 PM",
-        "show": "taskmaster-tuesdays"
-    },
-    {
-        "date": "2026-01-23",
-        "time": "9:00 PM",
-        "show": "chicago-comedy-hour"
-    },
-    {
-        "date": "2026-01-23",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-01-23",
-        "time": "11:30 PM",
-        "show": "the-graveyard-shift"
-    },
-    {
-        "date": "2026-01-24",
-        "time": "5:00 PM",
-        "show": "chicago-workshop-mic"
-    },
-    {
-        "date": "2026-01-24",
-        "time": "10:00 PM",
-        "show": "chicago-nerdlesque"
-    },
-    {
-        "date": "2026-01-26",
-        "time": "7:00 PM",
-        "show": "short-form-improv-workshop"
-    },
-    {
-        "date": "2026-01-27",
-        "time": "7:00 PM",
-        "show": "taskmaster-tuesdays"
-    },
-    {
-        "date": "2026-01-30",
-        "time": "9:00 PM",
-        "show": "masterminds"
-    },
-    {
-        "date": "2026-01-30",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-01-30",
-        "time": "11:30 PM",
-        "show": "the-graveyard-shift"
-    },
-    {
-        "date": "2026-01-31",
-        "time": "5:00 PM",
-        "show": "chicago-workshop-mic"
-    },
-    {
-        "date": "2026-01-31",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-02-02",
-        "time": "7:00 PM",
-        "show": "short-form-improv-workshop"
-    },
-    {
-        "date": "2026-02-03",
-        "time": "7:00 PM",
-        "show": "taskmaster-tuesdays"
-    },
-    {
-        "date": "2026-02-06",
-        "time": "7:00 PM",
-        "show": "comedy-pageant"
-    },
-    {
-        "date": "2026-02-06",
-        "time": "9:00 PM",
-        "show": "chicago-comedy-hour"
-    },
-    {
-        "date": "2026-02-06",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-02-06",
-        "time": "11:00 PM",
-        "show": "the-graveyard-shift"
-    },
-    {
-        "date": "2026-02-07",
-        "time": "5:00 PM",
-        "show": "chicago-workshop-mic"
-    },
-    {
-        "date": "2026-02-07",
-        "time": "9:00 PM",
-        "show": "laugh-along-live"
-    },
-    {
-        "date": "2026-02-07",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-02-09",
-        "time": "7:00 PM",
-        "show": "short-form-improv-workshop"
-    },
-    {
-        "date": "2026-02-10",
-        "time": "7:00 PM",
-        "show": "taskmaster-tuesdays"
-    },
-    {
-        "date": "2026-02-13",
-        "time": "9:00 PM",
-        "show": "my-cabaret"
-    },
-    {
-        "date": "2026-02-13",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-02-13",
-        "time": "11:00 PM",
-        "show": "the-graveyard-shift"
-    },
-    {
-        "date": "2026-02-14",
-        "time": "5:00 PM",
-        "show": "chicago-workshop-mic"
-    },
-    {
-        "date": "2026-02-14",
-        "time": "10:00 PM",
-        "show": "untethered-nights"
-    },
-    {
-        "date": "2026-02-16",
-        "time": "7:00 PM",
-        "show": "short-form-improv-workshop"
-    },
-    {
-        "date": "2026-02-17",
-        "time": "7:00 PM",
-        "show": "taskmaster-tuesdays"
-    },
-    {
-        "date": "2026-02-20",
-        "time": "7:00 PM",
-        "show": "comedy-pageant"
-    },
-    {
-        "date": "2026-02-20",
-        "time": "9:00 PM",
-        "show": "masterminds"
-    },
-    {
-        "date": "2026-02-20",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-02-20",
-        "time": "11:00 PM",
-        "show": "the-graveyard-shift"
-    },
-    {
-        "date": "2026-02-21",
-        "time": "5:00 PM",
-        "show": "chicago-workshop-mic"
-    },
-    {
-        "date": "2026-02-21",
-        "time": "9:00 PM",
-        "show": "laugh-along-live"
-    },
-    {
-        "date": "2026-02-21",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-02-23",
-        "time": "7:00 PM",
-        "show": "short-form-improv-workshop"
-    },
-    {
-        "date": "2026-02-24",
-        "time": "7:00 PM",
-        "show": "taskmaster-tuesdays"
-    },
-    {
-        "date": "2026-02-27",
-        "time": "9:00 PM",
-        "show": "chicago-comedy-hour"
-    },
-    {
-        "date": "2026-02-27",
-        "time": "10:00 PM",
-        "show": "peep-show"
-    },
-    {
-        "date": "2026-02-27",
-        "time": "11:00 PM",
-        "show": "the-graveyard-shift"
-    },
-    {
-        "date": "2026-02-28",
-        "time": "5:00 PM",
-        "show": "chicago-workshop-mic"
-    },
-    {
-        "date": "2026-02-28",
-        "time": "10:00 PM",
-        "show": "chicago-nerdlesque"
-    }
+  {
+    "date": "2026-01-03",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
+    "date": "2026-01-03",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-01-09",
+    "time": "9:00 PM",
+    "show": "my-cabaret"
+  },
+  {
+    "date": "2026-01-09",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-01-09",
+    "time": "11:30 PM",
+    "show": "the-graveyard-shift"
+  },
+  {
+    "date": "2026-01-12",
+    "time": "7:00 PM",
+    "show": "short-form-improv-workshop"
+  },
+  {
+    "date": "2026-01-16",
+    "time": "7:00 PM",
+    "show": "comedy-pageant"
+  },
+  {
+    "date": "2026-01-16",
+    "time": "9:00 PM",
+    "show": "masterminds"
+  },
+  {
+    "date": "2026-01-16",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-01-16",
+    "time": "11:30 PM",
+    "show": "the-graveyard-shift"
+  },
+  {
+    "date": "2026-01-17",
+    "time": "5:00 PM",
+    "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-01-17",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
+    "date": "2026-01-17",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-01-19",
+    "time": "7:00 PM",
+    "show": "short-form-improv-workshop"
+  },
+  {
+    "date": "2026-01-23",
+    "time": "9:00 PM",
+    "show": "chicago-comedy-hour"
+  },
+  {
+    "date": "2026-01-23",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-01-23",
+    "time": "11:30 PM",
+    "show": "the-graveyard-shift"
+  },
+  {
+    "date": "2026-01-24",
+    "time": "5:00 PM",
+    "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-01-26",
+    "time": "7:00 PM",
+    "show": "short-form-improv-workshop"
+  },
+  {
+    "date": "2026-01-30",
+    "time": "9:00 PM",
+    "show": "masterminds"
+  },
+  {
+    "date": "2026-01-30",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-01-30",
+    "time": "11:30 PM",
+    "show": "the-graveyard-shift"
+  },
+  {
+    "date": "2026-01-31",
+    "time": "5:00 PM",
+    "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-01-31",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-02-02",
+    "time": "7:00 PM",
+    "show": "short-form-improv-workshop"
+  },
+  {
+    "date": "2026-02-06",
+    "time": "7:00 PM",
+    "show": "comedy-pageant"
+  },
+  {
+    "date": "2026-02-06",
+    "time": "9:00 PM",
+    "show": "chicago-comedy-hour"
+  },
+  {
+    "date": "2026-02-06",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-02-06",
+    "time": "11:00 PM",
+    "show": "the-graveyard-shift"
+  },
+  {
+    "date": "2026-02-07",
+    "time": "5:00 PM",
+    "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-02-07",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
+    "date": "2026-02-07",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-02-09",
+    "time": "7:00 PM",
+    "show": "short-form-improv-workshop"
+  },
+  {
+    "date": "2026-02-13",
+    "time": "9:00 PM",
+    "show": "my-cabaret"
+  },
+  {
+    "date": "2026-02-13",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-02-13",
+    "time": "11:00 PM",
+    "show": "the-graveyard-shift"
+  },
+  {
+    "date": "2026-02-14",
+    "time": "5:00 PM",
+    "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-02-16",
+    "time": "7:00 PM",
+    "show": "short-form-improv-workshop"
+  },
+  {
+    "date": "2026-02-20",
+    "time": "7:00 PM",
+    "show": "comedy-pageant"
+  },
+  {
+    "date": "2026-02-20",
+    "time": "9:00 PM",
+    "show": "masterminds"
+  },
+  {
+    "date": "2026-02-20",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-02-20",
+    "time": "11:00 PM",
+    "show": "the-graveyard-shift"
+  },
+  {
+    "date": "2026-02-21",
+    "time": "5:00 PM",
+    "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-02-21",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
+    "date": "2026-02-21",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-02-23",
+    "time": "7:00 PM",
+    "show": "short-form-improv-workshop"
+  },
+  {
+    "date": "2026-02-27",
+    "time": "9:00 PM",
+    "show": "chicago-comedy-hour"
+  },
+  {
+    "date": "2026-02-27",
+    "time": "10:00 PM",
+    "show": "peep-show"
+  },
+  {
+    "date": "2026-02-27",
+    "time": "11:00 PM",
+    "show": "the-graveyard-shift"
+  },
+  {
+    "date": "2026-02-28",
+    "time": "5:00 PM",
+    "show": "chicago-workshop-mic"
+  }
 ]

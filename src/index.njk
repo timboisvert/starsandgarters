@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Chicago's Premiere Retro Entertainment Venue
 layout: base.njk
 ---
 
@@ -40,8 +40,10 @@ layout: base.njk
 
 <h2 class="font-oswald text-3xl uppercase mb-8">Now Showing</h2>
 
+{%- set sortedShows = shows | sortShows(events, today) -%}
+
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 mb-8">
-    {%- for show in shows %}
+    {%- for show in sortedShows %}
     <a href="/show/{{ show.slug }}/" class="block group">
         <div class="aspect-[11/17] bg-neutral-900 mb-3 overflow-hidden">
             {%- if show.poster %}

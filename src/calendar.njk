@@ -144,7 +144,7 @@ function renderCalendar() {
 
     grid.innerHTML = html;
 
-    // Mobile list view - only show days with events
+    // Mobile list view - only show days with events, skip past dates
     let mobileHtml = '';
     for (let day = 1; day <= daysInMonth; day++) {
         const dateStr = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
@@ -157,7 +157,10 @@ function renderCalendar() {
         const isToday = day === today.getDate() && viewMonth === currentMonth && viewYear === currentYear;
         const isPast = dateObj < new Date(today.getFullYear(), today.getMonth(), today.getDate());
 
-        mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''} ${isPast ? 'opacity-50' : ''}">`;
+        // Skip past dates on mobile
+        if (isPast) continue;
+
+        mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''}">`;
         mobileHtml += `<div class="bg-neutral-800 px-4 py-2 font-oswald uppercase ${isToday ? 'text-white' : 'text-neutral-300'}">`;
         mobileHtml += `${dayName}, ${monthNames[viewMonth]} ${day}`;
         mobileHtml += `</div>`;
@@ -177,7 +180,7 @@ function renderCalendar() {
     }
 
     if (mobileHtml === '') {
-        mobileHtml = '<p class="font-inter text-neutral-400 text-center py-8">No events this month.</p>';
+        mobileHtml = '<p class="font-inter text-neutral-400 text-center py-8">No upcoming events this month.</p>';
     }
 
     mobileList.innerHTML = mobileHtml;

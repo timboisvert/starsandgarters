@@ -10,6 +10,43 @@ export default function (eleventyConfig) {
         });
     });
 
+    // Sort shows: pinned first, then by next event date, then alphabetically
+    eleventyConfig.addFilter("sortShows", (shows, events, today) => {
+        // Build map of show slug to next event date
+        const nextEventMap = {};
+        for (const event of events) {
+            if (event.date >= today && !nextEventMap[event.show]) {
+                nextEventMap[event.show] = event.date;
+            }
+        }
+
+        // Separate into pinned, with upcoming, without upcoming
+        const pinned = [];
+        const withUpcoming = [];
+        const withoutUpcoming = [];
+
+        for (const show of shows) {
+            if (show.pinPosition) {
+                pinned.push({ show, nextDate: nextEventMap[show.slug] || null });
+            } else if (nextEventMap[show.slug]) {
+                withUpcoming.push({ show, nextDate: nextEventMap[show.slug] });
+            } else {
+                withoutUpcoming.push({ show, nextDate: null });
+            }
+        }
+
+        // Sort pinned by position
+        pinned.sort((a, b) => a.show.pinPosition - b.show.pinPosition);
+
+        // Sort with upcoming by date
+        withUpcoming.sort((a, b) => a.nextDate.localeCompare(b.nextDate));
+
+        // Sort without upcoming alphabetically
+        withoutUpcoming.sort((a, b) => a.show.title.localeCompare(b.show.title));
+
+        return [...pinned, ...withUpcoming, ...withoutUpcoming].map(item => item.show);
+    });
+
     // Copy static assets
     eleventyConfig.addPassthroughCopy("posters");
     eleventyConfig.addPassthroughCopy("logo.png");
