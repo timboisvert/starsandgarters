@@ -4,63 +4,179 @@ layout: base.njk
 permalink: /booking/
 ---
 
-<form action="https://formsubmit.co/starsandgartersclub@gmail.com" method="POST" class="w-full">
-    <input type="hidden" name="_subject" value="New Booking Request">
-    <input type="hidden" name="_next" value="https://starsandgartersclub.com/booking/?thanks=1">
+<div class="text-center mb-16">
+    <h1 class="font-oswald text-5xl uppercase mb-4">Work With Us</h1>
+    <p class="font-inter text-xl text-neutral-300 max-w-2xl mx-auto">Whether you're looking for a venue, a creative partner, or world-class entertainment for your event, we'd love to hear from you.</p>
+</div>
 
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div>
-            <label for="name" class="block font-inter text-sm mb-2">Name</label>
-            <input type="text" id="name" name="name" required
-                class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
-        </div>
-
-        <div>
-            <label for="email" class="block font-inter text-sm mb-2">Email</label>
-            <input type="email" id="email" name="email" required
-                class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
-        </div>
-
-        <div>
-            <label for="phone" class="block font-inter text-sm mb-2">Phone</label>
-            <input type="tel" id="phone" name="phone" required
-                class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
-        </div>
-
-        <div>
-            <label for="company" class="block font-inter text-sm mb-2">Production Company</label>
-            <input type="text" id="company" name="company" required
-                class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
-        </div>
-
-        <div>
-            <label for="dates" class="block font-inter text-sm mb-2">Date(s) Requested</label>
-            <input type="text" id="dates" name="dates" required
-                class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
-        </div>
-
-        <div>
-            <label for="time" class="block font-inter text-sm mb-2">Preferred Time (if any)</label>
-            <input type="text" id="time" name="time"
-                class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
-        </div>
+<!-- Three Options -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+    <!-- Rent Our Space -->
+    <div class="bg-neutral-900 border border-neutral-700 p-8 text-center hover:border-neutral-500 transition-colors">
+        <div class="text-4xl mb-4">🎭</div>
+        <h2 class="font-oswald text-2xl uppercase mb-4">Rent Our Space</h2>
+        <p class="font-inter text-neutral-400 mb-6">Host your production, private event, or corporate gathering. Two stages plus a lobby available.</p>
+        <a href="#rent" class="inline-block border border-white px-6 py-3 font-inter hover:bg-white hover:text-black transition-colors">Learn More</a>
     </div>
 
-    <div class="mb-6">
-        <label class="block font-inter text-sm mb-2">Which room are you interested in booking?</label>
-        <div class="flex gap-6">
-            <label class="flex items-center gap-2 font-inter cursor-pointer">
-                <input type="radio" name="room" value="mainstage" required class="accent-white">
-                <span>Mainstage</span>
-            </label>
-            <label class="flex items-center gap-2 font-inter cursor-pointer">
-                <input type="radio" name="room" value="rouge-room" class="accent-white">
-                <span>Rouge Room</span>
-            </label>
-        </div>
+    <!-- Collaborate -->
+    <div class="bg-neutral-900 border border-neutral-700 p-8 text-center hover:border-neutral-500 transition-colors">
+        <div class="text-4xl mb-4">🤝</div>
+        <h2 class="font-oswald text-2xl uppercase mb-4">Collaborate</h2>
+        <p class="font-inter text-neutral-400 mb-6">Have a show idea? We offer revenue shares, production support, and marketing for the right fit.</p>
+        <a href="#collaborate" class="inline-block border border-white px-6 py-3 font-inter hover:bg-white hover:text-black transition-colors">Learn More</a>
     </div>
 
-    <button type="submit" class="bg-white text-black font-inter font-medium px-6 py-3 hover:bg-neutral-200 transition-colors">
-        Submit
-    </button>
-</form>
+    <!-- Hire Our Talent -->
+    <div class="bg-neutral-900 border border-neutral-700 p-8 text-center hover:border-neutral-500 transition-colors">
+        <div class="text-4xl mb-4">⭐</div>
+        <h2 class="font-oswald text-2xl uppercase mb-4">Hire Our Talent</h2>
+        <p class="font-inter text-neutral-400 mb-6">Bring our house troupes to your venue for corporate events, parties, and private entertainment.</p>
+        <a href="#hire" class="inline-block border border-white px-6 py-3 font-inter hover:bg-white hover:text-black transition-colors">Learn More</a>
+    </div>
+</div>
+
+<!-- Rent Our Space Section -->
+<section id="rent" class="mb-20 scroll-mt-8">
+    <div class="border-t border-neutral-700 pt-12">
+        <h2 class="font-oswald text-4xl uppercase mb-6">Rent Our Space</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+            <div>
+                <h3 class="font-oswald text-2xl uppercase mb-4 text-neutral-300">Mainstage</h3>
+                <p class="font-inter text-neutral-400 mb-4">Our larger performance space with theatrical lighting and professional sound. Seats up to 70 guests. Suitable for comedy, burlesque, live music, and theatrical productions.</p>
+                <ul class="font-inter text-neutral-400 space-y-2">
+                    <li>• Full stage with curtains and backdrop</li>
+                    <li>• Professional lighting rig</li>
+                    <li>• PA system and monitors</li>
+                    <li>• Green room access</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-oswald text-2xl uppercase mb-4 text-neutral-300">Rouge Room</h3>
+                <p class="font-inter text-neutral-400 mb-4">A smaller cabaret space for intimate productions, workshops, open mics, and private events. Seats up to 50 guests.</p>
+                <ul class="font-inter text-neutral-400 space-y-2">
+                    <li>• Cabaret-style seating</li>
+                    <li>• Stage and performance area</li>
+                    <li>• Sound system</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <h3 class="font-oswald text-2xl uppercase mb-4 text-neutral-300">Shared Amenities</h3>
+            <p class="font-inter text-neutral-400">Both spaces share access to our full-service bar and a lobby that can be used for pre-show gatherings, merch tables, or additional seating. Street parking and CTA access nearby.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Collaborate Section -->
+<section id="collaborate" class="mb-20 scroll-mt-8">
+    <div class="border-t border-neutral-700 pt-12">
+        <h2 class="font-oswald text-4xl uppercase mb-6">Collaborate With Us</h2>
+        <div class="max-w-3xl">
+            <p class="font-inter text-lg text-neutral-300 mb-6">We work with performers and producers who want a creative home for their shows.</p>
+            <p class="font-inter text-neutral-400 mb-6">We offer revenue-sharing partnerships, production support, and marketing collaboration for shows that fit our programming—comedy, burlesque, drag, and variety entertainment.</p>
+            <p class="font-inter text-neutral-400">Whether you have a fully-formed production or just an idea, reach out.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Hire Our Talent Section -->
+<section id="hire" class="mb-20 scroll-mt-8">
+    <div class="border-t border-neutral-700 pt-12">
+        <h2 class="font-oswald text-4xl uppercase mb-6">Hire Our House Troupes</h2>
+        <p class="font-inter text-lg text-neutral-300 mb-8">Bring the Stars & Garters experience to your event. Our professional entertainment troupes are available for corporate events, private parties, festivals, and more.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div class="bg-neutral-900 border border-neutral-700 p-6">
+                <h3 class="font-oswald text-xl uppercase mb-3">The Starlets</h3>
+                <p class="font-inter text-neutral-400 text-sm">Our signature burlesque troupe. Glamorous, classic, and customizable for your event.</p>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-700 p-6">
+                <h3 class="font-oswald text-xl uppercase mb-3">Laugh-Along, Live!</h3>
+                <p class="font-inter text-neutral-400 text-sm">Interactive comedy show perfect for team-building, parties, and anyone who loves to laugh. Customizable to your event theme.</p>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-700 p-6">
+                <h3 class="font-oswald text-xl uppercase mb-3">Comedy Pageant</h3>
+                <p class="font-inter text-neutral-400 text-sm">High-energy comedy competition that gets your audience cheering and laughing. Great for festivals and large gatherings.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="scroll-mt-8">
+    <div class="border-t border-neutral-700 pt-12">
+        <h2 class="font-oswald text-4xl uppercase mb-6">Get In Touch</h2>
+        <p class="font-inter text-neutral-300 mb-8">Ready to start the conversation? Fill out the form below and we'll get back to you within 48 hours.</p>
+
+        <form action="https://formsubmit.co/starsandgartersclub@gmail.com" method="POST" class="max-w-3xl">
+            <input type="hidden" name="_subject" value="New Booking Inquiry">
+            <input type="hidden" name="_next" value="https://starsandgartersclub.com/booking/?thanks=1">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="name" class="block font-inter text-sm mb-2">Name *</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
+                </div>
+
+                <div>
+                    <label for="email" class="block font-inter text-sm mb-2">Email *</label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
+                </div>
+
+                <div>
+                    <label for="phone" class="block font-inter text-sm mb-2">Phone</label>
+                    <input type="tel" id="phone" name="phone"
+                        class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
+                </div>
+
+                <div>
+                    <label for="company" class="block font-inter text-sm mb-2">Organization / Production Company</label>
+                    <input type="text" id="company" name="company"
+                        class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block font-inter text-sm mb-3">I'm interested in: *</label>
+                <div class="flex flex-wrap gap-6">
+                    <label class="flex items-center gap-2 font-inter cursor-pointer">
+                        <input type="radio" name="inquiry_type" value="Renting Space" required class="accent-white">
+                        <span>Renting Space</span>
+                    </label>
+                    <label class="flex items-center gap-2 font-inter cursor-pointer">
+                        <input type="radio" name="inquiry_type" value="Collaboration" class="accent-white">
+                        <span>Collaboration</span>
+                    </label>
+                    <label class="flex items-center gap-2 font-inter cursor-pointer">
+                        <input type="radio" name="inquiry_type" value="Hiring Talent" class="accent-white">
+                        <span>Hiring Talent</span>
+                    </label>
+                    <label class="flex items-center gap-2 font-inter cursor-pointer">
+                        <input type="radio" name="inquiry_type" value="Other" class="accent-white">
+                        <span>Something Else</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label for="dates" class="block font-inter text-sm mb-2">Preferred Date(s)</label>
+                <input type="text" id="dates" name="dates" placeholder="e.g., March 15, 2026 or Saturdays in April"
+                    class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white">
+            </div>
+
+            <div class="mb-8">
+                <label for="message" class="block font-inter text-sm mb-2">Tell us about your project *</label>
+                <textarea id="message" name="message" rows="5" required placeholder="What are you looking to create? What's your vision?"
+                    class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 font-inter focus:outline-none focus:border-white resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="bg-white text-black font-inter font-semibold px-8 py-4 hover:bg-neutral-200 transition-colors">
+                Send Inquiry
+            </button>
+        </form>
+    </div>
+</section>
