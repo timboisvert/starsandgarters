@@ -1,0 +1,54 @@
+---
+layout: base.njk
+pagination:
+  data: shows
+  size: 1
+  alias: show
+permalink: "/show/{{ show.slug }}/"
+eleventyComputed:
+  title: "{{ show.title }}"
+---
+
+{%- set nextEvent = null -%}
+{%- set today = "2026-01-25" -%}
+{%- for event in events -%}
+    {%- if event.show == show.slug and event.date >= today and not nextEvent -%}
+        {%- set nextEvent = event -%}
+    {%- endif -%}
+{%- endfor -%}
+
+<div>
+    <div class="flex flex-col md:flex-row gap-12">
+        {%- if show.poster %}
+        <div class="w-full md:w-1/2 shrink-0">
+            <div class="aspect-[11/17] bg-neutral-900 overflow-hidden">
+                <img src="/posters/{{ show.poster }}" alt="{{ show.title }}" class="w-full h-full object-cover">
+            </div>
+        </div>
+        {%- endif %}
+
+        <div class="flex-1">
+            <h1 class="font-oswald font-bold text-5xl uppercase mb-6">{{ show.title }}</h1>
+
+            <p class="font-inter text-2xl text-neutral-300 mb-8">{{ show.schedule }}</p>
+
+            {%- if nextEvent %}
+            <div class="bg-neutral-900 border border-neutral-700 p-6 mb-8">
+                <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">Next Show</p>
+                <p class="font-inter text-xl text-white mb-1">{{ nextEvent.date | longDate }}</p>
+                <p class="font-inter text-lg text-neutral-300 mb-4">{{ nextEvent.time }}</p>
+                {%- if show.ticketUrl %}
+                <a href="{{ show.ticketUrl }}" target="_blank" rel="noopener"
+                   class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
+                    {{ show.buttonText if show.buttonText else "Buy Tickets" }}
+                </a>
+                {%- endif %}
+            </div>
+            {%- endif %}
+
+            {%- if show.description %}
+            <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal">{{ show.description }}</p>
+            {%- endif %}
+        </div>
+    </div>
+</div>

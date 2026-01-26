@@ -1,0 +1,16 @@
+{
+	"name": "stars-and-garters",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "concurrently \"npx @11ty/eleventy --serve --watch\" \"npx @tailwindcss/cli -i ./src/style.css -o ./_site/style.css --watch\"",
+		"build": "npx @11ty/eleventy && npx @tailwindcss/cli -i ./src/style.css -o ./_site/style.css --minify"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@tailwindcss/cli": "^4.1.18",
+		"concurrently": "^9.0.0",
+		"tailwindcss": "^4.1.18"
+	}
+}

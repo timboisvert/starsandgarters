@@ -1,0 +1,211 @@
+---
+title: Calendar
+layout: base.njk
+permalink: /calendar/
+---
+
+<div id="calendar-app" class="w-full">
+    <div class="flex items-center justify-between mb-6">
+        <button id="prev-month" class="font-inter text-neutral-400 hover:text-white px-4 py-2 disabled:opacity-30 disabled:cursor-not-allowed">
+            <span id="prev-month-label">&larr;</span>
+        </button>
+        <h2 id="month-title" class="font-oswald text-2xl uppercase"></h2>
+        <button id="next-month" class="font-inter text-neutral-400 hover:text-white px-4 py-2 disabled:opacity-30 disabled:cursor-not-allowed">
+            <span id="next-month-label">&rarr;</span>
+        </button>
+    </div>
+
+    <!-- Desktop Calendar Grid -->
+    <div class="hidden md:block" style="width: 100%;">
+        <div class="grid gap-px bg-neutral-600" style="width: 100%; grid-template-columns: repeat(7, 1fr);">
+            <div class="bg-neutral-800 p-3 text-center font-inter text-sm text-neutral-300">Sun</div>
+            <div class="bg-neutral-800 p-3 text-center font-inter text-sm text-neutral-300">Mon</div>
+            <div class="bg-neutral-800 p-3 text-center font-inter text-sm text-neutral-300">Tue</div>
+            <div class="bg-neutral-800 p-3 text-center font-inter text-sm text-neutral-300">Wed</div>
+            <div class="bg-neutral-800 p-3 text-center font-inter text-sm text-neutral-300">Thu</div>
+            <div class="bg-neutral-800 p-3 text-center font-inter text-sm text-neutral-300">Fri</div>
+            <div class="bg-neutral-800 p-3 text-center font-inter text-sm text-neutral-300">Sat</div>
+        </div>
+        <div id="calendar-grid" class="grid gap-px bg-neutral-600" style="width: 100%; grid-template-columns: repeat(7, 1fr);"></div>
+    </div>
+
+    <!-- Mobile List View -->
+    <div id="mobile-calendar" class="md:hidden space-y-4"></div>
+</div>
+
+<script>
+const events = {{ events | dump | safe }};
+const shows = {{ shows | dump | safe }};
+
+const showMap = {};
+shows.forEach(s => showMap[s.slug] = s);
+
+const today = new Date();
+const currentMonth = today.getMonth();
+const currentYear = today.getFullYear();
+
+let viewMonth = currentMonth;
+let viewYear = currentYear;
+
+const monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+function getMonthDiff(year, month) {
+    return (year - currentYear) * 12 + (month - currentMonth);
+}
+
+function getEventsForDate(dateStr) {
+    return events.filter(e => e.date === dateStr);
+}
+
+function hasEventsInMonth(year, month) {
+    const prefix = `${year}-${String(month + 1).padStart(2, '0')}`;
+    return events.some(e => e.date.startsWith(prefix));
+}
+
+function renderCalendar() {
+    const grid = document.getElementById('calendar-grid');
+    const mobileList = document.getElementById('mobile-calendar');
+    const title = document.getElementById('month-title');
+    const prevBtn = document.getElementById('prev-month');
+    const nextBtn = document.getElementById('next-month');
+    const prevLabel = document.getElementById('prev-month-label');
+    const nextLabel = document.getElementById('next-month-label');
+
+    title.textContent = `${monthNames[viewMonth]} ${viewYear}`;
+
+    const diff = getMonthDiff(viewYear, viewMonth);
+
+    // Check if prev/next months have events
+    let pm = viewMonth - 1;
+    let py = viewYear;
+    if (pm < 0) { pm = 11; py--; }
+    const prevHasEvents = hasEventsInMonth(py, pm);
+
+    let nm = viewMonth + 1;
+    let ny = viewYear;
+    if (nm > 11) { nm = 0; ny++; }
+    const nextHasEvents = hasEventsInMonth(ny, nm);
+
+    prevBtn.disabled = diff <= 0 || !prevHasEvents;
+    nextBtn.disabled = !nextHasEvents;
+
+    // Update prev/next labels with month names
+    prevLabel.textContent = (diff > 0 && prevHasEvents) ? `← ${monthNames[pm]}` : '←';
+    nextLabel.textContent = nextHasEvents ? `${monthNames[nm]} →` : '→';
+
+    const firstDay = new Date(viewYear, viewMonth, 1);
+    const lastDay = new Date(viewYear, viewMonth + 1, 0);
+    const startDayOfWeek = firstDay.getDay();
+    const daysInMonth = lastDay.getDate();
+
+    // Desktop grid
+    let html = '';
+
+    // Empty cells before first day
+    for (let i = 0; i < startDayOfWeek; i++) {
+        html += '<div class="bg-neutral-900 h-[120px] p-2 min-w-0"></div>';
+    }
+
+    // Days of month
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dateStr = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const dayEvents = getEventsForDate(dateStr);
+
+        const isToday = day === today.getDate() && viewMonth === currentMonth && viewYear === currentYear;
+        const isPast = new Date(viewYear, viewMonth, day) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+        const cellClasses = isToday
+            ? 'bg-white/10 border-2 border-white'
+            : 'bg-neutral-900';
+
+        html += `<div class="${cellClasses} h-[120px] p-2 overflow-hidden min-w-0 ${isPast ? 'opacity-50' : ''}">`;
+        html += `<div class="font-inter text-sm ${isToday ? 'text-white font-bold' : 'text-neutral-300'} mb-2">${day}</div>`;
+
+        dayEvents.forEach(event => {
+            const show = showMap[event.show];
+            if (show) {
+                html += `<a href="/show/${event.show}/" class="block text-xs font-inter mb-1 p-1 bg-neutral-700 hover:bg-neutral-600 truncate">
+                    <span class="text-neutral-300">${event.time}</span> ${show.title}
+                </a>`;
+            }
+        });
+
+        html += '</div>';
+    }
+
+    // Empty cells after last day
+    const endDayOfWeek = lastDay.getDay();
+    for (let i = endDayOfWeek + 1; i < 7; i++) {
+        html += '<div class="bg-neutral-900 h-[120px] p-2"></div>';
+    }
+
+    grid.innerHTML = html;
+
+    // Mobile list view - only show days with events
+    let mobileHtml = '';
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dateStr = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const dayEvents = getEventsForDate(dateStr);
+
+        if (dayEvents.length === 0) continue;
+
+        const dateObj = new Date(viewYear, viewMonth, day);
+        const dayName = dayNames[dateObj.getDay()];
+        const isToday = day === today.getDate() && viewMonth === currentMonth && viewYear === currentYear;
+        const isPast = dateObj < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+        mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''} ${isPast ? 'opacity-50' : ''}">`;
+        mobileHtml += `<div class="bg-neutral-800 px-4 py-2 font-oswald uppercase ${isToday ? 'text-white' : 'text-neutral-300'}">`;
+        mobileHtml += `${dayName}, ${monthNames[viewMonth]} ${day}`;
+        mobileHtml += `</div>`;
+        mobileHtml += `<div class="p-4 space-y-2">`;
+
+        dayEvents.forEach(event => {
+            const show = showMap[event.show];
+            if (show) {
+                mobileHtml += `<a href="/show/${event.show}/" class="flex items-center gap-3 p-2 bg-neutral-900 hover:bg-neutral-800">`;
+                mobileHtml += `<span class="font-inter text-sm text-neutral-400 w-20 shrink-0">${event.time}</span>`;
+                mobileHtml += `<span class="font-inter text-white">${show.title}</span>`;
+                mobileHtml += `</a>`;
+            }
+        });
+
+        mobileHtml += `</div></div>`;
+    }
+
+    if (mobileHtml === '') {
+        mobileHtml = '<p class="font-inter text-neutral-400 text-center py-8">No events this month.</p>';
+    }
+
+    mobileList.innerHTML = mobileHtml;
+}
+
+document.getElementById('prev-month').addEventListener('click', () => {
+    let pm = viewMonth - 1;
+    let py = viewYear;
+    if (pm < 0) { pm = 11; py--; }
+
+    if (getMonthDiff(viewYear, viewMonth) > 0 && hasEventsInMonth(py, pm)) {
+        viewMonth = pm;
+        viewYear = py;
+        renderCalendar();
+    }
+});
+
+document.getElementById('next-month').addEventListener('click', () => {
+    let nm = viewMonth + 1;
+    let ny = viewYear;
+    if (nm > 11) { nm = 0; ny++; }
+
+    if (hasEventsInMonth(ny, nm)) {
+        viewMonth = nm;
+        viewYear = ny;
+        renderCalendar();
+    }
+});
+
+renderCalendar();
+</script>

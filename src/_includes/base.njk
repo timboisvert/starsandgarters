@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Stars & Garters</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+    <header class="w-full">
+        <div class="max-w-[1240px] mx-auto px-4 pt-8 pb-4 flex items-center justify-between">
+            <a href="/" class="hover:opacity-80 shrink-0">
+                <img src="/logo.png" alt="Stars & Garters" class="h-32 w-auto">
+            </a>
+            <nav class="flex gap-8 font-inter">
+                <a href="/" class="hover:text-neutral-300">Now Showing</a>
+                <a href="/calendar/" class="hover:text-neutral-300">Calendar</a>
+                <a href="/booking/" class="hover:text-neutral-300">Booking</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-[1240px] mx-auto px-4 py-8 flex-1">
+        {{ content | safe }}
+    </main>
+
+    <footer class="w-full mt-auto">
+        <div class="w-full border-t border-b border-neutral-700">
+            <div class="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2">
+                <div class="aspect-video md:aspect-auto">
+                    <img src="/map.png" alt="Stars & Garters Location" class="w-full h-full object-cover" style="min-height: 300px;">
+                </div>
+                <div class="p-8 flex flex-col justify-center">
+                    <h3 class="font-oswald text-2xl uppercase mb-4">Stars & Garters</h3>
+                    <p class="font-inter text-neutral-300 leading-normal">3914 N Clark St</p>
+                    <p class="font-inter text-neutral-300 leading-normal mb-4">Chicago, IL 60613</p>
+                    <a href="mailto:starsandgartersclub@gmail.com" class="font-inter text-neutral-400 hover:text-white">starsandgartersclub@gmail.com</a>
+                    <a href="tel:+17732429929" class="font-inter text-neutral-400 hover:text-white">(773) 242-9929</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1240px] mx-auto px-4 py-8 text-center text-neutral-400 font-inter text-sm">
+            <p>&copy; 2026 Stars & Garters</p>
+            <p class="mt-2">A women-owned business and performer-owned theater.</p>
+        </div>
+    </footer>
+</body>
+</html>
