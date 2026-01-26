@@ -14,6 +14,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("posters");
     eleventyConfig.addPassthroughCopy("logo.png");
     eleventyConfig.addPassthroughCopy("map.png");
+    eleventyConfig.addPassthroughCopy("favicon.png");
 
     // Ignore style.css (Tailwind handles it separately)
     eleventyConfig.watchIgnores.add("src/style.css");
