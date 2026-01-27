@@ -54,7 +54,7 @@
         "slug": "chicago-workshop-mic",
         "title": "Chicago Workshop Mic",
         "schedule": "Sundays @ 6pm",
-        "poster": "chicagoworkshopmic.jpg",
+        "poster": "chicagoworkshopmic.png",
         "ticketUrl": "https://slotted.co/chicagoshopmic/",
         "buttonText": "Sign Up",
         "price": "Free",
@@ -72,14 +72,14 @@
         "description": "Musicians Welcomed. Bring your own instrument. Drink Specials."
     },
     {
-        "slug": "chicago-comedy-hour",
-        "title": "Chicago Comedy Hour!",
+        "slug": "dks-full-five-fridays",
+        "title": "DK's Full Five Fridays",
         "schedule": "1st and 4th Fridays @ 9pm",
-        "poster": "chicagocomedyhour.jpg",
+        "poster": "dksfullfivefridays.png",
         "ticketUrl": "https://www.eventbrite.com/e/chicago-comedy-hour-tickets-1510988841299",
         "price": "$10",
         "room": "Rouge Room",
-        "description": "Chicago's best up-and-coming stand-up comedians all in one place filming their five-minute sets!"
+        "description": "10 of Chicago's best up and coming comedians for only $10"
     },
     {
         "slug": "short-form-improv-workshop",
