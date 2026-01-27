@@ -1,4 +1,10 @@
 export default function (eleventyConfig) {
+    // Get current date in YYYY-MM-DD format (for build time)
+    eleventyConfig.addFilter("currentDate", () => {
+        const now = new Date();
+        return now.toISOString().split('T')[0];
+    });
+
     // Custom date filter
     eleventyConfig.addFilter("longDate", (dateStr) => {
         const date = new Date(dateStr + "T12:00:00");

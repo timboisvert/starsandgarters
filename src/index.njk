@@ -3,44 +3,110 @@ title: Chicago's Premiere Retro Entertainment Venue
 layout: base.njk
 ---
 
-{%- set today = "2026-01-25" -%}
-{%- set weekEnd = "2026-02-01" -%}
-{%- set thisWeekEvents = [] -%}
-{%- for event in events -%}
-    {%- if event.date >= today and event.date < weekEnd -%}
-        {%- set thisWeekEvents = (thisWeekEvents.push(event), thisWeekEvents) -%}
-    {%- endif -%}
-{%- endfor -%}
+{%- set nowDate = "" | currentDate -%}
 
 <div class="bg-neutral-900 border border-neutral-800 p-8 mb-12">
-    <h2 class="font-oswald text-2xl uppercase mb-6 text-neutral-300">This Week</h2>
-    {%- if thisWeekEvents.length > 0 %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {%- for event in thisWeekEvents -%}
-            {%- for show in shows -%}
-                {%- if show.slug == event.show -%}
-                <a href="/show/{{ show.slug }}/" class="flex items-center gap-4 p-4 bg-neutral-800 hover:bg-neutral-700 transition-colors">
-                    <div class="text-center shrink-0 w-16">
-                        <p class="font-inter text-2xl font-bold text-white">{{ event.date.split("-")[2] }}</p>
-                        <p class="font-inter text-xs text-neutral-400 uppercase">{{ event.date | longDate | truncate(3, true, "") }}</p>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="font-inter text-white truncate">{{ show.title }}</p>
-                        <p class="font-inter text-sm text-neutral-400">{{ event.time }}</p>
-                    </div>
-                </a>
-                {%- endif -%}
-            {%- endfor -%}
-        {%- endfor -%}
+    <h2 id="this-week-heading" class="font-oswald text-2xl uppercase mb-6 text-neutral-300">This Week's Shows</h2>
+    <div id="this-week-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     </div>
-    {%- else %}
-    <p class="font-inter text-neutral-400">No shows scheduled this week.</p>
-    {%- endif %}
+    <p id="this-week-empty" class="font-inter text-neutral-400 hidden">No shows scheduled.</p>
 </div>
+
+<script>
+(function() {
+    const events = {{ events | dump | safe }};
+    const shows = {{ shows | dump | safe }};
+
+    const showMap = {};
+    shows.forEach(show => showMap[show.slug] = show);
+
+    const now = new Date();
+    const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+    const hour = now.getHours();
+
+    // Determine if we're in "weekend mode"
+    // Thursday 8 AM until Monday 6 AM = weekend mode
+    let isWeekendMode = false;
+    if (dayOfWeek === 4 && hour >= 8) { // Thursday 8 AM or later
+        isWeekendMode = true;
+    } else if (dayOfWeek === 5 || dayOfWeek === 6) { // Friday or Saturday
+        isWeekendMode = true;
+    } else if (dayOfWeek === 0) { // Sunday
+        isWeekendMode = true;
+    } else if (dayOfWeek === 1 && hour < 6) { // Monday before 6 AM
+        isWeekendMode = true;
+    }
+
+    // Set heading
+    const heading = document.getElementById('this-week-heading');
+    heading.textContent = isWeekendMode ? "This Weekend's Shows" : "This Week's Shows";
+
+    // Calculate the end of the period
+    let endDate;
+    if (isWeekendMode) {
+        // End at Monday 6 AM (end of Sunday effectively for shows)
+        const daysUntilMonday = (8 - dayOfWeek) % 7 || 7; // Days until next Monday
+        endDate = new Date(now);
+        endDate.setDate(endDate.getDate() + daysUntilMonday);
+        endDate.setHours(6, 0, 0, 0);
+    } else {
+        // End at next Monday 6 AM (end of the week)
+        const daysUntilMonday = (8 - dayOfWeek) % 7 || 7;
+        endDate = new Date(now);
+        endDate.setDate(endDate.getDate() + daysUntilMonday);
+        endDate.setHours(6, 0, 0, 0);
+    }
+
+    // Filter events: must be in the future and before endDate
+    const filteredEvents = events.filter(event => {
+        const [year, month, day] = event.date.split('-').map(Number);
+        const [timePart, ampm] = event.time.split(' ');
+        let [hours, minutes] = timePart.split(':').map(Number);
+        if (ampm === 'PM' && hours !== 12) hours += 12;
+        if (ampm === 'AM' && hours === 12) hours = 0;
+
+        const eventDateTime = new Date(year, month - 1, day, hours, minutes);
+
+        return eventDateTime > now && eventDateTime < endDate;
+    });
+
+    const grid = document.getElementById('this-week-grid');
+    const emptyMsg = document.getElementById('this-week-empty');
+
+    if (filteredEvents.length === 0) {
+        grid.classList.add('hidden');
+        emptyMsg.classList.remove('hidden');
+    } else {
+        filteredEvents.forEach(event => {
+            const show = showMap[event.show];
+            if (!show) return;
+
+            const dayNum = event.date.split('-')[2];
+            const eventDate = new Date(event.date + 'T12:00:00');
+            const dayName = eventDate.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase().slice(0, 3);
+
+            const link = document.createElement('a');
+            link.href = '/show/' + show.slug + '/';
+            link.className = 'flex items-center gap-4 p-4 bg-neutral-800 hover:bg-neutral-700 transition-colors';
+            link.innerHTML = `
+                <div class="text-center shrink-0 w-16">
+                    <p class="font-inter text-2xl font-bold text-white">${dayNum}</p>
+                    <p class="font-inter text-xs text-neutral-400 uppercase">${dayName}</p>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="font-inter text-white truncate">${show.title}</p>
+                    <p class="font-inter text-sm text-neutral-400">${event.time}</p>
+                </div>
+            `;
+            grid.appendChild(link);
+        });
+    }
+})();
+</script>
 
 <h2 class="font-oswald text-3xl uppercase mb-8">Now Showing</h2>
 
-{%- set sortedShows = shows | sortShows(events, today) -%}
+{%- set sortedShows = shows | sortShows(events, nowDate) -%}
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 mb-8">
     {%- for show in sortedShows %}
