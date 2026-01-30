@@ -1,5 +1,18 @@
 [
     {
+        "slug": "starlets-burlesque-for-lovers",
+        "title": "Starlets Presents: Burlesque for Lovers",
+        "schedule": "Feb 14 @ 10pm",
+        "poster": "burlesqueforlovers.png",
+        "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2036552",
+        "buttonText": "Buy Tickets",
+        "price": null,
+        "room": "Main Stage",
+        "pinPosition": 1,
+        "nextEventLabel": "One Night Only!",
+        "description": "A Valentine's Day burlesque show for those who are in love, those who are in lust, and those who love themselves. Lose the old \"I guess we'll, uh...go somewhere nice for dinner and then...uh, go home?\" routine — come make lifelong memories with Chicago’s burlesque elite. Whether you're swooning over a first date, spicing it up with your soulmate, celebrating with your polycule, or tearing it up with your Galentine’s buds, we’ve got a seat (and a cocktail) waiting for you at Stars & Garters this February 14th. Featuring performances by Ronnie Rouge, Manny Schevitz, Gata Habbie, Katie Rae Horn, and Dizzie Daisie. Doors at 9:30pm, show at 10pm. 21+ event."
+    },
+    {
         "slug": "peep-show",
         "title": "Peep Show",
         "schedule": "Fridays and Saturdays @ 10pm",
@@ -7,7 +20,7 @@
         "ticketUrl": "https://www.eventbrite.com/e/peep-show-chicagos-finest-burlesque-show-tickets-565565340157",
         "price": "$30",
         "room": "Main Stage",
-        "pinPosition": 1,
+        "pinPosition": 2,
         "description": "BimBamBoom presents PEEP SHOW! Chicago's wildest sex & comedy show features two acts of scintillating burlesque performances by the striptease artists of BimBamBoom! Featuring the unforgettable talents of Lauren Bacchanal, Ronnie Rouge, Violet Mist, Gemini Blackheart, Miss Lou Vella D'Lish, Polly Glamorous, Zelda Hipsgerald, Gwendolyn the Gorgeous, Gata Habbie, Manny Schevitz & other burlesque superstars! Comedy performed by Jimmy Innuendo, Melvina Czervicks or Bubble Wizardry by Sam Rose! Hosted by Max Flattery, Dizzie Daisy, Lucien or Mrs. Yuka Layme! EVERY SHOW IS DIFFERENT! EVERY SHOW IS WILD!"
     },
     {
@@ -60,16 +73,6 @@
         "price": "Free",
         "room": "Rouge Room",
         "description": "Up and coming Chicago stand up comedians workshop new material and sign up for 10 minute sets at the Chicago Comedy Hour!"
-    },
-    {
-        "slug": "the-graveyard-shift",
-        "title": "The Graveyard Shift",
-        "schedule": "Fridays @ 11:30PM",
-        "poster": "graveyardshift.jpg",
-        "ticketUrl": null,
-        "price": "Free",
-        "room": "Rouge Room",
-        "description": "Musicians Welcomed. Bring your own instrument. Drink Specials."
     },
     {
         "slug": "dks-full-five-fridays",

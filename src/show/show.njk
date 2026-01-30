@@ -34,7 +34,7 @@ eleventyComputed:
 
             {%- if nextEvent %}
             <div class="bg-neutral-900 border border-neutral-700 p-6 mb-8">
-                <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">Next Show</p>
+                <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">{{ show.nextEventLabel if show.nextEventLabel else "Next Show" }}</p>
                 <p class="font-inter text-xl text-white mb-1">{{ nextEvent.date | longDate }}</p>
                 <p class="font-inter text-lg text-neutral-300 mb-4">{{ nextEvent.time }}</p>
                 {%- if show.ticketUrl %}
