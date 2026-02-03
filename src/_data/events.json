@@ -116,6 +116,11 @@
   },
   {
     "date": "2026-02-20",
+    "time": "8:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-02-20",
     "time": "9:00 PM",
     "show": "masterminds"
   },
@@ -143,5 +148,25 @@
     "date": "2026-02-28",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-03-06",
+    "time": "8:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-03-13",
+    "time": "8:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-03-20",
+    "time": "8:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-03-27",
+    "time": "8:00 PM",
+    "show": "rising-stars"
   }
 ]

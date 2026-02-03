@@ -1,5 +1,16 @@
 [
   {
+    "slug": "rising-stars",
+    "title": "Rising Stars Burlesque Revue",
+    "schedule": "February 20; March 6, 13, 20, 27 @ 8pm",
+    "poster": "rising-stars.jpg",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2043296",
+    "buttonText": null,
+    "price": null,
+    "room": "Main Stage",
+    "description": "A burlesque and variety showcase featuring Chicago's rising talent. Time: 8pm."
+  },
+  {
     "slug": "starlets-burlesque-for-lovers",
     "title": "Starlets Presents: Burlesque for Lovers",
     "schedule": "Feb 14 @ 10pm",
