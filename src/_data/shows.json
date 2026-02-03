@@ -1,98 +1,87 @@
 [
-    {
-        "slug": "starlets-burlesque-for-lovers",
-        "title": "Starlets Presents: Burlesque for Lovers",
-        "schedule": "Feb 14 @ 10pm",
-        "poster": "burlesqueforlovers.png",
-        "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2036552",
-        "buttonText": "Buy Tickets",
-        "price": null,
-        "room": "Main Stage",
-        "pinPosition": 1,
-        "nextEventLabel": "One Night Only!",
-        "description": "A Valentine's Day burlesque show for those who are in love, those who are in lust, and those who love themselves. Lose the old \"I guess we'll, uh...go somewhere nice for dinner and then...uh, go home?\" routine — come make lifelong memories with Chicago’s burlesque elite. Whether you're swooning over a first date, spicing it up with your soulmate, celebrating with your polycule, or tearing it up with your Galentine’s buds, we’ve got a seat (and a cocktail) waiting for you at Stars & Garters this February 14th. Featuring performances by Ronnie Rouge, Manny Schevitz, Gata Habbie, Katie Rae Horn, and Dizzie Daisie. Doors at 9:30pm, show at 10pm. 21+ event."
-    },
-    {
-        "slug": "peep-show",
-        "title": "Peep Show",
-        "schedule": "Fridays and Saturdays @ 10pm",
-        "poster": "peepshow.jpg",
-        "ticketUrl": "https://www.eventbrite.com/e/peep-show-chicagos-finest-burlesque-show-tickets-565565340157",
-        "price": "$30",
-        "room": "Main Stage",
-        "pinPosition": 2,
-        "description": "BimBamBoom presents PEEP SHOW! Chicago's wildest sex & comedy show features two acts of scintillating burlesque performances by the striptease artists of BimBamBoom! Featuring the unforgettable talents of Lauren Bacchanal, Ronnie Rouge, Violet Mist, Gemini Blackheart, Miss Lou Vella D'Lish, Polly Glamorous, Zelda Hipsgerald, Gwendolyn the Gorgeous, Gata Habbie, Manny Schevitz & other burlesque superstars! Comedy performed by Jimmy Innuendo, Melvina Czervicks or Bubble Wizardry by Sam Rose! Hosted by Max Flattery, Dizzie Daisy, Lucien or Mrs. Yuka Layme! EVERY SHOW IS DIFFERENT! EVERY SHOW IS WILD!"
-    },
-    {
-        "slug": "laugh-along-live",
-        "title": "Laugh-Along, Live!",
-        "schedule": "First and third Saturdays @ 9PM",
-        "poster": "laughalonglive.png",
-        "ticketUrl": "https://www.tickettailor.com/events/cocorunseverything/1960970",
-        "price": "$20",
-        "room": "Main Stage",
-        "description": "Laugh-Along, Live! is a monthly comedy show, movie screening, and party wrapped in one. Four comedians make jokes throughout a film (à la Mystery Science Theater) and run activities for the audience. Audience participation is encouraged, as our shows often include drinking games, costume contests, trivia quizzes, dance-offs, and more."
-    },
-    {
-        "slug": "masterminds",
-        "title": "M.A.S.T.E.R.M.I.N.D.S.",
-        "schedule": "Third Fridays @ 9 PM",
-        "poster": "masterminds.jpg",
-        "ticketUrl": "https://www.tickettailor.com/events/cocorunseverything/1889604",
-        "price": "$20",
-        "room": "Rouge Room",
-        "description": null
-    },
-    {
-        "slug": "comedy-pageant",
-        "title": "Comedy Pageant",
-        "schedule": "Every other Friday at 7 PM",
-        "poster": "comedypageant.png",
-        "ticketUrl": "https://buytickets.at/cocorunseverything/1878177",
-        "price": "$16",
-        "room": "Rouge Room",
-        "description": null
-    },
-    {
-        "slug": "my-cabaret",
-        "title": "MY Cabaret",
-        "schedule": "2nd Fridays @ 9pm",
-        "poster": "mycabaret.png",
-        "ticketUrl": "https://www.eventbrite.com/e/my-cabaret-live-in-the-rouge-room-tickets-1637138327809",
-        "price": "$25",
-        "room": "Rouge Room",
-        "description": "Muffy Fishbasket (M) and Mrs. Yuka Layme (Y) combine the best elements of drag & live cabaret to bring you a night of music, sass, shade, and booze! This is an evening you won't want to forget. So, gather that tipping cash and get those tickets for this interactive DRAGARET experience you're not likely to find anywhere else!"
-    },
-    {
-        "slug": "chicago-workshop-mic",
-        "title": "Chicago Workshop Mic",
-        "schedule": "Sundays @ 6pm",
-        "poster": "chicagoworkshopmic.png",
-        "ticketUrl": "https://slotted.co/chicagoshopmic/",
-        "buttonText": "Sign Up",
-        "price": "Free",
-        "room": "Rouge Room",
-        "description": "Up and coming Chicago stand up comedians workshop new material and sign up for 10 minute sets at the Chicago Comedy Hour!"
-    },
-    {
-        "slug": "dks-full-five-fridays",
-        "title": "DK's Full Five Fridays",
-        "schedule": "1st and 4th Fridays @ 9pm",
-        "poster": "dksfullfivefridays.png",
-        "ticketUrl": "https://www.eventbrite.com/e/chicago-comedy-hour-tickets-1510988841299",
-        "price": "$10",
-        "room": "Rouge Room",
-        "description": "10 of Chicago's best up and coming comedians for only $10"
-    },
-    {
-        "slug": "short-form-improv-workshop",
-        "title": "Short-form Improv Workshop",
-        "schedule": "Mondays @ 7PM",
-        "poster": "shortformimprovworkshop.png",
-        "ticketUrl": "https://cocoscout.com/s/TUG0J",
-        "buttonText": "Sign Up",
-        "price": "Free",
-        "room": "Rouge Room",
-        "description": null
-    }
+  {
+    "slug": "starlets-burlesque-for-lovers",
+    "title": "Starlets Presents: Burlesque for Lovers",
+    "schedule": "Feb 14 @ 10pm",
+    "poster": "burlesqueforlovers.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2036552",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": "Main Stage",
+    "pinPosition": 1,
+    "nextEventLabel": "One Night Only!",
+    "description": "A Valentine's Day burlesque show for those who are in love, those who are in lust, and those who love themselves. Lose the old \"I guess we'll, uh...go somewhere nice for dinner and then...uh, go home?\" routine — come make lifelong memories with Chicago’s burlesque elite. Whether you're swooning over a first date, spicing it up with your soulmate, celebrating with your polycule, or tearing it up with your Galentine’s buds, we’ve got a seat (and a cocktail) waiting for you at Stars & Garters this February 14th. Featuring performances by Ronnie Rouge, Manny Schevitz, Gata Habbie, Katie Rae Horn, and Dizzie Daisie. Doors at 9:30pm, show at 10pm. 21+ event."
+  },
+  {
+    "slug": "laugh-along-live",
+    "title": "Laugh-Along, Live!",
+    "schedule": "First and third Saturdays @ 9PM",
+    "poster": "laughalonglive.png",
+    "ticketUrl": "https://www.tickettailor.com/events/cocorunseverything/1960970",
+    "price": "$20",
+    "room": "Main Stage",
+    "description": "Laugh-Along, Live! is a monthly comedy show, movie screening, and party wrapped in one. Four comedians make jokes throughout a film (à la Mystery Science Theater) and run activities for the audience. Audience participation is encouraged, as our shows often include drinking games, costume contests, trivia quizzes, dance-offs, and more."
+  },
+  {
+    "slug": "masterminds",
+    "title": "M.A.S.T.E.R.M.I.N.D.S.",
+    "schedule": "Third Fridays @ 9 PM",
+    "poster": "masterminds.jpg",
+    "ticketUrl": "https://www.tickettailor.com/events/cocorunseverything/1889604",
+    "price": "$20",
+    "room": "Rouge Room",
+    "description": null
+  },
+  {
+    "slug": "comedy-pageant",
+    "title": "Comedy Pageant",
+    "schedule": "Every other Friday at 7 PM",
+    "poster": "comedypageant.png",
+    "ticketUrl": "https://buytickets.at/cocorunseverything/1878177",
+    "price": "$16",
+    "room": "Rouge Room",
+    "description": null
+  },
+  {
+    "slug": "my-cabaret",
+    "title": "MY Cabaret",
+    "schedule": "2nd Fridays @ 9pm",
+    "poster": "mycabaret.png",
+    "ticketUrl": "https://www.eventbrite.com/e/my-cabaret-live-in-the-rouge-room-tickets-1637138327809",
+    "price": "$25",
+    "room": "Rouge Room",
+    "description": "Muffy Fishbasket (M) and Mrs. Yuka Layme (Y) combine the best elements of drag & live cabaret to bring you a night of music, sass, shade, and booze! This is an evening you won't want to forget. So, gather that tipping cash and get those tickets for this interactive DRAGARET experience you're not likely to find anywhere else!"
+  },
+  {
+    "slug": "chicago-workshop-mic",
+    "title": "Chicago Workshop Mic",
+    "schedule": "Sundays @ 6pm",
+    "poster": "chicagoworkshopmic.png",
+    "ticketUrl": "https://slotted.co/chicagoshopmic/",
+    "buttonText": "Sign Up",
+    "price": "Free",
+    "room": "Rouge Room",
+    "description": "Up and coming Chicago stand up comedians workshop new material and sign up for 10 minute sets at the Chicago Comedy Hour!"
+  },
+  {
+    "slug": "dks-full-five-fridays",
+    "title": "DK's Full Five Fridays",
+    "schedule": "1st and 4th Fridays @ 9pm",
+    "poster": "dksfullfivefridays.png",
+    "ticketUrl": "https://www.eventbrite.com/e/chicago-comedy-hour-tickets-1510988841299",
+    "price": "$10",
+    "room": "Rouge Room",
+    "description": "10 of Chicago's best up and coming comedians for only $10"
+  },
+  {
+    "slug": "short-form-improv-workshop",
+    "title": "Short-form Improv Workshop",
+    "schedule": "Mondays @ 7PM",
+    "poster": "shortformimprovworkshop.png",
+    "ticketUrl": "https://cocoscout.com/s/TUG0J",
+    "buttonText": "Sign Up",
+    "price": "Free",
+    "room": "Rouge Room",
+    "description": null
+  }
 ]

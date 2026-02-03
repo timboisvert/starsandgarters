@@ -5,19 +5,9 @@
     "show": "laugh-along-live"
   },
   {
-    "date": "2026-01-03",
-    "time": "10:00 PM",
-    "show": "peep-show"
-  },
-  {
     "date": "2026-01-09",
     "time": "9:00 PM",
     "show": "my-cabaret"
-  },
-  {
-    "date": "2026-01-09",
-    "time": "10:00 PM",
-    "show": "peep-show"
   },
   {
     "date": "2026-01-12",
@@ -35,11 +25,6 @@
     "show": "masterminds"
   },
   {
-    "date": "2026-01-16",
-    "time": "10:00 PM",
-    "show": "peep-show"
-  },
-  {
     "date": "2026-01-17",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -48,11 +33,6 @@
     "date": "2026-01-17",
     "time": "9:00 PM",
     "show": "laugh-along-live"
-  },
-  {
-    "date": "2026-01-17",
-    "time": "10:00 PM",
-    "show": "peep-show"
   },
   {
     "date": "2026-01-19",
@@ -65,11 +45,6 @@
     "show": "dks-full-five-fridays"
   },
   {
-    "date": "2026-01-23",
-    "time": "10:00 PM",
-    "show": "peep-show"
-  },
-  {
     "date": "2026-01-24",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -80,19 +55,9 @@
     "show": "short-form-improv-workshop"
   },
   {
-    "date": "2026-01-30",
-    "time": "10:00 PM",
-    "show": "peep-show"
-  },
-  {
     "date": "2026-01-31",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
-  },
-  {
-    "date": "2026-01-31",
-    "time": "10:00 PM",
-    "show": "peep-show"
   },
   {
     "date": "2026-02-02",
@@ -110,11 +75,6 @@
     "show": "dks-full-five-fridays"
   },
   {
-    "date": "2026-02-06",
-    "time": "10:00 PM",
-    "show": "peep-show"
-  },
-  {
     "date": "2026-02-07",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -125,11 +85,6 @@
     "show": "laugh-along-live"
   },
   {
-    "date": "2026-02-07",
-    "time": "10:00 PM",
-    "show": "peep-show"
-  },
-  {
     "date": "2026-02-09",
     "time": "7:00 PM",
     "show": "short-form-improv-workshop"
@@ -138,11 +93,6 @@
     "date": "2026-02-13",
     "time": "9:00 PM",
     "show": "my-cabaret"
-  },
-  {
-    "date": "2026-02-13",
-    "time": "10:00 PM",
-    "show": "peep-show"
   },
   {
     "date": "2026-02-14",
@@ -170,11 +120,6 @@
     "show": "masterminds"
   },
   {
-    "date": "2026-02-20",
-    "time": "10:00 PM",
-    "show": "peep-show"
-  },
-  {
     "date": "2026-02-21",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -185,11 +130,6 @@
     "show": "laugh-along-live"
   },
   {
-    "date": "2026-02-21",
-    "time": "10:00 PM",
-    "show": "peep-show"
-  },
-  {
     "date": "2026-02-23",
     "time": "7:00 PM",
     "show": "short-form-improv-workshop"
@@ -198,11 +138,6 @@
     "date": "2026-02-27",
     "time": "9:00 PM",
     "show": "dks-full-five-fridays"
-  },
-  {
-    "date": "2026-02-27",
-    "time": "10:00 PM",
-    "show": "peep-show"
   },
   {
     "date": "2026-02-28",
