@@ -54,18 +54,8 @@
     "description": null
   },
   {
-    "slug": "my-cabaret",
-    "title": "MY Cabaret",
-    "schedule": "2nd Fridays @ 9pm",
-    "poster": "mycabaret.png",
-    "ticketUrl": "https://www.eventbrite.com/e/my-cabaret-live-in-the-rouge-room-tickets-1637138327809",
-    "price": "$25",
-    "room": "Rouge Room",
-    "description": "Muffy Fishbasket (M) and Mrs. Yuka Layme (Y) combine the best elements of drag & live cabaret to bring you a night of music, sass, shade, and booze! This is an evening you won't want to forget. So, gather that tipping cash and get those tickets for this interactive DRAGARET experience you're not likely to find anywhere else!"
-  },
-  {
     "slug": "chicago-workshop-mic",
-    "title": "Chicago Workshop Mic",
+    "title": "Chicago's Workshop Mic",
     "schedule": "Sundays @ 6pm",
     "poster": "chicagoworkshopmic.png",
     "ticketUrl": "https://slotted.co/chicagoshopmic/",
