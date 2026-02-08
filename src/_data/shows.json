@@ -84,5 +84,16 @@
     "price": "Free",
     "room": "Rouge Room",
     "description": null
+  },
+  {
+    "slug": "talk-yo-shxt",
+    "title": "Talk Yo Shxt",
+    "schedule": "Second Fridays @ 7:30 PM (Starts Mar 13)",
+    "poster": "talkyoshxt.png",
+    "ticketUrl": null,
+    "buttonText": null,
+    "price": "$12",
+    "room": "Rouge Room",
+    "description": "Improv"
   }
 ]
