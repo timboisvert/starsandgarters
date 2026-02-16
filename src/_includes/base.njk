@@ -3,31 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | Stars & Garters</title>
-    <meta name="description" content="Chicago's premiere retro entertainment venue. The home of Chicago's finest comedy, magic, drag and burlesque entertainment.">
+    <title>{{ title }} | {{ site.name }}</title>
+
+    <meta name="description" content="{{ meta.description | default(page.description) | default(site.description) }}">
+    <meta name="robots" content="{{ meta.robots | default('index,follow') }}">
+
+    <link rel="canonical" href="{{ meta.url | default(site.url ~ page.url) }}">
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.png" type="image/png">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Stars & Garters">
-    <meta property="og:url" content="https://starsandgartersclub.com{{ page.url }}">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="Chicago's premiere retro entertainment venue. The home of Chicago's finest comedy, magic, drag and burlesque entertainment.">
-    <meta property="og:image" content="https://starsandgartersclub.com/logo.png">
+    <meta property="og:type" content="{{ meta.ogType | default('website') }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:url" content="{{ meta.url | default(site.url ~ page.url) }}">
+    <meta property="og:title" content="{{ meta.title | default(title) }}">
+    <meta property="og:description" content="{{ meta.description | default(page.description) | default(site.description) }}">
+    <meta property="og:image" content="{{ meta.image | default(site.logo) }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@starsandgarters">
-    <meta name="twitter:url" content="https://starsandgartersclub.com{{ page.url }}">
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:description" content="Chicago's premiere retro entertainment venue. The home of Chicago's finest comedy, magic, drag and burlesque entertainment.">
-    <meta name="twitter:image" content="https://starsandgartersclub.com/logo.png">
+    <meta name="twitter:site" content="{{ site.twitter }}">
+    <meta name="twitter:url" content="{{ meta.url | default(site.url ~ page.url) }}">
+    <meta name="twitter:title" content="{{ meta.title | default(title) }}">
+    <meta name="twitter:description" content="{{ meta.description | default(page.description) | default(site.description) }}">
+    <meta name="twitter:image" content="{{ meta.image | default(site.logo) }}">
 
     <link rel="stylesheet" href="/style.css">
+
+    {% if page.url == '/' %}
+    <script type="application/ld+json">
+    {{ {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": site.name,
+        "url": site.url,
+        "logo": site.logo,
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": site.address.streetAddress,
+            "addressLocality": site.address.addressLocality,
+            "addressRegion": site.address.addressRegion,
+            "postalCode": site.address.postalCode,
+            "addressCountry": site.address.addressCountry
+        }
+    } | dump | safe }}
+    </script>
+    {% endif %}
 
     <!-- ReachCode tracking script (added per marketing) -->
     <script type="text/javascript" src="//cdn.rlets.com/capture_configs/868/1dc/a7f/80e495fa6b62a05e9821cad.js" async="async"></script>

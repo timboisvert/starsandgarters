@@ -1,6 +1,12 @@
 ---
-title: Chicago's Premiere Retro Entertainment Venue
+title: Chicago's Classic Entertainment Venue
 layout: base.njk
+eleventyComputed:
+  meta:
+    description: "Chicago's premiere retro entertainment venue. The home of Chicago's finest comedy, magic, drag and burlesque entertainment. See upcoming shows, buy tickets, and book the theater."
+    image: "{{ site.logo }}"
+    url: "{{ site.url }}/"
+    ogType: "website"
 ---
 
 {%- set nowDate = "" | currentDate -%}

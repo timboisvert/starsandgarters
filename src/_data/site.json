@@ -1,0 +1,14 @@
+{
+    "name": "Stars & Garters",
+    "url": "https://starsandgartersclub.com",
+    "description": "Chicago's premiere retro entertainment venue. The home of Chicago's finest comedy, magic, drag and burlesque entertainment.",
+    "twitter": "@starsandgarters",
+    "logo": "https://starsandgartersclub.com/logo.png",
+    "address": {
+        "streetAddress": "3914 N Clark St",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "postalCode": "60613",
+        "addressCountry": "US"
+    }
+}

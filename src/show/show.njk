@@ -7,15 +7,46 @@ pagination:
 permalink: "/show/{{ show.slug }}/"
 eleventyComputed:
   title: "{{ show.title }}"
+  meta:
+    description: "{{ show.description | default(show.schedule) }}"
+    image: "{{ (show.poster and (site.url ~ '/posters/' ~ show.poster)) or site.logo }}"
+    url: "{{ site.url ~ '/show/' ~ show.slug ~ '/' }}"
+    ogType: "article"
 ---
 
 {%- set nextEvent = null -%}
-{%- set today = "2026-01-25" -%}
+{%- set today = "" | currentDate -%}
 {%- for event in events -%}
     {%- if event.show == show.slug and event.date >= today and not nextEvent -%}
         {%- set nextEvent = event -%}
     {%- endif -%}
 {%- endfor -%}
+
+{%- if nextEvent -%}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": show.title,
+  "startDate": nextEvent.date,
+  "url": site.url ~ '/show/' ~ show.slug ~ '/',
+  "image": ((show.poster and (site.url ~ '/posters/' ~ show.poster)) or site.logo),
+  "description": show.description,
+  "location": {
+    "@type": "Place",
+    "name": site.name,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": site.address.streetAddress,
+      "addressLocality": site.address.addressLocality,
+      "addressRegion": site.address.addressRegion,
+      "postalCode": site.address.postalCode,
+      "addressCountry": site.address.addressCountry
+    }
+  }
+} | dump | safe }}
+</script>
+{%- endif -%}
 
 <div>
     <div class="flex flex-col md:flex-row gap-12">
