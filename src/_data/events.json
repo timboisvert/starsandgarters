@@ -140,9 +140,19 @@
     "show": "chicago-workshop-mic"
   },
   {
+    "date": "2026-02-28",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
     "date": "2026-03-06",
     "time": "8:00 PM",
     "show": "rising-stars"
+  },
+  {
+    "date": "2026-03-07",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
   },
   {
     "date": "2026-03-13",
@@ -155,9 +165,19 @@
     "show": "rising-stars"
   },
   {
+    "date": "2026-03-21",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
     "date": "2026-03-27",
     "time": "8:00 PM",
     "show": "rising-stars"
+  },
+  {
+    "date": "2026-03-28",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
   },
   {
     "date": "2026-03-13",
@@ -165,14 +185,74 @@
     "show": "talk-yo-shxt"
   },
   {
+    "date": "2026-04-04",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
     "date": "2026-04-10",
     "time": "7:30 PM",
     "show": "talk-yo-shxt"
   },
   {
+    "date": "2026-04-11",
+    "time": "7:00 PM",
+    "show": "freakshow-and-tell"
+  },
+  {
+    "date": "2026-04-11",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
+    "date": "2026-04-18",
+    "time": "7:00 PM",
+    "show": "freakshow-and-tell"
+  },
+  {
+    "date": "2026-04-18",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
+    "date": "2026-04-25",
+    "time": "7:00 PM",
+    "show": "freakshow-and-tell"
+  },
+  {
+    "date": "2026-05-02",
+    "time": "7:00 PM",
+    "show": "freakshow-and-tell"
+  },
+  {
+    "date": "2026-05-02",
+    "time": "9:00 PM",
+    "show": "laugh-along-live"
+  },
+  {
     "date": "2026-05-08",
     "time": "7:30 PM",
     "show": "talk-yo-shxt"
+  },
+  {
+    "date": "2026-05-09",
+    "time": "7:00 PM",
+    "show": "freakshow-and-tell"
+  },
+  {
+    "date": "2026-05-16",
+    "time": "7:00 PM",
+    "show": "freakshow-and-tell"
+  },
+  {
+    "date": "2026-05-23",
+    "time": "7:00 PM",
+    "show": "freakshow-and-tell"
+  },
+  {
+    "date": "2026-05-30",
+    "time": "7:00 PM",
+    "show": "freakshow-and-tell"
   },
   {
     "date": "2026-06-12",

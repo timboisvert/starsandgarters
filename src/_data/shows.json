@@ -25,12 +25,23 @@
   {
     "slug": "laugh-along-live",
     "title": "Laugh-Along, Live!",
-    "schedule": "First and third Saturdays @ 9PM",
+    "schedule": "Most Saturdays @ 9 PM",
     "poster": "laughalonglive.png",
-    "ticketUrl": "https://www.tickettailor.com/events/cocorunseverything/1960970",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080129",
     "price": "$20",
-    "room": "Main Stage",
-    "description": "Laugh-Along, Live! is a monthly comedy show, movie screening, and party wrapped in one. Four comedians make jokes throughout a film (à la Mystery Science Theater) and run activities for the audience. Audience participation is encouraged, as our shows often include drinking games, costume contests, trivia quizzes, dance-offs, and more."
+    "room": "Rouge Room",
+    "description": "Laugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. Three comedians make jokes throughout a film (à la Mystery Science Theater) and run activities for the audience. Audience participation is encouraged, as our shows often include drinking games, costume contests, trivia quizzes, dance-offs, and more."
+  },
+  {
+    "slug": "freakshow-and-tell",
+    "title": "FreakShow & Tell",
+    "schedule": "Saturdays @ 7 PM",
+    "poster": "freakshowandtell.jpg",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2076501",
+    "buttonText": null,
+    "price": null,
+    "room": "Rouge Room",
+    "description": ""
   },
   {
     "slug": "masterminds",
