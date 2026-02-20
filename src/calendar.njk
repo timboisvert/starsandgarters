@@ -133,8 +133,30 @@ function renderCalendar() {
         dayEvents.forEach(event => {
             const show = showMap[event.show];
             if (show) {
-                html += `<a href="/show/${event.show}/" class="block text-xs font-inter mb-1 p-1 bg-neutral-700 hover:bg-neutral-600 truncate">
-                    <span class="text-neutral-300">${event.time}</span> ${show.title}
+                // Determine display name and link
+                let displayName = show.title;
+                let linkUrl = '/show/' + event.show + '/';
+
+                if (event.displayName) {
+                    displayName = event.displayName;
+                } else if (event.title) {
+                    if (show.eventTitleFormat === 'event-first') {
+                        displayName = event.title + ': ' + show.title;
+                    } else {
+                        displayName = show.title + ': ' + event.title;
+                    }
+                }
+
+                if (show.createEventPages && event.title) {
+                    const eventSlug = event.title
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '-')
+                        .replace(/^-|-$/g, '');
+                    linkUrl = '/show/' + event.show + '/' + eventSlug + '/';
+                }
+
+                html += `<a href="${linkUrl}" class="block text-xs font-inter mb-1 p-1 bg-neutral-700 hover:bg-neutral-600 truncate">
+                    <span class="text-neutral-300">${event.time}</span> ${displayName}
                 </a>`;
             }
         });
@@ -175,9 +197,31 @@ function renderCalendar() {
         dayEvents.forEach(event => {
             const show = showMap[event.show];
             if (show) {
-                mobileHtml += `<a href="/show/${event.show}/" class="flex items-center gap-3 p-2 bg-neutral-900 hover:bg-neutral-800">`;
+                // Determine display name and link
+                let displayName = show.title;
+                let linkUrl = '/show/' + event.show + '/';
+
+                if (event.displayName) {
+                    displayName = event.displayName;
+                } else if (event.title) {
+                    if (show.eventTitleFormat === 'event-first') {
+                        displayName = event.title + ': ' + show.title;
+                    } else {
+                        displayName = show.title + ': ' + event.title;
+                    }
+                }
+
+                if (show.createEventPages && event.title) {
+                    const eventSlug = event.title
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '-')
+                        .replace(/^-|-$/g, '');
+                    linkUrl = '/show/' + event.show + '/' + eventSlug + '/';
+                }
+
+                mobileHtml += `<a href="${linkUrl}" class="flex items-center gap-3 p-2 bg-neutral-900 hover:bg-neutral-800">`;
                 mobileHtml += `<span class="font-inter text-sm text-neutral-400 w-20 shrink-0">${event.time}</span>`;
-                mobileHtml += `<span class="font-inter text-white">${show.title}</span>`;
+                mobileHtml += `<span class="font-inter text-white">${displayName}</span>`;
                 mobileHtml += `</a>`;
             }
         });

@@ -91,8 +91,31 @@ eleventyComputed:
             const eventDate = new Date(event.date + 'T12:00:00');
             const dayName = eventDate.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase().slice(0, 3);
 
+            // Determine display name and link
+            let displayName = show.title;
+            let linkUrl = '/show/' + show.slug + '/';
+
+            if (event.displayName) {
+                displayName = event.displayName;
+            } else if (event.title) {
+                if (show.eventTitleFormat === 'event-first') {
+                    displayName = event.title + ': ' + show.title;
+                } else {
+                    displayName = show.title + ': ' + event.title;
+                }
+            }
+
+            // Link to event page if show has createEventPages and event has title
+            if (show.createEventPages && event.title) {
+                const eventSlug = event.title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-|-$/g, '');
+                linkUrl = '/show/' + show.slug + '/' + eventSlug + '/';
+            }
+
             const link = document.createElement('a');
-            link.href = '/show/' + show.slug + '/';
+            link.href = linkUrl;
             link.className = 'flex items-center gap-4 p-4 bg-neutral-800 hover:bg-neutral-700 transition-colors';
             link.innerHTML = `
                 <div class="text-center shrink-0 w-16">
@@ -100,7 +123,7 @@ eleventyComputed:
                     <p class="font-inter text-xs text-neutral-400 uppercase">${dayName}</p>
                 </div>
                 <div class="flex-1 min-w-0">
-                    <p class="font-inter text-white truncate">${show.title}</p>
+                    <p class="font-inter text-white truncate">${displayName}</p>
                     <p class="font-inter text-sm text-neutral-400">${event.time}</p>
                 </div>
             `;
@@ -112,18 +135,22 @@ eleventyComputed:
 
 <h2 class="font-oswald text-3xl uppercase mb-8">Now Showing</h2>
 
-{%- set sortedShows = shows | sortShows(events, nowDate) -%}
+{%- set sortedItems = shows | sortShowsWithEvents(events, nowDate) -%}
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 mb-8">
-    {%- for show in sortedShows %}
-    <a href="/show/{{ show.slug }}/" class="block group">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 mb-8">
+    {%- for item in sortedItems %}
+    <a href="{{ item.link }}" class="block group">
         <div class="aspect-[11/17] bg-neutral-900 mb-3 overflow-hidden">
-            {%- if show.poster %}
-            <img src="/posters/{{ show.poster }}" alt="{{ show.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+            {%- if item.poster %}
+            <img src="/posters/{{ item.poster }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
             {%- endif %}
         </div>
-        <h2 class="font-oswald text-lg uppercase">{{ show.title }}</h2>
-        <p class="font-inter text-sm text-neutral-400">{{ show.schedule }}</p>
+        <h2 class="font-oswald text-lg uppercase">{{ item.title }}</h2>
+        {%- if item.type == 'event' %}
+        <p class="font-inter text-sm text-neutral-400">{{ item.schedule | longDate }}</p>
+        {%- else %}
+        <p class="font-inter text-sm text-neutral-400">{{ item.schedule }}</p>
+        {%- endif %}
     </a>
     {%- endfor %}
 </div>

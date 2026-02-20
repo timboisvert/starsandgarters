@@ -1,0 +1,39 @@
+---
+title: Open Auditions
+layout: base.njk
+permalink: /auditions/
+eleventyComputed:
+  meta:
+    description: "Audition for upcoming shows at Stars & Garters."
+    image: "{{ site.logo }}"
+    url: "{{ site.url }}/auditions/"
+    ogType: "website"
+---
+
+<h1 class="font-oswald text-3xl uppercase mb-8">Open Auditions</h1>
+
+<div class="space-y-6">
+    {%- for audition in auditions %}
+    <div class="bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col md:flex-row">
+        {%- if audition.logo %}
+        <div class="w-full md:w-48 shrink-0 bg-neutral-800 overflow-hidden">
+            <img src="/logos/{{ audition.logo }}" alt="{{ audition.title }}" class="w-full h-full object-cover aspect-square md:aspect-auto">
+        </div>
+        {%- endif %}
+        <div class="p-6 flex-1">
+            <h2 class="font-oswald text-xl uppercase mb-3">{{ audition.title }}</h2>
+            <p class="font-inter text-neutral-400 mb-4">{{ audition.description }}</p>
+            <p class="font-oswald text-sm uppercase text-neutral-300 mb-3">
+                {%- if audition.deadline -%}
+                    Deadline: {{ audition.deadline }}
+                {%- else -%}
+                    Revolving audition — no end date
+                {%- endif -%}
+            </p>
+            <a href="{{ audition.signupUrl }}" class="inline-block font-inter text-sm uppercase tracking-wider bg-white text-black px-6 py-3 hover:bg-neutral-200 transition-colors">
+                {{ audition.buttonText | default("Sign Up") }}
+            </a>
+        </div>
+    </div>
+    {%- endfor %}
+</div>

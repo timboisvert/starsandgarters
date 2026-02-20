@@ -1,0 +1,77 @@
+---
+layout: base.njk
+pagination:
+  data: collections.eventPages
+  size: 1
+  alias: eventPage
+permalink: "/show/{{ eventPage.show.slug }}/{{ eventPage.slug }}/"
+eleventyComputed:
+  title: "{{ eventPage.title }}"
+  meta:
+    description: "{{ eventPage.show.description | default(eventPage.title) }}"
+    image: "{{ (eventPage.poster and (site.url ~ '/posters/' ~ eventPage.poster)) or site.logo }}"
+    url: "{{ site.url ~ '/show/' ~ eventPage.show.slug ~ '/' ~ eventPage.slug ~ '/' }}"
+    ogType: "article"
+---
+
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": eventPage.title,
+  "startDate": eventPage.date,
+  "url": site.url ~ '/show/' ~ eventPage.show.slug ~ '/' ~ eventPage.slug ~ '/',
+  "image": ((eventPage.poster and (site.url ~ '/posters/' ~ eventPage.poster)) or site.logo),
+  "description": eventPage.show.description,
+  "location": {
+    "@type": "Place",
+    "name": site.name,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": site.address.streetAddress,
+      "addressLocality": site.address.addressLocality,
+      "addressRegion": site.address.addressRegion,
+      "postalCode": site.address.postalCode,
+      "addressCountry": site.address.addressCountry
+    }
+  }
+} | dump | safe }}
+</script>
+
+<div>
+    <div class="flex flex-col md:flex-row gap-12">
+        {%- if eventPage.poster %}
+        <div class="w-full md:w-1/2 shrink-0">
+            <div class="aspect-[11/17] bg-neutral-900 overflow-hidden">
+                <img src="/posters/{{ eventPage.poster }}" alt="{{ eventPage.title }}" class="w-full h-full object-cover">
+            </div>
+        </div>
+        {%- endif %}
+
+        <div class="flex-1">
+            <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">
+                <a href="/show/{{ eventPage.show.slug }}/" class="hover:text-white">{{ eventPage.show.title }}</a>
+            </p>
+            <h1 class="font-oswald font-bold text-5xl uppercase mb-6">{{ eventPage.shortTitle }}</h1>
+
+            <div class="bg-neutral-900 border border-neutral-700 p-6 mb-8">
+                <p class="font-inter text-xl text-white mb-1">{{ eventPage.date | longDate }}</p>
+                <p class="font-inter text-lg text-neutral-300 mb-4">{{ eventPage.time }}</p>
+                {%- if eventPage.ticketUrl %}
+                <a href="{{ eventPage.ticketUrl }}" target="_blank" rel="noopener"
+                   class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
+                    {{ eventPage.show.buttonText if eventPage.show.buttonText else "Buy Tickets" }}
+                </a>
+                {%- endif %}
+            </div>
+
+            {%- if eventPage.show.description %}
+            <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal">{{ eventPage.show.description }}</p>
+            {%- endif %}
+
+            <p class="font-inter text-neutral-500">
+                <a href="/show/{{ eventPage.show.slug }}/" class="hover:text-white">&larr; See all {{ eventPage.show.title }} shows</a>
+            </p>
+        </div>
+    </div>
+</div>

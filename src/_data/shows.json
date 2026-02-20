@@ -20,6 +20,7 @@
     "price": null,
     "room": "Main Stage",
     "nextEventLabel": "One Night Only!",
+    "hideFromHomepage": true,
     "description": "A Valentine's Day burlesque show for those who are in love, those who are in lust, and those who love themselves. Lose the old \"I guess we'll, uh...go somewhere nice for dinner and then...uh, go home?\" routine — come make lifelong memories with Chicago’s burlesque elite. Whether you're swooning over a first date, spicing it up with your soulmate, celebrating with your polycule, or tearing it up with your Galentine’s buds, we’ve got a seat (and a cocktail) waiting for you at Stars & Garters this February 14th. Featuring performances by Ronnie Rouge, Manny Schevitz, Gata Habbie, Katie Rae Horn, and Dizzie Daisie. Doors at 9:30pm, show at 10pm. 21+ event."
   },
   {
@@ -30,7 +31,11 @@
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080129",
     "price": "$20",
     "room": "Rouge Room",
-    "description": "Laugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. Three comedians make jokes throughout a film (à la Mystery Science Theater) and run activities for the audience. Audience participation is encouraged, as our shows often include drinking games, costume contests, trivia quizzes, dance-offs, and more."
+    "description": "Laugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. Three comedians make jokes throughout a film (à la Mystery Science Theater) and run activities for the audience. Audience participation is encouraged, as our shows often include drinking games, costume contests, trivia quizzes, dance-offs, and more.",
+    "isIndex": true,
+    "indexDays": 90,
+    "createEventPages": true,
+    "eventTitleFormat": "event-first"
   },
   {
     "slug": "freakshow-and-tell",
@@ -77,7 +82,7 @@
   {
     "slug": "dks-full-five-fridays",
     "title": "DK's Full Five Fridays",
-    "schedule": "1st and 4th Fridays @ 9pm",
+    "schedule": "1st Fridays @ 9pm",
     "poster": "dksfullfivefridays.png",
     "ticketUrl": "https://www.eventbrite.com/e/chicago-comedy-hour-tickets-1510988841299",
     "price": "$10",

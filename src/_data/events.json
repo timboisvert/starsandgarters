@@ -122,17 +122,14 @@
   {
     "date": "2026-02-21",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "Scream",
+    "poster": "laughalonglive-scream.png"
   },
   {
     "date": "2026-02-23",
     "time": "7:00 PM",
     "show": "short-form-improv-workshop"
-  },
-  {
-    "date": "2026-02-27",
-    "time": "9:00 PM",
-    "show": "dks-full-five-fridays"
   },
   {
     "date": "2026-02-28",
@@ -142,7 +139,13 @@
   {
     "date": "2026-02-28",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "Pride & Prejudice"
+  },
+  {
+    "date": "2026-03-06",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
   },
   {
     "date": "2026-03-06",
@@ -152,7 +155,8 @@
   {
     "date": "2026-03-07",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "Pokémon: The First Movie"
   },
   {
     "date": "2026-03-13",
@@ -167,7 +171,8 @@
   {
     "date": "2026-03-21",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "Space Jam"
   },
   {
     "date": "2026-03-27",
@@ -177,7 +182,8 @@
   {
     "date": "2026-03-28",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "Super Mario Bros."
   },
   {
     "date": "2026-03-13",
@@ -185,9 +191,15 @@
     "show": "talk-yo-shxt"
   },
   {
+    "date": "2026-04-03",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
+  },
+  {
     "date": "2026-04-04",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "Twilight"
   },
   {
     "date": "2026-04-10",
@@ -202,7 +214,8 @@
   {
     "date": "2026-04-11",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "Shrek"
   },
   {
     "date": "2026-04-18",
@@ -212,7 +225,8 @@
   {
     "date": "2026-04-18",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "Fern Gully"
   },
   {
     "date": "2026-04-25",
@@ -220,14 +234,15 @@
     "show": "freakshow-and-tell"
   },
   {
-    "date": "2026-05-02",
-    "time": "7:00 PM",
-    "show": "freakshow-and-tell"
+    "date": "2026-05-01",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
   },
   {
     "date": "2026-05-02",
     "time": "9:00 PM",
-    "show": "laugh-along-live"
+    "show": "laugh-along-live",
+    "title": "The Devil Wears Prada"
   },
   {
     "date": "2026-05-08",
@@ -255,9 +270,19 @@
     "show": "freakshow-and-tell"
   },
   {
+    "date": "2026-06-05",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
+  },
+  {
     "date": "2026-06-12",
     "time": "7:30 PM",
     "show": "talk-yo-shxt"
+  },
+  {
+    "date": "2026-07-03",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
   },
   {
     "date": "2026-07-10",
@@ -265,9 +290,19 @@
     "show": "talk-yo-shxt"
   },
   {
+    "date": "2026-08-07",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
+  },
+  {
     "date": "2026-08-14",
     "time": "7:30 PM",
     "show": "talk-yo-shxt"
+  },
+  {
+    "date": "2026-09-04",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
   },
   {
     "date": "2026-09-11",
@@ -275,14 +310,29 @@
     "show": "talk-yo-shxt"
   },
   {
+    "date": "2026-10-02",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
+  },
+  {
     "date": "2026-10-09",
     "time": "7:30 PM",
     "show": "talk-yo-shxt"
   },
   {
+    "date": "2026-11-06",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
+  },
+  {
     "date": "2026-11-13",
     "time": "7:30 PM",
     "show": "talk-yo-shxt"
+  },
+  {
+    "date": "2026-12-04",
+    "time": "9:00 PM",
+    "show": "dks-full-five-fridays"
   },
   {
     "date": "2026-12-11",

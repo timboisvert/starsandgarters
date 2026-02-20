@@ -64,21 +64,70 @@ eleventyComputed:
             <p class="font-inter text-2xl text-neutral-300 mb-8">{{ show.schedule }}</p>
 
             {%- if nextEvent %}
-            <div class="bg-neutral-900 border border-neutral-700 p-6 mb-8">
-                <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">{{ show.nextEventLabel if show.nextEventLabel else "Next Show" }}</p>
-                <p class="font-inter text-xl text-white mb-1">{{ nextEvent.date | longDate }}</p>
-                <p class="font-inter text-lg text-neutral-300 mb-4">{{ nextEvent.time }}</p>
-                {%- if show.ticketUrl %}
-                <a href="{{ show.ticketUrl }}" target="_blank" rel="noopener"
-                   class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
-                    {{ show.buttonText if show.buttonText else "Buy Tickets" }}
-                </a>
-                {%- endif %}
+            {%- set nextEventPoster = nextEvent.poster or show.poster %}
+            {%- set nextEventSlug = nextEvent | eventSlug %}
+            <div class="bg-neutral-900 border border-neutral-700 mb-8 overflow-hidden h-64">
+                <div class="flex h-full">
+                    {%- if show.createEventPages and nextEvent.title and nextEventPoster %}
+                    <div class="shrink-0 h-full p-3">
+                        <img src="/posters/{{ nextEventPoster }}" alt="{{ nextEvent | eventShortName(show) }}" class="h-full w-auto object-contain">
+                    </div>
+                    {%- endif %}
+                    <div class="p-6 flex-1">
+                        <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">{{ show.nextEventLabel if show.nextEventLabel else "Next Show" }}</p>
+                        {%- if show.createEventPages and nextEvent.title %}
+                        <p class="font-oswald text-2xl text-white mb-2">
+                            <a href="/show/{{ show.slug }}/{{ nextEventSlug }}/" class="hover:text-neutral-300">{{ nextEvent | eventShortName(show) }}</a>
+                        </p>
+                        {%- endif %}
+                        <p class="font-inter text-lg text-white mb-1">{{ nextEvent.date | longDate }}</p>
+                        <p class="font-inter text-neutral-300 mb-4">{{ nextEvent.time }}</p>
+                        {%- if show.ticketUrl %}
+                        <a href="{{ show.ticketUrl }}" target="_blank" rel="noopener"
+                           class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
+                            {{ show.buttonText if show.buttonText else "Buy Tickets" }}
+                        </a>
+                        {%- endif %}
+                    </div>
+                </div>
             </div>
             {%- endif %}
 
             {%- if show.description %}
             <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal">{{ show.description }}</p>
+            {%- endif %}
+
+            {%- if show.isIndex %}
+            {%- set upcomingEvents = events | upcomingShowEvents(show.slug, today, show.indexDays or 90) %}
+            {%- set skipFirst = show.createEventPages and nextEvent %}
+            {%- set hasMoreEvents = (skipFirst and upcomingEvents.length > 1) or (not skipFirst and upcomingEvents.length > 0) %}
+            {%- if hasMoreEvents %}
+            <div class="mt-8">
+                <h2 class="font-oswald text-2xl uppercase mb-4">Upcoming Shows</h2>
+                <div class="space-y-3">
+                    {%- for event in upcomingEvents %}
+                    {%- if not (skipFirst and loop.first) %}
+                    {%- set eventSlug = event | eventSlug %}
+                    <div class="flex items-center justify-between bg-neutral-800 p-4">
+                        <div>
+                            {%- if show.createEventPages and event.title %}
+                            <a href="/show/{{ show.slug }}/{{ eventSlug }}/" class="font-inter text-white hover:text-neutral-300">{{ event | eventShortName(show) }}</a>
+                            {%- else %}
+                            <p class="font-inter text-white">{{ event | eventShortName(show) }}</p>
+                            {%- endif %}
+                            <p class="font-inter text-sm text-neutral-400">{{ event.date | longDate }} @ {{ event.time }}</p>
+                        </div>
+                        {%- if show.ticketUrl %}
+                        <a href="{{ show.ticketUrl }}" target="_blank" rel="noopener" class="font-inter text-sm bg-white text-black px-4 py-2 hover:bg-neutral-200 transition-colors">
+                            Tickets
+                        </a>
+                        {%- endif %}
+                    </div>
+                    {%- endif %}
+                    {%- endfor %}
+                </div>
+            </div>
+            {%- endif %}
             {%- endif %}
         </div>
     </div>
