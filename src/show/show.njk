@@ -66,9 +66,10 @@ eleventyComputed:
             {%- if nextEvent %}
             {%- set nextEventPoster = nextEvent.poster or show.poster %}
             {%- set nextEventSlug = nextEvent | eventSlug %}
-            <div class="bg-neutral-900 border border-neutral-700 mb-8 overflow-hidden h-64">
+            {%- set showEventPoster = show.createEventPages and nextEvent.title and nextEventPoster %}
+            <div class="bg-neutral-900 border border-neutral-700 mb-8 overflow-hidden {{ 'h-64' if showEventPoster else '' }}">
                 <div class="flex h-full">
-                    {%- if show.createEventPages and nextEvent.title and nextEventPoster %}
+                    {%- if showEventPoster %}
                     <div class="shrink-0 h-full p-3">
                         <img src="/posters/{{ nextEventPoster }}" alt="{{ nextEvent | eventShortName(show) }}" class="h-full w-auto object-contain">
                     </div>

@@ -12,13 +12,27 @@ eleventyComputed:
 
 <div id="calendar-app" class="w-full">
     <div class="flex items-center justify-between mb-6">
-        <button id="prev-month" class="font-inter text-neutral-400 hover:text-white px-4 py-2 disabled:opacity-30 disabled:cursor-not-allowed">
-            <span id="prev-month-label">&larr;</span>
+        <button id="prev-month" class="font-inter text-neutral-400 hover:text-white px-4 py-2 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed">
+            <span id="prev-month-label"></span>
         </button>
         <h2 id="month-title" class="font-oswald text-2xl uppercase"></h2>
-        <button id="next-month" class="font-inter text-neutral-400 hover:text-white px-4 py-2 disabled:opacity-30 disabled:cursor-not-allowed">
+        <button id="next-month" class="font-inter text-neutral-400 hover:text-white px-4 py-2 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed">
             <span id="next-month-label">&rarr;</span>
         </button>
+    </div>
+
+    <!-- Day Modal -->
+    <div id="day-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/80" id="modal-backdrop"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-neutral-900 border border-neutral-700 w-full max-w-lg max-h-[80vh] overflow-hidden flex flex-col">
+                <div class="flex items-center justify-between p-4 border-b border-neutral-700">
+                    <h3 id="modal-title" class="font-oswald text-xl uppercase text-white"></h3>
+                    <button id="modal-close" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button>
+                </div>
+                <div id="modal-content" class="p-4 space-y-3 overflow-y-auto"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Desktop Calendar Grid -->
@@ -57,6 +71,80 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
                     "July", "August", "September", "October", "November", "December"];
 
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// Modal functionality
+const modal = document.getElementById('day-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalContent = document.getElementById('modal-content');
+const modalBackdrop = document.getElementById('modal-backdrop');
+const modalClose = document.getElementById('modal-close');
+
+function openDayModal(dateStr, dayEvents) {
+    const dateObj = new Date(dateStr + 'T12:00:00');
+    const dayName = dayNames[dateObj.getDay()];
+    const month = monthNames[dateObj.getMonth()];
+    const day = dateObj.getDate();
+
+    modalTitle.textContent = `${dayName}, ${month} ${day}`;
+
+    let html = '';
+    dayEvents.forEach(event => {
+        const show = showMap[event.show];
+        if (show) {
+            const poster = event.poster || show.poster;
+            let displayName = show.title;
+            let linkUrl = '/show/' + event.show + '/';
+
+            if (event.displayName) {
+                displayName = event.displayName;
+            } else if (event.title) {
+                if (show.eventTitleFormat === 'event-first') {
+                    displayName = event.title + ': ' + show.title;
+                } else {
+                    displayName = show.title + ': ' + event.title;
+                }
+            }
+
+            if (show.createEventPages && event.title) {
+                const eventSlug = event.title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-|-$/g, '');
+                linkUrl = '/show/' + event.show + '/' + eventSlug + '/';
+            }
+
+            html += `<a href="${linkUrl}" class="flex items-center gap-4 p-3 bg-neutral-800 hover:bg-neutral-700 transition-colors">`;
+            if (poster) {
+                html += `<div class="w-20 h-30 shrink-0 bg-neutral-900 overflow-hidden">`;
+                html += `<img src="/posters/${poster}" alt="${displayName}" class="w-full h-full object-cover">`;
+                html += `</div>`;
+            }
+            html += `<div class="flex-1 min-w-0">`;
+            html += `<p class="font-oswald text-2xl text-white truncate">${displayName}</p>`;
+            html += `<p class="font-inter text-lg text-neutral-400">${event.time}</p>`;
+            if (show.room) {
+                html += `<p class="font-inter text-base text-neutral-500">${show.room}</p>`;
+            }
+            html += `</div>`;
+            html += `</a>`;
+        }
+    });
+
+    modalContent.innerHTML = html;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+modalBackdrop.addEventListener('click', closeModal);
+modalClose.addEventListener('click', closeModal);
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
 
 function getMonthDiff(year, month) {
     return (year - currentYear) * 12 + (month - currentMonth);
@@ -99,7 +187,7 @@ function renderCalendar() {
     nextBtn.disabled = !nextHasEvents;
 
     // Update prev/next labels with month names
-    prevLabel.textContent = (diff > 0 && prevHasEvents) ? `← ${monthNames[pm]}` : '←';
+    prevLabel.textContent = (diff > 0 && prevHasEvents) ? `← ${monthNames[pm]}` : '';
     nextLabel.textContent = nextHasEvents ? `${monthNames[nm]} →` : '→';
 
     const firstDay = new Date(viewYear, viewMonth, 1);
@@ -112,7 +200,7 @@ function renderCalendar() {
 
     // Empty cells before first day
     for (let i = 0; i < startDayOfWeek; i++) {
-        html += '<div class="bg-neutral-900 h-[120px] p-2 min-w-0"></div>';
+        html += '<div class="bg-neutral-900 min-h-[160px] p-2 pb-3 min-w-0"></div>';
     }
 
     // Days of month
@@ -127,15 +215,17 @@ function renderCalendar() {
             ? 'bg-white/10 border-2 border-white'
             : 'bg-neutral-900';
 
-        html += `<div class="${cellClasses} h-[120px] p-2 overflow-hidden min-w-0 ${isPast ? 'opacity-50' : ''}">`;
+        const hasEvents = dayEvents.length > 0 && !isPast;
+        const clickableClass = hasEvents ? 'cursor-pointer hover:bg-neutral-800' : '';
+
+        html += `<div class="${cellClasses} ${clickableClass} min-h-[160px] p-2 pb-3 overflow-hidden min-w-0 ${isPast ? 'opacity-50' : ''}" ${hasEvents ? `data-date="${dateStr}"` : ''}>`;
         html += `<div class="font-inter text-sm ${isToday ? 'text-white font-bold' : 'text-neutral-300'} mb-2">${day}</div>`;
 
         dayEvents.forEach(event => {
             const show = showMap[event.show];
             if (show) {
-                // Determine display name and link
+                // Determine display name
                 let displayName = show.title;
-                let linkUrl = '/show/' + event.show + '/';
 
                 if (event.displayName) {
                     displayName = event.displayName;
@@ -147,17 +237,10 @@ function renderCalendar() {
                     }
                 }
 
-                if (show.createEventPages && event.title) {
-                    const eventSlug = event.title
-                        .toLowerCase()
-                        .replace(/[^a-z0-9]+/g, '-')
-                        .replace(/^-|-$/g, '');
-                    linkUrl = '/show/' + event.show + '/' + eventSlug + '/';
-                }
-
-                html += `<a href="${linkUrl}" class="block text-xs font-inter mb-1 p-1 bg-neutral-700 hover:bg-neutral-600 truncate">
-                    <span class="text-neutral-300">${event.time}</span> ${displayName}
-                </a>`;
+                html += `<div class="mb-3">
+                    <div class="text-xs font-inter text-neutral-400">${event.time}</div>
+                    <div class="text-sm font-inter text-white leading-tight">${displayName}</div>
+                </div>`;
             }
         });
 
@@ -167,7 +250,7 @@ function renderCalendar() {
     // Empty cells after last day
     const endDayOfWeek = lastDay.getDay();
     for (let i = endDayOfWeek + 1; i < 7; i++) {
-        html += '<div class="bg-neutral-900 h-[120px] p-2"></div>';
+        html += '<div class="bg-neutral-900 min-h-[160px] p-2 pb-3"></div>';
     }
 
     grid.innerHTML = html;
@@ -188,7 +271,7 @@ function renderCalendar() {
         // Skip past dates on mobile
         if (isPast) continue;
 
-        mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''}">`;
+        mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''} cursor-pointer hover:border-neutral-500" data-date="${dateStr}">`;
         mobileHtml += `<div class="bg-neutral-800 px-4 py-2 font-oswald uppercase ${isToday ? 'text-white' : 'text-neutral-300'}">`;
         mobileHtml += `${dayName}, ${monthNames[viewMonth]} ${day}`;
         mobileHtml += `</div>`;
@@ -197,9 +280,8 @@ function renderCalendar() {
         dayEvents.forEach(event => {
             const show = showMap[event.show];
             if (show) {
-                // Determine display name and link
+                // Determine display name
                 let displayName = show.title;
-                let linkUrl = '/show/' + event.show + '/';
 
                 if (event.displayName) {
                     displayName = event.displayName;
@@ -211,18 +293,10 @@ function renderCalendar() {
                     }
                 }
 
-                if (show.createEventPages && event.title) {
-                    const eventSlug = event.title
-                        .toLowerCase()
-                        .replace(/[^a-z0-9]+/g, '-')
-                        .replace(/^-|-$/g, '');
-                    linkUrl = '/show/' + event.show + '/' + eventSlug + '/';
-                }
-
-                mobileHtml += `<a href="${linkUrl}" class="flex items-center gap-3 p-2 bg-neutral-900 hover:bg-neutral-800">`;
+                mobileHtml += `<div class="flex items-center gap-3 p-2 bg-neutral-900">`;
                 mobileHtml += `<span class="font-inter text-sm text-neutral-400 w-20 shrink-0">${event.time}</span>`;
                 mobileHtml += `<span class="font-inter text-white">${displayName}</span>`;
-                mobileHtml += `</a>`;
+                mobileHtml += `</div>`;
             }
         });
 
@@ -234,6 +308,17 @@ function renderCalendar() {
     }
 
     mobileList.innerHTML = mobileHtml;
+
+    // Add click handlers for day cells
+    document.querySelectorAll('[data-date]').forEach(cell => {
+        cell.addEventListener('click', () => {
+            const dateStr = cell.dataset.date;
+            const dayEvents = getEventsForDate(dateStr);
+            if (dayEvents.length > 0) {
+                openDayModal(dateStr, dayEvents);
+            }
+        });
+    });
 }
 
 document.getElementById('prev-month').addEventListener('click', () => {

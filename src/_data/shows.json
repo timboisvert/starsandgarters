@@ -46,7 +46,8 @@
     "buttonText": null,
     "price": null,
     "room": "Rouge Room",
-    "description": ""
+    "description": "",
+    "isIndex": true
   },
   {
     "slug": "masterminds",
@@ -98,7 +99,8 @@
     "buttonText": "Sign Up",
     "price": "Free",
     "room": "Rouge Room",
-    "description": null
+    "description": null,
+    "nextEventLabel": "Next Workshop"
   },
   {
     "slug": "talk-yo-shxt",
