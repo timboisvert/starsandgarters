@@ -1,0 +1,43 @@
+---
+title: QR Code
+layout: base.njk
+eleventyExcludeFromCollections: true
+meta:
+  robots: noindex, nofollow
+---
+
+<div class="max-w-md mx-auto text-center py-12">
+    <h1 class="font-oswald text-3xl uppercase mb-8 text-neutral-100">Site QR Code</h1>
+
+    <div class="bg-white p-8 rounded-lg inline-block mb-8">
+        <img id="qr-image" alt="QR Code for Stars &amp; Garters Theater" width="300" height="300">
+    </div>
+
+    <p class="font-inter text-neutral-400 mb-6">https://www.starsandgarterstheater.com</p>
+
+    <a id="download-btn" download="stars-and-garters-qr.png" class="inline-block bg-amber-600 hover:bg-amber-500 text-white font-oswald uppercase px-6 py-3 rounded transition-colors cursor-pointer">
+        Download QR Code
+    </a>
+</div>
+
+<script type="module">
+import QRCode from 'https://cdn.jsdelivr.net/npm/qrcode@1.5.3/+esm';
+
+const siteUrl = 'https://www.starsandgarterstheater.com';
+const qrImage = document.getElementById('qr-image');
+const downloadBtn = document.getElementById('download-btn');
+
+QRCode.toDataURL(siteUrl, {
+    width: 300,
+    margin: 1,
+    color: {
+        dark: '#000000',
+        light: '#ffffff'
+    }
+}).then(dataUrl => {
+    qrImage.src = dataUrl;
+    downloadBtn.href = dataUrl;
+}).catch(err => {
+    console.error('QR Code generation failed:', err);
+});
+</script>
