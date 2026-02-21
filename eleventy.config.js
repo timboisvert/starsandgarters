@@ -309,7 +309,7 @@ export default function (eleventyConfig) {
                     title: formatEventTitle(event, show),
                     shortTitle: event.title,
                     poster: event.poster || show.poster,
-                    ticketUrl: show.ticketUrl,
+                    ticketUrl: event.ticketUrl || show.ticketUrl,
                     date: event.date,
                     time: event.time
                 });

@@ -83,8 +83,9 @@ eleventyComputed:
                         {%- endif %}
                         <p class="font-inter text-lg text-white mb-1">{{ nextEvent.date | longDate }}</p>
                         <p class="font-inter text-neutral-300 mb-4">{{ nextEvent.time }}</p>
-                        {%- if show.ticketUrl %}
-                        <a href="{{ show.ticketUrl }}" target="_blank" rel="noopener"
+                        {%- set eventTicketUrl = nextEvent.ticketUrl or show.ticketUrl %}
+                        {%- if eventTicketUrl %}
+                        <a href="{{ eventTicketUrl }}" target="_blank" rel="noopener"
                            class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
                             {{ show.buttonText if show.buttonText else "Buy Tickets" }}
                         </a>
@@ -118,8 +119,9 @@ eleventyComputed:
                             {%- endif %}
                             <p class="font-inter text-sm text-neutral-400">{{ event.date | longDate }} @ {{ event.time }}</p>
                         </div>
-                        {%- if show.ticketUrl %}
-                        <a href="{{ show.ticketUrl }}" target="_blank" rel="noopener" class="font-inter text-sm bg-white text-black px-4 py-2 hover:bg-neutral-200 transition-colors">
+                        {%- set eventTicketUrl = event.ticketUrl or show.ticketUrl %}
+                        {%- if eventTicketUrl %}
+                        <a href="{{ eventTicketUrl }}" target="_blank" rel="noopener" class="font-inter text-sm bg-white text-black px-4 py-2 hover:bg-neutral-200 transition-colors">
                             Tickets
                         </a>
                         {%- endif %}
