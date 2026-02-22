@@ -9,13 +9,10 @@ eleventyComputed:
     ogType: "website"
 ---
 
-{%- set nowDate = "" | currentDate -%}
-
 <div class="bg-neutral-900 border border-neutral-800 p-8 mb-12">
-    <h2 id="this-week-heading" class="font-oswald text-2xl uppercase mb-6 text-neutral-300">This Week's Shows</h2>
-    <div id="this-week-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    </div>
-    <p id="this-week-empty" class="font-inter text-neutral-400 hidden">No shows scheduled.</p>
+    <h2 class="font-oswald text-2xl uppercase mb-6 text-neutral-300">Upcoming Shows</h2>
+    <div id="upcoming-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    <p id="upcoming-empty" class="font-inter text-neutral-400 hidden">No upcoming shows scheduled.</p>
 </div>
 
 <script>
@@ -27,71 +24,34 @@ eleventyComputed:
     shows.forEach(show => showMap[show.slug] = show);
 
     const now = new Date();
-    const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-    const hour = now.getHours();
 
-    // Determine if we're in "weekend mode"
-    // Thursday 8 AM until Monday 6 AM = weekend mode
-    let isWeekendMode = false;
-    if (dayOfWeek === 4 && hour >= 8) { // Thursday 8 AM or later
-        isWeekendMode = true;
-    } else if (dayOfWeek === 5 || dayOfWeek === 6) { // Friday or Saturday
-        isWeekendMode = true;
-    } else if (dayOfWeek === 0) { // Sunday
-        isWeekendMode = true;
-    } else if (dayOfWeek === 1 && hour < 6) { // Monday before 6 AM
-        isWeekendMode = true;
-    }
-
-    // Set heading
-    const heading = document.getElementById('this-week-heading');
-    heading.textContent = isWeekendMode ? "This Weekend's Shows" : "This Week's Shows";
-
-    // Calculate the end of the period
-    let endDate;
-    if (isWeekendMode) {
-        // End at Monday 6 AM (end of Sunday effectively for shows)
-        const daysUntilMonday = (8 - dayOfWeek) % 7 || 7; // Days until next Monday
-        endDate = new Date(now);
-        endDate.setDate(endDate.getDate() + daysUntilMonday);
-        endDate.setHours(6, 0, 0, 0);
-    } else {
-        // End at next Monday 6 AM (end of the week)
-        const daysUntilMonday = (8 - dayOfWeek) % 7 || 7;
-        endDate = new Date(now);
-        endDate.setDate(endDate.getDate() + daysUntilMonday);
-        endDate.setHours(6, 0, 0, 0);
-    }
-
-    // Filter events: must be in the future and before endDate
-    const filteredEvents = events.filter(event => {
+    // Filter to future events and take the next 6
+    const upcomingEvents = events.filter(event => {
         const [year, month, day] = event.date.split('-').map(Number);
         const [timePart, ampm] = event.time.split(' ');
         let [hours, minutes] = timePart.split(':').map(Number);
         if (ampm === 'PM' && hours !== 12) hours += 12;
         if (ampm === 'AM' && hours === 12) hours = 0;
-
         const eventDateTime = new Date(year, month - 1, day, hours, minutes);
+        return eventDateTime > now;
+    }).slice(0, 6);
 
-        return eventDateTime > now && eventDateTime < endDate;
-    });
+    const grid = document.getElementById('upcoming-grid');
+    const emptyMsg = document.getElementById('upcoming-empty');
 
-    const grid = document.getElementById('this-week-grid');
-    const emptyMsg = document.getElementById('this-week-empty');
-
-    if (filteredEvents.length === 0) {
+    if (upcomingEvents.length === 0) {
         grid.classList.add('hidden');
         emptyMsg.classList.remove('hidden');
     } else {
-        filteredEvents.forEach(event => {
+        upcomingEvents.forEach(event => {
             const show = showMap[event.show];
             if (!show) return;
 
             const dayNum = event.date.split('-')[2];
             const eventDate = new Date(event.date + 'T12:00:00');
-            const dayName = eventDate.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase().slice(0, 3);
+            const dayName = eventDate.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase();
+            const monthName = eventDate.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
 
-            // Determine display name and link
             let displayName = show.title;
             let linkUrl = '/show/' + show.slug + '/';
 
@@ -105,7 +65,6 @@ eleventyComputed:
                 }
             }
 
-            // Link to event page if show has createEventPages and event has title
             if (show.createEventPages && event.title) {
                 const eventSlug = event.title
                     .toLowerCase()
@@ -116,13 +75,14 @@ eleventyComputed:
 
             const link = document.createElement('a');
             link.href = linkUrl;
-            link.className = 'flex items-center gap-4 p-4 bg-neutral-800 hover:bg-neutral-700 transition-colors';
+            link.className = 'flex items-stretch bg-neutral-800 hover:bg-neutral-700 transition-colors';
             link.innerHTML = `
-                <div class="text-center shrink-0 w-16">
+                <div class="text-center shrink-0 w-20 bg-neutral-700 flex flex-col justify-center py-3">
+                    <p class="font-inter text-xs text-neutral-400 uppercase">${monthName}</p>
                     <p class="font-inter text-2xl font-bold text-white">${dayNum}</p>
                     <p class="font-inter text-xs text-neutral-400 uppercase">${dayName}</p>
                 </div>
-                <div class="flex-1 min-w-0">
+                <div class="flex-1 min-w-0 p-4 flex flex-col justify-center">
                     <p class="font-inter text-white truncate">${displayName}</p>
                     <p class="font-inter text-sm text-neutral-400">${event.time}</p>
                 </div>
@@ -135,22 +95,164 @@ eleventyComputed:
 
 <h2 class="font-oswald text-3xl uppercase mb-8">Now Showing</h2>
 
-{%- set sortedItems = shows | sortShowsWithEvents(events, nowDate) -%}
-
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 mb-8">
-    {%- for item in sortedItems %}
-    <a href="{{ item.link }}" class="block group">
-        <div class="aspect-[11/17] bg-neutral-900 mb-3 overflow-hidden">
-            {%- if item.poster %}
-            <img src="/posters/{{ item.poster }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
-            {%- endif %}
-        </div>
-        <h2 class="font-oswald text-lg uppercase">{{ item.title }}</h2>
-        {%- if item.type == 'event' %}
-        <p class="font-inter text-sm text-neutral-400">{{ item.schedule | longDate }}</p>
-        {%- else %}
-        <p class="font-inter text-sm text-neutral-400">{{ item.schedule }}</p>
-        {%- endif %}
-    </a>
-    {%- endfor %}
+<div id="now-showing-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 mb-8">
 </div>
+
+<script>
+(function() {
+    const events = {{ events | dump | safe }};
+    const shows = {{ shows | dump | safe }};
+
+    const showMap = {};
+    shows.forEach(show => showMap[show.slug] = show);
+
+    const todayTs = Date.now();
+    const todayStr = new Date().toISOString().split('T')[0];
+
+    // Format event title helper
+    function formatEventTitle(event, show) {
+        if (event.displayName) return event.displayName;
+        if (!event.title) return show.title;
+        if (show.eventTitleFormat === 'event-first') {
+            return event.title + ': ' + show.title;
+        }
+        return show.title + ': ' + event.title;
+    }
+
+    // Format long date helper
+    function formatLongDate(dateStr) {
+        const date = new Date(dateStr + 'T12:00:00');
+        return date.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    }
+
+    // Build map of show slug -> next upcoming event
+    const nextEventMap = {};
+    const eventPagesMap = {};
+
+    for (const event of events) {
+        const [timePart = "00:00", ampm] = (event.time || "").split(" ");
+        let [hours = 0, minutes = 0] = timePart.split(":").map(n => parseInt(n, 10) || 0);
+        if (ampm === "PM" && hours !== 12) hours += 12;
+        if (ampm === "AM" && hours === 12) hours = 0;
+
+        const [y, m, d] = event.date.split("-").map(Number);
+        const eventTs = new Date(y, m - 1, d, hours, minutes, 0).getTime();
+
+        if (eventTs >= todayTs) {
+            if (!nextEventMap[event.show]) {
+                nextEventMap[event.show] = { date: event.date, time: event.time, ts: eventTs, event };
+            }
+            if (event.poster) {
+                if (!eventPagesMap[event.show]) {
+                    eventPagesMap[event.show] = [];
+                }
+                eventPagesMap[event.show].push({ event, ts: eventTs });
+            }
+        }
+    }
+
+    const results = [];
+
+    for (const show of shows) {
+        if (show.hideFromHomepage) continue;
+
+        const next = nextEventMap[show.slug] || null;
+        const hasUpcoming = !!next;
+
+        if (!hasUpcoming) {
+            results.push({
+                type: 'show',
+                show,
+                ts: Infinity,
+                title: show.title,
+                poster: show.poster,
+                slug: show.slug,
+                schedule: show.schedule,
+                link: '/show/' + show.slug + '/',
+                pinPosition: show.pinPosition
+            });
+        } else if (show.createEventPages) {
+            results.push({
+                type: 'show',
+                show,
+                ts: next.ts,
+                title: show.title,
+                poster: show.poster,
+                slug: show.slug,
+                schedule: show.schedule,
+                link: '/show/' + show.slug + '/',
+                pinPosition: show.pinPosition
+            });
+
+            const posterEvents = eventPagesMap[show.slug] || [];
+            for (const { event, ts } of posterEvents) {
+                const eventSlug = event.title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-|-$/g, '');
+                results.push({
+                    type: 'event',
+                    show,
+                    event: event,
+                    ts: ts,
+                    title: formatEventTitle(event, show),
+                    shortTitle: event.title,
+                    poster: event.poster,
+                    slug: eventSlug,
+                    schedule: event.date,
+                    link: '/show/' + show.slug + '/' + eventSlug + '/',
+                    pinPosition: show.pinPosition
+                });
+            }
+        } else {
+            results.push({
+                type: 'show',
+                show,
+                ts: next.ts,
+                title: show.title,
+                poster: show.poster,
+                slug: show.slug,
+                schedule: show.schedule,
+                link: '/show/' + show.slug + '/',
+                pinPosition: show.pinPosition
+            });
+        }
+    }
+
+    results.sort((a, b) => {
+        const aPin = a.pinPosition || Infinity;
+        const bPin = b.pinPosition || Infinity;
+        if (aPin !== Infinity || bPin !== Infinity) {
+            if (aPin !== bPin) return aPin - bPin;
+        }
+        if (a.ts !== b.ts) return a.ts - b.ts;
+        return a.title.localeCompare(b.title);
+    });
+
+    const grid = document.getElementById('now-showing-grid');
+    for (const item of results) {
+        const link = document.createElement('a');
+        link.href = item.link;
+        link.className = 'block group';
+
+        let scheduleText = item.schedule;
+        if (item.type === 'event') {
+            scheduleText = formatLongDate(item.schedule);
+        }
+
+        link.innerHTML = `
+            <div class="aspect-[11/17] bg-neutral-900 mb-3 overflow-hidden">
+                ${item.poster ? `<img src="/posters/${item.poster}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
+            </div>
+            <h2 class="font-oswald text-lg uppercase">${item.title}</h2>
+            <p class="font-inter text-sm text-neutral-400">${scheduleText}</p>
+        `;
+        grid.appendChild(link);
+    }
+})();
+</script>

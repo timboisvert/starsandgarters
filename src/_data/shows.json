@@ -11,17 +11,15 @@
     "description": "A burlesque and variety showcase featuring Chicago's rising talent. Time: 8pm."
   },
   {
-    "slug": "starlets-burlesque-for-lovers",
-    "title": "Starlets Presents: Burlesque for Lovers",
-    "schedule": "Feb 14 @ 10pm",
+    "slug": "starlets-presents",
+    "title": "Starlets Presents",
+    "schedule": "Mar 14 @ 8pm",
     "poster": "burlesqueforlovers.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2036552",
     "buttonText": "Buy Tickets",
     "price": null,
     "room": "Main Stage",
-    "nextEventLabel": "One Night Only!",
-    "hideFromHomepage": true,
-    "description": "A Valentine's Day burlesque show for those who are in love, those who are in lust, and those who love themselves. Lose the old \"I guess we'll, uh...go somewhere nice for dinner and then...uh, go home?\" routine — come make lifelong memories with Chicago’s burlesque elite. Whether you're swooning over a first date, spicing it up with your soulmate, celebrating with your polycule, or tearing it up with your Galentine’s buds, we’ve got a seat (and a cocktail) waiting for you at Stars & Garters this February 14th. Featuring performances by Ronnie Rouge, Manny Schevitz, Gata Habbie, Katie Rae Horn, and Dizzie Daisie. Doors at 9:30pm, show at 10pm. 21+ event."
+    "description": "Chicago's premiere burlesque showcase featuring performances by the city's finest performers."
   },
   {
     "slug": "laugh-along-live",

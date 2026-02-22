@@ -14,39 +14,40 @@ eleventyComputed:
     ogType: "article"
 ---
 
-{%- set nextEvent = null -%}
-{%- set today = "" | currentDate -%}
+{%- set showEvents = [] -%}
 {%- for event in events -%}
-    {%- if event.show == show.slug and event.date >= today and not nextEvent -%}
-        {%- set nextEvent = event -%}
+    {%- if event.show == show.slug -%}
+        {%- set showEvents = (showEvents.push({
+            date: event.date,
+            time: event.time,
+            title: event.title,
+            poster: event.poster or show.poster,
+            ticketUrl: event.ticketUrl or show.ticketUrl,
+            slug: event | eventSlug,
+            shortName: event | eventShortName(show)
+        }), showEvents) -%}
     {%- endif -%}
 {%- endfor -%}
 
-{%- if nextEvent -%}
-<script type="application/ld+json">
+<script id="show-data" type="application/json">
 {{ {
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": show.title,
-  "startDate": nextEvent.date,
-  "url": site.url ~ '/show/' ~ show.slug ~ '/',
-  "image": ((show.poster and (site.url ~ '/posters/' ~ show.poster)) or site.logo),
-  "description": show.description,
-  "location": {
-    "@type": "Place",
-    "name": site.name,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": site.address.streetAddress,
-      "addressLocality": site.address.addressLocality,
-      "addressRegion": site.address.addressRegion,
-      "postalCode": site.address.postalCode,
-      "addressCountry": site.address.addressCountry
+    slug: show.slug,
+    title: show.title,
+    poster: show.poster,
+    ticketUrl: show.ticketUrl,
+    createEventPages: show.createEventPages,
+    nextEventLabel: show.nextEventLabel or "Next Show",
+    buttonText: show.buttonText or "Buy Tickets",
+    events: showEvents,
+    site: {
+        url: site.url,
+        name: site.name,
+        logo: site.logo,
+        address: site.address
     }
-  }
 } | dump | safe }}
 </script>
-{%- endif -%}
+<script id="structured-data" type="application/ld+json"></script>
 
 <div>
     <div class="flex flex-col md:flex-row gap-12">
@@ -63,75 +64,140 @@ eleventyComputed:
 
             <p class="font-inter text-2xl text-neutral-300 mb-8">{{ show.schedule }}</p>
 
-            {%- if nextEvent %}
-            {%- set nextEventPoster = nextEvent.poster or show.poster %}
-            {%- set nextEventSlug = nextEvent | eventSlug %}
-            {%- set showEventPoster = show.createEventPages and nextEvent.title and nextEventPoster %}
-            <div class="bg-neutral-900 border border-neutral-700 mb-8 overflow-hidden {{ 'h-64' if showEventPoster else '' }}">
-                <div class="flex h-full">
-                    {%- if showEventPoster %}
-                    <div class="shrink-0 h-full p-3">
-                        <img src="/posters/{{ nextEventPoster }}" alt="{{ nextEvent | eventShortName(show) }}" class="h-full w-auto object-contain">
-                    </div>
-                    {%- endif %}
-                    <div class="p-6 flex-1">
-                        <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">{{ show.nextEventLabel if show.nextEventLabel else "Next Show" }}</p>
-                        {%- if show.createEventPages and nextEvent.title %}
-                        <p class="font-oswald text-2xl text-white mb-2">
-                            <a href="/show/{{ show.slug }}/{{ nextEventSlug }}/" class="hover:text-neutral-300">{{ nextEvent | eventShortName(show) }}</a>
-                        </p>
-                        {%- endif %}
-                        <p class="font-inter text-lg text-white mb-1">{{ nextEvent.date | longDate }}</p>
-                        <p class="font-inter text-neutral-300 mb-4">{{ nextEvent.time }}</p>
-                        {%- set eventTicketUrl = nextEvent.ticketUrl or show.ticketUrl %}
-                        {%- if eventTicketUrl %}
-                        <a href="{{ eventTicketUrl }}" target="_blank" rel="noopener"
-                           class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
-                            {{ show.buttonText if show.buttonText else "Buy Tickets" }}
-                        </a>
-                        {%- endif %}
-                    </div>
-                </div>
-            </div>
-            {%- endif %}
+            <div id="next-event-card" class="hidden"></div>
 
             {%- if show.description %}
             <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal">{{ show.description }}</p>
             {%- endif %}
 
             {%- if show.isIndex %}
-            {%- set upcomingEvents = events | upcomingShowEvents(show.slug, today, show.indexDays or 90) %}
-            {%- set skipFirst = show.createEventPages and nextEvent %}
-            {%- set hasMoreEvents = (skipFirst and upcomingEvents.length > 1) or (not skipFirst and upcomingEvents.length > 0) %}
-            {%- if hasMoreEvents %}
-            <div class="mt-8">
+            <div id="upcoming-events-section" class="mt-8 hidden">
                 <h2 class="font-oswald text-2xl uppercase mb-4">Upcoming Shows</h2>
-                <div class="space-y-3">
-                    {%- for event in upcomingEvents %}
-                    {%- if not (skipFirst and loop.first) %}
-                    {%- set eventSlug = event | eventSlug %}
-                    <div class="flex items-center justify-between bg-neutral-800 p-4">
-                        <div>
-                            {%- if show.createEventPages and event.title %}
-                            <a href="/show/{{ show.slug }}/{{ eventSlug }}/" class="font-inter text-white hover:text-neutral-300">{{ event | eventShortName(show) }}</a>
-                            {%- else %}
-                            <p class="font-inter text-white">{{ event | eventShortName(show) }}</p>
-                            {%- endif %}
-                            <p class="font-inter text-sm text-neutral-400">{{ event.date | longDate }} @ {{ event.time }}</p>
-                        </div>
-                        {%- set eventTicketUrl = event.ticketUrl or show.ticketUrl %}
-                        {%- if eventTicketUrl %}
-                        <a href="{{ eventTicketUrl }}" target="_blank" rel="noopener" class="font-inter text-sm bg-white text-black px-4 py-2 hover:bg-neutral-200 transition-colors">
-                            Tickets
-                        </a>
-                        {%- endif %}
-                    </div>
-                    {%- endif %}
-                    {%- endfor %}
-                </div>
+                <div id="upcoming-events-list" class="space-y-3"></div>
             </div>
-            {%- endif %}
             {%- endif %}
         </div>
     </div>
 </div>
+
+<script>
+(function() {
+    const dataEl = document.getElementById('show-data');
+    if (!dataEl) return;
+    
+    const data = JSON.parse(dataEl.textContent);
+    const today = new Date().toISOString().split('T')[0];
+    
+    // Find next upcoming event
+    const upcomingEvents = data.events.filter(e => e.date >= today);
+    const nextEvent = upcomingEvents[0];
+    
+    // Format date like "Saturday, February 28, 2026"
+    function formatLongDate(dateStr) {
+        const date = new Date(dateStr + 'T12:00:00');
+        return date.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    }
+    
+    // Render the next event card
+    if (nextEvent) {
+        const card = document.getElementById('next-event-card');
+        const showEventPoster = data.createEventPages && nextEvent.title && nextEvent.poster;
+        
+        let html = `<div class="bg-neutral-900 border border-neutral-700 mb-8 overflow-hidden ${showEventPoster ? 'h-64' : ''}">
+            <div class="flex h-full">`;
+        
+        if (showEventPoster) {
+            html += `<div class="shrink-0 h-full p-3">
+                <img src="/posters/${nextEvent.poster}" alt="${nextEvent.shortName}" class="h-full w-auto object-contain">
+            </div>`;
+        }
+        
+        html += `<div class="p-6 flex-1">
+            <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">${data.nextEventLabel}</p>`;
+        
+        if (data.createEventPages && nextEvent.title) {
+            html += `<p class="font-oswald text-2xl text-white mb-2">
+                <a href="/show/${data.slug}/${nextEvent.slug}/" class="hover:text-neutral-300">${nextEvent.shortName}</a>
+            </p>`;
+        }
+        
+        html += `<p class="font-inter text-lg text-white mb-1">${formatLongDate(nextEvent.date)}</p>
+            <p class="font-inter text-neutral-300 mb-4">${nextEvent.time}</p>`;
+        
+        if (nextEvent.ticketUrl) {
+            html += `<a href="${nextEvent.ticketUrl}" target="_blank" rel="noopener"
+                class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
+                ${data.buttonText}
+            </a>`;
+        }
+        
+        html += `</div></div></div>`;
+        
+        card.innerHTML = html;
+        card.classList.remove('hidden');
+        
+        // Update structured data
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": data.title,
+            "startDate": nextEvent.date,
+            "url": data.site.url + '/show/' + data.slug + '/',
+            "image": (data.poster && (data.site.url + '/posters/' + data.poster)) || data.site.logo,
+            "location": {
+                "@type": "Place",
+                "name": data.site.name,
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": data.site.address.streetAddress,
+                    "addressLocality": data.site.address.addressLocality,
+                    "addressRegion": data.site.address.addressRegion,
+                    "postalCode": data.site.address.postalCode,
+                    "addressCountry": data.site.address.addressCountry
+                }
+            }
+        };
+        document.getElementById('structured-data').textContent = JSON.stringify(structuredData);
+    }
+    
+    // Render upcoming events list (for isIndex shows)
+    const upcomingSection = document.getElementById('upcoming-events-section');
+    const upcomingList = document.getElementById('upcoming-events-list');
+    if (upcomingSection && upcomingList) {
+        const skipFirst = data.createEventPages && nextEvent;
+        const eventsToShow = skipFirst ? upcomingEvents.slice(1) : upcomingEvents;
+        
+        if (eventsToShow.length > 0) {
+            let html = '';
+            for (const event of eventsToShow) {
+                html += `<div class="flex items-center justify-between bg-neutral-800 p-4">
+                    <div>`;
+                
+                if (data.createEventPages && event.title) {
+                    html += `<a href="/show/${data.slug}/${event.slug}/" class="font-inter text-white hover:text-neutral-300">${event.shortName}</a>`;
+                } else {
+                    html += `<p class="font-inter text-white">${event.shortName}</p>`;
+                }
+                
+                html += `<p class="font-inter text-sm text-neutral-400">${formatLongDate(event.date)} @ ${event.time}</p>
+                    </div>`;
+                
+                if (event.ticketUrl) {
+                    html += `<a href="${event.ticketUrl}" target="_blank" rel="noopener" class="font-inter text-sm bg-white text-black px-4 py-2 hover:bg-neutral-200 transition-colors">
+                        Tickets
+                    </a>`;
+                }
+                
+                html += `</div>`;
+            }
+            upcomingList.innerHTML = html;
+            upcomingSection.classList.remove('hidden');
+        }
+    }
+})();
+</script>
