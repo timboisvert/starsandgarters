@@ -84,14 +84,14 @@ eleventyComputed:
 (function() {
     const dataEl = document.getElementById('show-data');
     if (!dataEl) return;
-    
+
     const data = JSON.parse(dataEl.textContent);
     const today = new Date().toISOString().split('T')[0];
-    
+
     // Find next upcoming event
     const upcomingEvents = data.events.filter(e => e.date >= today);
     const nextEvent = upcomingEvents[0];
-    
+
     // Format date like "Saturday, February 28, 2026"
     function formatLongDate(dateStr) {
         const date = new Date(dateStr + 'T12:00:00');
@@ -102,45 +102,45 @@ eleventyComputed:
             day: 'numeric'
         });
     }
-    
+
     // Render the next event card
     if (nextEvent) {
         const card = document.getElementById('next-event-card');
         const showEventPoster = data.createEventPages && nextEvent.title && nextEvent.poster;
-        
+
         let html = `<div class="bg-neutral-900 border border-neutral-700 mb-8 overflow-hidden ${showEventPoster ? 'h-64' : ''}">
             <div class="flex h-full">`;
-        
+
         if (showEventPoster) {
             html += `<div class="shrink-0 h-full p-3">
                 <img src="/posters/${nextEvent.poster}" alt="${nextEvent.shortName}" class="h-full w-auto object-contain">
             </div>`;
         }
-        
+
         html += `<div class="p-6 flex-1">
             <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">${data.nextEventLabel}</p>`;
-        
+
         if (data.createEventPages && nextEvent.title) {
             html += `<p class="font-oswald text-2xl text-white mb-2">
                 <a href="/show/${data.slug}/${nextEvent.slug}/" class="hover:text-neutral-300">${nextEvent.shortName}</a>
             </p>`;
         }
-        
+
         html += `<p class="font-inter text-lg text-white mb-1">${formatLongDate(nextEvent.date)}</p>
             <p class="font-inter text-neutral-300 mb-4">${nextEvent.time}</p>`;
-        
+
         if (nextEvent.ticketUrl) {
             html += `<a href="${nextEvent.ticketUrl}" target="_blank" rel="noopener"
                 class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
                 ${data.buttonText}
             </a>`;
         }
-        
+
         html += `</div></div></div>`;
-        
+
         card.innerHTML = html;
         card.classList.remove('hidden');
-        
+
         // Update structured data
         const structuredData = {
             "@context": "https://schema.org",
@@ -164,35 +164,35 @@ eleventyComputed:
         };
         document.getElementById('structured-data').textContent = JSON.stringify(structuredData);
     }
-    
+
     // Render upcoming events list (for isIndex shows)
     const upcomingSection = document.getElementById('upcoming-events-section');
     const upcomingList = document.getElementById('upcoming-events-list');
     if (upcomingSection && upcomingList) {
-        const skipFirst = data.createEventPages && nextEvent;
-        const eventsToShow = skipFirst ? upcomingEvents.slice(1) : upcomingEvents;
-        
+        // Always skip first event since it's shown in the Next Show card above
+        const eventsToShow = nextEvent ? upcomingEvents.slice(1) : upcomingEvents;
+
         if (eventsToShow.length > 0) {
             let html = '';
             for (const event of eventsToShow) {
                 html += `<div class="flex items-center justify-between bg-neutral-800 p-4">
                     <div>`;
-                
+
                 if (data.createEventPages && event.title) {
                     html += `<a href="/show/${data.slug}/${event.slug}/" class="font-inter text-white hover:text-neutral-300">${event.shortName}</a>`;
                 } else {
                     html += `<p class="font-inter text-white">${event.shortName}</p>`;
                 }
-                
+
                 html += `<p class="font-inter text-sm text-neutral-400">${formatLongDate(event.date)} @ ${event.time}</p>
                     </div>`;
-                
+
                 if (event.ticketUrl) {
                     html += `<a href="${event.ticketUrl}" target="_blank" rel="noopener" class="font-inter text-sm bg-white text-black px-4 py-2 hover:bg-neutral-200 transition-colors">
                         Tickets
                     </a>`;
                 }
-                
+
                 html += `</div>`;
             }
             upcomingList.innerHTML = html;

@@ -1,5 +1,17 @@
 [
   {
+    "slug": "stargazers-adventure-club",
+    "title": "Stargazers Adventure Club",
+    "schedule": "Saturdays at 10 AM",
+    "poster": "stargazersadventureclub.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2083963",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": "Main Stage",
+    "description": "For children aged 4-8 and their families.",
+    "isIndex": true
+  },
+  {
     "slug": "rising-stars",
     "title": "Rising Stars Burlesque Revue",
     "schedule": "February 20; March 6, 13, 20, 27 @ 8pm",
