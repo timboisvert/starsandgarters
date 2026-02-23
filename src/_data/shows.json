@@ -122,5 +122,16 @@
     "price": "$12",
     "room": "Rouge Room",
     "description": "Improv"
+  },
+  {
+    "slug": "a-witty-ditty-committee",
+    "title": "A Witty Ditty Committee",
+    "schedule": "Improvised Musical Comedy",
+    "poster": "awittydittycommittee.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080876",
+    "buttonText": null,
+    "price": null,
+    "room": "Rouge Room",
+    "description": "An improvised musical comedy experience starring B-Sticky and Ross Childs."
   }
 ]

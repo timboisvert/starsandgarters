@@ -53,7 +53,8 @@
     "show": "laugh-along-live",
     "title": "Pride & Prejudice",
     "poster": "laughalonglive-prideandprejudice.png",
-    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2081715"
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2081715",
+    "description": "Come watch Pride and Prejudice with Chicago's funniest comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink! Come feel the romance of Kiera Knightley's anachronistic bangs!\n\nDoors 8:30pm. Show at 9pm\n\n21+ show\n\nFeaturing: fae lily, Manny Miami, and Andie Wonnacott\n\nLove Pride and Prejudice? This show is for you! We are watching it!\n\nHate Pride and Prejudice? This show is for you! We will be poking fun at it!\n\nIndifferent about Pride and Prejudice? This show is for you! We are consuming alcohol! (or your non-alcoholic beverage of choice!)\n\nHate having fun? Go to bed! Respectfully, you're not invited.\n\nLaugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. A panel of comedians makes jokes throughout a film (à la Mystery Science Theater, but more about havinng fun than making fun) and run activities for the audience. Follow us @laughalonglive to know which movies we're doing next (after you've bought your tickets for this one, of course)."
   },
   {
     "date": "2026-03-02",
@@ -89,7 +90,9 @@
     "date": "2026-03-07",
     "time": "9:00 PM",
     "show": "laugh-along-live",
-    "title": "Pokémon: The First Movie"
+    "title": "Pokémon: The First Movie",
+    "poster": "laughalonglive-pokemon.jpg",
+    "description": "Come watch Pokémon: The First Movie with Chicago's funniest comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink! Come catch 'em all! Come try not to cry during that one part!\n\nDoors 8:30pm. Show at 9pm\n\n21+ show\n\nFeaturing: Bobby Cohoat, Seth Lowery, and Andie Wonnacott\n\nLaugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. A panel of comedians makes jokes throughout a film (à la Mystery Science Theater, but more about having fun than making fun) and run activities for the audience. Follow us @laughalonglive to know which movies we're doing next (after you've bought your tickets for this one, of course)."
   },
   {
     "date": "2026-03-09",
@@ -115,6 +118,11 @@
     "date": "2026-03-14",
     "time": "8:00 PM",
     "show": "starlets-presents"
+  },
+  {
+    "date": "2026-03-14",
+    "time": "9:00 PM",
+    "show": "a-witty-ditty-committee"
   },
   {
     "date": "2026-03-16",

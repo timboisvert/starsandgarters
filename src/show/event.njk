@@ -8,7 +8,7 @@ permalink: "/show/{{ eventPage.show.slug }}/{{ eventPage.slug }}/"
 eleventyComputed:
   title: "{{ eventPage.title }}"
   meta:
-    description: "{{ eventPage.show.description | default(eventPage.title) }}"
+    description: "{{ eventPage.description | default(eventPage.title) }}"
     image: "{{ (eventPage.poster and (site.url ~ '/posters/' ~ eventPage.poster)) or site.logo }}"
     url: "{{ site.url ~ '/show/' ~ eventPage.show.slug ~ '/' ~ eventPage.slug ~ '/' }}"
     ogType: "article"
@@ -22,7 +22,7 @@ eleventyComputed:
   "startDate": eventPage.date,
   "url": site.url ~ '/show/' ~ eventPage.show.slug ~ '/' ~ eventPage.slug ~ '/',
   "image": ((eventPage.poster and (site.url ~ '/posters/' ~ eventPage.poster)) or site.logo),
-  "description": eventPage.show.description,
+  "description": eventPage.description,
   "location": {
     "@type": "Place",
     "name": site.name,
@@ -65,8 +65,8 @@ eleventyComputed:
                 {%- endif %}
             </div>
 
-            {%- if eventPage.show.description %}
-            <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal">{{ eventPage.show.description }}</p>
+            {%- if eventPage.description %}
+            <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal whitespace-pre-line">{{ eventPage.description }}</p>
             {%- endif %}
 
             <p class="font-inter text-neutral-500">

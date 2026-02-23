@@ -231,6 +231,10 @@ eleventyComputed:
             if (aPin !== bPin) return aPin - bPin;
         }
         if (a.ts !== b.ts) return a.ts - b.ts;
+        // Events before shows (so show appears last)
+        if (a.type !== b.type) {
+            return a.type === 'event' ? -1 : 1;
+        }
         return a.title.localeCompare(b.title);
     });
 

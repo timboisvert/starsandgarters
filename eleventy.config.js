@@ -252,7 +252,7 @@ export default function (eleventyConfig) {
             }
         }
 
-        // Sort: pinned first, then by timestamp, then alphabetically
+        // Sort: pinned first, then by timestamp, then type (events before shows), then alphabetically
         results.sort((a, b) => {
             // Pinned items first
             const aPin = a.pinPosition || Infinity;
@@ -263,6 +263,11 @@ export default function (eleventyConfig) {
 
             // Then by timestamp
             if (a.ts !== b.ts) return a.ts - b.ts;
+
+            // Then by type: events before shows (so show appears last)
+            if (a.type !== b.type) {
+                return a.type === 'event' ? -1 : 1;
+            }
 
             // Then alphabetically
             return a.title.localeCompare(b.title);
@@ -311,7 +316,8 @@ export default function (eleventyConfig) {
                     poster: event.poster || show.poster,
                     ticketUrl: event.ticketUrl || show.ticketUrl,
                     date: event.date,
-                    time: event.time
+                    time: event.time,
+                    description: event.description || show.description
                 });
             }
         }
