@@ -133,5 +133,16 @@
     "price": null,
     "room": "Rouge Room",
     "description": "An improvised musical comedy experience starring B-Sticky and Ross Childs."
+  },
+  {
+    "slug": "date-night-live",
+    "title": "Date Night: Live",
+    "schedule": "May 7 @ 7 PM",
+    "poster": "datenightlive.jpg",
+    "ticketUrl": "https://www.eventbrite.com/e/date-night-live-tickets-1983424144007",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": "First dates are awkward enough… let's put them on stage!\n\nOn this evening, at the romantic Stars & Garters, two singles will meet for the first time. Watch them fall in love… unless they don't! 3 rounds, 2 singles, 1 epic first date."
   }
 ]
