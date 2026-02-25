@@ -117,11 +117,11 @@
     "title": "The Re:Up - A Monthly Comedy Show",
     "schedule": "Second Fridays @ 7:30 PM",
     "poster": "the-re-up.png",
-    "ticketUrl": null,
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2082350",
     "buttonText": null,
-    "price": "$12",
+    "price": null,
     "room": "Rouge Room",
-    "description": "Improv"
+    "description": "A monthly comedy show featuring Sam Rossi, Bronwyn Galloway, Xavier Smith, Mark Weitekamper, and Ryan Kruger"
   },
   {
     "slug": "a-witty-ditty-committee",
