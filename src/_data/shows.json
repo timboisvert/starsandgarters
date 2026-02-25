@@ -20,7 +20,8 @@
     "buttonText": null,
     "price": null,
     "room": "Main Stage",
-    "description": "A burlesque and variety showcase featuring Chicago's rising talent. Time: 8pm."
+    "description": "Come see Chicago's hottest up-and-coming burlesque stars! Experience the next generation of spectacle at Rising Stars, an alluring burlesque and variety revue that honors the Windy City's storied legacy of live entertainment. This high-energy showcase brings together the city's most captivating emerging burlesque dancers and variety entertainment for a night full of fun, whimsy, humor, and seduction. Whether you're a long-time fan of burlesque or a curious newcomer, we invite you to come enjoy Stars & Garters' intimate venue, world-class cocktails, and unforgettable performance artists.\n\nEvery Rising Stars show features a unique roster of talent, so there's reason to come back again and again. (Follow @starsandgarterstheater on instagram to see when your favorite performers are scheduled for a show.)",
+    "isIndex": true
   },
   {
     "slug": "starlets-presents",
@@ -51,7 +52,7 @@
     "slug": "freakshow-and-tell",
     "title": "FreakShow & Tell",
     "schedule": "Saturdays @ 7 PM",
-    "poster": "freakshowandtell.jpg",
+    "poster": "freakshowandtell.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2076501",
     "buttonText": null,
     "price": null,
@@ -63,7 +64,7 @@
     "slug": "masterminds",
     "title": "M.A.S.T.E.R.M.I.N.D.S.",
     "schedule": "Third Fridays @ 9 PM",
-    "poster": "masterminds.jpg",
+    "poster": "masterminds.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2082094",
     "price": "$20",
     "room": "Rouge Room",

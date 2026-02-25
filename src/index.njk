@@ -9,9 +9,9 @@ eleventyComputed:
     ogType: "website"
 ---
 
-<div class="bg-neutral-900 border border-neutral-800 p-8 mb-12">
+<div class="bg-neutral-900 border border-neutral-800 p-4 md:p-8 mb-12">
     <h2 class="font-oswald text-2xl uppercase mb-6 text-neutral-300">Upcoming Shows</h2>
-    <div id="upcoming-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    <div id="upcoming-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4"></div>
     <p id="upcoming-empty" class="font-inter text-neutral-400 hidden">No upcoming shows scheduled.</p>
 </div>
 
@@ -77,14 +77,14 @@ eleventyComputed:
             link.href = linkUrl;
             link.className = 'flex items-stretch bg-neutral-800 hover:bg-neutral-700 transition-colors';
             link.innerHTML = `
-                <div class="text-center shrink-0 w-20 bg-neutral-700 flex flex-col justify-center py-3">
-                    <p class="font-inter text-xs text-neutral-400 uppercase">${monthName}</p>
-                    <p class="font-inter text-2xl font-bold text-white">${dayNum}</p>
-                    <p class="font-inter text-xs text-neutral-400 uppercase">${dayName}</p>
+                <div class="text-center shrink-0 w-12 md:w-14 bg-neutral-700 flex flex-col justify-center py-1 md:py-2">
+                    <p class="font-inter text-[8px] md:text-[10px] text-neutral-400 uppercase">${monthName}</p>
+                    <p class="font-inter text-base md:text-lg font-bold text-white">${dayNum}</p>
+                    <p class="font-inter text-[8px] md:text-[10px] text-neutral-400 uppercase">${dayName}</p>
                 </div>
-                <div class="flex-1 min-w-0 p-4 flex flex-col justify-center">
-                    <p class="font-inter text-white truncate">${displayName}</p>
-                    <p class="font-inter text-sm text-neutral-400">${event.time}</p>
+                <div class="flex-1 min-w-0 p-2 md:p-4 flex flex-col justify-center">
+                    <p class="font-inter text-sm md:text-base text-white truncate">${displayName}</p>
+                    <p class="font-inter text-xs md:text-sm text-neutral-400">${event.time}</p>
                 </div>
             `;
             grid.appendChild(link);
@@ -95,7 +95,7 @@ eleventyComputed:
 
 <h2 class="font-oswald text-3xl uppercase mb-8">Now Showing</h2>
 
-<div id="now-showing-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 mb-8">
+<div id="now-showing-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 mb-8">
 </div>
 
 <script>
@@ -250,11 +250,11 @@ eleventyComputed:
         }
 
         link.innerHTML = `
-            <div class="aspect-[3/4] bg-neutral-900 mb-3 overflow-hidden">
+            <div class="aspect-[3/4] bg-neutral-900 mb-2 overflow-hidden">
                 ${item.poster ? `<img src="/posters/${item.poster}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
             </div>
-            <h2 class="font-oswald text-lg uppercase">${item.title}</h2>
-            <p class="font-inter text-sm text-neutral-400">${scheduleText}</p>
+            <h2 class="font-oswald text-sm uppercase">${item.title}</h2>
+            <p class="font-inter text-xs text-neutral-400">${scheduleText}</p>
         `;
         grid.appendChild(link);
     }
