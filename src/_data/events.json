@@ -118,7 +118,10 @@
   {
     "date": "2026-03-14",
     "time": "8:00 PM",
-    "show": "starlets-presents"
+    "show": "starlets-presents",
+    "title": "Taste The Rainbow",
+    "poster": "starletspresents-tastetherainbow.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2076468"
   },
   {
     "date": "2026-03-14",
