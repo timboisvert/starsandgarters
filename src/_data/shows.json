@@ -25,14 +25,16 @@
   },
   {
     "slug": "starlets-presents",
-    "title": "Starlets Presents: Taste The Rainbow",
+    "title": "Starlets Presents",
     "schedule": "Mar 14 @ 8pm",
-    "poster": "starletspresents-tastetherainbow.png",
+    "poster": "starletspresents.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2076468",
     "buttonText": "Buy Tickets",
     "price": null,
     "room": "Main Stage",
-    "description": "Chicago's premiere burlesque showcase featuring performances by the city's finest performers."
+    "description": "Chicago's premiere burlesque showcase featuring performances by the city's finest performers.",
+    "isIndex": true,
+    "createEventPages": true
   },
   {
     "slug": "laugh-along-live",
