@@ -190,6 +190,11 @@
     "show": "the-re-up"
   },
   {
+    "date": "2026-04-10",
+    "time": "8:00 PM",
+    "show": "rising-stars"
+  },
+  {
     "date": "2026-04-11",
     "time": "10:00 AM",
     "show": "stargazers-adventure-club"
@@ -252,6 +257,11 @@
     "show": "short-form-improv-workshop"
   },
   {
+    "date": "2026-04-24",
+    "time": "8:00 PM",
+    "show": "rising-stars"
+  },
+  {
     "date": "2026-04-25",
     "time": "10:00 AM",
     "show": "stargazers-adventure-club"
@@ -308,6 +318,11 @@
     "show": "the-re-up"
   },
   {
+    "date": "2026-05-08",
+    "time": "9:00 PM",
+    "show": "rising-stars"
+  },
+  {
     "date": "2026-05-09",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -346,6 +361,11 @@
     "date": "2026-05-18",
     "time": "7:00 PM",
     "show": "short-form-improv-workshop"
+  },
+  {
+    "date": "2026-05-22",
+    "time": "9:00 PM",
+    "show": "rising-stars"
   },
   {
     "date": "2026-05-23",
