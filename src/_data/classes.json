@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "the-language-of-silence",
+    "title": "The Language of Silence",
+    "subtitle": "An 8 Week Physical Acting and Mime Class",
+    "instructor": "Timothy Edward",
+    "schedule": "April 3 – May 23, Saturdays @ 10 AM",
+    "poster": "thelanguageofsilence.png",
+    "url": "https://www.cocoscout.com/c/748O6",
+    "buttonText": "Register",
+    "description": "A progressive physical performance course focused on illusion, tension control, emotional clarity, and ensemble awareness."
+  },
+  {
+    "slug": "short-form-improv-workshop",
+    "title": "Short-form Improv Workshop",
+    "subtitle": null,
+    "instructor": null,
+    "schedule": "Mondays @ 7 PM",
+    "poster": "shortformimprovworkshop.png",
+    "url": "https://cocoscout.com/s/TUG0J",
+    "buttonText": "Sign Up",
+    "description": "Come learn and play improv games with the cast of Comedy Pageant.\n\nAll experience levels welcome",
+    "showSlug": "short-form-improv-workshop"
+  }
+]

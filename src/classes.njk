@@ -1,0 +1,48 @@
+---
+title: Classes & Training
+layout: base.njk
+permalink: /classes/
+eleventyComputed:
+  meta:
+    description: "Classes and training at Stars & Garters — workshops, courses, and skill-building for performers of all levels."
+    image: "{{ site.logo }}"
+    url: "{{ site.url }}/classes/"
+    ogType: "website"
+---
+
+<h1 class="font-oswald text-3xl uppercase mb-8">Classes & Training</h1>
+
+<div class="space-y-12">
+    {%- for cls in classes %}
+    <div class="bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col md:flex-row">
+        {%- if cls.poster %}
+        <div class="w-full md:w-56 shrink-0 bg-neutral-800 overflow-hidden">
+            <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full h-full object-cover aspect-[3/4]">
+        </div>
+        {%- endif %}
+        <div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+            <h2 class="font-oswald text-2xl uppercase mb-2">{{ cls.title }}</h2>
+            {%- if cls.subtitle %}
+            <p class="font-inter text-lg text-neutral-300 mb-2">{{ cls.subtitle }}</p>
+            {%- endif %}
+            {%- if cls.instructor %}
+            <p class="font-inter text-sm text-neutral-400 mb-4">Taught by {{ cls.instructor }}</p>
+            {%- endif %}
+            <p class="font-oswald text-sm uppercase text-neutral-300 mb-4">{{ cls.schedule }}</p>
+            {%- if cls.description %}
+            <p class="font-inter text-neutral-400 mb-6">{{ cls.description }}</p>
+            {%- endif %}
+            <div class="flex flex-wrap gap-4">
+                <a href="{{ cls.url }}" class="inline-block font-inter text-sm uppercase tracking-wider bg-white text-black px-6 py-3 hover:bg-neutral-200 transition-colors">
+                    {{ cls.buttonText | default("Learn More") }}
+                </a>
+                {%- if cls.showSlug %}
+                <a href="/show/{{ cls.showSlug }}/" class="inline-block font-inter text-sm uppercase tracking-wider border border-white px-6 py-3 hover:bg-white hover:text-black transition-colors">
+                    View Details
+                </a>
+                {%- endif %}
+            </div>
+        </div>
+    </div>
+    {%- endfor %}
+</div>
