@@ -131,9 +131,15 @@
   },
   {
     "date": "2026-03-28",
+    "time": "7:30 PM",
+    "show": "the-real-spacewives-of-alderaan"
+  },
+  {
+    "date": "2026-03-28",
     "time": "8:00 PM",
     "show": "starlets-presents",
     "title": "Nerdlesque",
+    "poster": "starletspresents-nerdlesque.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2090380"
   },
   {
