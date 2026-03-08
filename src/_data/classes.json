@@ -13,7 +13,7 @@
   {
     "slug": "short-form-improv-workshop",
     "title": "Short-form Improv Workshop",
-    "subtitle": null,
+    "subtitle": "Learn and play improv games",
     "instructor": null,
     "schedule": "Mondays @ 7 PM",
     "poster": "shortformimprovworkshop.png",
@@ -21,5 +21,38 @@
     "buttonText": "Sign Up",
     "description": "Come learn and play improv games with the cast of Comedy Pageant.\n\nAll experience levels welcome",
     "showSlug": "short-form-improv-workshop"
+  },
+  {
+    "slug": "dks-stand-up-forge",
+    "title": "DK's Stand-up Forge",
+    "subtitle": "A place to refine the skills you have and gain the ones you don't!",
+    "instructor": null,
+    "schedule": "Saturdays @ 1 PM, 6 weeks starting April 12",
+    "poster": "dkforge-standup.jpg",
+    "url": "https://www.nearlander.com/service-page/stand-up-forge",
+    "buttonText": "Register",
+    "description": "A stand-up comedy course designed for people of all skill levels. Refine your craft and build new skills over six weeks of focused training."
+  },
+  {
+    "slug": "dks-improv-forge",
+    "title": "DK's Improv Forge",
+    "subtitle": "A place to refine the skills you have and gain the ones you don't!",
+    "instructor": null,
+    "schedule": "Saturdays @ 10 AM, 6 weeks starting April 12",
+    "poster": "dkforge-improv.jpg",
+    "url": "https://www.nearlander.com/service-page/improv-forge",
+    "buttonText": "Register",
+    "description": "An improv course designed for people of all skill levels. Refine your craft and build new skills over six weeks of focused training."
+  },
+  {
+    "slug": "dks-sketch-forge",
+    "title": "DK's Sketch Forge",
+    "subtitle": "A place to refine the skills you have and gain the ones you don't!",
+    "instructor": null,
+    "schedule": "Saturdays @ 4 PM, 6 weeks starting April 12",
+    "poster": "dkforge-sketch.jpg",
+    "url": "https://www.nearlander.com/service-page/sketch-forge",
+    "buttonText": "Register",
+    "description": "A sketch comedy course designed for people of all skill levels. Refine your craft and build new skills over six weeks of focused training."
   }
 ]

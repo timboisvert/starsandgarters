@@ -1,0 +1,56 @@
+---
+layout: base.njk
+pagination:
+  data: classes
+  size: 1
+  alias: cls
+permalink: "/classes/{{ cls.slug }}/"
+eleventyComputed:
+  title: "{{ cls.title }}"
+  meta:
+    description: "{{ cls.description | default(cls.schedule) }}"
+    image: "{{ (cls.poster and (site.url ~ '/posters/' ~ cls.poster)) or site.logo }}"
+    url: "{{ site.url ~ '/classes/' ~ cls.slug ~ '/' }}"
+    ogType: "article"
+---
+
+<div>
+    <div class="flex flex-col md:flex-row gap-12">
+        {%- if cls.poster %}
+        <div class="w-full md:w-1/2 shrink-0">
+            <div class="aspect-[3/4] bg-neutral-900 overflow-hidden">
+                <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full h-full object-cover">
+            </div>
+        </div>
+        {%- endif %}
+
+        <div class="flex-1">
+            <h1 class="font-oswald font-bold text-5xl uppercase mb-6">{{ cls.title }}</h1>
+
+            {%- if cls.subtitle %}
+            <p class="font-inter text-2xl text-neutral-300 mb-4">{{ cls.subtitle }}</p>
+            {%- endif %}
+
+            <p class="font-inter text-2xl text-neutral-300 mb-8">{{ cls.schedule }}</p>
+
+            {%- if cls.instructor %}
+            <p class="font-inter text-lg text-neutral-400 mb-4">Taught by {{ cls.instructor }}</p>
+            {%- endif %}
+
+            {%- if cls.description %}
+            <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal whitespace-pre-line">{{ cls.description }}</p>
+            {%- endif %}
+
+            <div class="flex flex-wrap gap-4">
+                <a href="{{ cls.url }}" class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
+                    {{ cls.buttonText | default("Learn More") }}
+                </a>
+                {%- if cls.showSlug %}
+                <a href="/show/{{ cls.showSlug }}/" class="inline-block font-inter text-base font-semibold border border-white px-6 py-3 hover:bg-white hover:text-black transition-colors">
+                    View Show Details
+                </a>
+                {%- endif %}
+            </div>
+        </div>
+    </div>
+</div>
