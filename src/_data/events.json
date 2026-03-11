@@ -1,10 +1,5 @@
 [
   {
-    "date": "2026-03-02",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
-  },
-  {
     "date": "2026-03-06",
     "time": "7:00 PM",
     "show": "comedy-pageant"
@@ -41,7 +36,7 @@
   {
     "date": "2026-03-09",
     "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-03-13",
@@ -72,9 +67,9 @@
     "show": "a-witty-ditty-committee"
   },
   {
-    "date": "2026-03-16",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-03-19",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-03-20",
@@ -110,9 +105,9 @@
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2086456"
   },
   {
-    "date": "2026-03-23",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-03-26",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-03-27",
@@ -123,6 +118,15 @@
     "date": "2026-03-28",
     "time": "10:00 AM",
     "show": "stargazers-adventure-club"
+  },
+  {
+    "date": "2026-03-28",
+    "time": "10:00 PM",
+    "show": "laugh-along-live",
+    "title": "Super Mario Bros.",
+    "poster": "laughalonglive-supermariobros.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2088161",
+    "description": "Come watch Super Mario Bros. with Chicago's funniest comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink! Come feel the unearned confidence of a man who just found a mysterious glowing power-up in a sewer!\n\nDoors 8:30pm. Show at 9pm\n\n21+ show\n\nFeaturing: Trevor D. Kelley, Emmanuel Ross Hartway, and Andie Wonnacott"
   },
   {
     "date": "2026-03-28",
@@ -143,18 +147,9 @@
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2090380"
   },
   {
-    "date": "2026-03-28",
-    "time": "10:00 PM",
-    "show": "laugh-along-live",
-    "title": "Super Mario Bros.",
-    "poster": "laughalonglive-supermariobros.png",
-    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2088161",
-    "description": "Come watch Super Mario Bros. with Chicago's funniest comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink! Come feel the unearned confidence of a man who just found a mysterious glowing power-up in a sewer!\n\nDoors 8:30pm. Show at 9pm\n\n21+ show\n\nFeaturing: Trevor D. Kelley, Emmanuel Ross Hartway, and Andie Wonnacott"
-  },
-  {
-    "date": "2026-03-30",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-04-02",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-04-03",
@@ -186,9 +181,9 @@
     "description": "Come watch Twilight with Chicago's funniest comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink! Come represent Team Edward or Team Jacob!\n\nDoors 8:30pm. Show at 9pm\n\n21+ show\n\nFeaturing: Andie Nash, Emilia Barrosse, and Emmanuel J Ross Hartway\n\nLaugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. A panel of comedians makes jokes throughout a film (à la Mystery Science Theater, but more about having fun than making fun) and run activities for the audience. Follow us @laughalonglive to know which movies we're doing next (after you've bought your tickets for this one, of course)."
   },
   {
-    "date": "2026-04-06",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-04-09",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-04-10",
@@ -222,9 +217,9 @@
     "title": "Shrek"
   },
   {
-    "date": "2026-04-13",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-04-16",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-04-17",
@@ -258,9 +253,9 @@
     "title": "Fern Gully"
   },
   {
-    "date": "2026-04-20",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-04-23",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-04-24",
@@ -283,9 +278,9 @@
     "show": "freakshow-and-tell"
   },
   {
-    "date": "2026-04-27",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-04-30",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-05-01",
@@ -309,14 +304,14 @@
     "title": "The Devil Wears Prada"
   },
   {
-    "date": "2026-05-04",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
-  },
-  {
     "date": "2026-05-07",
     "time": "7:00 PM",
     "show": "date-night-live"
+  },
+  {
+    "date": "2026-05-07",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-05-08",
@@ -339,9 +334,9 @@
     "show": "freakshow-and-tell"
   },
   {
-    "date": "2026-05-11",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-05-14",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-05-15",
@@ -364,9 +359,9 @@
     "show": "freakshow-and-tell"
   },
   {
-    "date": "2026-05-18",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-05-21",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-05-22",
@@ -384,9 +379,9 @@
     "show": "freakshow-and-tell"
   },
   {
-    "date": "2026-05-25",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-05-28",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-05-30",
@@ -399,9 +394,9 @@
     "show": "freakshow-and-tell"
   },
   {
-    "date": "2026-06-01",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-06-04",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-06-05",
@@ -419,9 +414,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-06-08",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-06-11",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-06-12",
@@ -434,9 +429,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-06-15",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-06-18",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-06-19",
@@ -454,9 +449,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-06-22",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-06-25",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-06-27",
@@ -464,9 +459,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-06-29",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-07-02",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-07-03",
@@ -484,9 +479,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-07-06",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-07-09",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-07-10",
@@ -499,9 +494,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-07-13",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-07-16",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-07-17",
@@ -519,9 +514,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-07-20",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-07-23",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-07-25",
@@ -529,9 +524,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-07-27",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-07-30",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-08-01",
@@ -539,9 +534,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-08-03",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-08-06",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-08-07",
@@ -559,9 +554,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-08-10",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-08-13",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-08-14",
@@ -574,9 +569,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-08-17",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-08-20",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-08-21",
@@ -594,9 +589,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-08-24",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-08-27",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-08-29",
@@ -604,9 +599,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-08-31",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-09-03",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-09-04",
@@ -624,9 +619,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-09-07",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-09-10",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-09-11",
@@ -639,9 +634,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-09-14",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-09-17",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-09-18",
@@ -659,9 +654,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-09-21",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-09-24",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-09-26",
@@ -669,9 +664,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-09-28",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-10-01",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-10-02",
@@ -689,9 +684,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-10-05",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-10-08",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-10-09",
@@ -704,9 +699,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-10-12",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-10-15",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-10-16",
@@ -724,9 +719,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-10-19",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-10-22",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-10-24",
@@ -734,9 +729,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-10-26",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-10-29",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-10-31",
@@ -744,9 +739,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-11-02",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-11-05",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-11-06",
@@ -764,9 +759,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-11-09",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-11-12",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-11-13",
@@ -779,9 +774,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-11-16",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-11-19",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-11-20",
@@ -799,9 +794,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-11-23",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-11-26",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-11-28",
@@ -809,9 +804,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-11-30",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-12-03",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-12-04",
@@ -829,9 +824,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-12-07",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-12-10",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-12-11",
@@ -844,9 +839,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-12-14",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-12-17",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-12-18",
@@ -864,9 +859,9 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-12-21",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-12-24",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   },
   {
     "date": "2026-12-26",
@@ -874,8 +869,8 @@
     "show": "chicago-workshop-mic"
   },
   {
-    "date": "2026-12-28",
-    "time": "7:00 PM",
-    "show": "short-form-improv-workshop"
+    "date": "2026-12-31",
+    "time": "7:30 PM",
+    "show": "short-form-improv-coached-jam"
   }
 ]

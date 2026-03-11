@@ -11,16 +11,16 @@
     "description": "A progressive physical performance course focused on illusion, tension control, emotional clarity, and ensemble awareness."
   },
   {
-    "slug": "short-form-improv-workshop",
-    "title": "Short-form Improv Workshop",
+    "slug": "short-form-improv-coached-jam",
+    "title": "Short-form Improv Coached Jam",
     "subtitle": "Learn and play improv games",
     "instructor": null,
-    "schedule": "Mondays @ 7 PM",
-    "poster": "shortformimprovworkshop.png",
+    "schedule": "Thursdays @ 7:30 PM",
+    "poster": "shortformimprovcoachedjam.png",
     "url": "https://cocoscout.com/s/TUG0J",
     "buttonText": "Sign Up",
     "description": "Come learn and play improv games with the cast of Comedy Pageant.\n\nAll experience levels welcome",
-    "showSlug": "short-form-improv-workshop"
+    "showSlug": "short-form-improv-coached-jam"
   },
   {
     "slug": "dks-stand-up-forge",
