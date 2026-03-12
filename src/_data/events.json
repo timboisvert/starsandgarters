@@ -6,11 +6,6 @@
   },
   {
     "date": "2026-03-06",
-    "time": "8:00 PM",
-    "show": "rising-stars"
-  },
-  {
-    "date": "2026-03-06",
     "time": "9:00 PM",
     "show": "dks-full-five-fridays"
   },
@@ -158,6 +153,11 @@
   },
   {
     "date": "2026-04-03",
+    "time": "8:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-04-03",
     "time": "9:00 PM",
     "show": "dks-full-five-fridays"
   },
@@ -233,6 +233,11 @@
   },
   {
     "date": "2026-04-17",
+    "time": "8:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-04-17",
     "time": "9:00 PM",
     "show": "masterminds"
   },
@@ -298,6 +303,11 @@
     "show": "dks-full-five-fridays"
   },
   {
+    "date": "2026-05-01",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
     "date": "2026-05-02",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -325,7 +335,7 @@
   },
   {
     "date": "2026-05-08",
-    "time": "9:00 PM",
+    "time": "10:00 PM",
     "show": "rising-stars"
   },
   {
@@ -354,6 +364,11 @@
     "show": "masterminds"
   },
   {
+    "date": "2026-05-15",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
     "date": "2026-05-16",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -370,7 +385,7 @@
   },
   {
     "date": "2026-05-22",
-    "time": "9:00 PM",
+    "time": "10:00 PM",
     "show": "rising-stars"
   },
   {
@@ -387,6 +402,11 @@
     "date": "2026-05-28",
     "time": "7:30 PM",
     "show": "short-form-improv-coached-jam"
+  },
+  {
+    "date": "2026-05-29",
+    "time": "10:00 PM",
+    "show": "rising-stars"
   },
   {
     "date": "2026-05-30",
@@ -414,6 +434,11 @@
     "show": "dks-full-five-fridays"
   },
   {
+    "date": "2026-06-05",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
     "date": "2026-06-06",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -427,6 +452,11 @@
     "date": "2026-06-12",
     "time": "7:30 PM",
     "show": "the-re-up"
+  },
+  {
+    "date": "2026-06-12",
+    "time": "10:00 PM",
+    "show": "rising-stars"
   },
   {
     "date": "2026-06-13",
@@ -449,6 +479,11 @@
     "show": "masterminds"
   },
   {
+    "date": "2026-06-19",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
     "date": "2026-06-20",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -457,6 +492,11 @@
     "date": "2026-06-25",
     "time": "7:30 PM",
     "show": "short-form-improv-coached-jam"
+  },
+  {
+    "date": "2026-06-26",
+    "time": "10:00 PM",
+    "show": "rising-stars"
   },
   {
     "date": "2026-06-27",
