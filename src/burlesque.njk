@@ -1,0 +1,251 @@
+---
+title: Burlesque at Stars & Garters
+layout: base.njk
+permalink: /burlesque/
+eleventyComputed:
+  meta:
+    description: "Experience Chicago's finest burlesque entertainment at Stars & Garters. See upcoming burlesque shows, buy tickets, and discover the city's most captivating performers."
+    image: "{{ site.logo }}"
+    url: "{{ site.url }}/burlesque/"
+    ogType: "website"
+---
+
+<div class="bg-neutral-900 border border-neutral-800 p-4 md:p-8 mb-12">
+    <h2 class="font-oswald text-2xl uppercase mb-6 text-neutral-300">Upcoming Burlesque Shows</h2>
+    <div id="upcoming-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4"></div>
+    <p id="upcoming-empty" class="font-inter text-neutral-400 hidden">No upcoming shows scheduled.</p>
+</div>
+
+<script>
+(function() {
+    const events = {{ events | dump | safe }};
+    const shows = {{ shows | dump | safe }};
+
+    const showMap = {};
+    const landingSlugs = new Set();
+    shows.forEach(show => {
+        showMap[show.slug] = show;
+        if (show.landingPages && show.landingPages.includes('burlesque')) landingSlugs.add(show.slug);
+    });
+
+    const now = new Date();
+
+    const upcomingEvents = events.filter(event => {
+        if (!landingSlugs.has(event.show)) return false;
+        const [year, month, day] = event.date.split('-').map(Number);
+        const [timePart, ampm] = event.time.split(' ');
+        let [hours, minutes] = timePart.split(':').map(Number);
+        if (ampm === 'PM' && hours !== 12) hours += 12;
+        if (ampm === 'AM' && hours === 12) hours = 0;
+        const eventDateTime = new Date(year, month - 1, day, hours, minutes);
+        return eventDateTime > now;
+    }).slice(0, 6);
+
+    const grid = document.getElementById('upcoming-grid');
+    const emptyMsg = document.getElementById('upcoming-empty');
+
+    if (upcomingEvents.length === 0) {
+        grid.classList.add('hidden');
+        emptyMsg.classList.remove('hidden');
+    } else {
+        upcomingEvents.forEach(event => {
+            const show = showMap[event.show];
+            if (!show) return;
+
+            const dayNum = event.date.split('-')[2];
+            const eventDate = new Date(event.date + 'T12:00:00');
+            const dayName = eventDate.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase();
+            const monthName = eventDate.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+
+            let displayName = show.title;
+            let linkUrl = '/show/' + show.slug + '/';
+
+            if (event.displayName) {
+                displayName = event.displayName;
+            } else if (event.title) {
+                if (show.eventTitleFormat === 'event-first') {
+                    displayName = event.title + ': ' + show.title;
+                } else {
+                    displayName = show.title + ': ' + event.title;
+                }
+            }
+
+            if (show.createEventPages && event.title) {
+                const eventSlug = event.title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-|-$/g, '');
+                linkUrl = '/show/' + show.slug + '/' + eventSlug + '/';
+            }
+
+            const link = document.createElement('a');
+            link.href = linkUrl;
+            link.className = 'flex items-stretch bg-neutral-800 hover:bg-neutral-700 transition-colors';
+            link.innerHTML = `
+                <div class="text-center shrink-0 w-12 md:w-14 bg-neutral-700 flex flex-col justify-center py-1 md:py-2">
+                    <p class="font-inter text-[8px] md:text-[10px] text-neutral-400 uppercase">${monthName}</p>
+                    <p class="font-inter text-base md:text-lg font-bold text-white">${dayNum}</p>
+                    <p class="font-inter text-[8px] md:text-[10px] text-neutral-400 uppercase">${dayName}</p>
+                </div>
+                <div class="flex-1 min-w-0 p-2 md:p-4 flex flex-col justify-center">
+                    <p class="font-inter text-sm md:text-base text-white truncate">${displayName}</p>
+                    <p class="font-inter text-xs md:text-sm text-neutral-400">${event.time}</p>
+                </div>
+            `;
+            grid.appendChild(link);
+        });
+    }
+})();
+</script>
+
+<h2 class="font-oswald text-3xl uppercase mb-8">Burlesque Shows</h2>
+
+<div id="now-showing-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-8">
+</div>
+
+<script>
+(function() {
+    const events = {{ events | dump | safe }};
+    const shows = {{ shows | dump | safe }};
+
+    const showMap = {};
+    shows.forEach(show => showMap[show.slug] = show);
+
+    const todayTs = Date.now();
+
+    function formatEventTitle(event, show) {
+        if (event.displayName) return event.displayName;
+        if (!event.title) return show.title;
+        if (show.eventTitleFormat === 'event-first') {
+            return event.title + ': ' + show.title;
+        }
+        return show.title + ': ' + event.title;
+    }
+
+    function formatLongDate(dateStr) {
+        const date = new Date(dateStr + 'T12:00:00');
+        return date.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    }
+
+    const nextEventMap = {};
+    const eventPagesMap = {};
+
+    for (const event of events) {
+        const [timePart = "00:00", ampm] = (event.time || "").split(" ");
+        let [hours = 0, minutes = 0] = timePart.split(":").map(n => parseInt(n, 10) || 0);
+        if (ampm === "PM" && hours !== 12) hours += 12;
+        if (ampm === "AM" && hours === 12) hours = 0;
+
+        const [y, m, d] = event.date.split("-").map(Number);
+        const eventTs = new Date(y, m - 1, d, hours, minutes, 0).getTime();
+
+        if (eventTs >= todayTs) {
+            if (!nextEventMap[event.show]) {
+                nextEventMap[event.show] = { date: event.date, time: event.time, ts: eventTs, event };
+            }
+            if (event.poster) {
+                if (!eventPagesMap[event.show]) {
+                    eventPagesMap[event.show] = [];
+                }
+                eventPagesMap[event.show].push({ event, ts: eventTs });
+            }
+        }
+    }
+
+    const results = [];
+
+    for (const show of shows) {
+        if (!show.landingPages || !show.landingPages.includes('burlesque')) continue;
+        if (show.hideFromHomepage) continue;
+
+        const next = nextEventMap[show.slug] || null;
+        const hasUpcoming = !!next;
+
+        if (!hasUpcoming) {
+            results.push({
+                type: 'show',
+                show,
+                ts: Infinity,
+                title: show.title,
+                poster: show.poster,
+                slug: show.slug,
+                schedule: show.schedule,
+                link: '/show/' + show.slug + '/',
+                pinPosition: show.pinPosition
+            });
+        } else if (show.createEventPages) {
+            const posterEvents = eventPagesMap[show.slug] || [];
+            for (const { event, ts } of posterEvents) {
+                const eventSlug = event.title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-|-$/g, '');
+                results.push({
+                    type: 'event',
+                    show,
+                    event: event,
+                    ts: ts,
+                    title: formatEventTitle(event, show),
+                    shortTitle: event.title,
+                    poster: event.poster,
+                    slug: eventSlug,
+                    schedule: event.date,
+                    link: '/show/' + show.slug + '/' + eventSlug + '/',
+                    pinPosition: show.pinPosition
+                });
+            }
+        } else {
+            results.push({
+                type: 'show',
+                show,
+                ts: next.ts,
+                title: show.title,
+                poster: show.poster,
+                slug: show.slug,
+                schedule: show.schedule,
+                link: '/show/' + show.slug + '/',
+                pinPosition: show.pinPosition
+            });
+        }
+    }
+
+    results.sort((a, b) => {
+        const aPin = a.pinPosition || Infinity;
+        const bPin = b.pinPosition || Infinity;
+        if (aPin !== Infinity || bPin !== Infinity) {
+            if (aPin !== bPin) return aPin - bPin;
+        }
+        if (a.ts !== b.ts) return a.ts - b.ts;
+        if (a.type !== b.type) {
+            return a.type === 'event' ? -1 : 1;
+        }
+        return a.title.localeCompare(b.title);
+    });
+
+    const grid = document.getElementById('now-showing-grid');
+    for (const item of results) {
+        const link = document.createElement('a');
+        link.href = item.link;
+        link.className = 'block group';
+
+        let scheduleText = item.schedule;
+        if (item.type === 'event') {
+            scheduleText = formatLongDate(item.schedule);
+        }
+
+        link.innerHTML = `
+            <div class="aspect-[3/4] bg-neutral-900 mb-2 overflow-hidden">
+                ${item.poster ? `<img src="/posters/${item.poster}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
+            </div>
+            <h2 class="font-oswald text-sm uppercase">${item.title}</h2>
+            <p class="font-inter text-xs text-neutral-400">${scheduleText}</p>
+        `;
+        grid.appendChild(link);
+    }
+})();
+</script>
