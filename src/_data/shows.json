@@ -166,6 +166,20 @@
     "description": "The very best comics in Chicago & Beyond take the stage for one night only."
   },
   {
+    "slug": "burly-oke",
+    "title": "Burly-oke!",
+    "schedule": "Apr 1 @ 8 PM",
+    "poster": "burlyoke.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2116142",
+    "buttonText": "Book a table",
+    "price": null,
+    "room": null,
+    "description": "You sing, we dance.",
+    "landingPages": [
+      "burlesque"
+    ]
+  },
+  {
     "slug": "date-night-live",
     "title": "Date Night: Live",
     "schedule": "May 7 -- One night only!",
