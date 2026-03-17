@@ -23,6 +23,9 @@ eleventyComputed:
         <div class="p-6 flex-1">
             <h2 class="font-oswald text-xl uppercase mb-3">{{ audition.title }}</h2>
             <p class="font-inter text-neutral-400 mb-4">{{ audition.description }}</p>
+            {%- if audition.showSlug %}
+            <div id="next-event-{{ audition.showSlug }}" class="hidden"></div>
+            {%- else %}
             <p class="font-oswald text-sm uppercase text-neutral-300 mb-3">
                 {%- if audition.deadline -%}
                     Deadline: {{ audition.deadline }}
@@ -33,7 +36,73 @@ eleventyComputed:
             <a href="{{ audition.signupUrl }}" class="inline-block font-inter text-sm uppercase tracking-wider bg-white text-black px-6 py-3 hover:bg-neutral-200 transition-colors">
                 {{ audition.buttonText | default("Sign Up") }}
             </a>
+            {%- endif %}
         </div>
     </div>
     {%- endfor %}
 </div>
+
+{%- set auditionShows = [] -%}
+{%- for audition in auditions -%}
+    {%- if audition.showSlug -%}
+        {%- set auditionShows = (auditionShows.push({
+            showSlug: audition.showSlug,
+            signupUrl: audition.signupUrl,
+            buttonText: audition.buttonText or "Sign Up"
+        }), auditionShows) -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- set auditionEvents = [] -%}
+{%- for event in events -%}
+    {%- for as in auditionShows -%}
+        {%- if event.show == as.showSlug -%}
+            {%- set auditionEvents = (auditionEvents.push({
+                date: event.date,
+                time: event.time,
+                show: event.show,
+                ticketUrl: event.ticketUrl
+            }), auditionEvents) -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endfor -%}
+
+<script>
+(function() {
+    var auditionShows = {{ auditionShows | dump | safe }};
+    var auditionEvents = {{ auditionEvents | dump | safe }};
+    var today = new Date().toISOString().split('T')[0];
+
+    function formatLongDate(dateStr) {
+        var date = new Date(dateStr + 'T12:00:00');
+        return date.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    }
+
+    auditionShows.forEach(function(as) {
+        var upcoming = auditionEvents.filter(function(e) {
+            return e.show === as.showSlug && e.date >= today;
+        });
+        var next = upcoming[0];
+        var card = document.getElementById('next-event-' + as.showSlug);
+        if (!card) return;
+
+        if (next) {
+            var ticketUrl = next.ticketUrl || as.signupUrl;
+            card.innerHTML = '<div class="bg-neutral-800 border border-neutral-700 p-4 mb-3">'
+                + '<p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-1">Next Jam</p>'
+                + '<p class="font-inter text-white mb-1">' + formatLongDate(next.date) + '</p>'
+                + '<p class="font-inter text-neutral-300 mb-3">' + next.time + '</p>'
+                + '<a href="' + ticketUrl + '" class="inline-block font-inter text-sm uppercase tracking-wider bg-white text-black px-6 py-3 hover:bg-neutral-200 transition-colors">' + as.buttonText + '</a>'
+                + '</div>';
+        } else {
+            card.innerHTML = '<a href="' + as.signupUrl + '" class="inline-block font-inter text-sm uppercase tracking-wider bg-white text-black px-6 py-3 hover:bg-neutral-200 transition-colors">' + as.buttonText + '</a>';
+        }
+        card.classList.remove('hidden');
+    });
+})();
+</script>

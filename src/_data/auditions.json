@@ -25,5 +25,15 @@
         "signupUrl": "https://www.cocoscout.com/a/YI5NN",
         "buttonText": "Submit Video audition",
         "deadline": null
+    },
+    {
+        "slug": "short-form-improv-coached-jam",
+        "title": "Short-Form Improv Coached Jam",
+        "description": "Comedy Pageant does not do traditional auditions, but pulls talent from people who consistently attend and shine at their Short-Form Improv Coached Jams on Thursday nights. Sign-up to learn and play improv games with the cast of Comedy Pageant, and we'd love to eventually get you on a show!",
+        "poster": "shortformimprovcoachedjam.png",
+        "signupUrl": "https://cocoscout.com/s/TUG0J",
+        "buttonText": "Sign Up",
+        "deadline": null,
+        "showSlug": "short-form-improv-coached-jam"
     }
 ]

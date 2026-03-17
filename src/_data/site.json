@@ -4,6 +4,13 @@
     "description": "Chicago's premiere retro entertainment venue. The home of Chicago's finest comedy, magic, drag and burlesque entertainment.",
     "twitter": "@starsandgarters",
     "logo": "https://starsandgartersclub.com/logo.png",
+    "facebook": "https://www.facebook.com/starsandgartersclub",
+    "phone": "+1-773-242-9929",
+    "email": "starsandgartersclub@gmail.com",
+    "geo": {
+        "latitude": "41.952948",
+        "longitude": "-87.6613524"
+    },
     "address": {
         "streetAddress": "3914 N Clark St",
         "addressLocality": "Chicago",
