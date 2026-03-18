@@ -69,15 +69,39 @@ export default function (eleventyConfig) {
 
     // Build a single Event schema object
     function buildSingleEventSchema(name, dateStr, timeStr, url, imageUrl, description, ticketUrl, price, site) {
+        const startISO = toISODateTime(dateStr, timeStr);
+
+        // Compute endDate: 2 hours after start
+        let endISO = null;
+        if (startISO) {
+            const match = startISO.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+            if (match) {
+                const [, sy, smo, sd, sh, sm] = match.map(Number);
+                const dt = new Date(sy, smo - 1, sd, sh + 2, sm);
+                const ey = dt.getFullYear();
+                const emo = String(dt.getMonth() + 1).padStart(2, '0');
+                const ed = String(dt.getDate()).padStart(2, '0');
+                const eh = String(dt.getHours()).padStart(2, '0');
+                const em = String(dt.getMinutes()).padStart(2, '0');
+                const offset = startISO.slice(-6); // reuse same timezone offset
+                endISO = `${ey}-${emo}-${ed}T${eh}:${em}:00${offset}`;
+            }
+        }
+
         const schema = {
             "@type": "Event",
             "name": name,
-            "startDate": toISODateTime(dateStr, timeStr),
+            "startDate": startISO,
+            "endDate": endISO,
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "url": url,
             "image": imageUrl,
             "location": buildLocationSchema(site),
+            "performer": {
+                "@type": "PerformingGroup",
+                "name": name
+            },
             "organizer": {
                 "@type": "Organization",
                 "name": site.name,
@@ -93,7 +117,8 @@ export default function (eleventyConfig) {
             schema.offers = {
                 "@type": "Offer",
                 "url": ticketUrl,
-                "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "validFrom": dateStr
             };
             if (price && price !== "Free") {
                 schema.offers.price = price.replace(/[^0-9.]/g, '');
