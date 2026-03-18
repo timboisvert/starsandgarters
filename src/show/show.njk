@@ -47,7 +47,10 @@ eleventyComputed:
     }
 } | dump | safe }}
 </script>
-<script id="structured-data" type="application/ld+json"></script>
+{%- set schemaJson = show | showEventsSchema(events, site) -%}
+{%- if schemaJson %}
+<script type="application/ld+json">{{ schemaJson | safe }}</script>
+{%- endif %}
 
 <div>
     <div class="flex flex-col md:flex-row gap-12">
@@ -140,29 +143,6 @@ eleventyComputed:
 
         card.innerHTML = html;
         card.classList.remove('hidden');
-
-        // Update structured data
-        const structuredData = {
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": data.title,
-            "startDate": nextEvent.date,
-            "url": data.site.url + '/show/' + data.slug + '/',
-            "image": (data.poster && (data.site.url + '/posters/' + data.poster)) || data.site.logo,
-            "location": {
-                "@type": "Place",
-                "name": data.site.name,
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": data.site.address.streetAddress,
-                    "addressLocality": data.site.address.addressLocality,
-                    "addressRegion": data.site.address.addressRegion,
-                    "postalCode": data.site.address.postalCode,
-                    "addressCountry": data.site.address.addressCountry
-                }
-            }
-        };
-        document.getElementById('structured-data').textContent = JSON.stringify(structuredData);
     }
 
     // Render upcoming events list (for isIndex shows)

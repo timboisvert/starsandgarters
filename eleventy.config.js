@@ -14,6 +14,99 @@ export default function (eleventyConfig) {
         return show.title;
     }
 
+    // Convert date + time to ISO datetime with Chicago timezone offset
+    function toISODateTime(dateStr, timeStr) {
+        if (!dateStr) return dateStr;
+
+        let hours = 0, minutes = 0;
+        if (timeStr) {
+            const parts = timeStr.split(" ");
+            const timePart = parts[0] || "00:00";
+            const ampm = parts[1];
+            const tp = timePart.split(":").map(n => parseInt(n, 10) || 0);
+            hours = tp[0] || 0;
+            minutes = tp[1] || 0;
+            if (ampm === "PM" && hours !== 12) hours += 12;
+            if (ampm === "AM" && hours === 12) hours = 0;
+        }
+
+        const h = String(hours).padStart(2, '0');
+        const m = String(minutes).padStart(2, '0');
+        const [y, mo] = dateStr.split("-").map(Number);
+
+        // Chicago: CDT (UTC-5) spring-fall, CST (UTC-6) fall-spring
+        const march1 = new Date(y, 2, 1);
+        const dstStartDay = 1 + ((7 - march1.getDay()) % 7) + 7;
+        const nov1 = new Date(y, 10, 1);
+        const dstEndDay = 1 + ((7 - nov1.getDay()) % 7);
+
+        const eventDate = new Date(y, mo - 1, parseInt(dateStr.split("-")[2], 10));
+        const offset = (eventDate >= new Date(y, 2, dstStartDay) && eventDate < new Date(y, 10, dstEndDay)) ? "-05:00" : "-06:00";
+
+        return `${dateStr}T${h}:${m}:00${offset}`;
+    }
+
+    // Build location schema for the venue
+    function buildLocationSchema(site) {
+        return {
+            "@type": "Place",
+            "name": site.name,
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": site.address.streetAddress,
+                "addressLocality": site.address.addressLocality,
+                "addressRegion": site.address.addressRegion,
+                "postalCode": site.address.postalCode,
+                "addressCountry": site.address.addressCountry
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": site.geo.latitude,
+                "longitude": site.geo.longitude
+            }
+        };
+    }
+
+    // Build a single Event schema object
+    function buildSingleEventSchema(name, dateStr, timeStr, url, imageUrl, description, ticketUrl, price, site) {
+        const schema = {
+            "@type": "Event",
+            "name": name,
+            "startDate": toISODateTime(dateStr, timeStr),
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "url": url,
+            "image": imageUrl,
+            "location": buildLocationSchema(site),
+            "organizer": {
+                "@type": "Organization",
+                "name": site.name,
+                "url": site.url
+            }
+        };
+
+        if (description) {
+            schema.description = description;
+        }
+
+        if (ticketUrl) {
+            schema.offers = {
+                "@type": "Offer",
+                "url": ticketUrl,
+                "availability": "https://schema.org/InStock"
+            };
+            if (price && price !== "Free") {
+                schema.offers.price = price.replace(/[^0-9.]/g, '');
+                schema.offers.priceCurrency = "USD";
+            } else if (price === "Free") {
+                schema.offers.price = "0";
+                schema.offers.priceCurrency = "USD";
+            }
+        }
+
+        return schema;
+    }
+
     // Get current date in YYYY-MM-DD format (for build time)
     eleventyConfig.addFilter("currentDate", () => {
         const now = new Date();
@@ -66,6 +159,92 @@ export default function (eleventyConfig) {
             if (event.show !== showSlug) return false;
             const eventDate = new Date(event.date + "T00:00:00");
             return eventDate >= todayDate && eventDate <= endDate;
+        });
+    });
+
+    // Convert date + time string to ISO datetime
+    eleventyConfig.addFilter("isoDateTime", (dateStr, timeStr) => toISODateTime(dateStr, timeStr));
+
+    // Generate JSON-LD for a show page's upcoming events
+    eleventyConfig.addFilter("showEventsSchema", (show, events, site) => {
+        const today = new Date().toISOString().split('T')[0];
+        const showEvents = events.filter(e => e.show === show.slug && e.date >= today);
+
+        if (showEvents.length === 0) return null;
+
+        const schemas = showEvents.map(event => {
+            const name = formatEventTitle(event, show);
+            const poster = event.poster || show.poster;
+            const imageUrl = poster ? (site.url + '/posters/' + poster) : site.logo;
+            const ticketUrl = event.ticketUrl || show.ticketUrl;
+
+            let url = site.url + '/show/' + show.slug + '/';
+            if (show.createEventPages && event.title) {
+                const slug = event.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                url = site.url + '/show/' + show.slug + '/' + slug + '/';
+            }
+
+            return buildSingleEventSchema(name, event.date, event.time, url, imageUrl, event.description || show.description, ticketUrl, show.price, site);
+        });
+
+        if (schemas.length === 1) {
+            schemas[0]["@context"] = "https://schema.org";
+            return JSON.stringify(schemas[0]);
+        }
+
+        return JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": schemas
+        });
+    });
+
+    // Generate JSON-LD for an event detail page
+    eleventyConfig.addFilter("eventPageSchema", (eventPage, site) => {
+        const schema = buildSingleEventSchema(
+            eventPage.title,
+            eventPage.date,
+            eventPage.time,
+            site.url + '/show/' + eventPage.show.slug + '/' + eventPage.slug + '/',
+            eventPage.poster ? (site.url + '/posters/' + eventPage.poster) : site.logo,
+            eventPage.description,
+            eventPage.ticketUrl,
+            eventPage.show.price,
+            site
+        );
+        schema["@context"] = "https://schema.org";
+        return JSON.stringify(schema);
+    });
+
+    // Generate JSON-LD for homepage/calendar with all upcoming events
+    eleventyConfig.addFilter("upcomingEventsSchema", (events, shows, site) => {
+        const today = new Date().toISOString().split('T')[0];
+        const showMap = {};
+        shows.forEach(s => showMap[s.slug] = s);
+
+        const upcoming = events.filter(e => e.date >= today);
+        if (upcoming.length === 0) return null;
+
+        const schemas = upcoming.map(event => {
+            const show = showMap[event.show];
+            if (!show) return null;
+
+            const name = formatEventTitle(event, show);
+            const poster = event.poster || show.poster;
+            const imageUrl = poster ? (site.url + '/posters/' + poster) : site.logo;
+            const ticketUrl = event.ticketUrl || show.ticketUrl;
+
+            let url = site.url + '/show/' + show.slug + '/';
+            if (show.createEventPages && event.title) {
+                const slug = event.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                url = site.url + '/show/' + show.slug + '/' + slug + '/';
+            }
+
+            return buildSingleEventSchema(name, event.date, event.time, url, imageUrl, event.description || show.description, ticketUrl, show.price, site);
+        }).filter(Boolean);
+
+        return JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": schemas
         });
     });
 
