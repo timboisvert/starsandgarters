@@ -212,6 +212,11 @@
     "show": "rising-stars"
   },
   {
+    "date": "2026-04-10",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
+  },
+  {
     "date": "2026-04-11",
     "time": "10:00 AM",
     "show": "stargazers-adventure-club"
@@ -284,6 +289,11 @@
     "show": "rising-stars"
   },
   {
+    "date": "2026-04-24",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
+  },
+  {
     "date": "2026-04-25",
     "time": "10:00 AM",
     "show": "stargazers-adventure-club"
@@ -305,6 +315,11 @@
   },
   {
     "date": "2026-05-01",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-05-01",
     "time": "7:00 PM",
     "show": "comedy-pageant"
   },
@@ -312,11 +327,6 @@
     "date": "2026-05-01",
     "time": "9:00 PM",
     "show": "dks-full-five-fridays"
-  },
-  {
-    "date": "2026-05-01",
-    "time": "10:00 PM",
-    "show": "rising-stars"
   },
   {
     "date": "2026-05-02",
@@ -341,13 +351,13 @@
   },
   {
     "date": "2026-05-08",
-    "time": "7:30 PM",
-    "show": "the-re-up"
+    "time": "10:00 PM",
+    "show": "rising-stars"
   },
   {
     "date": "2026-05-08",
-    "time": "10:00 PM",
-    "show": "rising-stars"
+    "time": "7:30 PM",
+    "show": "the-re-up"
   },
   {
     "date": "2026-05-09",
@@ -366,6 +376,11 @@
   },
   {
     "date": "2026-05-15",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-05-15",
     "time": "7:00 PM",
     "show": "comedy-pageant"
   },
@@ -373,11 +388,6 @@
     "date": "2026-05-15",
     "time": "9:00 PM",
     "show": "masterminds"
-  },
-  {
-    "date": "2026-05-15",
-    "time": "10:00 PM",
-    "show": "rising-stars"
   },
   {
     "date": "2026-05-16",
@@ -398,6 +408,11 @@
     "date": "2026-05-22",
     "time": "10:00 PM",
     "show": "rising-stars"
+  },
+  {
+    "date": "2026-05-22",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-05-23",
@@ -436,6 +451,11 @@
   },
   {
     "date": "2026-06-05",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-06-05",
     "time": "7:00 PM",
     "show": "comedy-pageant"
   },
@@ -443,11 +463,6 @@
     "date": "2026-06-05",
     "time": "9:00 PM",
     "show": "dks-full-five-fridays"
-  },
-  {
-    "date": "2026-06-05",
-    "time": "10:00 PM",
-    "show": "rising-stars"
   },
   {
     "date": "2026-06-06",
@@ -461,13 +476,18 @@
   },
   {
     "date": "2026-06-12",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-06-12",
     "time": "7:30 PM",
     "show": "the-re-up"
   },
   {
     "date": "2026-06-12",
-    "time": "10:00 PM",
-    "show": "rising-stars"
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-06-13",
@@ -481,6 +501,11 @@
   },
   {
     "date": "2026-06-19",
+    "time": "10:00 PM",
+    "show": "rising-stars"
+  },
+  {
+    "date": "2026-06-19",
     "time": "7:00 PM",
     "show": "comedy-pageant"
   },
@@ -488,11 +513,6 @@
     "date": "2026-06-19",
     "time": "9:00 PM",
     "show": "masterminds"
-  },
-  {
-    "date": "2026-06-19",
-    "time": "10:00 PM",
-    "show": "rising-stars"
   },
   {
     "date": "2026-06-20",
@@ -508,6 +528,11 @@
     "date": "2026-06-26",
     "time": "10:00 PM",
     "show": "rising-stars"
+  },
+  {
+    "date": "2026-06-26",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-06-27",
@@ -545,6 +570,11 @@
     "show": "the-re-up"
   },
   {
+    "date": "2026-07-10",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
+  },
+  {
     "date": "2026-07-11",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -573,6 +603,11 @@
     "date": "2026-07-23",
     "time": "7:30 PM",
     "show": "short-form-improv-coached-jam"
+  },
+  {
+    "date": "2026-07-24",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-07-25",
@@ -620,6 +655,11 @@
     "show": "the-re-up"
   },
   {
+    "date": "2026-08-14",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
+  },
+  {
     "date": "2026-08-15",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -648,6 +688,11 @@
     "date": "2026-08-27",
     "time": "7:30 PM",
     "show": "short-form-improv-coached-jam"
+  },
+  {
+    "date": "2026-08-28",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-08-29",
@@ -685,6 +730,11 @@
     "show": "the-re-up"
   },
   {
+    "date": "2026-09-11",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
+  },
+  {
     "date": "2026-09-12",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -713,6 +763,11 @@
     "date": "2026-09-24",
     "time": "7:30 PM",
     "show": "short-form-improv-coached-jam"
+  },
+  {
+    "date": "2026-09-25",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-09-26",
@@ -750,6 +805,11 @@
     "show": "the-re-up"
   },
   {
+    "date": "2026-10-09",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
+  },
+  {
     "date": "2026-10-10",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -778,6 +838,11 @@
     "date": "2026-10-22",
     "time": "7:30 PM",
     "show": "short-form-improv-coached-jam"
+  },
+  {
+    "date": "2026-10-23",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-10-24",
@@ -825,6 +890,11 @@
     "show": "the-re-up"
   },
   {
+    "date": "2026-11-13",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
+  },
+  {
     "date": "2026-11-14",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
@@ -853,6 +923,11 @@
     "date": "2026-11-26",
     "time": "7:30 PM",
     "show": "short-form-improv-coached-jam"
+  },
+  {
+    "date": "2026-11-27",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-11-28",
@@ -888,6 +963,11 @@
     "date": "2026-12-11",
     "time": "7:30 PM",
     "show": "the-re-up"
+  },
+  {
+    "date": "2026-12-11",
+    "time": "9:00 PM",
+    "show": "a-random-memory"
   },
   {
     "date": "2026-12-12",

@@ -200,5 +200,17 @@
     "price": null,
     "room": "Rouge Room",
     "description": "Featuring:\nColton Alstatt\nEmmanuel J. Ross Hartway\nMichael Oakes\nThom Murray\nTrevor D. Kelley"
+  },
+  {
+    "slug": "a-random-memory",
+    "title": "A Random Memory",
+    "schedule": "Magic and Mentalism",
+    "poster": "arandommemory.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2128252",
+    "buttonText": null,
+    "price": null,
+    "room": "Rouge Room",
+    "description": "A Random Memory is an intimate magic and mentalism show worth remembering. Every trick uses the audience's own cares, wishes and memories to create magic with emotional weight. Instead of another round of generic card tricks featuring kings and aces, the show opens with a nearly blank deck of cards and each trick fills out more of the deck with things the audience cares about. To bring things full circle and remind us all that even this show will only be a memory, the audience performs a magic trick of their own that destroys the deck they spent the last hour building.\n\nA Random Memory is the brainchild of magician, Dan Feltey. Dan is a software engineer by trade who fell in love with magic in 2018 and never gave it up. Dan got his start in magic taking classes at Magic Inc., and The Chicago Magic Lounge, before joining Open Heart Magic in 2023 as a bedside magician. Open Heart Magic is a non-profit organization that trains volunteers to perform magic at children's hospitals throughout the midwest, and emphasizes magic that makes the child the center of every trick. Dan brings this philosophy to A Random Memory, allowing the audience to become the star of the show and experience the magic themselves.",
+    "isIndex": true
   }
 ]
