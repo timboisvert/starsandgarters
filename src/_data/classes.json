@@ -54,5 +54,16 @@
     "url": "https://www.nearlander.com/service-page/sketch-forge",
     "buttonText": "Register",
     "description": "A sketch comedy course designed for people of all skill levels. Refine your craft and build new skills over six weeks of focused training."
+  },
+  {
+    "slug": "janelles-improv-workshop",
+    "title": "Janelle's Improv Workshop",
+    "subtitle": "Have fun and break bad habits",
+    "instructor": "Janelle Kloth",
+    "schedule": "Saturday, April 18 @ 1–4 PM",
+    "poster": "janellesimprovworkshop.png",
+    "url": "https://cocoscout.com/c/OHQB2",
+    "buttonText": "Register",
+    "description": "Join Janelle Kloth for a diagnostics based workshop for anyone looking to level up their improv!\n\n$40, or $35 if you register by April 4."
   }
 ]
