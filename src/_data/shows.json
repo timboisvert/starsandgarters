@@ -223,5 +223,16 @@
     "price": null,
     "room": null,
     "description": "Join The Beaus for a one-night-only, high-energy cabaret where no two moments are planned—and everything is shaped by the audience.\n\nFeaturing mashups and hits from Broadway, pop, disco, rock, jazz, country, and more, this interactive experience puts you in control. Before the show begins, you'll choose your favorite artists from a curated list. From there, The Beaus create a completely original performance on the fly.\n\nFeaturing the full Beaus cast, this is a night of music, comedy, and controlled chaos—where anything can happen, and you won't know what you're getting until it starts."
+  },
+  {
+    "slug": "butterface",
+    "title": "Butterface",
+    "schedule": "Her sketches are funny... but her face",
+    "poster": "butterface.jpg",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2130496",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": "BUTTERFACE is a two-person sketch show extravaganza exploring themes of compassion, love, empathy, and cringe. Written and performed through the vessels of Brady Barrow and Ollie Grishaber, these two will bring the beauty of HOPE back to comedy by doing the unspeakable: being two women with okay faces. Sure, the sketches are really good...but her face!"
   }
 ]
