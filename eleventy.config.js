@@ -273,6 +273,30 @@ export default function (eleventyConfig) {
         });
     });
 
+    // Sort classes by start date
+    eleventyConfig.addFilter("sortClasses", (classes) => {
+        function parseTimeToMinutes(timeStr) {
+            if (!timeStr) return 0;
+            const [timePart = "0:00", ampm] = timeStr.split(" ");
+            let [hours = 0, minutes = 0] = timePart.split(":").map(n => parseInt(n, 10) || 0);
+            if (ampm === "PM" && hours !== 12) hours += 12;
+            if (ampm === "AM" && hours === 12) hours = 0;
+            return hours * 60 + minutes;
+        }
+        function firstDate(cls) {
+            return cls.dates && cls.dates.length ? cls.dates[0] : null;
+        }
+        return [...classes].sort((a, b) => {
+            const ad = firstDate(a);
+            const bd = firstDate(b);
+            if (!ad && !bd) return 0;
+            if (!ad) return 1;
+            if (!bd) return -1;
+            if (ad.date !== bd.date) return ad.date.localeCompare(bd.date);
+            return parseTimeToMinutes(ad.time) - parseTimeToMinutes(bd.time);
+        });
+    });
+
     // Sort shows: pinned first, then by next upcoming event (date+time), then alphabetically
     eleventyConfig.addFilter("sortShows", (shows, events, today) => {
         // Build map of show slug -> next upcoming event (timestamp + raw values)

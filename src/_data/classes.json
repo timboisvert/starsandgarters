@@ -4,7 +4,18 @@
     "title": "The Language of Silence",
     "subtitle": "An 8 Week Physical Acting and Mime Class",
     "instructor": "Timothy Edward",
-    "schedule": "April 3 – May 23, Saturdays @ 10 AM",
+    "schedule": "April 4 – May 23, Saturdays @ 10 AM",
+    "dates": [
+      { "date": "2026-04-04", "time": "10:00 AM" },
+      { "date": "2026-04-11", "time": "10:00 AM" },
+      { "date": "2026-04-18", "time": "10:00 AM" },
+      { "date": "2026-04-25", "time": "10:00 AM" },
+      { "date": "2026-05-02", "time": "10:00 AM" },
+      { "date": "2026-05-09", "time": "10:00 AM" },
+      { "date": "2026-05-16", "time": "10:00 AM" },
+      { "date": "2026-05-23", "time": "10:00 AM" },
+      { "date": "2026-05-31", "time": "12:00 PM", "label": "Showcase" }
+    ],
     "poster": "thelanguageofsilence.png",
     "url": "https://www.cocoscout.com/c/748O6",
     "buttonText": "Register",
@@ -28,6 +39,15 @@
     "subtitle": "A place to refine the skills you have and gain the ones you don't!",
     "instructor": null,
     "schedule": "Saturdays @ 1 PM, 6 weeks starting April 12",
+    "dates": [
+      { "date": "2026-04-12", "time": "1:00 PM" },
+      { "date": "2026-04-19", "time": "1:00 PM" },
+      { "date": "2026-04-26", "time": "1:00 PM" },
+      { "date": "2026-05-03", "time": "1:00 PM" },
+      { "date": "2026-05-17", "time": "1:00 PM" },
+      { "date": "2026-05-24", "time": "1:00 PM" },
+      { "date": "2026-05-31", "time": "2:00 PM", "label": "Showcase" }
+    ],
     "poster": "dkforge-standup.jpg",
     "url": "https://www.nearlander.com/service-page/stand-up-forge",
     "buttonText": "Register",
@@ -39,6 +59,15 @@
     "subtitle": "A place to refine the skills you have and gain the ones you don't!",
     "instructor": null,
     "schedule": "Saturdays @ 10 AM, 6 weeks starting April 12",
+    "dates": [
+      { "date": "2026-04-12", "time": "10:00 AM" },
+      { "date": "2026-04-19", "time": "10:00 AM" },
+      { "date": "2026-04-26", "time": "10:00 AM" },
+      { "date": "2026-05-03", "time": "10:00 AM" },
+      { "date": "2026-05-17", "time": "10:00 AM" },
+      { "date": "2026-05-24", "time": "10:00 AM" },
+      { "date": "2026-05-31", "time": "2:00 PM", "label": "Showcase" }
+    ],
     "poster": "dkforge-improv.jpg",
     "url": "https://www.nearlander.com/service-page/improv-forge",
     "buttonText": "Register",
@@ -50,6 +79,15 @@
     "subtitle": "A place to refine the skills you have and gain the ones you don't!",
     "instructor": null,
     "schedule": "Saturdays @ 4 PM, 6 weeks starting April 12",
+    "dates": [
+      { "date": "2026-04-12", "time": "4:00 PM" },
+      { "date": "2026-04-19", "time": "4:00 PM" },
+      { "date": "2026-04-26", "time": "4:00 PM" },
+      { "date": "2026-05-03", "time": "4:00 PM" },
+      { "date": "2026-05-17", "time": "4:00 PM" },
+      { "date": "2026-05-24", "time": "4:00 PM" },
+      { "date": "2026-05-31", "time": "2:00 PM", "label": "Showcase" }
+    ],
     "poster": "dkforge-sketch.jpg",
     "url": "https://www.nearlander.com/service-page/sketch-forge",
     "buttonText": "Register",
@@ -61,9 +99,26 @@
     "subtitle": "Have fun and break bad habits",
     "instructor": "Janelle Kloth",
     "schedule": "Saturday, April 18 @ 1–4 PM",
+    "dates": [
+      { "date": "2026-04-18", "time": "1:00 PM" }
+    ],
     "poster": "janellesimprovworkshop.png",
     "url": "https://cocoscout.com/c/OHQB2",
     "buttonText": "Register",
     "description": "Join Janelle Kloth for a diagnostics based workshop for anyone looking to level up their improv!\n\n$40, or $35 if you register by April 4."
+  },
+  {
+    "slug": "card-magic-for-beginners",
+    "title": "Card Magic for Beginners",
+    "subtitle": "Sleight-of-hand crash course",
+    "instructor": null,
+    "schedule": "Saturday, May 2 @ 4–7 PM",
+    "dates": [
+      { "date": "2026-05-02", "time": "4:00 PM" }
+    ],
+    "poster": "cardmagicforbeginners.png",
+    "url": "http://localhost:3000/c/RIVGU",
+    "buttonText": "Register",
+    "description": "A crash course in the basics of sleight-of-hand card magic. You'll learn to handle a deck of cards like a pro. Skills taught include how to shuffle cards, control cards, and more. Plus learn tricks you can perform right away to entertain your friends, family, and maybe even fool a magician."
   }
 ]

@@ -13,7 +13,7 @@ eleventyComputed:
 <h1 class="font-oswald text-3xl uppercase mb-8">Classes & Training</h1>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    {%- for cls in classes %}
+    {%- for cls in classes | sortClasses %}
     <a href="/classes/{{ cls.slug }}/" class="group bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col hover:border-neutral-600 transition-colors">
         {%- if cls.poster %}
         <div class="w-full bg-neutral-800 overflow-hidden">

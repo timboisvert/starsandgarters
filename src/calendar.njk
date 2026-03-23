@@ -67,6 +67,39 @@ const shows = {{ shows | dump | safe }};
 const showMap = {};
 shows.forEach(s => showMap[s.slug] = s);
 
+const classesData = {{ classes | dump | safe }};
+classesData.forEach(cls => {
+    if (cls.dates && cls.dates.length) {
+        showMap['_class_' + cls.slug] = {
+            title: cls.title,
+            poster: cls.poster,
+            isClass: true,
+            classSlug: cls.slug
+        };
+        cls.dates.forEach(d => {
+            const displayName = d.label ? cls.title + ' ' + d.label : cls.title;
+            events.push({
+                date: d.date,
+                time: d.time || '',
+                show: '_class_' + cls.slug,
+                isClass: true,
+                classSlug: cls.slug,
+                displayName: displayName
+            });
+        });
+    }
+});
+
+function parseTimeTo24(timeStr) {
+    if (!timeStr) return 0;
+    const [timePart = '0:00', ampm] = timeStr.split(' ');
+    let [h = 0, m = 0] = timePart.split(':').map(n => parseInt(n, 10) || 0);
+    if (ampm === 'PM' && h !== 12) h += 12;
+    if (ampm === 'AM' && h === 12) h = 0;
+    return h * 60 + m;
+}
+events.sort((a, b) => a.date.localeCompare(b.date) || parseTimeTo24(a.time) - parseTimeTo24(b.time));
+
 const today = new Date();
 const currentMonth = today.getMonth();
 const currentYear = today.getFullYear();
@@ -118,6 +151,10 @@ function openDayModal(dateStr, dayEvents) {
                     .replace(/[^a-z0-9]+/g, '-')
                     .replace(/^-|-$/g, '');
                 linkUrl = '/show/' + event.show + '/' + eventSlug + '/';
+            }
+
+            if (show.isClass) {
+                linkUrl = '/classes/' + show.classSlug + '/';
             }
 
             html += `<a href="${linkUrl}" class="flex items-center gap-4 p-3 bg-neutral-800 hover:bg-neutral-700 transition-colors">`;
