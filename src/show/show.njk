@@ -67,6 +67,15 @@ eleventyComputed:
 
             <p class="font-inter text-2xl text-neutral-300 mb-8">{{ show.schedule }}</p>
 
+            {%- if show.ticketUrl %}
+            <div id="static-ticket-button" class="mb-8">
+                <a href="{{ show.ticketUrl }}" target="_blank" rel="noopener"
+                    class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
+                    {{ show.buttonText or "Buy Tickets" }}
+                </a>
+            </div>
+            {%- endif %}
+
             <div id="next-event-card" class="hidden"></div>
 
             {%- if show.description %}
@@ -143,6 +152,10 @@ eleventyComputed:
 
         card.innerHTML = html;
         card.classList.remove('hidden');
+
+        // Hide the static ticket button since next-event card has its own
+        const staticBtn = document.getElementById('static-ticket-button');
+        if (staticBtn) staticBtn.classList.add('hidden');
     }
 
     // Render upcoming events list (for isIndex shows)

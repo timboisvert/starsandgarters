@@ -191,15 +191,37 @@
     "description": "First dates are awkward enough… let's put them on stage!\n\nOn this evening, at the romantic Stars & Garters, two singles will meet for the first time. Watch them fall in love… unless they don't! 3 rounds, 2 singles, 1 epic first date."
   },
   {
-    "slug": "the-gap",
+    "slug": "the-gap-3-21-2026",
     "title": "The Gap: Stand-up Showcase",
     "schedule": "Top local stand-ups",
-    "poster": "the-gap.png",
+    "poster": "the-gap-3-21-2026.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2122080",
     "buttonText": null,
     "price": null,
     "room": "Rouge Room",
     "description": "Featuring:\nColton Alstatt\nEmmanuel J. Ross Hartway\nMichael Oakes\nThom Murray\nTrevor D. Kelley"
+  },
+  {
+    "slug": "the-gap-3-27-2026",
+    "title": "The Gap: Stand-up Showcase",
+    "schedule": "Top local stand-ups",
+    "poster": "the-gap-3-27-2026.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2133177",
+    "buttonText": null,
+    "price": null,
+    "room": "Rouge Room",
+    "description": null
+  },
+  {
+    "slug": "the-gap-4-25-2026",
+    "title": "The Gap: Stand-up Showcase",
+    "schedule": "Top local stand-ups",
+    "poster": "the-gap-4-25-2026.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2133179",
+    "buttonText": null,
+    "price": null,
+    "room": "Rouge Room",
+    "description": null
   },
   {
     "slug": "a-random-memory",
