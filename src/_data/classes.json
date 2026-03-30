@@ -1,55 +1,5 @@
 [
   {
-    "slug": "the-language-of-silence",
-    "title": "The Language of Silence",
-    "subtitle": "An 8 Week Physical Acting and Mime Class",
-    "instructor": "Timothy Edward",
-    "schedule": "April 4 – May 23, Saturdays @ 10 AM",
-    "dates": [
-      {
-        "date": "2026-04-04",
-        "time": "10:00 AM"
-      },
-      {
-        "date": "2026-04-11",
-        "time": "10:00 AM"
-      },
-      {
-        "date": "2026-04-18",
-        "time": "10:00 AM"
-      },
-      {
-        "date": "2026-04-25",
-        "time": "10:00 AM"
-      },
-      {
-        "date": "2026-05-02",
-        "time": "10:00 AM"
-      },
-      {
-        "date": "2026-05-09",
-        "time": "10:00 AM"
-      },
-      {
-        "date": "2026-05-16",
-        "time": "10:00 AM"
-      },
-      {
-        "date": "2026-05-23",
-        "time": "10:00 AM"
-      },
-      {
-        "date": "2026-05-31",
-        "time": "12:00 PM",
-        "label": "Showcase"
-      }
-    ],
-    "poster": "thelanguageofsilence.png",
-    "url": "https://www.cocoscout.com/c/748O6",
-    "buttonText": "Register",
-    "description": "A progressive physical performance course focused on illusion, tension control, emotional clarity, and ensemble awareness."
-  },
-  {
     "slug": "short-form-improv-coached-jam",
     "title": "Short-form Improv Coached Jam",
     "subtitle": "Learn and play improv games",
