@@ -287,6 +287,13 @@ export default function (eleventyConfig) {
             return cls.dates && cls.dates.length ? cls.dates[0] : null;
         }
         return [...classes].sort((a, b) => {
+            if (a.pinned && !b.pinned) return -1;
+            if (!a.pinned && b.pinned) return 1;
+            if (a.pinned && b.pinned) {
+                const ao = a.pinOrder || 999;
+                const bo = b.pinOrder || 999;
+                if (ao !== bo) return ao - bo;
+            }
             const ad = firstDate(a);
             const bd = firstDate(b);
             if (!ad && !bd) return 0;

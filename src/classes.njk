@@ -14,10 +14,10 @@ eleventyComputed:
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     {%- for cls in classes | sortClasses %}
-    <a href="/classes/{{ cls.slug }}/" class="group bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col hover:border-neutral-600 transition-colors">
+    <a href="/classes/{{ cls.slug }}/" class="group bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col hover:border-neutral-600 transition-colors{{ ' sm:col-span-2 lg:col-span-4' if cls.posterWide }}">
         {%- if cls.poster %}
         <div class="w-full bg-neutral-800 overflow-hidden">
-            <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-300">
+            <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full {{ 'aspect-video' if cls.posterWide else 'aspect-[3/4]' }} object-cover group-hover:scale-105 transition-transform duration-300">
         </div>
         {%- endif %}
         <div class="p-5 flex-1 flex flex-col">

@@ -15,8 +15,13 @@ eleventyComputed:
 ---
 
 <div>
+    {%- if cls.poster and cls.posterWide %}
+    <div class="w-full bg-neutral-900 overflow-hidden mb-12">
+        <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full object-cover">
+    </div>
+    {%- endif %}
     <div class="flex flex-col md:flex-row gap-12">
-        {%- if cls.poster %}
+        {%- if cls.poster and not cls.posterWide %}
         <div class="w-full md:w-1/2 shrink-0">
             <div class="aspect-[3/4] bg-neutral-900 overflow-hidden">
                 <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full h-full object-cover">
