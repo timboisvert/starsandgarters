@@ -104,8 +104,21 @@ const today = new Date();
 const currentMonth = today.getMonth();
 const currentYear = today.getFullYear();
 
-let viewMonth = currentMonth;
-let viewYear = currentYear;
+// Determine earliest navigable month: skip current month if it has no remaining events
+const todayStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+const currentMonthPrefix = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}`;
+const hasRemainingThisMonth = events.some(e => e.date.startsWith(currentMonthPrefix) && e.date >= todayStr);
+
+let minMonth = currentMonth;
+let minYear = currentYear;
+if (!hasRemainingThisMonth) {
+    minMonth = currentMonth + 1;
+    minYear = currentYear;
+    if (minMonth > 11) { minMonth = 0; minYear++; }
+}
+
+let viewMonth = minMonth;
+let viewYear = minYear;
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
                     "July", "August", "September", "October", "November", "December"];
@@ -191,7 +204,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 function getMonthDiff(year, month) {
-    return (year - currentYear) * 12 + (month - currentMonth);
+    return (year - minYear) * 12 + (month - minMonth);
 }
 
 function getEventsForDate(dateStr) {
