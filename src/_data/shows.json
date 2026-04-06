@@ -156,14 +156,16 @@
   },
   {
     "slug": "down-and-down-presents",
-    "title": "Down & Down Presents: A Stand-Up Comedy Show",
-    "schedule": "One night only!",
+    "title": "Down & Down Presents",
+    "schedule": "A Monthly Stand-up Comedy Show",
     "poster": "downanddown.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2113010",
     "buttonText": "Buy Tickets",
+    "createEventPages": true,
+    "hideBaseFromHomepage": true,
     "price": null,
     "room": "Rouge Room",
-    "description": "The very best comics in Chicago & Beyond take the stage for one night only."
+    "description": "Stand-up comics take the stage for one night only."
   },
   {
     "slug": "burly-oke",
@@ -191,26 +193,18 @@
     "description": "First dates are awkward enough… let's put them on stage!\n\nOn this evening, at the romantic Stars & Garters, two singles will meet for the first time. Watch them fall in love… unless they don't! 3 rounds, 2 singles, 1 epic first date."
   },
   {
-    "slug": "the-gap-3-27-2026",
-    "title": "The Gap: Stand-up Showcase",
-    "schedule": "Top local stand-ups",
-    "poster": "the-gap-3-27-2026.png",
-    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2133177",
+    "slug": "the-gap",
+    "title": "The Gap",
+    "schedule": "A Monthly Stand-up Showcase",
+    "poster": null,
+    "ticketUrl": null,
     "buttonText": null,
+    "createEventPages": true,
+    "hideBaseFromHomepage": true,
+    "eventTitleFormat": "event-first",
     "price": null,
     "room": "Rouge Room",
-    "description": "Featuring:\nColton Alstatt\nEmilia Barrosse\nSydney Breedlove\nTrevor D. Kelley\nTaylor Meredith"
-  },
-  {
-    "slug": "the-gap-4-25-2026",
-    "title": "The Gap: Stand-up Showcase",
-    "schedule": "Top local stand-ups",
-    "poster": "the-gap-4-25-2026.png",
-    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2133179",
-    "buttonText": null,
-    "price": null,
-    "room": "Rouge Room",
-    "description": null
+    "description": "Top local stand-ups take the stage."
   },
   {
     "slug": "a-random-memory",

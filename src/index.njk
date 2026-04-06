@@ -154,7 +154,8 @@ eleventyComputed:
             if (!nextEventMap[event.show]) {
                 nextEventMap[event.show] = { date: event.date, time: event.time, ts: eventTs, event };
             }
-            if (event.poster) {
+            const show = showMap[event.show];
+            if (event.poster || (show && show.hideBaseFromHomepage && event.title)) {
                 if (!eventPagesMap[event.show]) {
                     eventPagesMap[event.show] = [];
                 }
@@ -184,17 +185,19 @@ eleventyComputed:
                 pinPosition: show.pinPosition
             });
         } else if (show.createEventPages) {
-            results.push({
-                type: 'show',
-                show,
-                ts: next.ts,
-                title: show.title,
-                poster: show.poster,
-                slug: show.slug,
-                schedule: show.schedule,
-                link: '/show/' + show.slug + '/',
-                pinPosition: show.pinPosition
-            });
+            if (!show.hideBaseFromHomepage) {
+                results.push({
+                    type: 'show',
+                    show,
+                    ts: next.ts,
+                    title: show.title,
+                    poster: show.poster,
+                    slug: show.slug,
+                    schedule: show.schedule,
+                    link: '/show/' + show.slug + '/',
+                    pinPosition: show.pinPosition
+                });
+            }
 
             const posterEvents = eventPagesMap[show.slug] || [];
             for (const { event, ts } of posterEvents) {
@@ -209,7 +212,7 @@ eleventyComputed:
                     ts: ts,
                     title: formatEventTitle(event, show),
                     shortTitle: event.title,
-                    poster: event.poster,
+                    poster: event.poster || show.poster,
                     slug: eventSlug,
                     schedule: event.date,
                     link: '/show/' + show.slug + '/' + eventSlug + '/',
