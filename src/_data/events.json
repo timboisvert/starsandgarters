@@ -216,9 +216,24 @@
     "show": "freakshow-and-tell"
   },
   {
+    "date": "2026-05-09",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-10",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
     "date": "2026-05-12",
     "time": "7:00 PM",
     "show": "cabaret-week-2026-mashups-and-more"
+  },
+  {
+    "date": "2026-05-14",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
   },
   {
     "date": "2026-05-15",
@@ -229,6 +244,11 @@
     "date": "2026-05-15",
     "time": "7:00 PM",
     "show": "comedy-pageant"
+  },
+  {
+    "date": "2026-05-15",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
   },
   {
     "date": "2026-05-15",
@@ -247,8 +267,28 @@
   },
   {
     "date": "2026-05-16",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-16",
     "time": "9:30 PM",
     "show": "cabaret-week-2026-im-ms-behavin"
+  },
+  {
+    "date": "2026-05-17",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-21",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-22",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
   },
   {
     "date": "2026-05-22",
@@ -271,6 +311,26 @@
     "show": "freakshow-and-tell"
   },
   {
+    "date": "2026-05-23",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-24",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-28",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-29",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
     "date": "2026-05-29",
     "time": "10:00 PM",
     "show": "rising-stars"
@@ -286,6 +346,26 @@
     "show": "freakshow-and-tell"
   },
   {
+    "date": "2026-05-30",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-31",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-06-04",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-06-05",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
     "date": "2026-06-05",
     "time": "10:00 PM",
     "show": "rising-stars"
@@ -299,6 +379,16 @@
     "date": "2026-06-06",
     "time": "5:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-06-06",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-06-07",
+    "time": "7:00 PM",
+    "show": "the-conspirators-tartuffe"
   },
   {
     "date": "2026-06-12",

@@ -252,5 +252,17 @@
     "landingPages": [
       "burlesque"
     ]
+  },
+  {
+    "slug": "the-conspirators-tartuffe",
+    "title": "The Conspirators Present: Tartuffe, or, The Charlatan",
+    "schedule": "May 14 – June 7",
+    "poster": "tartuffe.jpg",
+    "ticketUrl": "https://www.conspirewithus.org",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": "Main Stage",
+    "description": "by Molière\ndirected by Wm. Bullion\nproducer & Style coach: Sid Feldman\n\nThe Conspirators lovingly dismantle Molière's classic comedy about the dangers of cultishly believing only what you choose to believe despite a mountain of evidence to the contrary. SOUND FAMILIAR?",
+    "isIndex": true
   }
 ]
