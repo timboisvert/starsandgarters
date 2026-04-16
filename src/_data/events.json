@@ -118,9 +118,11 @@
   {
     "date": "2026-04-18",
     "time": "9:00 PM",
-    "show": "starlets-presents-april-showers",
+    "show": "starlets-presents",
     "title": "April Showers",
-    "poster": "starletspresents-aprilshowers.png"
+    "poster": "starletspresents-aprilshowers.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2162486",
+    "description": "Get wet with us at April Showers, a burlesque extravaganza that will brighten up the stormiest of days! Spring weather in Chicago may be unpredictable, but the evenings of April 18th & 25th, we can forecast 100% chance of sizzle.\n\nCome peek behind the clouds for a glimpse of the Starlets, Stars & Garters' premium house burlesque troupe. Splash around in performances that may be sexy, silly, sensual, spectacular...and always one-of-a-kind.\n\nFeaturing: Gemini Blackheart, Chantilly Chantelle, Dizzie Daisie, Gata Habbie, Katie Rae Horn, Raye Mantique, Ronnie Rouge, and Manny Schevitz!\n\nLet it pour.\n\n21+ show\n\nTo beat the rush, we recommend arriving early to enjoy a cocktail in our gorgeous lobby before the show. Come see why Stars & Garters is the new gold standard for live classic entertainment in the city.\n\nLimited VIP seating available for on-stage and front-row tables."
   },
   {
     "date": "2026-04-18",
@@ -164,9 +166,11 @@
   {
     "date": "2026-04-25",
     "time": "9:00 PM",
-    "show": "starlets-presents-april-showers",
+    "show": "starlets-presents",
     "title": "April Showers",
-    "poster": "starletspresents-aprilshowers.png"
+    "poster": "starletspresents-aprilshowers.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2162486",
+    "description": "Get wet with us at April Showers, a burlesque extravaganza that will brighten up the stormiest of days! Spring weather in Chicago may be unpredictable, but the evenings of April 18th & 25th, we can forecast 100% chance of sizzle.\n\nCome peek behind the clouds for a glimpse of the Starlets, Stars & Garters' premium house burlesque troupe. Splash around in performances that may be sexy, silly, sensual, spectacular...and always one-of-a-kind.\n\nFeaturing: Gemini Blackheart, Chantilly Chantelle, Dizzie Daisie, Gata Habbie, Katie Rae Horn, Raye Mantique, Ronnie Rouge, and Manny Schevitz!\n\nLet it pour.\n\n21+ show\n\nTo beat the rush, we recommend arriving early to enjoy a cocktail in our gorgeous lobby before the show. Come see why Stars & Garters is the new gold standard for live classic entertainment in the city.\n\nLimited VIP seating available for on-stage and front-row tables."
   },
   {
     "date": "2026-04-25",
@@ -296,6 +300,14 @@
     "date": "2026-05-16",
     "time": "9:30 PM",
     "show": "cabaret-week-2026-im-ms-behavin"
+  },
+  {
+    "date": "2026-05-16",
+    "time": "10:00 PM",
+    "show": "laugh-along-live",
+    "title": "Twilight: New Moon",
+    "poster": "laughalonglive-twilightnewmoon.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2168484"
   },
   {
     "date": "2026-05-17",

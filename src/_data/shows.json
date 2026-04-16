@@ -43,21 +43,6 @@
     ]
   },
   {
-    "slug": "starlets-presents-april-showers",
-    "title": "Starlets Presents: April Showers",
-    "schedule": "Saturdays April 18 & 25, 9pm",
-    "poster": "starletspresents-aprilshowers.png",
-    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2162486",
-    "buttonText": "Buy Tickets",
-    "price": null,
-    "room": "Main Stage",
-    "description": "Get wet with us at April Showers, a burlesque extravaganza that will brighten up the stormiest of days! Spring weather in Chicago may be unpredictable, but the evenings of April 18th & 25th, we can forecast 100% chance of sizzle.\n\nCome peek behind the clouds for a glimpse of the Starlets, Stars & Garters' premium house burlesque troupe. Splash around in performances that may be sexy, silly, sensual, spectacular...and always one-of-a-kind.\n\nFeaturing: Gemini Blackheart, Chantilly Chantelle, Dizzie Daisie, Gata Habbie, Katie Rae Horn, Raye Mantique, Ronnie Rouge, and Manny Schevitz!\n\nLet it pour.\n\n21+ show\n\nTo beat the rush, we recommend arriving early to enjoy a cocktail in our gorgeous lobby before the show. Come see why Stars & Garters is the new gold standard for live classic entertainment in the city.\n\nLimited VIP seating available for on-stage and front-row tables.",
-    "isIndex": true,
-    "landingPages": [
-      "burlesque"
-    ]
-  },
-  {
     "slug": "laugh-along-live",
     "title": "Laugh-Along, Live!",
     "schedule": "Watch movies with Chicago's funniest comedians",
@@ -144,7 +129,8 @@
     "buttonText": null,
     "price": null,
     "room": "Rouge Room",
-    "description": "An improvised musical comedy experience starring B-Sticky and Ross Childs."
+    "description": "An improvised musical comedy experience starring B-Sticky and Ross Childs.",
+    "hideFromHomepage": true
   },
   {
     "slug": "the-real-spacewives-of-alderaan",
@@ -155,7 +141,8 @@
     "buttonText": "Buy Tickets",
     "price": null,
     "room": "Rouge Room",
-    "description": "The Real Spacewives of Alderaan is a fully improvised reality show adventure across the galaxy. Honoring the tropes of both Bravo TV and Star Wars, our show revolves around the wealthy elite women of the luxurious Alderaan system. Our all-femme cast of spacewives and host Andi-Wan Cohnobi create a hilarious, unscripted episode of reality TV featuring fierce rivalries, out-of-this-world fashion, and enough chaos to rival a galactic civil war."
+    "description": "The Real Spacewives of Alderaan is a fully improvised reality show adventure across the galaxy. Honoring the tropes of both Bravo TV and Star Wars, our show revolves around the wealthy elite women of the luxurious Alderaan system. Our all-femme cast of spacewives and host Andi-Wan Cohnobi create a hilarious, unscripted episode of reality TV featuring fierce rivalries, out-of-this-world fashion, and enough chaos to rival a galactic civil war.",
+    "hideFromHomepage": true
   },
   {
     "slug": "down-and-down-presents",
@@ -264,6 +251,7 @@
     "price": null,
     "room": "Main Stage",
     "description": "Hosted by Hunter Diamond\nPole performances by Mister Calix",
+    "hideFromHomepage": true,
     "landingPages": [
       "burlesque"
     ]

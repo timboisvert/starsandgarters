@@ -536,11 +536,16 @@ export default function (eleventyConfig) {
                 return eventDate >= todayDate && eventDate <= endDate;
             });
 
+            const seenSlugs = new Set();
             for (const event of showEvents) {
                 const slug = event.title
                     .toLowerCase()
                     .replace(/[^a-z0-9]+/g, '-')
                     .replace(/^-|-$/g, '');
+
+                const pageKey = show.slug + '/' + slug;
+                if (seenSlugs.has(pageKey)) continue;
+                seenSlugs.add(pageKey);
 
                 eventPages.push({
                     show: show,
