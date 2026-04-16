@@ -279,5 +279,16 @@
     "room": "Main Stage",
     "description": "by Molière\ndirected by Wm. Bullion\nproducer & Style coach: Sid Feldman\n\nThe Conspirators lovingly dismantle Molière's classic comedy about the dangers of cultishly believing only what you choose to believe despite a mountain of evidence to the contrary. SOUND FAMILIAR?",
     "isIndex": true
+  },
+  {
+    "slug": "sliced-diced-minced",
+    "title": "Sliced Diced Minced",
+    "schedule": "Apr 24 @ 10 PM",
+    "poster": "sliceddicedminced.jpg",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2164853",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": null
   }
 ]
