@@ -34,41 +34,5 @@
     "url": "https://cocoscout.com/c/WJUBO",
     "buttonText": "Register",
     "description": "A crash course in the basics of sleight-of-hand card magic. You'll learn to handle a deck of cards like a pro. Skills taught include how to shuffle cards, control cards, and more. Plus learn tricks you can perform right away to entertain your friends, family, and maybe even fool a magician."
-  },
-  {
-    "slug": "advanced-sketch-show-production-w-butterface",
-    "pinned": true,
-    "pinOrder": 1,
-    "title": "Advanced Sketch Show Production w/BUTTERFACE",
-    "subtitle": "A 5 Week Sketch Class Intensive, including a final performance!",
-    "instructor": null,
-    "schedule": "Saturdays @ 2 PM, 5 weeks starting April 25",
-    "dates": [
-      {
-        "date": "2026-04-25",
-        "time": "2:00 PM"
-      },
-      {
-        "date": "2026-05-02",
-        "time": "2:00 PM"
-      },
-      {
-        "date": "2026-05-09",
-        "time": "2:00 PM"
-      },
-      {
-        "date": "2026-05-16",
-        "time": "2:00 PM"
-      },
-      {
-        "date": "2026-05-23",
-        "time": "2:00 PM"
-      }
-    ],
-    "poster": "butterface-class.jpg",
-    "posterWide": true,
-    "url": "https://cocoscout.com/c/H55U4",
-    "buttonText": "Sign Up",
-    "description": "Have you ever wanted to produce your own sketch show, but don't know where to start? Join BUTTERFACE as we help you uplift your own creative ideas and learn how to produce your own sketch show. Learn how to create a running order, pitch to theaters, make your tech sheet, find a thematic tie, and more! This Advanced Course requires the following: Beginner knowledge of sketch writing and format."
   }
 ]
