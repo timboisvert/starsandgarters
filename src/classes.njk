@@ -12,21 +12,33 @@ eleventyComputed:
 
 <h1 class="font-oswald text-3xl uppercase mb-8">Classes & Training</h1>
 
+{% set today = "" | currentDate %}
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     {%- for cls in classes | sortClasses %}
-    <a href="/classes/{{ cls.slug }}/" class="group bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col hover:border-neutral-600 transition-colors{{ ' sm:col-span-2 lg:col-span-4' if cls.posterWide }}">
-        {%- if cls.poster %}
-        <div class="w-full bg-neutral-800 overflow-hidden">
-            <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full {{ 'aspect-video' if cls.posterWide else 'aspect-[3/4]' }} object-cover group-hover:scale-105 transition-transform duration-300">
-        </div>
-        {%- endif %}
-        <div class="p-5 flex-1 flex flex-col">
-            <h2 class="font-oswald text-xl uppercase mb-1">{{ cls.title }}</h2>
-            {%- if cls.subtitle %}
-            <p class="font-inter text-sm text-neutral-400 mb-2">{{ cls.subtitle }}</p>
+        {#- Find the last date for the class -#}
+        {% if cls.dates and (cls.dates | length) > 1 %}
+            {% set lastDate = (cls.dates | sort(attribute='date'))[-1].date %}
+        {% elif cls.dates and (cls.dates | length) == 1 %}
+            {% set lastDate = cls.dates[0].date %}
+        {% else %}
+            {% set lastDate = none %}
+        {% endif %}
+        {#- Only show if lastDate is today or in the future -#}
+        {% if lastDate and lastDate >= today %}
+        <a href="/classes/{{ cls.slug }}/" class="group bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col hover:border-neutral-600 transition-colors{{ ' sm:col-span-2 lg:col-span-4' if cls.posterWide }}">
+            {%- if cls.poster %}
+            <div class="w-full bg-neutral-800 overflow-hidden">
+                <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full {{ 'aspect-video' if cls.posterWide else 'aspect-[3/4]' }} object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
             {%- endif %}
-            <p class="font-oswald text-sm uppercase text-neutral-300 mt-auto pt-2">{{ cls.schedule }}</p>
-        </div>
-    </a>
+            <div class="p-5 flex-1 flex flex-col">
+                <h2 class="font-oswald text-xl uppercase mb-1">{{ cls.title }}</h2>
+                {%- if cls.subtitle %}
+                <p class="font-inter text-sm text-neutral-400 mb-2">{{ cls.subtitle }}</p>
+                {%- endif %}
+                <p class="font-oswald text-sm uppercase text-neutral-300 mt-auto pt-2">{{ cls.schedule }}</p>
+            </div>
+        </a>
+        {% endif %}
     {%- endfor %}
 </div>
