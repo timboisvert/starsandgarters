@@ -57,7 +57,7 @@ eleventyComputed:
         {%- if show.poster %}
         <div class="w-full md:w-1/2 shrink-0">
             <div class="aspect-[3/4] bg-neutral-900 overflow-hidden">
-                <img src="/posters/{{ show.poster }}" alt="{{ show.title }}" class="w-full h-full object-cover">
+                <img id="show-poster" src="/posters/{{ show.poster }}" alt="{{ show.title }}" class="w-full h-full object-cover">
             </div>
         </div>
         {%- endif %}
@@ -156,6 +156,12 @@ eleventyComputed:
         // Hide the static ticket button since next-event card has its own
         const staticBtn = document.getElementById('static-ticket-button');
         if (staticBtn) staticBtn.classList.add('hidden');
+
+        // Update main poster if this event has a different one
+        if (nextEvent.poster && nextEvent.poster !== data.poster) {
+            const posterImg = document.getElementById('show-poster');
+            if (posterImg) posterImg.src = '/posters/' + nextEvent.poster;
+        }
     }
 
     // Render upcoming events list (for isIndex shows)

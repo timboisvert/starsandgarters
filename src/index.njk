@@ -225,7 +225,7 @@ eleventyComputed:
                 show,
                 ts: next.ts,
                 title: show.title,
-                poster: show.poster,
+                poster: next.event.poster || show.poster,
                 slug: show.slug,
                 schedule: show.schedule,
                 link: '/show/' + show.slug + '/',
