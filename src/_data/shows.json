@@ -38,6 +38,7 @@
     "description": "Chicago's premiere burlesque showcase featuring performances by the city's finest performers.",
     "isIndex": true,
     "createEventPages": true,
+    "hideBaseFromHomepage": true,
     "landingPages": [
       "burlesque"
     ]
