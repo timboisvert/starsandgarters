@@ -279,5 +279,19 @@
     "price": null,
     "room": null,
     "description": null
+  },
+  {
+    "slug": "velvet-vixens-vol3",
+    "title": "Velvet Vixens Cabaret Vol. 3: Velvet Reverie",
+    "schedule": "A Dazzling Burlesque Variety Cabaret",
+    "poster": "velvetvixens-vol3.jpg",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2180003",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": "Main Stage",
+    "description": "Step into the sultry and whimsical world of Velvet Reverie, a dazzling burlesque variety cabaret that feels like a glamorous dream full of bold self-expression. Featuring an all–queer women cast, this vibrant showcase blends classic tease with contemporary edge, delivering a night of unforgettable performances.\n\nFrom sultry striptease to playful, high-energy acts, each performer brings their own unique flair to the stage—starring Clit Hardwood, Midnight Jade, Arrachna Fatale, Mama Pipe, Ms. Lady Ryder, and hosted by THE Trixie Pickles!",
+    "landingPages": [
+      "burlesque"
+    ]
   }
 ]
