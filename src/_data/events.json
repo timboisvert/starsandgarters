@@ -193,6 +193,11 @@
   },
   {
     "date": "2026-05-02",
+    "time": "7:00 PM",
+    "show": "rorschach-baby-fixes-you"
+  },
+  {
+    "date": "2026-05-02",
     "time": "9:00 PM",
     "show": "down-and-down-presents",
     "title": "Blake Hammond",
@@ -344,6 +349,11 @@
     "date": "2026-05-23",
     "time": "7:00 PM",
     "show": "the-conspirators-tartuffe"
+  },
+  {
+    "date": "2026-05-23",
+    "time": "9:00 PM",
+    "show": "rorschach-baby-fixes-you"
   },
   {
     "date": "2026-05-24",
