@@ -214,7 +214,7 @@ eleventyComputed:
                     shortTitle: event.title,
                     poster: event.poster || show.poster,
                     slug: eventSlug,
-                    schedule: event.date,
+                    schedule: event.schedule || event.date,
                     link: '/show/' + show.slug + '/' + eventSlug + '/',
                     pinPosition: show.pinPosition
                 });
@@ -255,7 +255,7 @@ eleventyComputed:
         link.className = 'block group';
 
         let scheduleText = item.schedule;
-        if (item.type === 'event') {
+        if (item.type === 'event' && /^\d{4}-\d{2}-\d{2}$/.test(item.schedule)) {
             scheduleText = formatLongDate(item.schedule);
         }
 

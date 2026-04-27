@@ -554,7 +554,8 @@ export default function (eleventyConfig) {
                     title: formatEventTitle(event, show),
                     shortTitle: event.title,
                     poster: event.poster || show.poster,
-                    ticketUrl: event.ticketUrl || show.ticketUrl,
+                    ticketUrl: event.freeAtDoor ? null : (event.ticketUrl || show.ticketUrl),
+                    freeAtDoor: event.freeAtDoor || false,
                     date: event.date,
                     time: event.time,
                     description: event.description || show.description

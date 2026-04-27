@@ -22,7 +22,8 @@ eleventyComputed:
             time: event.time,
             title: event.title,
             poster: event.poster or show.poster,
-            ticketUrl: event.ticketUrl or show.ticketUrl,
+            ticketUrl: null if event.freeAtDoor else (event.ticketUrl or show.ticketUrl),
+            freeAtDoor: event.freeAtDoor,
             slug: event | eventSlug,
             shortName: event | eventShortName(show)
         }), showEvents) -%}
@@ -146,6 +147,8 @@ eleventyComputed:
                 class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
                 ${data.buttonText}
             </a>`;
+        } else if (nextEvent.freeAtDoor) {
+            html += `<p class="font-inter text-base text-white">Free at the door</p>`;
         }
 
         html += `</div></div></div>`;

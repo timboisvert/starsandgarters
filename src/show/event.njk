@@ -42,6 +42,8 @@ eleventyComputed:
                    class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
                     {{ eventPage.show.buttonText if eventPage.show.buttonText else "Buy Tickets" }}
                 </a>
+                {%- elif eventPage.freeAtDoor %}
+                <p class="font-inter text-base text-white">Free at the door</p>
                 {%- endif %}
             </div>
 
