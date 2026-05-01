@@ -192,6 +192,7 @@
     "buttonText": null,
     "createEventPages": true,
     "hideBaseFromHomepage": true,
+    "hideFromHomepage": true,
     "eventTitleFormat": "event-first",
     "price": null,
     "room": "Rouge Room",
@@ -229,6 +230,7 @@
     "buttonText": "Buy Tickets",
     "price": null,
     "room": "Main Stage",
+    "hideFromHomepage": true,
     "description": "BUTTERFACE is a two-person sketch show extravaganza exploring themes of compassion, love, empathy, and cringe. Written and performed through the vessels of Brady Barrow and Ollie Grishaber, these two will bring the beauty of HOPE back to comedy by doing the unspeakable: being two women with okay faces. Sure, the sketches are really good...but her face!"
   },
   {
@@ -268,17 +270,6 @@
     "room": "Main Stage",
     "description": "by Molière\ndirected by Wm. Bullion\nproducer & Style coach: Sid Feldman\n\nThe Conspirators lovingly dismantle Molière's classic comedy about the dangers of cultishly believing only what you choose to believe despite a mountain of evidence to the contrary. SOUND FAMILIAR?",
     "isIndex": true
-  },
-  {
-    "slug": "sliced-diced-minced",
-    "title": "Sliced Diced Minced",
-    "schedule": "Apr 24 @ 10 PM",
-    "poster": "sliceddicedminced.jpg",
-    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2164853",
-    "buttonText": "Buy Tickets",
-    "price": null,
-    "room": null,
-    "description": null
   },
   {
     "slug": "rorschach-baby-fixes-you",
