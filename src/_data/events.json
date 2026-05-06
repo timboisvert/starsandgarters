@@ -76,6 +76,15 @@
   },
   {
     "date": "2026-05-09",
+    "time": "9:30 PM",
+    "show": "the-gap",
+    "title": "Stand-up Showcase",
+    "poster": "the-gap-5-9-2026.png",
+    "ticketUrl": "https://buytickets.at/starsgarters/2202353",
+    "description": "Featuring:\nSydney Breedlove\nQuinn James\nJessica Thiesen\nColton Alstatt\nHannah Belmont\n\nHosted by Tim Boisvert"
+  },
+  {
+    "date": "2026-05-09",
     "time": "10:00 PM",
     "show": "starlets-presents",
     "title": "May Flowers",

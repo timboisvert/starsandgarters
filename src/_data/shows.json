@@ -192,7 +192,6 @@
     "buttonText": null,
     "createEventPages": true,
     "hideBaseFromHomepage": true,
-    "hideFromHomepage": true,
     "eventTitleFormat": "event-first",
     "price": null,
     "room": "Rouge Room",
