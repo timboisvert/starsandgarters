@@ -123,15 +123,14 @@
   },
   {
     "slug": "a-witty-ditty-committee",
-    "title": "A Witty Ditty Committee Presents: Paddy's Parade Panel",
-    "schedule": "Improvised Musical Comedy",
-    "poster": "awittydittycommittee.jpg",
+    "title": "A Witty Ditty Committee",
+    "schedule": "A Musical Comedy Experience",
+    "poster": "awittydittycommittee-may22.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080876",
     "buttonText": null,
     "price": null,
     "room": "Rouge Room",
-    "description": "An improvised musical comedy experience starring B-Sticky and Ross Childs.",
-    "hideFromHomepage": true
+    "description": "An improvised musical comedy experience starring B-Sticky and Ross Childs."
   },
   {
     "slug": "the-real-spacewives-of-alderaan",
