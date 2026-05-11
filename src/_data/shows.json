@@ -295,6 +295,17 @@
     ]
   },
   {
+    "slug": "shakespeare-blood-oath",
+    "title": "Shakespeare Blood Oath",
+    "schedule": "An abridged play of William Shakespeare",
+    "poster": "shakespearebloodoath.png",
+    "ticketUrl": "https://www.shakespearebloodoath.com/",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": "Rouge Room",
+    "description": "When we founded SBO, we made an oath to do all of Shakespeare's plays, even the bad ones.\n\nWell, it's finally time to do one of the bad ones — Henry VIII. Frankly, we couldn't be more excited!\n\nNo two performances will be the same! Heck, no two casts will be the same! This year, SBO will be injecting the chaos and energy of short-form improv into the work of William Shakespeare, with games, audience participation, and more to make light work of what some might describe as a slog of a play. The biggest twist … the SBO players will train and rehearse to perform any role in the play, and each performance will be cast in front of the audience at the beginning of the show. The Director and Producer will guide them throughout in order to put up a show that's fit for a Queen. Maybe some improv games? Maybe some on-the-spot punch-up's? They may even have to deal with the whims of Queen Elizabeth, herself. That's right! Our very own Queen Elizabeth will be in attendance. But will she approve of this year's production? Or will she be her father's daughter and condemn the cast to the Executioner?"
+  },
+  {
     "slug": "whatever-we-feel",
     "title": "Whatever We Feel",
     "schedule": "A High-energy Romp through Chicago's Performing Arts",

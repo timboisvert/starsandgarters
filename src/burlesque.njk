@@ -167,17 +167,7 @@ eleventyComputed:
         const hasUpcoming = !!next;
 
         if (!hasUpcoming) {
-            results.push({
-                type: 'show',
-                show,
-                ts: Infinity,
-                title: show.title,
-                poster: show.poster,
-                slug: show.slug,
-                schedule: show.schedule,
-                link: '/show/' + show.slug + '/',
-                pinPosition: show.pinPosition
-            });
+            continue;
         } else if (show.createEventPages) {
             const posterEvents = eventPagesMap[show.slug] || [];
             for (const { event, ts } of posterEvents) {

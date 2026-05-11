@@ -280,6 +280,11 @@
   },
   {
     "date": "2026-06-05",
+    "time": "7:00 PM",
+    "show": "shakespeare-blood-oath"
+  },
+  {
+    "date": "2026-06-05",
     "time": "10:00 PM",
     "show": "rising-stars"
   },
@@ -292,6 +297,11 @@
     "date": "2026-06-06",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-06-06",
+    "time": "6:00 PM",
+    "show": "shakespeare-blood-oath"
   },
   {
     "date": "2026-06-06",
