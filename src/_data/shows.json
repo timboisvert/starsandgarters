@@ -293,5 +293,27 @@
     "landingPages": [
       "burlesque"
     ]
+  },
+  {
+    "slug": "whatever-we-feel",
+    "title": "Whatever We Feel",
+    "schedule": "A High-energy Romp through Chicago's Performing Arts",
+    "poster": "whateverwefeel.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2200560",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": null
+  },
+  {
+    "slug": "threes-a-crowd",
+    "title": "Three's a Crowd",
+    "schedule": "Featuring Chicago's brightest stars",
+    "poster": "threesacrowd.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2200550",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": null
   }
 ]

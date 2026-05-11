@@ -264,6 +264,11 @@
     "show": "the-conspirators-tartuffe"
   },
   {
+    "date": "2026-06-04",
+    "time": "8:00 PM",
+    "show": "threes-a-crowd"
+  },
+  {
     "date": "2026-06-05",
     "time": "7:00 PM",
     "show": "the-conspirators-tartuffe"
@@ -316,6 +321,11 @@
     "date": "2026-06-13",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-06-13",
+    "time": "9:00 PM",
+    "show": "whatever-we-feel"
   },
   {
     "date": "2026-06-19",
@@ -371,6 +381,11 @@
     "show": "chicago-workshop-mic"
   },
   {
+    "date": "2026-07-02",
+    "time": "8:00 PM",
+    "show": "threes-a-crowd"
+  },
+  {
     "date": "2026-07-03",
     "time": "9:00 PM",
     "show": "dks-full-five-fridays"
@@ -399,6 +414,11 @@
     "date": "2026-07-11",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-07-11",
+    "time": "9:00 PM",
+    "show": "whatever-we-feel"
   },
   {
     "date": "2026-07-17",
@@ -441,6 +461,11 @@
     "show": "chicago-workshop-mic"
   },
   {
+    "date": "2026-08-06",
+    "time": "8:00 PM",
+    "show": "threes-a-crowd"
+  },
+  {
     "date": "2026-08-07",
     "time": "9:00 PM",
     "show": "dks-full-five-fridays"
@@ -449,6 +474,11 @@
     "date": "2026-08-08",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-08-08",
+    "time": "9:00 PM",
+    "show": "whatever-we-feel"
   },
   {
     "date": "2026-08-14",
