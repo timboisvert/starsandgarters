@@ -247,21 +247,30 @@ function renderCalendar() {
     prevLabel.textContent = (diff > 0 && prevHasEvents) ? `← ${monthNames[pm]}` : '';
     nextLabel.textContent = nextHasEvents ? `${monthNames[nm]} →` : '→';
 
-    const firstDay = new Date(viewYear, viewMonth, 1);
     const lastDay = new Date(viewYear, viewMonth + 1, 0);
-    const startDayOfWeek = firstDay.getDay();
     const daysInMonth = lastDay.getDate();
+
+    // When viewing the current month, hide weeks that ended before this week.
+    // Start the grid from the Sunday of the current week if that Sunday falls within this month.
+    let startDay = 1;
+    if (viewMonth === currentMonth && viewYear === currentYear) {
+        const weekStart = new Date(currentYear, currentMonth, today.getDate() - today.getDay());
+        if (weekStart.getMonth() === viewMonth && weekStart.getFullYear() === viewYear) {
+            startDay = weekStart.getDate();
+        }
+    }
+    const startDayOfWeek = new Date(viewYear, viewMonth, startDay).getDay();
 
     // Desktop grid
     let html = '';
 
-    // Empty cells before first day
+    // Empty cells before first rendered day
     for (let i = 0; i < startDayOfWeek; i++) {
         html += '<div class="bg-neutral-900 min-h-[160px] p-2 pb-3 min-w-0"></div>';
     }
 
     // Days of month
-    for (let day = 1; day <= daysInMonth; day++) {
+    for (let day = startDay; day <= daysInMonth; day++) {
         const dateStr = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
         const dayEvents = getEventsForDate(dateStr);
 
