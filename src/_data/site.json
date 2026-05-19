@@ -1,9 +1,10 @@
 {
     "name": "Stars & Garters",
-    "url": "https://starsandgartersclub.com",
-    "description": "Chicago's premiere retro entertainment venue. The home of Chicago's finest comedy, magic, drag and burlesque entertainment.",
+    "url": "https://starsandgarterstheater.com",
+    "description": "Chicago's premiere classic entertainment venue. The home of Chicago's finest comedy, magic, drag and burlesque entertainment.",
     "twitter": "@starsandgarters",
-    "logo": "https://starsandgartersclub.com/logo.png",
+    "logo": "https://starsandgarterstheater.com/logo.png",
+    "googleAnalyticsId": "G-XV1TGQ16DH",
     "facebook": "https://www.facebook.com/starsandgartersclub",
     "phone": "+1-773-242-9929",
     "email": "starsandgartersclub@gmail.com",
