@@ -259,6 +259,11 @@
     "show": "the-conspirators-tartuffe"
   },
   {
+    "date": "2026-05-31",
+    "time": "9:00 PM",
+    "show": "butterface"
+  },
+  {
     "date": "2026-06-03",
     "time": "8:00 PM",
     "show": "burly-oke"
@@ -331,6 +336,11 @@
     "date": "2026-06-12",
     "time": "9:00 PM",
     "show": "a-random-memory"
+  },
+  {
+    "date": "2026-06-12",
+    "time": "10:00 PM",
+    "show": "boylesque"
   },
   {
     "date": "2026-06-13",

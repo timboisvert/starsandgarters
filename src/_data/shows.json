@@ -223,12 +223,11 @@
     "slug": "butterface",
     "title": "Butterface",
     "schedule": "Her sketches are funny... but her face",
-    "poster": "butterface.jpg",
+    "poster": "butterface.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2130496",
     "buttonText": "Buy Tickets",
     "price": null,
     "room": "Main Stage",
-    "hideFromHomepage": true,
     "description": "BUTTERFACE is a two-person sketch show extravaganza exploring themes of compassion, love, empathy, and cringe. Written and performed through the vessels of Brady Barrow and Ollie Grishaber, these two will bring the beauty of HOPE back to comedy by doing the unspeakable: being two women with okay faces. Sure, the sketches are really good...but her face!"
   },
   {
@@ -252,7 +251,6 @@
     "price": null,
     "room": "Main Stage",
     "description": "Hosted by Hunter Diamond\nPole performances by Mister Calix",
-    "hideFromHomepage": true,
     "landingPages": [
       "burlesque"
     ]
