@@ -12,6 +12,49 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
+        // First-touch attribution: capture UTM params on landing, persist 90 days,
+        // re-send as user properties on every page so attribution survives the session.
+        (function() {
+            var COOKIE = 'sg_attribution';
+            var DAYS = 90;
+
+            function readCookie(name) {
+                var m = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]*)'));
+                return m ? decodeURIComponent(m[2]) : null;
+            }
+            function writeCookie(name, value, days) {
+                var exp = new Date(Date.now() + days * 86400000).toUTCString();
+                document.cookie = name + '=' + encodeURIComponent(value) +
+                    '; expires=' + exp + '; path=/; SameSite=Lax';
+            }
+
+            var params = new URLSearchParams(window.location.search);
+            var utm = {};
+            ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k) {
+                var v = params.get(k);
+                if (v) utm[k] = v;
+            });
+
+            var stored = readCookie(COOKIE);
+            var attribution = null;
+
+            if (Object.keys(utm).length > 0 && !stored) {
+                attribution = Object.assign({}, utm, { first_seen: new Date().toISOString() });
+                writeCookie(COOKIE, JSON.stringify(attribution), DAYS);
+            } else if (stored) {
+                try { attribution = JSON.parse(stored); } catch (e) {}
+            }
+
+            if (attribution) {
+                gtag('set', 'user_properties', {
+                    first_touch_source: attribution.utm_source || '(none)',
+                    first_touch_medium: attribution.utm_medium || '(none)',
+                    first_touch_campaign: attribution.utm_campaign || '(none)'
+                });
+            }
+        })();
+
         gtag('config', '{{ site.googleAnalyticsId }}');
     </script>
     {% endif %}
