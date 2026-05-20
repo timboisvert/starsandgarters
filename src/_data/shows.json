@@ -244,13 +244,13 @@
   {
     "slug": "boylesque",
     "title": "Boylesque",
-    "schedule": "Stars & Garters' FIRST all-male burlesque show!",
+    "schedule": "Stars & Garters' all-male burlesque show!",
     "poster": "boylesque.png",
     "ticketUrl": "https://buytickets.at/starsgarters/2141197",
     "buttonText": "Buy Tickets",
     "price": null,
     "room": "Main Stage",
-    "description": "Hosted by Hunter Diamond\nPole performances by Mister Calix",
+    "description": "Hosted by Lando Graves\nPole performances by Wolfie J",
     "landingPages": [
       "burlesque"
     ]
