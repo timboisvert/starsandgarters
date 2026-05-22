@@ -431,7 +431,7 @@ export default function (eleventyConfig) {
                     title: show.title,
                     poster: show.poster,
                     slug: show.slug,
-                    schedule: show.schedule,
+                    tagline: show.tagline,
                     link: '/show/' + show.slug + '/',
                     pinPosition: show.pinPosition
                 });
@@ -445,7 +445,7 @@ export default function (eleventyConfig) {
                     title: show.title,
                     poster: show.poster,
                     slug: show.slug,
-                    schedule: show.schedule,
+                    tagline: show.tagline,
                     link: '/show/' + show.slug + '/',
                     pinPosition: show.pinPosition
                 });
@@ -466,7 +466,7 @@ export default function (eleventyConfig) {
                         shortTitle: event.title,
                         poster: event.poster,
                         slug: eventSlug,
-                        schedule: event.date,
+                        tagline: event.date,
                         link: '/show/' + show.slug + '/' + eventSlug + '/',
                         pinPosition: show.pinPosition
                     });
@@ -480,7 +480,7 @@ export default function (eleventyConfig) {
                     title: show.title,
                     poster: show.poster,
                     slug: show.slug,
-                    schedule: show.schedule,
+                    tagline: show.tagline,
                     link: '/show/' + show.slug + '/',
                     pinPosition: show.pinPosition
                 });

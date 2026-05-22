@@ -2,7 +2,7 @@
   {
     "slug": "stargazers-adventure-club",
     "title": "Stargazers Adventure Club",
-    "schedule": "For children aged 4-8 and their people",
+    "tagline": "For children aged 4-8 and their people",
     "poster": "stargazersadventureclub.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2083963",
     "buttonText": "Buy Tickets",
@@ -14,7 +14,7 @@
   {
     "slug": "rising-stars",
     "title": "Rising Stars Burlesque Revue",
-    "schedule": "Chicago's hottest up-and-coming burlesque stars",
+    "tagline": "Chicago's hottest up-and-coming burlesque stars",
     "poster": "rising-stars.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2043296",
     "buttonText": null,
@@ -29,7 +29,7 @@
   {
     "slug": "starlets-presents",
     "title": "Starlets Presents",
-    "schedule": "A Freshly-Picked Burlesque Bouquet",
+    "tagline": "A Freshly-Picked Burlesque Bouquet",
     "poster": "starletspresents-mayflowers.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2195444",
     "buttonText": "Buy Tickets",
@@ -46,7 +46,7 @@
   {
     "slug": "laugh-along-live",
     "title": "Laugh-Along, Live!",
-    "schedule": "Watch movies with Chicago's funniest comedians",
+    "tagline": "Watch movies with Chicago's funniest comedians",
     "poster": "laughalonglive.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080129",
     "price": "$20",
@@ -60,7 +60,7 @@
   {
     "slug": "freakshow-and-tell",
     "title": "FreakShow & Tell",
-    "schedule": "Saturdays @ 7 PM",
+    "tagline": "Saturdays @ 7 PM",
     "poster": "freakshowandtell.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2076501",
     "buttonText": null,
@@ -72,7 +72,7 @@
   {
     "slug": "masterminds",
     "title": "M.A.S.T.E.R.M.I.N.D.S.",
-    "schedule": "Third Fridays @ 9 PM",
+    "tagline": "Third Fridays @ 9 PM",
     "poster": "masterminds.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2082094",
     "price": "$20",
@@ -82,7 +82,7 @@
   {
     "slug": "comedy-pageant",
     "title": "Comedy Pageant",
-    "schedule": "Every other Friday at 7 PM",
+    "tagline": "Every other Friday at 7 PM",
     "poster": "comedypageant.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2082103",
     "price": "$16",
@@ -92,7 +92,7 @@
   {
     "slug": "chicago-workshop-mic",
     "title": "Chicago's Workshop Mic",
-    "schedule": "Saturdays @ 4pm",
+    "tagline": "Saturdays @ 4pm",
     "poster": "chicagoworkshopmic.png",
     "ticketUrl": "https://cocoscout.com/s/BHZ0W",
     "buttonText": "Sign Up",
@@ -103,7 +103,7 @@
   {
     "slug": "dks-full-five-fridays",
     "title": "DK's Full Five Fridays",
-    "schedule": "1st Fridays @ 9pm",
+    "tagline": "1st Fridays @ 9pm",
     "poster": "dksfullfivefridays.png",
     "ticketUrl": "https://www.nearlander.com/event-details/full-five-fridays-2026-04-03-20-40",
     "price": "$10",
@@ -113,7 +113,7 @@
   {
     "slug": "the-re-up",
     "title": "The Re:Up - A Monthly Comedy Show",
-    "schedule": "A Monthly Stand-up Comedy Show",
+    "tagline": "A Monthly Stand-up Comedy Show",
     "poster": "the-re-up.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2082350",
     "buttonText": null,
@@ -124,7 +124,7 @@
   {
     "slug": "a-witty-ditty-committee",
     "title": "A Witty Ditty Committee",
-    "schedule": "A Musical Comedy Experience",
+    "tagline": "A Musical Comedy Experience",
     "poster": "awittydittycommittee-may22.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080876",
     "buttonText": null,
@@ -135,19 +135,18 @@
   {
     "slug": "the-real-spacewives-of-alderaan",
     "title": "The Real Spacewives of Alderaan",
-    "schedule": "Mar 28 @ 7:30 PM",
+    "tagline": "A fully-improvised reality show",
     "poster": "therealspacewivesofalderaan.jpg",
     "ticketUrl": "https://buytickets.at/starsgarters/2106121",
     "buttonText": "Buy Tickets",
     "price": null,
     "room": "Rouge Room",
-    "description": "The Real Spacewives of Alderaan is a fully improvised reality show adventure across the galaxy. Honoring the tropes of both Bravo TV and Star Wars, our show revolves around the wealthy elite women of the luxurious Alderaan system. Our all-femme cast of spacewives and host Andi-Wan Cohnobi create a hilarious, unscripted episode of reality TV featuring fierce rivalries, out-of-this-world fashion, and enough chaos to rival a galactic civil war.",
-    "hideFromHomepage": true
+    "description": "The Real Spacewives of Alderaan is a fully improvised reality show adventure across the galaxy. Honoring the tropes of both Bravo TV and Star Wars, our show revolves around the wealthy elite women of the luxurious Alderaan system. Our all-femme cast of spacewives and host Andi-Wan Cohnobi create a hilarious, unscripted episode of reality TV featuring fierce rivalries, out-of-this-world fashion, and enough chaos to rival a galactic civil war."
   },
   {
     "slug": "down-and-down-presents",
     "title": "Down & Down Presents",
-    "schedule": "A Monthly Stand-up Comedy Show",
+    "tagline": "A Monthly Stand-up Comedy Show",
     "poster": "downanddown.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2113010",
     "buttonText": "Buy Tickets",
@@ -160,7 +159,7 @@
   {
     "slug": "burly-oke",
     "title": "Burly-oke!",
-    "schedule": "You sing, we dance.",
+    "tagline": "You sing, we dance.",
     "poster": "burlyoke.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2116142",
     "buttonText": "Book a table",
@@ -174,7 +173,7 @@
   {
     "slug": "date-night-live",
     "title": "Date Night: Live",
-    "schedule": "May 7 -- One night only!",
+    "tagline": "May 7 -- One night only!",
     "poster": "datenightlive.jpg",
     "ticketUrl": "https://www.eventbrite.com/e/date-night-live-tickets-1983424144007",
     "buttonText": "Buy Tickets",
@@ -185,7 +184,7 @@
   {
     "slug": "the-gap",
     "title": "The Gap",
-    "schedule": "A Monthly Stand-up Showcase",
+    "tagline": "A Monthly Stand-up Showcase",
     "poster": null,
     "ticketUrl": null,
     "buttonText": null,
@@ -199,7 +198,7 @@
   {
     "slug": "a-random-memory",
     "title": "A Random Memory",
-    "schedule": "Magic and Mentalism",
+    "tagline": "Magic and Mentalism",
     "poster": "arandommemory.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2128252",
     "buttonText": null,
@@ -211,7 +210,7 @@
   {
     "slug": "cabaret-week-2026-mashups-and-more",
     "title": "Cabaret Week 2026: Mashups & More",
-    "schedule": "You pick the songs. We build the show.",
+    "tagline": "You pick the songs. We build the show.",
     "poster": "thebeaus.jpg",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2101896",
     "buttonText": "Buy Tickets",
@@ -222,7 +221,7 @@
   {
     "slug": "butterface",
     "title": "Butterface",
-    "schedule": "Her sketches are funny... but her face",
+    "tagline": "Her sketches are funny... but her face",
     "poster": "butterface.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2130496",
     "buttonText": "Buy Tickets",
@@ -233,7 +232,7 @@
   {
     "slug": "cabaret-week-2026-im-ms-behavin",
     "title": "Cabaret Week 2026: I'm M$ B'Havin",
-    "schedule": "Not Your Typical Mama... Memories of a Life Well Lived in Songs",
+    "tagline": "Not Your Typical Mama... Memories of a Life Well Lived in Songs",
     "poster": "immsbehavin.png",
     "ticketUrl": "https://app.tickettailor.com/events/starsgarters/2105859",
     "buttonText": "Buy Tickets",
@@ -244,7 +243,7 @@
   {
     "slug": "boylesque",
     "title": "Boylesque",
-    "schedule": "Stars & Garters' all-male burlesque show!",
+    "tagline": "Stars & Garters' all-male burlesque show!",
     "poster": "boylesque.png",
     "ticketUrl": "https://buytickets.at/starsgarters/2141197",
     "buttonText": "Buy Tickets",
@@ -258,7 +257,7 @@
   {
     "slug": "the-conspirators-tartuffe",
     "title": "The Conspirators Present: Tartuffe, or, The Charlatan",
-    "schedule": "May 14 – June 7",
+    "tagline": "May 14 – June 7",
     "poster": "tartuffe.jpg",
     "ticketUrl": "https://www.conspirewithus.org",
     "buttonText": "Buy Tickets",
@@ -270,7 +269,7 @@
   {
     "slug": "rorschach-baby-fixes-you",
     "title": "Rorschach Baby Fixes YOU",
-    "schedule": "Total emotional repair (Results not guaranteed)",
+    "tagline": "Total emotional repair (Results not guaranteed)",
     "poster": "rorschachbaby-fixesyou.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2157433",
     "buttonText": "Buy Tickets",
@@ -281,7 +280,7 @@
   {
     "slug": "velvet-vixens-vol3",
     "title": "Velvet Vixens Cabaret Vol. 3: Velvet Reverie",
-    "schedule": "A Dazzling Burlesque Variety Cabaret",
+    "tagline": "A Dazzling Burlesque Variety Cabaret",
     "poster": "velvetvixens-vol3.jpg",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2180003",
     "buttonText": "Buy Tickets",
@@ -295,7 +294,7 @@
   {
     "slug": "shakespeare-blood-oath",
     "title": "Shakespeare Blood Oath",
-    "schedule": "An abridged play of William Shakespeare",
+    "tagline": "An abridged play of William Shakespeare",
     "poster": "shakespearebloodoath.png",
     "ticketUrl": "https://www.shakespearebloodoath.com/",
     "buttonText": "Buy Tickets",
@@ -306,7 +305,7 @@
   {
     "slug": "whatever-we-feel",
     "title": "Whatever We Feel",
-    "schedule": "A High-energy Romp through Chicago's Performing Arts",
+    "tagline": "A High-energy Romp through Chicago's Performing Arts",
     "poster": "whateverwefeel.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2200560",
     "buttonText": "Buy Tickets",
@@ -317,7 +316,7 @@
   {
     "slug": "threes-a-crowd",
     "title": "Three's a Crowd",
-    "schedule": "Featuring Chicago's brightest stars",
+    "tagline": "Featuring Chicago's brightest stars",
     "poster": "threesacrowd.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2200550",
     "buttonText": "Buy Tickets",

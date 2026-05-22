@@ -35,7 +35,7 @@
     "show": "down-and-down-presents",
     "title": "Silk & Satire",
     "poster": "downanddown-silksatire.jpeg",
-    "schedule": "Free Comedy Show",
+    "tagline": "Free Comedy Show",
     "freeAtDoor": true,
     "description": "Devin Glass\nNick Emeka\nZoe Dodson\nRebecca Jaffe"
   },
@@ -443,6 +443,12 @@
   },
   {
     "date": "2026-07-11",
+    "time": "7:00 PM",
+    "show": "the-real-spacewives-of-alderaan",
+    "poster": "therealspacewivesofalderaan-july.png"
+  },
+  {
+    "date": "2026-07-11",
     "time": "9:00 PM",
     "show": "whatever-we-feel"
   },
@@ -520,6 +526,12 @@
     "date": "2026-08-15",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-08-15",
+    "time": "7:00 PM",
+    "show": "the-real-spacewives-of-alderaan",
+    "poster": "therealspacewivesofalderaan-august.png"
   },
   {
     "date": "2026-08-21",

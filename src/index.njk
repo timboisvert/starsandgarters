@@ -183,7 +183,7 @@ eleventyComputed:
                     title: show.title,
                     poster: show.poster,
                     slug: show.slug,
-                    schedule: show.schedule,
+                    tagline: show.tagline,
                     link: '/show/' + show.slug + '/',
                     pinPosition: show.pinPosition
                 });
@@ -204,7 +204,7 @@ eleventyComputed:
                     shortTitle: event.title,
                     poster: event.poster || show.poster,
                     slug: eventSlug,
-                    schedule: event.schedule || event.date,
+                    tagline: event.tagline || event.date,
                     link: '/show/' + show.slug + '/' + eventSlug + '/',
                     pinPosition: show.pinPosition
                 });
@@ -217,7 +217,7 @@ eleventyComputed:
                 title: show.title,
                 poster: next.event.poster || show.poster,
                 slug: show.slug,
-                schedule: show.schedule,
+                tagline: show.tagline,
                 link: '/show/' + show.slug + '/',
                 pinPosition: show.pinPosition
             });
@@ -244,9 +244,9 @@ eleventyComputed:
         link.href = item.link;
         link.className = 'block group';
 
-        let scheduleText = item.schedule;
-        if (item.type === 'event' && /^\d{4}-\d{2}-\d{2}$/.test(item.schedule)) {
-            scheduleText = formatLongDate(item.schedule);
+        let taglineText = item.tagline;
+        if (item.type === 'event' && /^\d{4}-\d{2}-\d{2}$/.test(item.tagline)) {
+            taglineText = formatLongDate(item.tagline);
         }
 
         link.innerHTML = `
@@ -254,7 +254,7 @@ eleventyComputed:
                 ${item.poster ? `<img src="/posters/${item.poster}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
             </div>
             <h2 class="font-oswald text-sm uppercase">${item.title}</h2>
-            <p class="font-inter text-xs text-neutral-400">${scheduleText}</p>
+            <p class="font-inter text-xs text-neutral-400">${taglineText}</p>
         `;
         grid.appendChild(link);
     }

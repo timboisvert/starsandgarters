@@ -184,7 +184,7 @@ eleventyComputed:
                     shortTitle: event.title,
                     poster: event.poster,
                     slug: eventSlug,
-                    schedule: event.date,
+                    tagline: event.date,
                     link: '/show/' + show.slug + '/' + eventSlug + '/',
                     pinPosition: show.pinPosition
                 });
@@ -195,9 +195,9 @@ eleventyComputed:
                 show,
                 ts: next.ts,
                 title: show.title,
-                poster: show.poster,
+                poster: next.event.poster || show.poster,
                 slug: show.slug,
-                schedule: show.schedule,
+                tagline: show.tagline,
                 link: '/show/' + show.slug + '/',
                 pinPosition: show.pinPosition
             });
@@ -223,9 +223,9 @@ eleventyComputed:
         link.href = item.link;
         link.className = 'block group';
 
-        let scheduleText = item.schedule;
+        let taglineText = item.tagline;
         if (item.type === 'event') {
-            scheduleText = formatLongDate(item.schedule);
+            taglineText = formatLongDate(item.tagline);
         }
 
         link.innerHTML = `
@@ -233,7 +233,7 @@ eleventyComputed:
                 ${item.poster ? `<img src="/posters/${item.poster}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
             </div>
             <h2 class="font-oswald text-sm uppercase">${item.title}</h2>
-            <p class="font-inter text-xs text-neutral-400">${scheduleText}</p>
+            <p class="font-inter text-xs text-neutral-400">${taglineText}</p>
         `;
         grid.appendChild(link);
     }
