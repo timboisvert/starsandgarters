@@ -13,18 +13,22 @@ eleventyComputed:
 <h1 class="font-oswald text-3xl uppercase mb-8">Classes & Training</h1>
 
 {% set today = "" | currentDate %}
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    {%- for cls in classes | sortClasses %}
-        {#- Find the last date for the class -#}
-        {% if cls.dates and (cls.dates | length) > 1 %}
-            {% set lastDate = (cls.dates | sort(attribute='date'))[-1].date %}
-        {% elif cls.dates and (cls.dates | length) == 1 %}
-            {% set lastDate = cls.dates[0].date %}
-        {% else %}
-            {% set lastDate = none %}
-        {% endif %}
-        {#- Only show if lastDate is today or in the future -#}
-        {% if lastDate and lastDate >= today %}
+{% set upcomingClasses = [] %}
+{%- for cls in classes | sortClasses %}
+    {% if cls.dates and (cls.dates | length) > 1 %}
+        {% set lastDate = (cls.dates | sort(attribute='date'))[-1].date %}
+    {% elif cls.dates and (cls.dates | length) == 1 %}
+        {% set lastDate = cls.dates[0].date %}
+    {% else %}
+        {% set lastDate = none %}
+    {% endif %}
+    {% if lastDate and lastDate >= today %}
+        {% set _ = upcomingClasses.push(cls) %}
+    {% endif %}
+{%- endfor %}
+{% set gridCols = "grid-cols-1 sm:grid-cols-2" if (upcomingClasses | length) < 2 else "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" %}
+<div class="grid {{ gridCols }} gap-6">
+    {%- for cls in upcomingClasses %}
         <a href="/classes/{{ cls.slug }}/" class="group bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col hover:border-neutral-600 transition-colors{{ ' sm:col-span-2 lg:col-span-4' if cls.posterWide }}">
             {%- if cls.poster %}
             <div class="w-full bg-neutral-800 overflow-hidden">
@@ -39,6 +43,5 @@ eleventyComputed:
                 <p class="font-oswald text-sm uppercase text-neutral-300 mt-auto pt-2">{{ cls.schedule }}</p>
             </div>
         </a>
-        {% endif %}
     {%- endfor %}
 </div>
