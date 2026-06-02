@@ -334,5 +334,17 @@
     "price": null,
     "room": null,
     "description": "In this hour-long, high-energy, political lampoon, opposing clown politicians Marti and Mimi finally live up to the title “Civil Servant.” Be amazed and entertained by their dedication to “family values, the Good Lord, and charity, or…something”.  Join Marti, Mimi, and guest performers Ignatius the Thing and Jahrethh for a night of irreverence, fundraising, and a show you can take the whole family to… as long as your family is super horny. Proceeds will be donated to the Southern Trans Youth Emergency Project."
+  },
+  {
+    "slug": "frankenfilms",
+    "title": "Frankenfilms",
+    "tagline": "A complete bastardization of the cinematic arts",
+    "poster": "frankenfilms.png",
+    "ticketUrl": "https://www.nearlander.com/event-details/frankenfilms-2026-07-11-19-00",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": "An improvised dubbing show where we take the pieces of America's favorite movies and mash them together, take out all the dialogue, and have improvisers dub over it!",
+    "isIndex": true
   }
 ]

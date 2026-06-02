@@ -451,6 +451,11 @@
   },
   {
     "date": "2026-07-11",
+    "time": "7:00 PM",
+    "show": "frankenfilms"
+  },
+  {
+    "date": "2026-07-11",
     "time": "9:00 PM",
     "show": "whatever-we-feel"
   },
@@ -473,6 +478,11 @@
     "date": "2026-07-18",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-07-18",
+    "time": "7:00 PM",
+    "show": "frankenfilms"
   },
   {
     "date": "2026-07-18",
@@ -505,6 +515,11 @@
   },
   {
     "date": "2026-07-25",
+    "time": "7:00 PM",
+    "show": "frankenfilms"
+  },
+  {
+    "date": "2026-07-25",
     "time": "8:00 PM",
     "show": "starlets-presents",
     "title": "Batlesque",
@@ -521,6 +536,11 @@
     "date": "2026-08-01",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-08-01",
+    "time": "7:00 PM",
+    "show": "frankenfilms"
   },
   {
     "date": "2026-08-06",
