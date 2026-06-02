@@ -190,11 +190,15 @@ eleventyComputed:
             }
 
             const posterEvents = eventPagesMap[show.slug] || [];
+            const seenEventSlugs = new Set();
             for (const { event, ts } of posterEvents) {
                 const eventSlug = event.title
                     .toLowerCase()
                     .replace(/[^a-z0-9]+/g, '-')
                     .replace(/^-|-$/g, '');
+                // Collapse multiple dates of the same event into one card
+                if (seenEventSlugs.has(eventSlug)) continue;
+                seenEventSlugs.add(eventSlug);
                 results.push({
                     type: 'event',
                     show,
