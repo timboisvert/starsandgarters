@@ -188,7 +188,7 @@ eleventyComputed:
                     shortTitle: event.title,
                     poster: event.poster,
                     slug: eventSlug,
-                    tagline: event.date,
+                    tagline: event.tagline || event.date,
                     link: '/show/' + show.slug + '/' + eventSlug + '/',
                     pinPosition: show.pinPosition
                 });
@@ -228,7 +228,7 @@ eleventyComputed:
         link.className = 'block group';
 
         let taglineText = item.tagline;
-        if (item.type === 'event') {
+        if (item.type === 'event' && /^\d{4}-\d{2}-\d{2}$/.test(item.tagline)) {
             taglineText = formatLongDate(item.tagline);
         }
 
