@@ -342,6 +342,11 @@
   },
   {
     "date": "2026-06-13",
+    "time": "3:00 PM",
+    "show": "love-the-sinners"
+  },
+  {
+    "date": "2026-06-13",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
   },
@@ -349,6 +354,11 @@
     "date": "2026-06-13",
     "time": "9:00 PM",
     "show": "whatever-we-feel"
+  },
+  {
+    "date": "2026-06-14",
+    "time": "3:00 PM",
+    "show": "love-the-sinners"
   },
   {
     "date": "2026-06-19",
