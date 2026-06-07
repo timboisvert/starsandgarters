@@ -369,5 +369,16 @@
     "price": null,
     "room": null,
     "description": "New Comedy Order is recruiting new members. As a show of good faith, they've brought in Chicago's best stand-up comedians. Come prepared to hoot, holler, and raise your chrism oil for a merger with the godhead.\n\nThe New Comedy Order is like the Knights Templar for laughing. Their Kabbalah is Jerry Seinfeld's 23 Hours to Kill. When they were wandering the desert seeking enlightenment, they were all like, \"Jeez, where's the service around here?\" Now, their Third Eye is open and it's watching Simpsons reruns.\n\nThere are 33 vertebrae in the spine, 33 years in Jesus' life, and honestly way more than 33 minutes of lowkey tough comedy in this show. For the best laughs between Joachim and Boaz, spend a night with the New Comedy Order."
+  },
+  {
+    "slug": "secret-third-thing",
+    "title": "Secret Third Thing",
+    "tagline": "Trans-scending the comedy scene!",
+    "poster": "secretthirdthing.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2250520",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": "Chicago’s only all non-binary and gender non-conforming improv team; specializing in long form narrative improv with an alternate reality twist and as much gender fuckery as we please."
   }
 ]

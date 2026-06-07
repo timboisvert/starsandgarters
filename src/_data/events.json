@@ -387,6 +387,11 @@
   },
   {
     "date": "2026-06-20",
+    "time": "7:00 PM",
+    "show": "secret-third-thing"
+  },
+  {
+    "date": "2026-06-20",
     "time": "10:00 PM",
     "show": "laugh-along-live",
     "title": "But I'm a Cheerleader",
