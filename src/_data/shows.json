@@ -380,5 +380,16 @@
     "price": null,
     "room": null,
     "description": "Chicago’s only all non-binary and gender non-conforming improv team; specializing in long form narrative improv with an alternate reality twist and as much gender fuckery as we please."
+  },
+  {
+    "slug": "pee-wees-gayhouse",
+    "title": "Pee-wee's Gayhouse",
+    "tagline": null,
+    "poster": "peeweesgayhouse.jpeg",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2255016",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": null
   }
 ]
