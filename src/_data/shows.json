@@ -390,6 +390,17 @@
     "buttonText": "Buy Tickets",
     "price": null,
     "room": null,
-    "description": null
+    "description": "Pee-wee’s Gayhouse is a ONE NIGHT ONLY Variety Show featuring some of the best comedians & artists in Chicago. Hosted by Katie Rae Horn/Pee-wee Herman.\n\nFeaturing the talents of:\nA Secret Third Thing\nMaura Caruso\nDa Pope\nDan Feltey\nGOON\nCourtney Reid Harris\nFae Lily\nZoia Mendoza\nSabrina Stoffels\nDanny Wightkin"
+  },
+  {
+    "slug": "the-male-gayze",
+    "title": "The Male Gayze",
+    "tagline": "A Night of Gay Comedy",
+    "poster": "themalegayze.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2251232",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": "Featuring:\n\nTy Blasing\nPJ Walker\nMatt Brown\nJacob Crow\nManny Petty"
   }
 ]
