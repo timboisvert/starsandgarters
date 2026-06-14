@@ -63,9 +63,13 @@ eleventyComputed:
 <script>
 const events = {{ events | dump | safe }};
 const shows = {{ shows | dump | safe }};
+const closures = {{ closures | dump | safe }};
 
 const showMap = {};
 shows.forEach(s => showMap[s.slug] = s);
+
+const closureMap = {};
+closures.forEach(c => closureMap[c.date] = c.label || 'Theater Closed');
 
 const classesData = {{ classes | dump | safe }};
 classesData.forEach(cls => {
@@ -276,6 +280,7 @@ function renderCalendar() {
 
         const isToday = day === today.getDate() && viewMonth === currentMonth && viewYear === currentYear;
         const isPast = new Date(viewYear, viewMonth, day) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const closureLabel = closureMap[dateStr];
 
         const cellClasses = isToday
             ? 'bg-white/10 border-2 border-white'
@@ -310,6 +315,10 @@ function renderCalendar() {
             }
         });
 
+        if (closureLabel && !isPast) {
+            html += `<div class="text-sm font-inter italic text-neutral-500 leading-tight">${closureLabel}</div>`;
+        }
+
         html += '</div>';
     }
 
@@ -326,8 +335,9 @@ function renderCalendar() {
     for (let day = 1; day <= daysInMonth; day++) {
         const dateStr = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
         const dayEvents = getEventsForDate(dateStr);
+        const closureLabel = closureMap[dateStr];
 
-        if (dayEvents.length === 0) continue;
+        if (dayEvents.length === 0 && !closureLabel) continue;
 
         const dateObj = new Date(viewYear, viewMonth, day);
         const dayName = dayNames[dateObj.getDay()];
@@ -337,11 +347,16 @@ function renderCalendar() {
         // Skip past dates on mobile
         if (isPast) continue;
 
-        mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''} cursor-pointer hover:border-neutral-500" data-date="${dateStr}">`;
+        const isClickable = dayEvents.length > 0;
+        mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''} ${isClickable ? 'cursor-pointer hover:border-neutral-500' : ''}" ${isClickable ? `data-date="${dateStr}"` : ''}>`;
         mobileHtml += `<div class="bg-neutral-800 px-4 py-2 font-oswald uppercase ${isToday ? 'text-white' : 'text-neutral-300'}">`;
         mobileHtml += `${dayName}, ${monthNames[viewMonth]} ${day}`;
         mobileHtml += `</div>`;
         mobileHtml += `<div class="p-4 space-y-2">`;
+
+        if (closureLabel) {
+            mobileHtml += `<div class="font-inter italic text-neutral-500">${closureLabel}</div>`;
+        }
 
         dayEvents.forEach(event => {
             const show = showMap[event.show];
