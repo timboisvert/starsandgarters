@@ -402,5 +402,16 @@
     "price": null,
     "room": null,
     "description": "Featuring:\n\nTy Blasing\nPJ Walker\nMatt Brown\nJacob Crow\nManny Petty"
+  },
+  {
+    "slug": "funhaus-pride-show",
+    "title": "FUNHAÜS: The Pride Show",
+    "tagline": "Go Fun Yourself",
+    "poster": "funhaus.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2261175",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": "FUNHAÜS Queer Sketch Circus is Chicago's hottest comedy show for freaks & homos. Homoerotic, over-the-top, deliriously funny - FUNHAÜS delivers an unforgettable hour of original sketch comedy glittered with burlesque, drag, and endless surprises. Featuring legendary Chicago drag star Smokey Karmikael and a harem of Chicago's hottest queer & trans comedians, FUNHAÜS: The Pride Show is the explosive comedy extravaganza that turns corporate pride merch to ash."
   }
 ]
