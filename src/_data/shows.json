@@ -413,5 +413,17 @@
     "price": null,
     "room": null,
     "description": "FUNHAÜS Queer Sketch Circus is Chicago's hottest comedy show for freaks & homos. Homoerotic, over-the-top, deliriously funny - FUNHAÜS delivers an unforgettable hour of original sketch comedy glittered with burlesque, drag, and endless surprises. Featuring legendary Chicago drag star Smokey Karmikael and a harem of Chicago's hottest queer & trans comedians, FUNHAÜS: The Pride Show is the explosive comedy extravaganza that turns corporate pride merch to ash."
+  },
+  {
+    "slug": "mystery-machine",
+    "title": "Mystery Machine",
+    "tagline": "A family-friendly improvised whodunit",
+    "poster": "mysterymachine.png",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2274944",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": null,
+    "isIndex": true
   }
 ]

@@ -501,6 +501,11 @@
   },
   {
     "date": "2026-07-18",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
+  },
+  {
+    "date": "2026-07-18",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
   },
@@ -536,6 +541,11 @@
   },
   {
     "date": "2026-07-25",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
+  },
+  {
+    "date": "2026-07-25",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
   },
@@ -558,6 +568,11 @@
     "date": "2026-08-01",
     "time": "10:00 AM",
     "show": "stargazers-adventure-club"
+  },
+  {
+    "date": "2026-08-01",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
   },
   {
     "date": "2026-08-01",
@@ -586,6 +601,11 @@
   },
   {
     "date": "2026-08-08",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
+  },
+  {
+    "date": "2026-08-08",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
   },
@@ -608,6 +628,11 @@
     "date": "2026-08-14",
     "time": "9:00 PM",
     "show": "a-random-memory"
+  },
+  {
+    "date": "2026-08-15",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
   },
   {
     "date": "2026-08-15",
@@ -642,6 +667,11 @@
   },
   {
     "date": "2026-08-22",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
+  },
+  {
+    "date": "2026-08-22",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
   },
@@ -654,6 +684,11 @@
     "date": "2026-08-28",
     "time": "9:00 PM",
     "show": "a-random-memory"
+  },
+  {
+    "date": "2026-08-29",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
   },
   {
     "date": "2026-08-29",
@@ -682,6 +717,11 @@
   },
   {
     "date": "2026-09-05",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
+  },
+  {
+    "date": "2026-09-05",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
   },
@@ -702,6 +742,11 @@
   },
   {
     "date": "2026-09-12",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
+  },
+  {
+    "date": "2026-09-12",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
   },
@@ -714,6 +759,11 @@
     "date": "2026-09-18",
     "time": "9:00 PM",
     "show": "masterminds"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "2:00 PM",
+    "show": "mystery-machine"
   },
   {
     "date": "2026-09-19",
