@@ -51,6 +51,30 @@ eleventyComputed:
             <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal whitespace-pre-line">{{ eventPage.description }}</p>
             {%- endif %}
 
+            {%- if eventPage.dates | length > 1 %}
+            <div class="mt-8 mb-10">
+                <h2 class="font-oswald text-2xl uppercase mb-4">All Dates</h2>
+                <div class="space-y-3">
+                    {%- for d in eventPage.dates %}
+                    <div class="flex items-center justify-between bg-neutral-800 p-4">
+                        <div>
+                            <p class="font-inter text-white">{{ d.date | longDate }}</p>
+                            <p class="font-inter text-sm text-neutral-400">{{ d.time }}</p>
+                        </div>
+                        {%- if d.ticketUrl %}
+                        <a href="{{ d.ticketUrl }}" target="_blank" rel="noopener"
+                           class="font-inter text-sm bg-white text-black px-4 py-2 hover:bg-neutral-200 transition-colors">
+                            Tickets
+                        </a>
+                        {%- elif d.freeAtDoor %}
+                        <span class="font-inter text-sm text-neutral-300">Free at the door</span>
+                        {%- endif %}
+                    </div>
+                    {%- endfor %}
+                </div>
+            </div>
+            {%- endif %}
+
             <p class="font-inter text-neutral-500">
                 <a href="/show/{{ eventPage.show.slug }}/" class="hover:text-white">&larr; See all {{ eventPage.show.title }} shows</a>
             </p>

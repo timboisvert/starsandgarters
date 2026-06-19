@@ -536,16 +536,23 @@ export default function (eleventyConfig) {
                 return eventDate >= todayDate && eventDate <= endDate;
             });
 
-            const seenSlugs = new Set();
+            // Group events that share a title slug so a single page can list all its dates
+            const pagesBySlug = new Map();
             for (const event of showEvents) {
                 const slug = event.title
                     .toLowerCase()
                     .replace(/[^a-z0-9]+/g, '-')
                     .replace(/^-|-$/g, '');
 
-                const pageKey = show.slug + '/' + slug;
-                if (seenSlugs.has(pageKey)) continue;
-                seenSlugs.add(pageKey);
+                if (!pagesBySlug.has(slug)) {
+                    pagesBySlug.set(slug, []);
+                }
+                pagesBySlug.get(slug).push(event);
+            }
+
+            for (const [slug, slugEvents] of pagesBySlug) {
+                slugEvents.sort((a, b) => a.date.localeCompare(b.date));
+                const event = slugEvents[0];
 
                 eventPages.push({
                     show: show,
@@ -558,7 +565,13 @@ export default function (eleventyConfig) {
                     freeAtDoor: event.freeAtDoor || false,
                     date: event.date,
                     time: event.time,
-                    description: event.description || show.description
+                    description: event.description || show.description,
+                    dates: slugEvents.map(e => ({
+                        date: e.date,
+                        time: e.time,
+                        ticketUrl: e.freeAtDoor ? null : (e.ticketUrl || show.ticketUrl),
+                        freeAtDoor: e.freeAtDoor || false
+                    }))
                 });
             }
         }
