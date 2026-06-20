@@ -425,5 +425,39 @@
     "room": null,
     "description": "A mysterious haunt.\n\nSuspicious suspects.\n\nFour meddlin’ detectives.\n\nEach performance is a completely original spooky mystery adventure packed with clues, laughs, chases, surprises, and a final unmasking.",
     "isIndex": true
+  },
+  {
+    "slug": "the-seance",
+    "title": "The Séance",
+    "tagline": "We play with the dead",
+    "poster": "the-seance.jpg",
+    "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2275567",
+    "buttonText": "Buy Tickets",
+    "price": null,
+    "room": null,
+    "description": "A Victorian séance. Live on stage.\n\nThe Séance is an original stage show that recreates an authentic Victorian-era séance. We investigate the history, tell the stories of the participants, and demonstrate the exact techniques used by psychics and mediums who claimed to contact the dead.\n\nIt's a time machine — we're taking you back to the heyday of the séance.\n\nTonight, you will learn exactly how a séance was performed.\n\n——\n\nWhat it's NOT: The Séance is not an \"actual\" séance, nor is it a cheesy ghost tour. We perform live demonstrations and tell stories based on the real history of early-1900s séance shows.\n\nA spook-house show for the smart set.\n\n——\n\n\"Prepare to be fascinated!\" — WGN Radio\n\"It's a history lesson in what we don't know.\" — Scapi Magazine\n\"Phenomenal show! I was thrilled from beginning to end.\" — TripAdvisor ★★★★★\n\"An evening very well spent.\" — TripAdvisor ★★★★★",
+    "isIndex": true,
+    "faq": [
+      {
+        "question": "What is The Séance?",
+        "answer": "An original stage show recreating an authentic Victorian-era séance. We demonstrate the exact techniques used by mediums who claimed to contact the dead, based on real history from the early 1900s."
+      },
+      {
+        "question": "Is it a real séance?",
+        "answer": "It is not an \"actual\" séance. Every demonstration is based on real historical technique. Make of that what you will."
+      },
+      {
+        "question": "Is it interactive?",
+        "answer": "Yes. Audience members participate. You've been warned."
+      },
+      {
+        "question": "Is it for children?",
+        "answer": "Oh no. We discuss actual death, volunteers yell curse words when frightened, and we're performing in a nightclub. There will be booze. 21+ only. Valid ID required at the door."
+      },
+      {
+        "question": "Why did it sell out last year?",
+        "answer": "Every show in 2025 sold out. Seats are limited, and this is an intimate theater experience."
+      }
+    ]
   }
 ]

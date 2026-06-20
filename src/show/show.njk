@@ -83,6 +83,20 @@ eleventyComputed:
             <p class="font-inter text-lg text-neutral-400 mb-10 leading-normal whitespace-pre-line">{{ show.description }}</p>
             {%- endif %}
 
+            {%- if show.faq %}
+            <div class="mt-8 mb-10">
+                <h2 class="font-oswald text-2xl uppercase mb-4">FAQ</h2>
+                <div class="space-y-6">
+                    {%- for item in show.faq %}
+                    <div>
+                        <p class="font-inter text-lg text-white mb-1">{{ item.question }}</p>
+                        <p class="font-inter text-lg text-neutral-400 leading-normal whitespace-pre-line">{{ item.answer }}</p>
+                    </div>
+                    {%- endfor %}
+                </div>
+            </div>
+            {%- endif %}
+
             {%- if show.isIndex %}
             <div id="upcoming-events-section" class="mt-8 hidden">
                 <h2 class="font-oswald text-2xl uppercase mb-4">Upcoming Shows</h2>

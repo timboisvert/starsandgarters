@@ -771,6 +771,11 @@
     "show": "chicago-workshop-mic"
   },
   {
+    "date": "2026-09-19",
+    "time": "7:00 PM",
+    "show": "the-seance"
+  },
+  {
     "date": "2026-09-25",
     "time": "8:00 PM",
     "show": "rising-stars"
@@ -786,6 +791,11 @@
     "show": "chicago-workshop-mic"
   },
   {
+    "date": "2026-09-26",
+    "time": "7:00 PM",
+    "show": "the-seance"
+  },
+  {
     "date": "2026-10-02",
     "time": "8:00 PM",
     "show": "rising-stars"
@@ -799,6 +809,11 @@
     "date": "2026-10-03",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-10-03",
+    "time": "7:00 PM",
+    "show": "the-seance"
   },
   {
     "date": "2026-10-09",
@@ -821,6 +836,11 @@
     "show": "chicago-workshop-mic"
   },
   {
+    "date": "2026-10-10",
+    "time": "7:00 PM",
+    "show": "the-seance"
+  },
+  {
     "date": "2026-10-16",
     "time": "8:00 PM",
     "show": "rising-stars"
@@ -834,6 +854,11 @@
     "date": "2026-10-17",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-10-17",
+    "time": "7:00 PM",
+    "show": "the-seance"
   },
   {
     "date": "2026-10-23",
@@ -851,6 +876,11 @@
     "show": "chicago-workshop-mic"
   },
   {
+    "date": "2026-10-24",
+    "time": "7:00 PM",
+    "show": "the-seance"
+  },
+  {
     "date": "2026-10-30",
     "time": "8:00 PM",
     "show": "rising-stars"
@@ -859,6 +889,11 @@
     "date": "2026-10-31",
     "time": "4:00 PM",
     "show": "chicago-workshop-mic"
+  },
+  {
+    "date": "2026-10-31",
+    "time": "7:00 PM",
+    "show": "the-seance"
   },
   {
     "date": "2026-11-06",
