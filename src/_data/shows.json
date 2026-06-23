@@ -268,7 +268,7 @@
   },
   {
     "slug": "rorschach-baby-fixes-you",
-    "title": "Rorschach Baby Fixes YOU",
+    "title": "Rorschach Baby",
     "tagline": "Total emotional repair (Results not guaranteed)",
     "poster": "rorschachbaby-fixesyou.png",
     "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2157433",
@@ -459,5 +459,17 @@
         "answer": "Every show in 2025 sold out. Seats are limited, and this is an intimate theater experience."
       }
     ]
+  },
+  {
+    "slug": "red-velvet-comedy",
+    "title": "Red Velvet Comedy",
+    "tagline": "A standup competition mic",
+    "poster": "red-velvet-comedy.png",
+    "ticketUrl": "https://cocoscout.com/s/TTL9C",
+    "buttonText": "Sign Up",
+    "price": null,
+    "room": null,
+    "description": "Bring your best 5 minutes to Red Velvet Comedy, a competition mic in which winners are given paid slots in Stars & Garters' comedy, variety, and burlesque shows. Only 25 slots; pre-registration required using this form.\n\nComics will be judged by two rotating judges plus an audience vote, so bring your friends and pad your stats!\n\nOne-drink minimum.",
+    "isIndex": true
   }
 ]
