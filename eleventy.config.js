@@ -586,6 +586,12 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("map.png");
     eleventyConfig.addPassthroughCopy("favicon.png");
 
+    // Sveltia CMS admin UI (self-hosted at /admin)
+    eleventyConfig.addPassthroughCopy("admin");
+
+    // Rebuild when CMS-edited content files change in local dev
+    eleventyConfig.addWatchTarget("content");
+
     // Ignore style.css (Tailwind handles it separately)
     eleventyConfig.watchIgnores.add("src/style.css");
 

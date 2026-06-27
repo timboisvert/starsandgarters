@@ -1,0 +1,477 @@
+{
+  "shows": [
+    {
+      "slug": "stargazers-adventure-club",
+      "title": "Stargazers Adventure Club",
+      "tagline": "For children aged 4-8 and their people",
+      "poster": "stargazersadventureclub.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2083963",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "Blast off with Stargazers Adventure Club in Planetary Games, an interactive space spectacular where imagination fuels the fun! You’ll learn planetary facts from out-of-this-world host, Astro the Alien as the Stargazers “bubble port” across all eight planets. This family friendly adventure is packed with music, movement, comedy and audience participation. In Stargazers Adventure Club: Planetary Games, everyone who has fun is a winner! 🚀 🪐 💫",
+      "isIndex": true
+    },
+    {
+      "slug": "rising-stars",
+      "title": "Rising Stars Burlesque Revue",
+      "tagline": "Chicago's hottest up-and-coming burlesque stars",
+      "poster": "rising-stars.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2043296",
+      "buttonText": null,
+      "price": null,
+      "room": "Main Stage",
+      "description": "Come see Chicago's hottest up-and-coming burlesque stars! Experience the next generation of spectacle at Rising Stars, an alluring burlesque and variety revue that honors the Windy City's storied legacy of live entertainment. This high-energy showcase brings together the city's most captivating emerging burlesque dancers and variety entertainment for a night full of fun, whimsy, humor, and seduction. Whether you're a long-time fan of burlesque or a curious newcomer, we invite you to come enjoy Stars & Garters' intimate venue, world-class cocktails, and unforgettable performance artists.\n\nEvery Rising Stars show features a unique roster of talent, so there's reason to come back again and again. (Follow @starsandgarterstheater on instagram to see when your favorite performers are scheduled for a show.)",
+      "isIndex": true,
+      "landingPages": [
+        "burlesque"
+      ]
+    },
+    {
+      "slug": "starlets-presents",
+      "title": "Starlets Presents",
+      "tagline": "A Batman Burlesque Parody",
+      "poster": "starletspresents-batlesque.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2229893",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "Chicago's premiere burlesque showcase featuring performances by the city's finest performers.",
+      "isIndex": true,
+      "createEventPages": true,
+      "hideBaseFromHomepage": true,
+      "landingPages": [
+        "burlesque"
+      ]
+    },
+    {
+      "slug": "laugh-along-live",
+      "title": "Laugh-Along, Live!",
+      "tagline": "Watch movies with Chicago's funniest comedians",
+      "poster": "laughalonglive.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080129",
+      "price": "$20",
+      "room": "Rouge Room",
+      "description": "Laugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. Three comedians make jokes throughout a film (à la Mystery Science Theater) and run activities for the audience. Audience participation is encouraged, as our shows often include drinking games, costume contests, trivia quizzes, dance-offs, and more.",
+      "isIndex": true,
+      "indexDays": 90,
+      "createEventPages": true,
+      "eventTitleFormat": "event-first"
+    },
+    {
+      "slug": "freakshow-and-tell",
+      "title": "FreakShow & Tell",
+      "tagline": "Saturdays @ 7 PM",
+      "poster": "freakshowandtell.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2076501",
+      "buttonText": null,
+      "price": null,
+      "room": "Rouge Room",
+      "description": "21+ ONLY\n\nBrianna Wellen, Chicago Reader:\n\n\"Sideshow entertainer Thom Britton’s solo show is part performance, part demonstration. Britton is a charismatic performer who appears genuinely thrilled to share how simple his seemingly death-defying acts really are. His explanations are peppered with jokes and carnival flair, making even the dullest details memorable and entertaining. I may have retained more information about science and history during a single carnival-themed night than in all my years of schooling\"\n\nSideshow performer Thom Britton created a stage show to answer the barrage of questions he regularly received before, during, and after his performances.\n\nPeople wanted to know how he could possibly eat fire or drive a nail into his head or why he'd want to walk on broken glass or stand on an electrified plate. Thus was born \"FreakShow & Tell,\" an hour and fifteen-minute long stage show that fuses science, history, anatomy, physics, and a whole slew of others with genuine sideshow acts such as The Electric Man, Fire Eating and Glass Walking, amongst other things.\n\nThe show is funny, poignant, entertaining, fast-paced, and 100% science!",
+      "isIndex": true
+    },
+    {
+      "slug": "masterminds",
+      "title": "M.A.S.T.E.R.M.I.N.D.S.",
+      "tagline": "Third Fridays @ 9 PM",
+      "poster": "masterminds.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2082094",
+      "price": "$20",
+      "room": "Rouge Room",
+      "description": "Calling all evil-doers, charlatans, and ne'er-do-wells! Come participate in a board meeting for villains!\n\nSee slideshows of nefarious plans presented by 4 nefarious villains!\n\nAll facilitated by the powerful chairperson of the board, MindMaster (Gib Christensen)\n\nM.A.S.T.E.R.M.I.N.D.S. (Menaces Assessing Strategic Tactics End Rogues Making Intelligent Maneuvers Diabolically Shhh) is a slide presentation comedy show that involves audience participation, so come prepared to get villainous with us! Every month we have a different set of villains. Follow us @mastermindschicago on instagram for info on future shows."
+    },
+    {
+      "slug": "comedy-pageant",
+      "title": "Comedy Pageant",
+      "tagline": "Every other Friday at 7 PM",
+      "poster": "comedypageant.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2082103",
+      "price": "$16",
+      "room": "Rouge Room",
+      "description": null
+    },
+    {
+      "slug": "chicago-workshop-mic",
+      "title": "Chicago's Workshop Mic",
+      "tagline": "Saturdays @ 4pm",
+      "poster": "chicagoworkshopmic.png",
+      "ticketUrl": "https://cocoscout.com/s/BHZ0W",
+      "buttonText": "Sign Up",
+      "price": "Free",
+      "room": "Rouge Room",
+      "description": "Chicago stand up comedians workshop new material. "
+    },
+    {
+      "slug": "dks-full-five-fridays",
+      "title": "DK's Full Five Fridays",
+      "tagline": "1st Fridays @ 9pm",
+      "poster": "dksfullfivefridays.png",
+      "ticketUrl": "https://www.nearlander.com/event-details/full-five-fridays-2026-04-03-20-40",
+      "price": "$10",
+      "room": "Rouge Room",
+      "description": "10 of Chicago's best up and coming comedians for only $10"
+    },
+    {
+      "slug": "the-re-up",
+      "title": "The Re:Up - A Monthly Comedy Show",
+      "tagline": "A Monthly Stand-up Comedy Show",
+      "poster": "the-re-up.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2082350",
+      "buttonText": null,
+      "price": null,
+      "room": "Rouge Room",
+      "description": "Featuring:\nDevin Glass\nRyan Kruger\nKevin Kicmal\nNicky B\nXavier Smith"
+    },
+    {
+      "slug": "a-witty-ditty-committee",
+      "title": "A Witty Ditty Committee",
+      "tagline": "A Musical Comedy Experience",
+      "poster": "awittydittycommittee-may22.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080876",
+      "buttonText": null,
+      "price": null,
+      "room": "Rouge Room",
+      "description": "An improvised musical comedy experience starring B-Sticky and Ross Childs."
+    },
+    {
+      "slug": "the-real-spacewives-of-alderaan",
+      "title": "The Real Spacewives of Alderaan",
+      "tagline": "A fully-improvised reality show",
+      "poster": "therealspacewivesofalderaan.jpg",
+      "ticketUrl": "https://buytickets.at/starsgarters/2106121",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Rouge Room",
+      "description": "The Real Spacewives of Alderaan is a fully improvised reality show adventure across the galaxy. Honoring the tropes of both Bravo TV and Star Wars, our show revolves around the wealthy elite women of the luxurious Alderaan system. Our all-femme cast of spacewives and host Andi-Wan Cohnobi create a hilarious, unscripted episode of reality TV featuring fierce rivalries, out-of-this-world fashion, and enough chaos to rival a galactic civil war."
+    },
+    {
+      "slug": "down-and-down-presents",
+      "title": "Down & Down Presents",
+      "tagline": "A Monthly Stand-up Comedy Show",
+      "poster": "downanddown.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2113010",
+      "buttonText": "Buy Tickets",
+      "createEventPages": true,
+      "hideBaseFromHomepage": true,
+      "price": null,
+      "room": "Main Stage",
+      "description": "Stand-up comics take the stage for one night only."
+    },
+    {
+      "slug": "burly-oke",
+      "title": "Burly-oke!",
+      "tagline": "You sing, we dance.",
+      "poster": "burlyoke.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2116142",
+      "buttonText": "Book a table",
+      "price": null,
+      "room": null,
+      "description": "Get ready to trade your shower-singing sessions for the spotlight at Burly-oke!, the ultimate mashup of karaoke and burlesque! From 8:00 PM to 11:00 PM, we're turning the stage over to you...and the incredible burlesque performers of Stars & Garters.\n\nPop-Up Karaoke will be in the house providing their signature, best-in-Chicago, karaoke experience. While you croon a ballad, belt a rock anthem, or sing a pop bop, our professional burlesque performers will be right there with you delivering improvised, show-stopping dances every few songs. Feel free to drop in for a song, or stay for the full three-hour spectacle.\n\nWhile there is no cover charge to join the fun, we do require a two-item minimum purchase and tipping the dancers and KJ is encouraged.\n\nIf you want to elevate your evening, grab a VIP table to secure the best view in the house with front-row seating and a special gift. The best part? VIP guests are guaranteed that at least one of their karaoke selections will feature a live burlesque dancer performing alongside them.\n\nCome see the magic one-night only: April 1st. Gather your friends, warm-up your vocal chords, and get ready for a karaoke night like no other.",
+      "landingPages": [
+        "burlesque"
+      ]
+    },
+    {
+      "slug": "date-night-live",
+      "title": "Date Night: Live",
+      "tagline": "May 7 -- One night only!",
+      "poster": "datenightlive.jpg",
+      "ticketUrl": "https://www.eventbrite.com/e/date-night-live-tickets-1983424144007",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "First dates are awkward enough… let's put them on stage!\n\nOn this evening, at the romantic Stars & Garters, two singles will meet for the first time. Watch them fall in love… unless they don't! 3 rounds, 2 singles, 1 epic first date."
+    },
+    {
+      "slug": "the-gap",
+      "title": "The Gap",
+      "tagline": "A Monthly Stand-up Showcase",
+      "poster": null,
+      "ticketUrl": null,
+      "buttonText": null,
+      "createEventPages": true,
+      "hideBaseFromHomepage": true,
+      "eventTitleFormat": "event-first",
+      "price": null,
+      "room": "Rouge Room",
+      "description": "Top local stand-ups take the stage."
+    },
+    {
+      "slug": "a-random-memory",
+      "title": "A Random Memory",
+      "tagline": "Magic and Mentalism",
+      "poster": "arandommemory.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2128252",
+      "buttonText": null,
+      "price": null,
+      "room": "Rouge Room",
+      "description": "A Random Memory is an intimate magic and mentalism show worth remembering. Every trick uses the audience's own cares, wishes and memories to create magic with emotional weight. Instead of another round of generic card tricks featuring kings and aces, the show opens with a nearly blank deck of cards and each trick fills out more of the deck with things the audience cares about. To bring things full circle and remind us all that even this show will only be a memory, the audience performs a magic trick of their own that destroys the deck they spent the last hour building.\n\nA Random Memory is the brainchild of magician, Dan Feltey. Dan is a software engineer by trade who fell in love with magic in 2018 and never gave it up. Dan got his start in magic taking classes at Magic Inc., and The Chicago Magic Lounge, before joining Open Heart Magic in 2023 as a bedside magician. Open Heart Magic is a non-profit organization that trains volunteers to perform magic at children's hospitals throughout the midwest, and emphasizes magic that makes the child the center of every trick. Dan brings this philosophy to A Random Memory, allowing the audience to become the star of the show and experience the magic themselves.",
+      "isIndex": true
+    },
+    {
+      "slug": "cabaret-week-2026-mashups-and-more",
+      "title": "Cabaret Week 2026: Mashups & More",
+      "tagline": "You pick the songs. We build the show.",
+      "poster": "thebeaus.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2101896",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "Join The Beaus for a one-night-only, high-energy cabaret where no two moments are planned—and everything is shaped by the audience.\n\nFeaturing mashups and hits from Broadway, pop, disco, rock, jazz, country, and more, this interactive experience puts you in control. Before the show begins, you'll choose your favorite artists from a curated list. From there, The Beaus create a completely original performance on the fly.\n\nFeaturing the full Beaus cast, this is a night of music, comedy, and controlled chaos—where anything can happen, and you won't know what you're getting until it starts."
+    },
+    {
+      "slug": "butterface",
+      "title": "Butterface",
+      "tagline": "Her sketches are funny... but her face",
+      "poster": "butterface.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2130496",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "BUTTERFACE is a two-person sketch show extravaganza exploring themes of compassion, love, empathy, and cringe. Written and performed through the vessels of Brady Barrow and Ollie Grishaber, these two will bring the beauty of HOPE back to comedy by doing the unspeakable: being two women with okay faces. Sure, the sketches are really good...but her face!"
+    },
+    {
+      "slug": "cabaret-week-2026-im-ms-behavin",
+      "title": "Cabaret Week 2026: I'm M$ B'Havin",
+      "tagline": "Not Your Typical Mama... Memories of a Life Well Lived in Songs",
+      "poster": "immsbehavin.png",
+      "ticketUrl": "https://app.tickettailor.com/events/starsgarters/2105859",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "A mature Diva, I'm M$ B'Havin is built on a young woman's frame; however, she's not your typical Mama! She'll give you the Blues, with a little bit of Burlesque, Comedy, Jazz, R&B, and a whole lot of sass!"
+    },
+    {
+      "slug": "boylesque",
+      "title": "Boylesque",
+      "tagline": "Stars & Garters' all-male burlesque show!",
+      "poster": "boylesque.png",
+      "ticketUrl": "https://buytickets.at/starsgarters/2141197",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "Hosted by Lando Graves\nPole performances by Wolfie J",
+      "landingPages": [
+        "burlesque"
+      ]
+    },
+    {
+      "slug": "the-conspirators-tartuffe",
+      "title": "The Conspirators Present: Tartuffe, or, The Charlatan",
+      "tagline": "May 14 – June 7",
+      "poster": "tartuffe.jpg",
+      "ticketUrl": "https://www.conspirewithus.org",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "by Molière\ndirected by Wm. Bullion\nproducer & Style coach: Sid Feldman\n\nThe Conspirators lovingly dismantle Molière's classic comedy about the dangers of cultishly believing only what you choose to believe despite a mountain of evidence to the contrary. SOUND FAMILIAR?",
+      "isIndex": true
+    },
+    {
+      "slug": "rorschach-baby-fixes-you",
+      "title": "Rorschach Baby",
+      "tagline": "Total emotional repair (Results not guaranteed)",
+      "poster": "rorschachbaby-fixesyou.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2157433",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "Doctor Rorschach is BACK with his signature show: Rorschach Baby Fixes YOU. Through a chaotic mix of sharp sketches, unforgettable characters, and a fully improvised long-form finale, this show promises what no one else can—total emotional repair (results not guaranteed).\n\nFeaturing some of Chicago's most established comedians and improvisers, you'll leave feeling lighter, slightly unhinged, and at the very least… hoping for another appointment with the Doctor.\n\nFeaturing:\nTravis Bergman, Jason Clark, Katie Rae Horn, Andrew Kerr, Nick Martini, Jace Mertes, Daniella Pereira, Jazmin Robinson & Stephen Shoemaker.\n\nCoach: Jake Prizant (Deli Boys, Missed Call, Creamboy)\n\nFollow us on Instagram @rorschachbabyimprov"
+    },
+    {
+      "slug": "velvet-vixens-vol3",
+      "title": "Velvet Vixens Cabaret Vol. 3: Velvet Reverie",
+      "tagline": "A Dazzling Burlesque Variety Cabaret",
+      "poster": "velvetvixens-vol3.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2180003",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "Step into the sultry and whimsical world of Velvet Reverie, a dazzling burlesque variety cabaret that feels like a glamorous dream full of bold self-expression. Featuring an all–queer women cast, this vibrant showcase blends classic tease with contemporary edge, delivering a night of unforgettable performances.\n\nFrom sultry striptease to playful, high-energy acts, each performer brings their own unique flair to the stage—starring Clit Hardwood, Midnight Jade, Arrachna Fatale, Mama Pipe, Ms. Lady Ryder, and hosted by THE Trixie Pickles!",
+      "landingPages": [
+        "burlesque"
+      ]
+    },
+    {
+      "slug": "shakespeare-blood-oath",
+      "title": "Shakespeare Blood Oath",
+      "tagline": "An abridged play of William Shakespeare",
+      "poster": "shakespearebloodoath.png",
+      "ticketUrl": "https://www.shakespearebloodoath.com/",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Rouge Room",
+      "description": "When we founded SBO, we made an oath to do all of Shakespeare's plays, even the bad ones.\n\nWell, it's finally time to do one of the bad ones — Henry VIII. Frankly, we couldn't be more excited!\n\nNo two performances will be the same! Heck, no two casts will be the same! This year, SBO will be injecting the chaos and energy of short-form improv into the work of William Shakespeare, with games, audience participation, and more to make light work of what some might describe as a slog of a play. The biggest twist … the SBO players will train and rehearse to perform any role in the play, and each performance will be cast in front of the audience at the beginning of the show. The Director and Producer will guide them throughout in order to put up a show that's fit for a Queen. Maybe some improv games? Maybe some on-the-spot punch-up's? They may even have to deal with the whims of Queen Elizabeth, herself. That's right! Our very own Queen Elizabeth will be in attendance. But will she approve of this year's production? Or will she be her father's daughter and condemn the cast to the Executioner?"
+    },
+    {
+      "slug": "whatever-we-feel",
+      "title": "Whatever We Feel",
+      "tagline": "A High-energy Romp through Chicago's Performing Arts",
+      "poster": "whateverwefeel.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2200560",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": null
+    },
+    {
+      "slug": "threes-a-crowd",
+      "title": "Three's a Crowd",
+      "tagline": "Featuring Chicago's brightest stars",
+      "poster": "threesacrowd.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2200550",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": null
+    },
+    {
+      "slug": "marti-mimis-charity-ball",
+      "title": "Marti & Mimi's 250th B-Day Charity Ball",
+      "tagline": "Featuring \"The Professor\" and Chris Shitpants as \"The Sludge\"",
+      "poster": "martimimi.jpeg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2223416",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "Marti, Mimi, and America are turning 250 this year! Join your favorite rival clown politicians and special guest performers The Professor and Chris Shitpants as The Sludge for a night of non-stop celebration, a patriotic trip down memory lane, and performances like nothing you have seen before on a Chicago stage, because everyone is too scared of getting down like Toronto! Proceeds will be donated to the Trans Youth Emergency Project."
+    },
+    {
+      "slug": "frankenfilms",
+      "title": "Frankenfilms",
+      "tagline": "A complete bastardization of the cinematic arts",
+      "poster": "frankenfilms.png",
+      "ticketUrl": "https://www.nearlander.com/event-details/frankenfilms-2026-07-11-19-00",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "An improvised dubbing show where we take the pieces of America's favorite movies and mash them together, take out all the dialogue, and have improvisers dub over it!",
+      "isIndex": true
+    },
+    {
+      "slug": "love-the-sinners",
+      "title": "Love, The Sinners",
+      "tagline": "Staged Reading + Talkback",
+      "poster": "lovethesinners.jpeg",
+      "ticketUrl": "https://www.eventbrite.com/e/love-the-sinners-staged-reading-talkback-tickets-1990968885532",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "Production Productions invites you to the first public reading of LOVE, THE SINNERS, written by Maggie Smith and directed by Eliza Tryon!\n\nJoin our cast and creative team for a public presentation of this new play before its world premiere production in the fall of 2026, followed by an interactive talkback!\n\n“While preparing for a normal year at their Catholic high school, a group of queer teenagers are suddenly faced with a new series of anti-LGBTQ+ rules created by their city's archdiocese, threatening to expel each one of them. Tired of their school's \"hate the sin, love the sinner\" mentality, the teenagers turn to malicious compliance as a means of protest, boycotting every academic material and lesson plan that they argue goes against Church teachings.”\n\nCast: Mak Van Raalte, Orion Hay-Miller, Rocky Nguyen, Audrey Yang, Gwyneth Puryear, Grey Sindaco, Annie Smith, Madeleine Moderhack, Emylie Johnson, Alex Marusich, and Baneet Chawla",
+      "isIndex": true
+    },
+    {
+      "slug": "new-comedy-order",
+      "title": "New Comedy Order",
+      "tagline": "Laugh Like The Elite",
+      "poster": "newcomedyorder.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2251378",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "New Comedy Order is recruiting new members. As a show of good faith, they've brought in Chicago's best stand-up comedians. Come prepared to hoot, holler, and raise your chrism oil for a merger with the godhead.\n\nThe New Comedy Order is like the Knights Templar for laughing. Their Kabbalah is Jerry Seinfeld's 23 Hours to Kill. When they were wandering the desert seeking enlightenment, they were all like, \"Jeez, where's the service around here?\" Now, their Third Eye is open and it's watching Simpsons reruns.\n\nThere are 33 vertebrae in the spine, 33 years in Jesus' life, and honestly way more than 33 minutes of lowkey tough comedy in this show. For the best laughs between Joachim and Boaz, spend a night with the New Comedy Order."
+    },
+    {
+      "slug": "secret-third-thing",
+      "title": "Secret Third Thing",
+      "tagline": "Trans-scending the comedy scene!",
+      "poster": "secretthirdthing.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2250520",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "Chicago’s only all non-binary and gender non-conforming improv team; specializing in long form narrative improv with an alternate reality twist and as much gender fuckery as we please."
+    },
+    {
+      "slug": "pee-wees-gayhouse",
+      "title": "Pee-wee's Gayhouse",
+      "tagline": "Hosted by Katie Rae Horn",
+      "poster": "peeweesgayhouse.jpeg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2255016",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "Pee-wee’s Gayhouse is a ONE NIGHT ONLY Variety Show featuring some of the best comedians & artists in Chicago. Hosted by Katie Rae Horn/Pee-wee Herman.\n\nFeaturing the talents of:\nA Secret Third Thing\nMaura Caruso\nDa Pope\nDan Feltey\nGOON\nCourtney Reid Harris\nFae Lily\nZoia Mendoza\nSabrina Stoffels\nDanny Wightkin"
+    },
+    {
+      "slug": "the-male-gayze",
+      "title": "The Male Gayze",
+      "tagline": "A Night of Gay Comedy",
+      "poster": "themalegayze.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2251232",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "Featuring:\n\nTy Blasing\nPJ Walker\nMatt Brown\nJacob Crow\nManny Petty"
+    },
+    {
+      "slug": "funhaus-pride-show",
+      "title": "FUNHAÜS: The Pride Show",
+      "tagline": "Go Fun Yourself",
+      "poster": "funhaus.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2261175",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "FUNHAÜS Queer Sketch Circus is Chicago's hottest comedy show for freaks & homos. Homoerotic, over-the-top, deliriously funny - FUNHAÜS delivers an unforgettable hour of original sketch comedy glittered with burlesque, drag, and endless surprises. Featuring legendary Chicago drag star Smokey Karmikael and a harem of Chicago's hottest queer & trans comedians, FUNHAÜS: The Pride Show is the explosive comedy extravaganza that turns corporate pride merch to ash."
+    },
+    {
+      "slug": "mystery-machine",
+      "title": "Mystery Machine",
+      "tagline": "A family-friendly improvised whodunit",
+      "poster": "mysterymachine.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2274944",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "A mysterious haunt.\n\nSuspicious suspects.\n\nFour meddlin’ detectives.\n\nEach performance is a completely original spooky mystery adventure packed with clues, laughs, chases, surprises, and a final unmasking.",
+      "isIndex": true
+    },
+    {
+      "slug": "the-seance",
+      "title": "The Séance",
+      "tagline": "We play with the dead",
+      "poster": "the-seance.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2275567",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "A Victorian séance. Live on stage.\n\nThe Séance is an original stage show that recreates an authentic Victorian-era séance. We investigate the history, tell the stories of the participants, and demonstrate the exact techniques used by psychics and mediums who claimed to contact the dead.\n\nIt's a time machine — we're taking you back to the heyday of the séance.\n\nTonight, you will learn exactly how a séance was performed.\n\n——\n\nWhat it's NOT: The Séance is not an \"actual\" séance, nor is it a cheesy ghost tour. We perform live demonstrations and tell stories based on the real history of early-1900s séance shows.\n\nA spook-house show for the smart set.\n\n——\n\n\"Prepare to be fascinated!\" — WGN Radio\n\"It's a history lesson in what we don't know.\" — Scapi Magazine\n\"Phenomenal show! I was thrilled from beginning to end.\" — TripAdvisor ★★★★★\n\"An evening very well spent.\" — TripAdvisor ★★★★★",
+      "isIndex": true,
+      "faq": [
+        {
+          "question": "What is The Séance?",
+          "answer": "An original stage show recreating an authentic Victorian-era séance. We demonstrate the exact techniques used by mediums who claimed to contact the dead, based on real history from the early 1900s."
+        },
+        {
+          "question": "Is it a real séance?",
+          "answer": "It is not an \"actual\" séance. Every demonstration is based on real historical technique. Make of that what you will."
+        },
+        {
+          "question": "Is it interactive?",
+          "answer": "Yes. Audience members participate. You've been warned."
+        },
+        {
+          "question": "Is it for children?",
+          "answer": "Oh no. We discuss actual death, volunteers yell curse words when frightened, and we're performing in a nightclub. There will be booze. 21+ only. Valid ID required at the door."
+        },
+        {
+          "question": "Why did it sell out last year?",
+          "answer": "Every show in 2025 sold out. Seats are limited, and this is an intimate theater experience."
+        }
+      ]
+    },
+    {
+      "slug": "red-velvet-comedy",
+      "title": "Red Velvet Comedy",
+      "tagline": "A standup competition mic",
+      "poster": "red-velvet-comedy.png",
+      "ticketUrl": "https://cocoscout.com/s/TTL9C",
+      "buttonText": "Sign Up",
+      "price": null,
+      "room": null,
+      "description": "Bring your best 5 minutes to Red Velvet Comedy, a competition mic in which winners are given paid slots in Stars & Garters' comedy, variety, and burlesque shows. Only 25 slots; pre-registration required using this form.\n\nComics will be judged by two rotating judges plus an audience vote, so bring your friends and pad your stats!\n\nOne-drink minimum.",
+      "isIndex": true
+    }
+  ]
+}

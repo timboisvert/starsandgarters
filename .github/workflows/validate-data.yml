@@ -1,14 +1,16 @@
 name: Validate data files
 
-# Safety net for edits made via Pages CMS or directly on GitHub.
+# Safety net for edits made via the /admin CMS or directly on GitHub.
 # Fails loudly if any data file is not valid JSON, before Vercel builds it.
 
 on:
   push:
     paths:
+      - "content/**.json"
       - "src/_data/**.json"
   pull_request:
     paths:
+      - "content/**.json"
       - "src/_data/**.json"
 
 jobs:
@@ -19,7 +21,7 @@ jobs:
       - name: Check every data file parses as JSON
         run: |
           status=0
-          for f in src/_data/*.json; do
+          for f in content/*.json src/_data/*.json; do
             if python3 -m json.tool "$f" > /dev/null 2>&1; then
               echo "ok    $f"
             else

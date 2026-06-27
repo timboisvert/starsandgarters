@@ -1,0 +1,92 @@
+backend:
+  name: github
+  repo: timboisvert/starsandgarters
+  branch: main
+  # OAuth handled by this site's own serverless functions (api/auth, api/callback)
+  base_url: https://starsandgarterstheater.com
+  auth_endpoint: api/auth
+
+# Posters live in /posters and are referenced by filename in the data.
+media_folder: posters
+public_folder: /posters
+
+collections:
+  - name: schedule
+    label: Schedule
+    files:
+      - name: events
+        label: Events / Showtimes
+        file: content/events.json
+        format: json
+        fields:
+          - name: events
+            label: Events
+            label_singular: Event
+            widget: list
+            summary: "{{fields.date}} {{fields.time}} — {{fields.show}}"
+            fields:
+              - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: false }
+              - { name: time, label: Time, widget: string, hint: "e.g. 8:00 PM" }
+              - name: show
+                label: Show
+                widget: relation
+                collection: catalog
+                file: shows
+                value_field: "shows.*.slug"
+                search_fields: ["shows.*.title", "shows.*.slug"]
+                display_fields: ["shows.*.title"]
+              - { name: title, label: Event title (optional), widget: string, required: false, hint: "A name for this specific date; blank uses the show's name" }
+              - { name: displayName, label: Display name override (optional), widget: string, required: false }
+              - { name: tagline, label: Tagline (optional), widget: string, required: false }
+              - { name: poster, label: Poster filename (optional), widget: string, required: false, hint: "e.g. rising-stars.png; blank uses the show's poster" }
+              - { name: ticketUrl, label: Ticket URL (optional), widget: string, required: false }
+              - { name: freeAtDoor, label: Free at the door, widget: boolean, required: false, default: false }
+              - { name: description, label: Description (optional), widget: text, required: false }
+
+      - name: closures
+        label: Theater Closures
+        file: content/closures.json
+        format: json
+        fields:
+          - name: closures
+            label: Closures
+            label_singular: Closure
+            widget: list
+            summary: "{{fields.date}} — {{fields.label}}"
+            fields:
+              - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: false }
+              - { name: label, label: Label, widget: string, default: Theater Closed }
+
+  - name: catalog
+    label: Catalog
+    files:
+      - name: shows
+        label: Shows
+        file: content/shows.json
+        format: json
+        fields:
+          - name: shows
+            label: Shows
+            label_singular: Show
+            widget: list
+            summary: "{{fields.title}} ({{fields.slug}})"
+            fields:
+              - { name: slug, label: Slug (URL id), widget: string, pattern: ["^[a-z0-9-]+$", "Lowercase letters, numbers, and hyphens only"], hint: "Used in event links and page URLs. Don't change once a show is live." }
+              - { name: title, label: Title, widget: string }
+              - { name: tagline, label: Tagline, widget: string, required: false }
+              - { name: poster, label: Poster filename, widget: string, required: false, hint: "e.g. rising-stars.png" }
+              - { name: ticketUrl, label: Ticket URL, widget: string, required: false }
+              - { name: buttonText, label: Button text, widget: string, required: false, hint: "e.g. Buy Tickets, Sign Up" }
+              - { name: price, label: Price, widget: string, required: false, hint: "e.g. $20, Free" }
+              - { name: room, label: Room, widget: select, options: ["Main Stage", "Rouge Room"], required: false }
+              - { name: description, label: Description, widget: text, required: false }
+              - { name: isIndex, label: Show on homepage, widget: boolean, required: false, default: false }
+              - { name: hideBaseFromHomepage, label: Hide base show from homepage, widget: boolean, required: false, default: false }
+              - { name: indexDays, label: Homepage window (days), widget: number, required: false, value_type: int }
+              - { name: createEventPages, label: Create individual event pages, widget: boolean, required: false, default: false }
+              - { name: eventTitleFormat, label: Event title format, widget: select, options: ["event-first"], required: false, hint: "Blank = 'Show: Event'. 'event-first' = 'Event: Show'." }
+              - name: landingPages
+                label: Landing pages
+                widget: list
+                required: false
+                field: { name: page, label: Page, widget: string }
