@@ -117,11 +117,6 @@
     },
     {
       "date": "2026-06-19",
-      "time": "10:00 PM",
-      "show": "rising-stars"
-    },
-    {
-      "date": "2026-06-19",
       "time": "9:00 PM",
       "show": "masterminds"
     },
@@ -158,11 +153,6 @@
       "time": "8:00 PM",
       "show": "rorschach-baby-fixes-you",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2157433"
-    },
-    {
-      "date": "2026-06-26",
-      "time": "10:00 PM",
-      "show": "rising-stars"
     },
     {
       "date": "2026-06-27",
@@ -242,11 +232,6 @@
     },
     {
       "date": "2026-07-17",
-      "time": "8:00 PM",
-      "show": "rising-stars"
-    },
-    {
-      "date": "2026-07-17",
       "time": "9:00 PM",
       "show": "masterminds"
     },
@@ -279,11 +264,6 @@
       "poster": "starletspresents-batlesque.jpg",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2229893",
       "description": "Na na na na na na na na... Batlesque!\n\nJoin us on the Main Stage at Stars and Garters for an unforgettable evening of Batman themed parody burlesque. The Starlets, our resident burlesque troupe, invite you into a playful and provocative reimagining of Gotham City's most iconic heroes and villains.\n\nFeaturing burlesque performances by Gata Habbie, Gemini Blackheart, Manny Schevitz, Raye Mantique, and Ronnie Rouge, this spectacular lineup also showcases the incredible variety talents of Katie Rae Horn and Kayla Janelle. Guiding you through the chaos of Gotham are your hosts, Dizzie Daisie and Lucky Charm, with our fabulous kitten, Chantilly Chantelle.\n\nWatch as your favorite DC characters leap from the pages of comic books and onto the stage in dazzling, unexpected, and delightfully cheeky ways. From Batman and Harley Quinn to The Joker, Catwoman, The Riddler, Poison Ivy, Alfred, Penguin, and Two-Face, these beloved characters are transformed through glitter, glamour, comedy, and tease.\n\nWhether you're a lifelong comic book fan, a burlesque enthusiast, or simply looking for a one-of-a-kind night out, Batlesque promises an evening packed with laughter, spectacle, and Gotham-sized entertainment.\n\nHoly tassels, Batman... you won't want to miss this one!"
-    },
-    {
-      "date": "2026-07-24",
-      "time": "8:00 PM",
-      "show": "rising-stars"
     },
     {
       "date": "2026-07-24",
@@ -347,13 +327,13 @@
     },
     {
       "date": "2026-08-07",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "dks-full-five-fridays"
     },
     {
       "date": "2026-08-07",
-      "time": "9:00 PM",
-      "show": "dks-full-five-fridays"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-08-08",
@@ -374,11 +354,6 @@
       "date": "2026-08-14",
       "time": "7:30 PM",
       "show": "the-re-up"
-    },
-    {
-      "date": "2026-08-14",
-      "time": "8:00 PM",
-      "show": "rising-stars"
     },
     {
       "date": "2026-08-14",
@@ -433,11 +408,6 @@
     },
     {
       "date": "2026-08-28",
-      "time": "8:00 PM",
-      "show": "rising-stars"
-    },
-    {
-      "date": "2026-08-28",
       "time": "9:00 PM",
       "show": "a-random-memory"
     },
@@ -463,13 +433,13 @@
     },
     {
       "date": "2026-09-04",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "dks-full-five-fridays"
     },
     {
       "date": "2026-09-04",
-      "time": "9:00 PM",
-      "show": "dks-full-five-fridays"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-09-05",
@@ -488,11 +458,6 @@
     },
     {
       "date": "2026-09-11",
-      "time": "8:00 PM",
-      "show": "rising-stars"
-    },
-    {
-      "date": "2026-09-11",
       "time": "7:00 PM",
       "show": "a-random-memory"
     },
@@ -505,11 +470,6 @@
       "date": "2026-09-12",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
-    },
-    {
-      "date": "2026-09-18",
-      "time": "8:00 PM",
-      "show": "rising-stars"
     },
     {
       "date": "2026-09-18",
@@ -517,6 +477,11 @@
       "show": "masterminds"
     },
     {
+      "date": "2026-09-18",
+      "time": "10:00 PM",
+      "show": "rising-stars"
+    },
+    {
       "date": "2026-09-19",
       "time": "2:00 PM",
       "show": "mystery-machine"
@@ -533,13 +498,13 @@
     },
     {
       "date": "2026-09-25",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "a-random-memory"
     },
     {
       "date": "2026-09-25",
-      "time": "9:00 PM",
-      "show": "a-random-memory"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-09-26",
@@ -553,13 +518,13 @@
     },
     {
       "date": "2026-10-02",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "dks-full-five-fridays"
     },
     {
       "date": "2026-10-02",
-      "time": "9:00 PM",
-      "show": "dks-full-five-fridays"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-10-03",
@@ -578,13 +543,13 @@
     },
     {
       "date": "2026-10-09",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "a-random-memory"
     },
     {
       "date": "2026-10-09",
-      "time": "9:00 PM",
-      "show": "a-random-memory"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-10-10",
@@ -595,11 +560,6 @@
       "date": "2026-10-10",
       "time": "7:00 PM",
       "show": "the-seance"
-    },
-    {
-      "date": "2026-10-16",
-      "time": "8:00 PM",
-      "show": "rising-stars"
     },
     {
       "date": "2026-10-16",
@@ -607,6 +567,11 @@
       "show": "masterminds"
     },
     {
+      "date": "2026-10-16",
+      "time": "10:00 PM",
+      "show": "rising-stars"
+    },
+    {
       "date": "2026-10-17",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
@@ -618,13 +583,13 @@
     },
     {
       "date": "2026-10-23",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "a-random-memory"
     },
     {
       "date": "2026-10-23",
-      "time": "9:00 PM",
-      "show": "a-random-memory"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-10-24",
@@ -638,7 +603,7 @@
     },
     {
       "date": "2026-10-30",
-      "time": "8:00 PM",
+      "time": "10:00 PM",
       "show": "rising-stars"
     },
     {
@@ -653,13 +618,13 @@
     },
     {
       "date": "2026-11-06",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "dks-full-five-fridays"
     },
     {
       "date": "2026-11-06",
-      "time": "9:00 PM",
-      "show": "dks-full-five-fridays"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-11-07",
@@ -673,13 +638,13 @@
     },
     {
       "date": "2026-11-13",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "a-random-memory"
     },
     {
       "date": "2026-11-13",
-      "time": "9:00 PM",
-      "show": "a-random-memory"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-11-14",
@@ -688,13 +653,13 @@
     },
     {
       "date": "2026-11-20",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "masterminds"
     },
     {
       "date": "2026-11-20",
-      "time": "9:00 PM",
-      "show": "masterminds"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-11-21",
@@ -707,19 +672,24 @@
       "show": "a-random-memory"
     },
     {
+      "date": "2026-11-27",
+      "time": "10:00 PM",
+      "show": "rising-stars"
+    },
+    {
       "date": "2026-11-28",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
     {
       "date": "2026-12-04",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "dks-full-five-fridays"
     },
     {
       "date": "2026-12-04",
-      "time": "9:00 PM",
-      "show": "dks-full-five-fridays"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-12-05",
@@ -733,13 +703,13 @@
     },
     {
       "date": "2026-12-11",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "a-random-memory"
     },
     {
       "date": "2026-12-11",
-      "time": "9:00 PM",
-      "show": "a-random-memory"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-12-12",
@@ -748,13 +718,13 @@
     },
     {
       "date": "2026-12-18",
-      "time": "8:00 PM",
-      "show": "rising-stars"
+      "time": "9:00 PM",
+      "show": "masterminds"
     },
     {
       "date": "2026-12-18",
-      "time": "9:00 PM",
-      "show": "masterminds"
+      "time": "10:00 PM",
+      "show": "rising-stars"
     },
     {
       "date": "2026-12-19",
