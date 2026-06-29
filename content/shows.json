@@ -480,6 +480,24 @@
       "poster": "que-sera-sera.png",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2250577",
       "description": "Join Magician Luis Carreon as he shares his favorite pieces of magic that he has learned over a 22-year career. Expect laughs, moments of amazement, and the unexpected. What will the show be? I guess Que sera sera!"
+    },
+    {
+      "slug": "bright-star-circus",
+      "title": "Bright Star Circus",
+      "tagline": "Circus-themed variety show for the whole family",
+      "poster": "bright-star-circus.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2282062",
+      "description": "Step right up and experience the wonder of the Bright Star Circus!\n\nEvery Saturday at noon, the Stars & Garters Theater transforms into a magical playground of pure imagination. Perfect for audiences of all ages, this family-friendly variety show features a dazzling, rotating cast of premier talent. No two weeks are ever the same!\n\nBring the whole family to witness a spectacular lineup that includes:\n\n• Mind-Boggling Magicians pulling secrets out of thin air.\n• World-Class Musicians and rhythm-makers setting the beat.\n• Side-Splitting Comedians & Clowns guaranteed to tickle your funny bone.\n• Dynamic Dancers and variety performers pushing the boundaries of fun.\n\nWhether you're 5 or 95, Bright Star Circus is the ultimate weekend treat. Grab your tickets, find your seats, and get ready for an unforgettable afternoon of laughter, gasps, and pure theatrical joy!",
+      "isIndex": true
+    },
+    {
+      "slug": "dark-star-circus",
+      "title": "Dark Star Circus",
+      "tagline": "Late-night circus-themed variety show",
+      "poster": "dark-star-circus.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2282093",
+      "description": "Leave the kids at home and step into the shadows for Dark Star Circus: the seductive, unfiltered, and delightfully wicked after-hours variety show at Stars & Garters Theater.\n\nWhen the sun goes down, the velvet curtains rise on this spectacle with a sharp, adult edge, this late-night extravaganza features a rotating cast of premier performers ready to push the boundaries of fun. Expect plenty of laughs and a whole lot of allure. No two weeks are ever the same!\n\nBrace yourself for a thrilling, fast-paced lineup featuring:\n\n• Seductive Dancers moving to the rhythm of a pulsing soundtrack.\n• Mind-Bending Magicians delivering illusions with a cheeky twist.\n• Uncensored Comedians & Clowns guaranteed to make you blush and laugh until it hurts.\n• Late-Night Musicians keeping the energy electric all night long.\n\nWhether you're looking for an unforgettable date night or a wild evening out with friends, Dark Star Circus serves up the perfect blend of comedy, spectacle, and pure temptation. Grab a drink, leave your inhibitions at the door, and get ready for a show that's anything but innocent!",
+      "isIndex": true
     }
   ]
 }
