@@ -282,6 +282,11 @@
     },
     {
       "date": "2026-07-24",
+      "time": "7:00 PM",
+      "show": "a-witty-ditty-committee"
+    },
+    {
+      "date": "2026-07-24",
       "time": "9:00 PM",
       "show": "a-random-memory"
     },
@@ -537,6 +542,11 @@
       "show": "chicago-workshop-mic"
     },
     {
+      "date": "2026-09-13",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-trivia-bingo"
+    },
+    {
       "date": "2026-09-18",
       "time": "9:00 PM",
       "show": "masterminds"
@@ -567,6 +577,11 @@
       "show": "the-seance"
     },
     {
+      "date": "2026-09-20",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-trivia-bingo"
+    },
+    {
       "date": "2026-09-25",
       "time": "9:00 PM",
       "show": "a-random-memory"
@@ -590,6 +605,11 @@
       "date": "2026-09-26",
       "time": "7:00 PM",
       "show": "the-seance"
+    },
+    {
+      "date": "2026-09-27",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-trivia-bingo"
     },
     {
       "date": "2026-10-02",
@@ -620,6 +640,11 @@
       "date": "2026-10-03",
       "time": "7:00 PM",
       "show": "the-seance"
+    },
+    {
+      "date": "2026-10-04",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-holy-ghost-bingo"
     },
     {
       "date": "2026-10-09",
@@ -657,6 +682,11 @@
       "show": "the-seance"
     },
     {
+      "date": "2026-10-11",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-holy-ghost-bingo"
+    },
+    {
       "date": "2026-10-16",
       "time": "9:00 PM",
       "show": "masterminds"
@@ -687,6 +717,11 @@
       "show": "the-seance"
     },
     {
+      "date": "2026-10-18",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-holy-ghost-bingo"
+    },
+    {
       "date": "2026-10-23",
       "time": "9:00 PM",
       "show": "a-random-memory"
@@ -715,6 +750,11 @@
       "date": "2026-10-24",
       "time": "7:00 PM",
       "show": "the-seance"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-holy-ghost-bingo"
     },
     {
       "date": "2026-10-30",

@@ -498,6 +498,22 @@
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2282093",
       "description": "Leave the kids at home and step into the shadows for Dark Star Circus: the seductive, unfiltered, and delightfully wicked after-hours variety show at Stars & Garters Theater.\n\nWhen the sun goes down, the velvet curtains rise on this spectacle with a sharp, adult edge, this late-night extravaganza features a rotating cast of premier performers ready to push the boundaries of fun. Expect plenty of laughs and a whole lot of allure. No two weeks are ever the same!\n\nBrace yourself for a thrilling, fast-paced lineup featuring:\n\n• Seductive Dancers moving to the rhythm of a pulsing soundtrack.\n• Mind-Bending Magicians delivering illusions with a cheeky twist.\n• Uncensored Comedians & Clowns guaranteed to make you blush and laugh until it hurts.\n• Late-Night Musicians keeping the energy electric all night long.\n\nWhether you're looking for an unforgettable date night or a wild evening out with friends, Dark Star Circus serves up the perfect blend of comedy, spectacle, and pure temptation. Grab a drink, leave your inhibitions at the door, and get ready for a show that's anything but innocent!",
       "isIndex": true
+    },
+    {
+      "slug": "late-nite-catechism-holy-ghost-bingo",
+      "title": "Late Nite Catechism: Holy Ghost Bingo",
+      "tagline": "Gods, Goblins, and Games",
+      "poster": "latenitecatechism-holyghostbingo.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2292131",
+      "isIndex": true
+    },
+    {
+      "slug": "late-nite-catechism-trivia-bingo",
+      "title": "Late Nite Catechism Trivia Bingo",
+      "tagline": "Catholic Guilt, Latin Mass, and Nuns",
+      "poster": "latenitecatechism-triviabingo.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2292110",
+      "isIndex": true
     }
   ]
 }
