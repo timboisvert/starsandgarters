@@ -524,6 +524,15 @@
       "poster": "the-loop.png",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2290217",
       "description": "One audience suggestion kicks off an entirely improvised chain reaction: the suggestion becomes the music, the music becomes the scenes, the scenes become the music. The Loop begins. Featuring original live scoring from Banana Acid and some of Chicago’s most adventurous improvisers, The Loop explores what happens when live comedy and live music stop accompanying each other and start actively collaborating in real time. Fast, fun, and ever-changing, join The Loop for a collision of live music and improvised comedy, where every moment reshapes the next in real time. One night only. It will never happen this way again."
+    },
+    {
+      "slug": "the-good-the-bad-the-freak",
+      "title": "The Good, The Bad, and The Freak",
+      "tagline": "A Standup Show Hosted by Sam Rossi",
+      "poster": "the-good-the-bad-the-freak.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2295000",
+      "description": "Performers:\nSohrab Forouzesh\nLuke Neumann\nGrace Kilpatrick",
+      "isIndex": true
     }
   ]
 }
