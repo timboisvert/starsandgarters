@@ -662,6 +662,11 @@
       "show": "the-seance"
     },
     {
+      "date": "2026-10-03",
+      "time": "7:30 PM",
+      "show": "carded"
+    },
+    {
       "date": "2026-10-04",
       "time": "2:00 PM",
       "show": "late-nite-catechism-holy-ghost-bingo"
@@ -702,6 +707,11 @@
       "show": "the-seance"
     },
     {
+      "date": "2026-10-10",
+      "time": "7:30 PM",
+      "show": "carded"
+    },
+    {
       "date": "2026-10-11",
       "time": "2:00 PM",
       "show": "late-nite-catechism-holy-ghost-bingo"
@@ -737,6 +747,11 @@
       "show": "the-seance"
     },
     {
+      "date": "2026-10-17",
+      "time": "7:30 PM",
+      "show": "carded"
+    },
+    {
       "date": "2026-10-18",
       "time": "2:00 PM",
       "show": "late-nite-catechism-holy-ghost-bingo"
@@ -770,6 +785,11 @@
       "date": "2026-10-24",
       "time": "7:00 PM",
       "show": "the-seance"
+    },
+    {
+      "date": "2026-10-24",
+      "time": "7:30 PM",
+      "show": "carded"
     },
     {
       "date": "2026-10-25",
