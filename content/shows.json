@@ -542,6 +542,15 @@
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2286130",
       "description": "In this spooky, hilarious improv show, an audience member receives a live divination reading that conjures the inspiration for an improvised set that’ll have you laughing while wondering, “why is this weirdly accurate?”\n\nEqual parts comedy show and séance, we let the art of divination take shape as spontaneous characters, scenes, and stories through whatever the universe and the audience decide to reveal.\n\nThis is a one hour show with no intermission.",
       "isIndex": true
+    },
+    {
+      "slug": "pavlovs-party",
+      "title": "Pavlov's Party",
+      "tagline": "One scene; one suggestion; one night only. And you’re invited.",
+      "poster": "pavlov.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2291219",
+      "description": "Five comedians spin a suggestion from the audience into a tangled web of relationships that unfold over the course of a single evening. Join us for an hour of live comedy with rowdy celebrations, heartfelt blunders, and messy confrontations that—like any good party—can be summed up in only one way:\n\nYou just had to be there.",
+      "isIndex": true
     }
   ]
 }

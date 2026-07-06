@@ -236,6 +236,11 @@
       "show": "dark-star-circus"
     },
     {
+      "date": "2026-07-12",
+      "time": "8:00 PM",
+      "show": "pavlovs-party"
+    },
+    {
       "date": "2026-07-17",
       "time": "7:00 PM",
       "show": "que-sera-sera"
@@ -401,6 +406,11 @@
       "show": "whatever-we-feel"
     },
     {
+      "date": "2026-08-09",
+      "time": "8:00 PM",
+      "show": "pavlovs-party"
+    },
+    {
       "date": "2026-08-14",
       "time": "7:30 PM",
       "show": "the-re-up"
@@ -562,6 +572,11 @@
       "show": "late-nite-catechism-trivia-bingo"
     },
     {
+      "date": "2026-09-13",
+      "time": "8:00 PM",
+      "show": "pavlovs-party"
+    },
+    {
       "date": "2026-09-18",
       "time": "9:00 PM",
       "show": "masterminds"
@@ -717,6 +732,11 @@
       "show": "late-nite-catechism-holy-ghost-bingo"
     },
     {
+      "date": "2026-10-11",
+      "time": "8:00 PM",
+      "show": "pavlovs-party"
+    },
+    {
       "date": "2026-10-16",
       "time": "9:00 PM",
       "show": "masterminds"
@@ -842,6 +862,11 @@
       "show": "chicago-workshop-mic"
     },
     {
+      "date": "2026-11-08",
+      "time": "8:00 PM",
+      "show": "pavlovs-party"
+    },
+    {
       "date": "2026-11-13",
       "time": "7:30 PM",
       "show": "the-re-up"
@@ -950,6 +975,11 @@
       "date": "2026-12-12",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
+    },
+    {
+      "date": "2026-12-13",
+      "time": "8:00 PM",
+      "show": "pavlovs-party"
     },
     {
       "date": "2026-12-18",
