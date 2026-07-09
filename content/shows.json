@@ -551,6 +551,15 @@
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2291219",
       "description": "Five comedians spin a suggestion from the audience into a tangled web of relationships that unfold over the course of a single evening. Join us for an hour of live comedy with rowdy celebrations, heartfelt blunders, and messy confrontations that—like any good party—can be summed up in only one way:\n\nYou just had to be there.",
       "isIndex": true
+    },
+    {
+      "slug": "halloween-2026",
+      "title": "Halloween 2026: Werewolves vs. Vampires Creepy Cabaret",
+      "tagline": "Seance. Burlesque. Tarot. Bites. Cocktails.",
+      "poster": "halloween2026.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2292075",
+      "description": "",
+      "isIndex": true
     }
   ]
 }
