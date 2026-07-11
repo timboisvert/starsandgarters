@@ -569,6 +569,24 @@
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2292075",
       "description": "",
       "isIndex": true
+    },
+    {
+      "slug": "the-incredibly-serious-stand-up-hour",
+      "title": "The Incredibly Serious Stand Up Hour",
+      "tagline": "Cutting-edge comedy. 2/2 doctors recommended.",
+      "poster": "incrediblyserious.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2286114",
+      "description": "Please join Ph.D* Professors* of Theater, Emilia Barrosse & Adam O’Dell, as they reveal to you the latest in their ongoing research into the fringe form of live theater known as stand-up comedy. Hard at work in the comedy lab, The Incredibly Serious Stand-Up Hour brings you the most cutting-edge comedy the greater Chicago area has to offer, presented to you by the two most Incredibly Serious People in the United States*.\n*untrue/unverified information",
+      "isIndex": true
+    },
+    {
+      "slug": "esprit",
+      "title": "ESPRIT",
+      "tagline": "A Night of Devised Scenes",
+      "poster": "esprit.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2308537",
+      "description": "Do you know what you are? Join us for an energetic tempest of existentialism that spans the full life cycle of self actualization. Exploring multiple genres, forms, and tones- this new scene collection is unrelenting in its effort to identify.",
+      "isIndex": true
     }
   ]
 }

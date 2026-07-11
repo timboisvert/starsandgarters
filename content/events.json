@@ -188,6 +188,16 @@
     },
     {
       "date": "2026-08-07",
+      "time": "7:30 PM",
+      "show": "the-incredibly-serious-stand-up-hour"
+    },
+    {
+      "date": "2026-08-07",
+      "time": "8:00 PM",
+      "show": "esprit"
+    },
+    {
+      "date": "2026-08-07",
       "time": "9:00 PM",
       "show": "dks-full-five-fridays"
     },
@@ -210,6 +220,11 @@
       "date": "2026-08-08",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
+    },
+    {
+      "date": "2026-08-08",
+      "time": "8:00 PM",
+      "show": "esprit"
     },
     {
       "date": "2026-08-08",
@@ -368,6 +383,11 @@
       "show": "a-random-memory"
     },
     {
+      "date": "2026-09-11",
+      "time": "9:11 PM",
+      "show": "the-incredibly-serious-stand-up-hour"
+    },
+    {
       "date": "2026-09-12",
       "time": "12:00 PM",
       "show": "bright-star-circus"
@@ -461,6 +481,11 @@
       "date": "2026-09-27",
       "time": "2:00 PM",
       "show": "late-nite-catechism-trivia-bingo"
+    },
+    {
+      "date": "2026-10-02",
+      "time": "7:30 PM",
+      "show": "the-incredibly-serious-stand-up-hour"
     },
     {
       "date": "2026-10-02",
@@ -639,6 +664,11 @@
     },
     {
       "date": "2026-11-06",
+      "time": "7:30 PM",
+      "show": "the-incredibly-serious-stand-up-hour"
+    },
+    {
+      "date": "2026-11-06",
       "time": "9:00 PM",
       "show": "dks-full-five-fridays"
     },
@@ -726,6 +756,11 @@
       "date": "2026-11-28",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
+    },
+    {
+      "date": "2026-12-04",
+      "time": "7:30 PM",
+      "show": "the-incredibly-serious-stand-up-hour"
     },
     {
       "date": "2026-12-04",
