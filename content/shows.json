@@ -174,12 +174,13 @@
     {
       "slug": "date-night-live",
       "title": "Date Night: Live",
-      "tagline": "May 7 -- One night only!",
+      "tagline": "July 31 -- Two shows!",
       "poster": "datenightlive.jpg",
-      "ticketUrl": "https://www.eventbrite.com/e/date-night-live-tickets-1983424144007",
+      "ticketUrl": "https://www.eventbrite.com/e/date-night-live-tickets-1991120277349",
       "buttonText": "Buy Tickets",
       "price": null,
       "room": null,
+      "showAllEvents": true,
       "description": "First dates are awkward enough… let's put them on stage!\n\nOn this evening, at the romantic Stars & Garters, two singles will meet for the first time. Watch them fall in love… unless they don't! 3 rounds, 2 singles, 1 epic first date."
     },
     {

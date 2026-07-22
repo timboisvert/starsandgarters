@@ -177,6 +177,16 @@
       "show": "the-loop"
     },
     {
+      "date": "2026-07-31",
+      "time": "7:00 PM",
+      "show": "date-night-live"
+    },
+    {
+      "date": "2026-07-31",
+      "time": "9:00 PM",
+      "show": "date-night-live"
+    },
+    {
       "date": "2026-08-01",
       "time": "10:00 AM",
       "show": "stargazers-adventure-club"

@@ -37,6 +37,7 @@ eleventyComputed:
     poster: show.poster,
     ticketUrl: show.ticketUrl,
     createEventPages: show.createEventPages,
+    showAllEvents: show.showAllEvents,
     nextEventLabel: show.nextEventLabel or "Next Show",
     buttonText: show.buttonText or "Buy Tickets",
     events: showEvents,
@@ -130,61 +131,74 @@ eleventyComputed:
         });
     }
 
-    // Render the next event card
-    if (nextEvent) {
-        const card = document.getElementById('next-event-card');
-        const showEventPoster = data.createEventPages && nextEvent.title && nextEvent.poster;
+    // Build the card for a single event. Label is omitted when listing every event.
+    function renderEventCard(event, label) {
+        const showEventPoster = data.createEventPages && event.title && event.poster;
 
         let html = `<div class="bg-neutral-900 border border-neutral-700 mb-8 overflow-hidden ${showEventPoster ? 'h-64' : ''}">
             <div class="flex h-full">`;
 
         if (showEventPoster) {
             html += `<div class="shrink-0 h-full p-3">
-                <img src="/posters/${nextEvent.poster}" alt="${nextEvent.shortName}" class="h-full w-auto object-contain">
+                <img src="/posters/${event.poster}" alt="${event.shortName}" class="h-full w-auto object-contain">
             </div>`;
         }
 
-        html += `<div class="p-6 flex-1">
-            <p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">${data.nextEventLabel}</p>`;
+        html += `<div class="p-6 flex-1">`;
 
-        if (data.createEventPages && nextEvent.title) {
+        if (label) {
+            html += `<p class="font-inter text-sm text-neutral-400 uppercase tracking-wide mb-2">${label}</p>`;
+        }
+
+        if (data.createEventPages && event.title) {
             html += `<p class="font-oswald text-2xl text-white mb-2">
-                <a href="/show/${data.slug}/${nextEvent.slug}/" class="hover:text-neutral-300">${nextEvent.shortName}</a>
+                <a href="/show/${data.slug}/${event.slug}/" class="hover:text-neutral-300">${event.shortName}</a>
             </p>`;
         }
 
-        html += `<p class="font-inter text-lg text-white mb-1">${formatLongDate(nextEvent.date)}</p>
-            <p class="font-inter text-neutral-300 mb-4">${nextEvent.time}</p>`;
+        html += `<p class="font-inter text-lg text-white mb-1">${formatLongDate(event.date)}</p>
+            <p class="font-inter text-neutral-300 mb-4">${event.time}</p>`;
 
-        if (nextEvent.ticketUrl) {
-            html += `<a href="${nextEvent.ticketUrl}" target="_blank" rel="noopener"
+        if (event.ticketUrl) {
+            html += `<a href="${event.ticketUrl}" target="_blank" rel="noopener"
                 class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
                 ${data.buttonText}
             </a>`;
-        } else if (nextEvent.freeAtDoor) {
+        } else if (event.freeAtDoor) {
             html += `<p class="font-inter text-base text-white">Free at the door</p>`;
         }
 
         html += `</div></div></div>`;
+        return html;
+    }
 
-        card.innerHTML = html;
+    // showAllEvents gives every upcoming event its own unlabelled card;
+    // otherwise just the next one, labelled.
+    const cardEvents = data.showAllEvents ? upcomingEvents : (nextEvent ? [nextEvent] : []);
+
+    if (cardEvents.length) {
+        const card = document.getElementById('next-event-card');
+        card.innerHTML = cardEvents
+            .map(e => renderEventCard(e, data.showAllEvents ? null : data.nextEventLabel))
+            .join('');
         card.classList.remove('hidden');
 
-        // Hide the static ticket button since next-event card has its own
+        // Hide the static ticket button since the cards have their own
         const staticBtn = document.getElementById('static-ticket-button');
         if (staticBtn) staticBtn.classList.add('hidden');
 
-        // Update main poster if this event has a different one
-        if (nextEvent.poster && nextEvent.poster !== data.poster) {
+        // Update main poster if the leading event has a different one
+        const leadEvent = cardEvents[0];
+        if (leadEvent.poster && leadEvent.poster !== data.poster) {
             const posterImg = document.getElementById('show-poster');
-            if (posterImg) posterImg.src = '/posters/' + nextEvent.poster;
+            if (posterImg) posterImg.src = '/posters/' + leadEvent.poster;
         }
     }
 
     // Render upcoming events list (for isIndex shows)
     const upcomingSection = document.getElementById('upcoming-events-section');
     const upcomingList = document.getElementById('upcoming-events-list');
-    if (upcomingSection && upcomingList) {
+    if (upcomingSection && upcomingList && !data.showAllEvents) {
         // Always skip first event since it's shown in the Next Show card above
         const eventsToShow = nextEvent ? upcomingEvents.slice(1) : upcomingEvents;
 
