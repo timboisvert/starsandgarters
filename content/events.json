@@ -227,6 +227,17 @@
       "show": "dark-star-circus"
     },
     {
+      "date": "2026-08-02",
+      "time": "8:00 PM",
+      "show": "laugh-along-live",
+      "title": "Shrek 2",
+      "tagline": "Shrekfest 2026",
+      "poster": "laughalonglive-shrek2.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2327540",
+      "shrekfest": true,
+      "description": "Come watch Shrek 2 with Chicago’s funniest queer comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink!\n\nShow at 8:00pm.\n\n21+ show\n\nFeaturing: Leah Blevins, fae lily, Seth Lowery\n\nLaugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. A panel of comedians makes jokes throughout a film (à la Mystery Science Theater, but more about having fun than making fun) and run activities for the audience. Follow us @laughalonglive to know which movies we’re doing next (after you’ve bought your tickets for this one, of course.\n\nThis show is part of ShrekFest. You can upgrade to enjoy the rest of the festivities or buy just the ticket to this show."
+    },
+    {
       "date": "2026-08-06",
       "time": "8:00 PM",
       "show": "threes-a-crowd"

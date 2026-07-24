@@ -566,6 +566,7 @@ export default function (eleventyConfig) {
                     date: event.date,
                     time: event.time,
                     description: event.description || show.description,
+                    shrekfest: event.shrekfest || false,
                     dates: slugEvents.map(e => ({
                         date: e.date,
                         time: e.time,
