@@ -228,10 +228,16 @@
     },
     {
       "date": "2026-08-02",
+      "time": "5:00 PM",
+      "show": "tales-from-the-swamp",
+      "shrekfest": true
+    },
+    {
+      "date": "2026-08-02",
       "time": "8:00 PM",
       "show": "laugh-along-live",
       "title": "Shrek 2",
-      "tagline": "Shrekfest 2026",
+      "tagline": "Watch with Chicago's funniest comedians",
       "poster": "laughalonglive-shrek2.png",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2327540",
       "shrekfest": true,

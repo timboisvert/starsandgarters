@@ -1,6 +1,21 @@
 {
   "shows": [
     {
+      "slug": "tales-from-the-swamp",
+      "title": "Tales From the Swamp",
+      "tagline": "A Shrek-Themed Burlesque and Comedy Show",
+      "poster": "talesfromtheswamp.jpeg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2328507",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "Come enjoy a Shrek-themed burlesque parody show complete with seduction, whimsy, and comedy.\n\nBrought to you by Windy City Witches. Featuring Jordan E. Euell.",
+      "shrekfest": true,
+      "landingPages": [
+        "burlesque"
+      ]
+    },
+    {
       "slug": "stargazers-adventure-club",
       "title": "Stargazers Adventure Club",
       "tagline": "For children aged 4-8 and their people",
