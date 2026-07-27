@@ -104,30 +104,113 @@ function parseTimeTo24(timeStr) {
 }
 events.sort((a, b) => a.date.localeCompare(b.date) || parseTimeTo24(a.time) - parseTimeTo24(b.time));
 
+const monthNames = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
 const today = new Date();
 const currentMonth = today.getMonth();
 const currentYear = today.getFullYear();
+const todayMidnight = new Date(currentYear, currentMonth, today.getDate());
 
-// Determine earliest navigable month: skip current month if it has no remaining events
 const todayStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 const currentMonthPrefix = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}`;
 const hasRemainingThisMonth = events.some(e => e.date.startsWith(currentMonthPrefix) && e.date >= todayStr);
 
-let minMonth = currentMonth;
-let minYear = currentYear;
-if (!hasRemainingThisMonth) {
-    minMonth = currentMonth + 1;
-    minYear = currentYear;
-    if (minMonth > 11) { minMonth = 0; minYear++; }
+function hasEventsInMonth(year, month) {
+    const prefix = `${year}-${String(month + 1).padStart(2, '0')}`;
+    return events.some(e => e.date.startsWith(prefix));
 }
 
-let viewMonth = minMonth;
-let viewYear = minYear;
+function getEventsForDate(dateStr) {
+    return events.filter(e => e.date === dateStr);
+}
 
-const monthNames = ["January", "February", "March", "April", "May", "June",
-                    "July", "August", "September", "October", "November", "December"];
+function fmtDate(dt) {
+    return `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`;
+}
 
-const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+// --- Build the ordered list of navigable views ----------------------------
+// First month to display: current month, or next month if nothing remains this month.
+let firstMonth = currentMonth;
+let firstYear = currentYear;
+if (!hasRemainingThisMonth) {
+    firstMonth++;
+    if (firstMonth > 11) { firstMonth = 0; firstYear++; }
+}
+
+// When we're within 7 days of the end of the current month, the leftover
+// weekend looks empty on its own, so fold the current month and all of next
+// month into a single combined first view (e.g. "July / August"). Navigating
+// "next" from there lands on the month after (e.g. September).
+const lastDayOfCurrentMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+const daysUntilMonthEnd = lastDayOfCurrentMonth - today.getDate();
+const combineFirst = hasRemainingThisMonth && daysUntilMonthEnd <= 7;
+
+// Latest month with any event, to bound the view list.
+let maxMonthKey = firstYear * 12 + firstMonth;
+events.forEach(e => {
+    const [y, m] = e.date.split('-').map(Number);
+    const key = y * 12 + (m - 1);
+    if (key > maxMonthKey) maxMonthKey = key;
+});
+
+// Every month that has events, from the first month onward.
+const monthsWithEvents = [];
+for (let key = firstYear * 12 + firstMonth; key <= maxMonthKey; key++) {
+    const y = Math.floor(key / 12);
+    const m = key % 12;
+    if (hasEventsInMonth(y, m)) monthsWithEvents.push({ year: y, month: m });
+}
+
+// Each view shows one month, except an optional combined first view spanning
+// the current month + the next calendar month.
+const views = [];
+if (combineFirst) {
+    let nm = firstMonth + 1, ny = firstYear;
+    if (nm > 11) { nm = 0; ny++; }
+    views.push({ months: [{ year: firstYear, month: firstMonth }, { year: ny, month: nm }] });
+    const cutoffKey = ny * 12 + nm;
+    monthsWithEvents.forEach(mm => {
+        if (mm.year * 12 + mm.month > cutoffKey) views.push({ months: [mm] });
+    });
+} else {
+    monthsWithEvents.forEach(mm => views.push({ months: [mm] }));
+}
+if (views.length === 0) {
+    views.push({ months: [{ year: firstYear, month: firstMonth }] });
+}
+
+let viewIndex = 0;
+
+function viewTitle(view) {
+    const ms = view.months;
+    const a = ms[0], b = ms[ms.length - 1];
+    if (ms.length === 1) return `${monthNames[a.month]} ${a.year}`;
+    if (a.year === b.year) return `${monthNames[a.month]} / ${monthNames[b.month]} ${a.year}`;
+    return `${monthNames[a.month]} ${a.year} / ${monthNames[b.month]} ${b.year}`;
+}
+
+function viewShortLabel(view) {
+    const ms = view.months;
+    if (ms.length === 1) return monthNames[ms[0].month];
+    return `${monthNames[ms[0].month]} / ${monthNames[ms[ms.length - 1].month]}`;
+}
+
+function viewRange(view) {
+    const first = view.months[0];
+    const last = view.months[view.months.length - 1];
+    let startDate = new Date(first.year, first.month, 1);
+    // For the current month, start at the Sunday of this week so past weeks hide.
+    if (first.year === currentYear && first.month === currentMonth) {
+        const weekStart = new Date(currentYear, currentMonth, today.getDate() - today.getDay());
+        if (weekStart.getMonth() === currentMonth && weekStart.getFullYear() === currentYear) {
+            startDate = weekStart;
+        }
+    }
+    const endDate = new Date(last.year, last.month + 1, 0);
+    return { startDate, endDate };
+}
 
 // Modal functionality
 const modal = document.getElementById('day-modal');
@@ -207,17 +290,47 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
 });
 
-function getMonthDiff(year, month) {
-    return (year - minYear) * 12 + (month - minMonth);
-}
+const EMPTY_CELL = '<div class="bg-neutral-900 min-h-[160px] p-2 pb-3 min-w-0"></div>';
 
-function getEventsForDate(dateStr) {
-    return events.filter(e => e.date === dateStr);
-}
+function renderDayCell(dateObj) {
+    const dateStr = fmtDate(dateObj);
+    const day = dateObj.getDate();
+    const dayEvents = getEventsForDate(dateStr);
+    const isToday = dateObj.getTime() === todayMidnight.getTime();
+    const isPast = dateObj < todayMidnight;
+    const closureLabel = closureMap[dateStr];
 
-function hasEventsInMonth(year, month) {
-    const prefix = `${year}-${String(month + 1).padStart(2, '0')}`;
-    return events.some(e => e.date.startsWith(prefix));
+    const cellClasses = isToday ? 'bg-white/10 border-2 border-white' : 'bg-neutral-900';
+    const hasEvents = dayEvents.length > 0 && !isPast;
+    const clickableClass = hasEvents ? 'cursor-pointer hover:bg-neutral-800' : '';
+
+    let html = `<div class="${cellClasses} ${clickableClass} min-h-[160px] p-2 pb-3 overflow-hidden min-w-0 ${isPast ? 'opacity-50' : ''}" ${hasEvents ? `data-date="${dateStr}"` : ''}>`;
+    html += `<div class="font-inter text-sm ${isToday ? 'text-white font-bold' : 'text-neutral-300'} mb-2">${day}</div>`;
+
+    dayEvents.forEach(event => {
+        const show = showMap[event.show];
+        if (show) {
+            let displayName = show.title;
+            if (event.displayName) {
+                displayName = event.displayName;
+            } else if (event.title) {
+                displayName = show.eventTitleFormat === 'event-first'
+                    ? event.title + ': ' + show.title
+                    : show.title + ': ' + event.title;
+            }
+            html += `<div class="mb-3">
+                <div class="text-xs font-inter text-neutral-400">${event.time}</div>
+                <div class="text-sm font-inter text-white leading-tight">${displayName}</div>
+            </div>`;
+        }
+    });
+
+    if (closureLabel && !isPast) {
+        html += `<div class="text-sm font-inter italic text-neutral-500 leading-tight">${closureLabel}</div>`;
+    }
+
+    html += '</div>';
+    return html;
 }
 
 function renderCalendar() {
@@ -229,165 +342,80 @@ function renderCalendar() {
     const prevLabel = document.getElementById('prev-month-label');
     const nextLabel = document.getElementById('next-month-label');
 
-    title.textContent = `${monthNames[viewMonth]} ${viewYear}`;
+    const view = views[viewIndex];
+    title.textContent = viewTitle(view);
 
-    const diff = getMonthDiff(viewYear, viewMonth);
+    prevBtn.disabled = viewIndex <= 0;
+    nextBtn.disabled = viewIndex >= views.length - 1;
+    prevLabel.textContent = viewIndex > 0 ? `← ${viewShortLabel(views[viewIndex - 1])}` : '';
+    nextLabel.textContent = viewIndex < views.length - 1 ? `${viewShortLabel(views[viewIndex + 1])} →` : '→';
 
-    // Check if prev/next months have events
-    let pm = viewMonth - 1;
-    let py = viewYear;
-    if (pm < 0) { pm = 11; py--; }
-    const prevHasEvents = hasEventsInMonth(py, pm);
+    const { startDate, endDate } = viewRange(view);
 
-    let nm = viewMonth + 1;
-    let ny = viewYear;
-    if (nm > 11) { nm = 0; ny++; }
-    const nextHasEvents = hasEventsInMonth(ny, nm);
-
-    prevBtn.disabled = diff <= 0 || !prevHasEvents;
-    nextBtn.disabled = !nextHasEvents;
-
-    // Update prev/next labels with month names
-    prevLabel.textContent = (diff > 0 && prevHasEvents) ? `← ${monthNames[pm]}` : '';
-    nextLabel.textContent = nextHasEvents ? `${monthNames[nm]} →` : '→';
-
-    const lastDay = new Date(viewYear, viewMonth + 1, 0);
-    const daysInMonth = lastDay.getDate();
-
-    // When viewing the current month, hide weeks that ended before this week.
-    // Start the grid from the Sunday of the current week if that Sunday falls within this month.
-    let startDay = 1;
-    if (viewMonth === currentMonth && viewYear === currentYear) {
-        const weekStart = new Date(currentYear, currentMonth, today.getDate() - today.getDay());
-        if (weekStart.getMonth() === viewMonth && weekStart.getFullYear() === viewYear) {
-            startDay = weekStart.getDate();
-        }
-    }
-    const startDayOfWeek = new Date(viewYear, viewMonth, startDay).getDay();
-
-    // Desktop grid
+    // Desktop grid: one continuous run of week rows across the whole range.
     let html = '';
+    for (let i = 0; i < startDate.getDay(); i++) html += EMPTY_CELL;
 
-    // Empty cells before first rendered day
-    for (let i = 0; i < startDayOfWeek; i++) {
-        html += '<div class="bg-neutral-900 min-h-[160px] p-2 pb-3 min-w-0"></div>';
+    const cursor = new Date(startDate);
+    while (cursor <= endDate) {
+        html += renderDayCell(cursor);
+        cursor.setDate(cursor.getDate() + 1);
     }
 
-    // Days of month
-    for (let day = startDay; day <= daysInMonth; day++) {
-        const dateStr = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-        const dayEvents = getEventsForDate(dateStr);
-
-        const isToday = day === today.getDate() && viewMonth === currentMonth && viewYear === currentYear;
-        const isPast = new Date(viewYear, viewMonth, day) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
-        const closureLabel = closureMap[dateStr];
-
-        const cellClasses = isToday
-            ? 'bg-white/10 border-2 border-white'
-            : 'bg-neutral-900';
-
-        const hasEvents = dayEvents.length > 0 && !isPast;
-        const clickableClass = hasEvents ? 'cursor-pointer hover:bg-neutral-800' : '';
-
-        html += `<div class="${cellClasses} ${clickableClass} min-h-[160px] p-2 pb-3 overflow-hidden min-w-0 ${isPast ? 'opacity-50' : ''}" ${hasEvents ? `data-date="${dateStr}"` : ''}>`;
-        html += `<div class="font-inter text-sm ${isToday ? 'text-white font-bold' : 'text-neutral-300'} mb-2">${day}</div>`;
-
-        dayEvents.forEach(event => {
-            const show = showMap[event.show];
-            if (show) {
-                // Determine display name
-                let displayName = show.title;
-
-                if (event.displayName) {
-                    displayName = event.displayName;
-                } else if (event.title) {
-                    if (show.eventTitleFormat === 'event-first') {
-                        displayName = event.title + ': ' + show.title;
-                    } else {
-                        displayName = show.title + ': ' + event.title;
-                    }
-                }
-
-                html += `<div class="mb-3">
-                    <div class="text-xs font-inter text-neutral-400">${event.time}</div>
-                    <div class="text-sm font-inter text-white leading-tight">${displayName}</div>
-                </div>`;
-            }
-        });
-
-        if (closureLabel && !isPast) {
-            html += `<div class="text-sm font-inter italic text-neutral-500 leading-tight">${closureLabel}</div>`;
-        }
-
-        html += '</div>';
-    }
-
-    // Empty cells after last day
-    const endDayOfWeek = lastDay.getDay();
-    for (let i = endDayOfWeek + 1; i < 7; i++) {
-        html += '<div class="bg-neutral-900 min-h-[160px] p-2 pb-3"></div>';
-    }
+    for (let i = endDate.getDay() + 1; i < 7; i++) html += EMPTY_CELL;
 
     grid.innerHTML = html;
 
-    // Mobile list view - only show days with events, skip past dates
+    // Mobile list view: only days with events/closures, skipping past dates.
     let mobileHtml = '';
-    for (let day = 1; day <= daysInMonth; day++) {
-        const dateStr = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    const mCursor = new Date(startDate);
+    while (mCursor <= endDate) {
+        const dateStr = fmtDate(mCursor);
         const dayEvents = getEventsForDate(dateStr);
         const closureLabel = closureMap[dateStr];
+        const isPast = mCursor < todayMidnight;
 
-        if (dayEvents.length === 0 && !closureLabel) continue;
+        if (!isPast && (dayEvents.length > 0 || closureLabel)) {
+            const dayName = dayNames[mCursor.getDay()];
+            const isToday = mCursor.getTime() === todayMidnight.getTime();
+            const isClickable = dayEvents.length > 0;
 
-        const dateObj = new Date(viewYear, viewMonth, day);
-        const dayName = dayNames[dateObj.getDay()];
-        const isToday = day === today.getDate() && viewMonth === currentMonth && viewYear === currentYear;
-        const isPast = dateObj < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+            mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''} ${isClickable ? 'cursor-pointer hover:border-neutral-500' : ''}" ${isClickable ? `data-date="${dateStr}"` : ''}>`;
+            mobileHtml += `<div class="bg-neutral-800 px-4 py-2 font-oswald uppercase ${isToday ? 'text-white' : 'text-neutral-300'}">`;
+            mobileHtml += `${dayName}, ${monthNames[mCursor.getMonth()]} ${mCursor.getDate()}`;
+            mobileHtml += `</div>`;
+            mobileHtml += `<div class="p-4 space-y-2">`;
 
-        // Skip past dates on mobile
-        if (isPast) continue;
-
-        const isClickable = dayEvents.length > 0;
-        mobileHtml += `<div class="border border-neutral-700 ${isToday ? 'border-white' : ''} ${isClickable ? 'cursor-pointer hover:border-neutral-500' : ''}" ${isClickable ? `data-date="${dateStr}"` : ''}>`;
-        mobileHtml += `<div class="bg-neutral-800 px-4 py-2 font-oswald uppercase ${isToday ? 'text-white' : 'text-neutral-300'}">`;
-        mobileHtml += `${dayName}, ${monthNames[viewMonth]} ${day}`;
-        mobileHtml += `</div>`;
-        mobileHtml += `<div class="p-4 space-y-2">`;
-
-        if (closureLabel) {
-            mobileHtml += `<div class="font-inter italic text-neutral-500">${closureLabel}</div>`;
-        }
-
-        dayEvents.forEach(event => {
-            const show = showMap[event.show];
-            if (show) {
-                // Determine display name
-                let displayName = show.title;
-
-                if (event.displayName) {
-                    displayName = event.displayName;
-                } else if (event.title) {
-                    if (show.eventTitleFormat === 'event-first') {
-                        displayName = event.title + ': ' + show.title;
-                    } else {
-                        displayName = show.title + ': ' + event.title;
-                    }
-                }
-
-                mobileHtml += `<div class="flex items-center gap-3 p-2 bg-neutral-900">`;
-                mobileHtml += `<span class="font-inter text-sm text-neutral-400 w-20 shrink-0">${event.time}</span>`;
-                mobileHtml += `<span class="font-inter text-white">${displayName}</span>`;
-                mobileHtml += `</div>`;
+            if (closureLabel) {
+                mobileHtml += `<div class="font-inter italic text-neutral-500">${closureLabel}</div>`;
             }
-        });
 
-        mobileHtml += `</div></div>`;
+            dayEvents.forEach(event => {
+                const show = showMap[event.show];
+                if (show) {
+                    let displayName = show.title;
+                    if (event.displayName) {
+                        displayName = event.displayName;
+                    } else if (event.title) {
+                        displayName = show.eventTitleFormat === 'event-first'
+                            ? event.title + ': ' + show.title
+                            : show.title + ': ' + event.title;
+                    }
+                    mobileHtml += `<div class="flex items-center gap-3 p-2 bg-neutral-900">`;
+                    mobileHtml += `<span class="font-inter text-sm text-neutral-400 w-20 shrink-0">${event.time}</span>`;
+                    mobileHtml += `<span class="font-inter text-white">${displayName}</span>`;
+                    mobileHtml += `</div>`;
+                }
+            });
+
+            mobileHtml += `</div></div>`;
+        }
+        mCursor.setDate(mCursor.getDate() + 1);
     }
 
     if (mobileHtml === '') {
         mobileHtml = '<p class="font-inter text-neutral-400 text-center py-8">No upcoming events this month.</p>';
     }
-
     mobileList.innerHTML = mobileHtml;
 
     // Add click handlers for day cells
@@ -403,25 +431,15 @@ function renderCalendar() {
 }
 
 document.getElementById('prev-month').addEventListener('click', () => {
-    let pm = viewMonth - 1;
-    let py = viewYear;
-    if (pm < 0) { pm = 11; py--; }
-
-    if (getMonthDiff(viewYear, viewMonth) > 0 && hasEventsInMonth(py, pm)) {
-        viewMonth = pm;
-        viewYear = py;
+    if (viewIndex > 0) {
+        viewIndex--;
         renderCalendar();
     }
 });
 
 document.getElementById('next-month').addEventListener('click', () => {
-    let nm = viewMonth + 1;
-    let ny = viewYear;
-    if (nm > 11) { nm = 0; ny++; }
-
-    if (hasEventsInMonth(ny, nm)) {
-        viewMonth = nm;
-        viewYear = ny;
+    if (viewIndex < views.length - 1) {
+        viewIndex++;
         renderCalendar();
     }
 });
