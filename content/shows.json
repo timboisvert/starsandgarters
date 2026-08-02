@@ -71,6 +71,7 @@
       "isIndex": true,
       "indexDays": 90,
       "createEventPages": true,
+      "hideBaseFromHomepage": true,
       "eventTitleFormat": "event-first"
     },
     {
