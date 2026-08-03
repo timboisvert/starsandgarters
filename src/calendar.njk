@@ -61,7 +61,9 @@ eleventyComputed:
 </div>
 
 <script>
-const events = {{ events | dump | safe }};
+// Events with a linkUrl are actually part of another ticketed show (they point
+// to it), so they're not listed as standalone entries on the calendar.
+const events = ({{ events | dump | safe }}).filter(e => !e.linkUrl);
 const shows = {{ shows | dump | safe }};
 const closures = {{ closures | dump | safe }};
 

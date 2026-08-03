@@ -34,6 +34,7 @@ eleventyComputed:
 
     // Filter to future events and take the next 6
     const upcomingEvents = events.filter(event => {
+        if (event.linkUrl) return false; // part of another show, not standalone
         const [year, month, day] = event.date.split('-').map(Number);
         const [timePart, ampm] = event.time.split(' ');
         let [hours, minutes] = timePart.split(':').map(Number);
@@ -142,6 +143,7 @@ eleventyComputed:
     const eventPagesMap = {};
 
     for (const event of events) {
+        if (event.linkUrl) continue; // part of another show, not standalone
         const [timePart = "00:00", ampm] = (event.time || "").split(" ");
         let [hours = 0, minutes = 0] = timePart.split(":").map(n => parseInt(n, 10) || 0);
         if (ampm === "PM" && hours !== 12) hours += 12;
