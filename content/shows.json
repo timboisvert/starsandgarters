@@ -1,6 +1,15 @@
 {
   "shows": [
     {
+      "slug": "late-nite-catechism-christmas-bingo",
+      "title": "Late Nite Catechism: Christmas Bingo",
+      "tagline": "It's a Ho-Ho-Holy Night!",
+      "poster": "latenitecatechism-christmasbingo.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2293039",
+      "description": "Did Santa babysit the baby Jesus? Why were the Three Wise Men so lost? The answers to these and other humorous questions are answered in the hit holiday comedy CHRISTMAS BINGO: IT’S A HO-HO-HOLY NIGHT.\n\nWritten by Vicki Quade, one of the creators of the hit comedy Late Nite Catechism, CHRISTMAS BINGO brings together two of the best things about being Catholic: Christmas and Bingo.\n\nThe show was selected as one of 10 holiday shows highlighted by Chris Jones, the Chicago Tribune’s theater critic.\n\nIn this interactive comedy, audience members play bingo while also answering questions about Christmas traditions, the origin of St. Nick, where do candy canes come from, miracles in the Bible, and a clever re-creation of the Annunciation, complete with audience members in angel wings and halos.",
+      "isIndex": true
+    },
+    {
       "slug": "the-family-game-show-show",
       "title": "The Family Game Show Show",
       "tagline": "Play 70 years of game show challenges... with real prizes!",

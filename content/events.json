@@ -993,6 +993,11 @@
       "show": "chicago-workshop-mic"
     },
     {
+      "date": "2026-12-06",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-christmas-bingo"
+    },
+    {
       "date": "2026-12-11",
       "time": "7:30 PM",
       "show": "the-re-up"
@@ -1021,6 +1026,11 @@
       "date": "2026-12-12",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
+    },
+    {
+      "date": "2026-12-13",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-christmas-bingo"
     },
     {
       "date": "2026-12-13",
@@ -1053,9 +1063,19 @@
       "show": "chicago-workshop-mic"
     },
     {
+      "date": "2026-12-20",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-christmas-bingo"
+    },
+    {
       "date": "2026-12-26",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
+    },
+    {
+      "date": "2026-12-27",
+      "time": "2:00 PM",
+      "show": "late-nite-catechism-christmas-bingo"
     }
   ]
 }
