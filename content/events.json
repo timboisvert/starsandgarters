@@ -825,7 +825,12 @@
     {
       "date": "2026-10-31",
       "time": "7:00 PM",
-      "show": "the-seance"
+      "show": "the-seance",
+      "linkUrl": "/show/halloween-2026/",
+      "linkText": "See the Show",
+      "linkHeader": "Werewolves vs. Vampires",
+      "linkPoster": "halloween2026.jpg",
+      "linkBlurb": "This Halloween, The Séance is part of Werewolves vs. Vampires — an immersive creepy cabaret with a live séance, tarot readings, themed burlesque, and more, all on one ticket."
     },
     {
       "date": "2026-10-31",
