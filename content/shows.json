@@ -1,6 +1,23 @@
 {
   "shows": [
     {
+      "slug": "party-girl",
+      "title": "Party Girl",
+      "tagline": "The one woman show of your dreams",
+      "poster": "partygirl.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2281431",
+      "description": "This girl just wants to have fun and be sexy. And never think about the economy. Or death. After years of losing love, scraping by at minimum wage, and smoking weak-ass weed, she's determined to have the most fabulous night ever, at any cost. Even blood.",
+      "isIndex": true
+    },
+    {
+      "slug": "cage-match",
+      "title": "Cage Match",
+      "tagline": "Quinn & Hannah Split An Hour",
+      "poster": "cagematch.jpeg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2341581",
+      "description": null
+    },
+    {
       "slug": "late-nite-catechism-christmas-bingo",
       "title": "Late Nite Catechism: Christmas Bingo",
       "tagline": "It's a Ho-Ho-Holy Night!",
