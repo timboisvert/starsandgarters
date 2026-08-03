@@ -1,0 +1,77 @@
+---
+title: Family Saturdays
+layout: base.njk
+permalink: /family/
+eleventyComputed:
+  meta:
+    description: "Every Saturday from 10 AM to 3 PM, Stars & Garters is packed with live family entertainment — magic, circus, mystery, and game-show fun. Every family show has a family discount."
+    image: "{{ site.logo }}"
+    url: "{{ site.url }}/family/"
+    ogType: "website"
+---
+
+{%- set familyShows = [
+  { title: "Stargazers Adventure Club", time: "10:00 AM", slug: "stargazers-adventure-club", poster: "stargazersadventureclub.png", tagline: "An interactive space adventure for kids 4–8 and their people." },
+  { title: "The Magic Toybox", time: "11:00 AM", comingSoon: true, tagline: "A brand-new family adventure joining the Saturday lineup soon." },
+  { title: "Bright Star Circus", time: "12:00 PM", slug: "bright-star-circus", poster: "bright-star-circus.jpg", tagline: "A dazzling circus-themed variety show for the whole family." },
+  { title: "The Family Game Show Show", time: "1:00 PM", slug: "the-family-game-show-show", poster: "thefamilygameshowshow.png", tagline: "Play 70 years of game show challenges — with real prizes!" },
+  { title: "Mystery Machine", time: "2:00 PM", slug: "mystery-machine", poster: "mysterymachine.png", tagline: "A family-friendly improvised whodunit, solved on the spot." }
+] -%}
+
+<!-- HERO -->
+<section class="text-center pt-6 pb-14 md:pt-10 md:pb-20">
+    <p class="font-inter uppercase tracking-[0.35em] text-amber-400 text-xs md:text-sm mb-5">Every Saturday &middot; 10 AM – 3 PM</p>
+    <h1 class="font-oswald font-bold uppercase text-5xl md:text-8xl leading-[0.9] mb-6">
+        Family<br class="hidden md:block"> Saturdays
+    </h1>
+    <p class="font-inter text-lg md:text-2xl text-neutral-300 max-w-2xl mx-auto leading-normal">
+        Five hours of live, hands-on entertainment for the whole family — space adventures, circus spectacle, mystery, and game-show fun. Drop in for one show or make a day of it.
+    </p>
+</section>
+
+<!-- LINEUP -->
+<section class="mb-16">
+    <hr class="border-neutral-800 mb-12">
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6">
+        {%- for item in familyShows %}
+        {%- if item.comingSoon %}
+        <div class="block bg-neutral-900 border border-dashed border-neutral-700 overflow-hidden">
+            <div class="aspect-[3/4] flex items-center justify-center bg-neutral-950 px-4 text-center">
+                <span class="font-oswald uppercase text-neutral-600 text-2xl leading-tight">Coming<br>Soon</span>
+            </div>
+            <div class="p-4">
+                <p class="font-inter text-amber-400 text-sm font-semibold mb-1">{{ item.time }} &middot; Coming Soon</p>
+                <h3 class="font-oswald uppercase text-lg leading-tight mb-1">{{ item.title }}</h3>
+                <p class="font-inter text-sm text-neutral-400 leading-snug">{{ item.tagline }}</p>
+            </div>
+        </div>
+        {%- else %}
+        <a href="/show/{{ item.slug }}/" class="group block bg-neutral-900 border border-neutral-800 hover:border-amber-400 transition-colors overflow-hidden">
+            <div class="aspect-[3/4] overflow-hidden bg-neutral-950">
+                <img src="/posters/{{ item.poster }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+            </div>
+            <div class="p-4">
+                <p class="font-inter text-amber-400 text-sm font-semibold mb-1">{{ item.time }}</p>
+                <h3 class="font-oswald uppercase text-lg leading-tight mb-1">{{ item.title }}</h3>
+                <p class="font-inter text-sm text-neutral-400 leading-snug">{{ item.tagline }}</p>
+            </div>
+        </a>
+        {%- endif %}
+        {%- endfor %}
+    </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="text-center bg-amber-400 text-black py-14 px-6 mb-4">
+    <h2 class="font-oswald font-bold uppercase text-4xl md:text-5xl mb-4">Make It a Family Tradition</h2>
+    <p class="font-inter text-lg md:text-xl max-w-2xl mx-auto mb-4 leading-normal">
+        Every Saturday, 10 AM to 3 PM, right in the heart of Wrigleyville. Come for one show, or stay for them all.
+    </p>
+    <p class="font-inter text-base md:text-lg font-semibold max-w-2xl mx-auto mb-8 leading-normal">
+        And every family show has a family discount at checkout — so a full day of fun won't break the bank.
+    </p>
+    <a href="/calendar/" class="inline-block bg-black text-white font-inter text-base font-semibold px-8 py-4 hover:bg-neutral-800 transition-colors">
+        View the Calendar
+    </a>
+</section>
