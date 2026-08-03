@@ -31,10 +31,8 @@ eleventyComputed:
     shows.forEach(show => showMap[show.slug] = show);
 
     const now = new Date();
-    const localToday = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
 
-    // Future events, plus ShrekFest shows kept visible through the end of their
-    // show day (so they don't vanish once the show starts or ends).
+    // Filter to future events and take the next 6
     const upcomingEvents = events.filter(event => {
         const [year, month, day] = event.date.split('-').map(Number);
         const [timePart, ampm] = event.time.split(' ');
@@ -42,84 +40,61 @@ eleventyComputed:
         if (ampm === 'PM' && hours !== 12) hours += 12;
         if (ampm === 'AM' && hours === 12) hours = 0;
         const eventDateTime = new Date(year, month - 1, day, hours, minutes);
-        if (eventDateTime > now) return true;
-        if (event.shrekfest && event.date === localToday) return true;
-        return false;
+        return eventDateTime > now;
     }).slice(0, 6);
 
     const grid = document.getElementById('upcoming-grid');
     const emptyMsg = document.getElementById('upcoming-empty');
 
-    // Build one date-chip card for a single upcoming event.
-    function chipHTML(event, show) {
-        const dayNum = event.date.split('-')[2];
-        const eventDate = new Date(event.date + 'T12:00:00');
-        const dayName = eventDate.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase();
-        const monthName = eventDate.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
-
-        let displayName = show.title;
-        let linkUrl = '/show/' + show.slug + '/';
-
-        if (event.displayName) {
-            displayName = event.displayName;
-        } else if (event.title) {
-            if (show.eventTitleFormat === 'event-first') {
-                displayName = event.title + ': ' + show.title;
-            } else {
-                displayName = show.title + ': ' + event.title;
-            }
-        }
-
-        if (show.createEventPages && event.title) {
-            const eventSlug = event.title
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, '-')
-                .replace(/^-|-$/g, '');
-            linkUrl = '/show/' + show.slug + '/' + eventSlug + '/';
-        }
-
-        return `<a href="${linkUrl}" class="flex items-stretch bg-neutral-800 hover:bg-neutral-700 transition-colors">
-            <div class="text-center shrink-0 w-12 md:w-14 bg-neutral-700 flex flex-col justify-center py-1 md:py-2">
-                <p class="font-inter text-[8px] md:text-[10px] text-neutral-400 uppercase">${monthName}</p>
-                <p class="font-inter text-base md:text-lg font-bold text-white">${dayNum}</p>
-                <p class="font-inter text-[8px] md:text-[10px] text-neutral-400 uppercase">${dayName}</p>
-            </div>
-            <div class="flex-1 min-w-0 p-2 md:p-4 flex flex-col justify-center">
-                <p class="font-inter text-sm md:text-base text-white truncate">${displayName}</p>
-                <p class="font-inter text-xs md:text-sm text-neutral-400">${event.time}</p>
-            </div>
-        </a>`;
-    }
-
     if (upcomingEvents.length === 0) {
         grid.classList.add('hidden');
         emptyMsg.classList.remove('hidden');
     } else {
-        // ShrekFest events are wrapped together in a single green box that
-        // spans the full width of the upcoming grid.
-        const shrekEvents = upcomingEvents.filter(e => showMap[e.show] && e.shrekfest);
-        let shrekRendered = false;
-
         upcomingEvents.forEach(event => {
             const show = showMap[event.show];
             if (!show) return;
 
-            if (event.shrekfest) {
-                if (shrekRendered) return;
-                shrekRendered = true;
-                const box = document.createElement('div');
-                box.className = 'col-span-1 md:col-span-2 lg:col-span-3 p-3';
-                box.style.backgroundColor = '#8CB04E';
-                box.innerHTML = `
-                    <p class="font-oswald text-sm uppercase font-bold text-black mb-2">ShrekFest 2026</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        ${shrekEvents.map(e => chipHTML(e, showMap[e.show])).join('')}
-                    </div>
-                `;
-                grid.appendChild(box);
-            } else {
-                grid.insertAdjacentHTML('beforeend', chipHTML(event, show));
+            const dayNum = event.date.split('-')[2];
+            const eventDate = new Date(event.date + 'T12:00:00');
+            const dayName = eventDate.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase();
+            const monthName = eventDate.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+
+            let displayName = show.title;
+            let linkUrl = '/show/' + show.slug + '/';
+
+            if (event.displayName) {
+                displayName = event.displayName;
+            } else if (event.title) {
+                if (show.eventTitleFormat === 'event-first') {
+                    displayName = event.title + ': ' + show.title;
+                } else {
+                    displayName = show.title + ': ' + event.title;
+                }
             }
+
+            if (show.createEventPages && event.title) {
+                const eventSlug = event.title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-|-$/g, '');
+                linkUrl = '/show/' + show.slug + '/' + eventSlug + '/';
+            }
+
+            const link = document.createElement('a');
+            link.href = linkUrl;
+            link.className = 'flex items-stretch bg-neutral-800 hover:bg-neutral-700 transition-colors';
+            link.innerHTML = `
+                <div class="text-center shrink-0 w-12 md:w-14 bg-neutral-700 flex flex-col justify-center py-1 md:py-2">
+                    <p class="font-inter text-[8px] md:text-[10px] text-neutral-400 uppercase">${monthName}</p>
+                    <p class="font-inter text-base md:text-lg font-bold text-white">${dayNum}</p>
+                    <p class="font-inter text-[8px] md:text-[10px] text-neutral-400 uppercase">${dayName}</p>
+                </div>
+                <div class="flex-1 min-w-0 p-2 md:p-4 flex flex-col justify-center">
+                    <p class="font-inter text-sm md:text-base text-white truncate">${displayName}</p>
+                    <p class="font-inter text-xs md:text-sm text-neutral-400">${event.time}</p>
+                </div>
+            `;
+            grid.appendChild(link);
         });
     }
 })();
@@ -140,8 +115,6 @@ eleventyComputed:
 
     const todayTs = Date.now();
     const todayStr = new Date().toISOString().split('T')[0];
-    const nowLocal = new Date();
-    const localToday = `${nowLocal.getFullYear()}-${String(nowLocal.getMonth() + 1).padStart(2, '0')}-${String(nowLocal.getDate()).padStart(2, '0')}`;
 
     // Format event title helper
     function formatEventTitle(event, show) {
@@ -177,9 +150,7 @@ eleventyComputed:
         const [y, m, d] = event.date.split("-").map(Number);
         const eventTs = new Date(y, m - 1, d, hours, minutes, 0).getTime();
 
-        // Keep ShrekFest shows visible through the end of their show day, even
-        // once the event's start time has passed.
-        if (eventTs >= todayTs || (event.shrekfest && event.date === localToday)) {
+        if (eventTs >= todayTs) {
             if (!nextEventMap[event.show]) {
                 nextEventMap[event.show] = { date: event.date, time: event.time, ts: eventTs, event };
             }
@@ -214,8 +185,7 @@ eleventyComputed:
                     slug: show.slug,
                     tagline: show.tagline,
                     link: '/show/' + show.slug + '/',
-                    pinPosition: show.pinPosition,
-                    shrekfest: !!next.event.shrekfest
+                    pinPosition: show.pinPosition
                 });
             }
 
@@ -240,8 +210,7 @@ eleventyComputed:
                     slug: eventSlug,
                     tagline: event.tagline || event.date,
                     link: '/show/' + show.slug + '/' + eventSlug + '/',
-                    pinPosition: show.pinPosition,
-                    shrekfest: !!event.shrekfest
+                    pinPosition: show.pinPosition
                 });
             }
         } else {
@@ -254,8 +223,7 @@ eleventyComputed:
                 slug: show.slug,
                 tagline: show.tagline,
                 link: '/show/' + show.slug + '/',
-                pinPosition: show.pinPosition,
-                shrekfest: !!next.event.shrekfest
+                pinPosition: show.pinPosition
             });
         }
     }
@@ -275,50 +243,24 @@ eleventyComputed:
     });
 
     const grid = document.getElementById('now-showing-grid');
+    for (const item of results) {
+        const link = document.createElement('a');
+        link.href = item.link;
+        link.className = 'block group';
 
-    function taglineFor(item) {
+        let taglineText = item.tagline;
         if (item.type === 'event' && /^\d{4}-\d{2}-\d{2}$/.test(item.tagline)) {
-            return formatLongDate(item.tagline);
+            taglineText = formatLongDate(item.tagline);
         }
-        return item.tagline;
-    }
 
-    // A single poster card. `onGreen` flips the text to black so it reads
-    // against the ShrekFest box background.
-    function cardHTML(item, onGreen) {
-        const titleClass = onGreen ? 'text-black' : '';
-        const taglineClass = onGreen ? 'text-black' : 'text-neutral-400';
-        return `<a href="${item.link}" class="block group">
+        link.innerHTML = `
             <div class="aspect-[3/4] bg-neutral-900 mb-2 overflow-hidden">
                 ${item.poster ? `<img src="/posters/${item.poster}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
             </div>
-            <h2 class="font-oswald text-sm uppercase ${titleClass}">${item.title}</h2>
-            <p class="font-inter text-xs ${taglineClass}">${taglineFor(item)}</p>
-        </a>`;
-    }
-
-    // ShrekFest shows are pulled together into a single green box that spans two
-    // grid columns, keeping them visually grouped without breaking the grid flow.
-    const shrekItems = results.filter(r => r.shrekfest);
-    let shrekRendered = false;
-
-    for (const item of results) {
-        if (item.shrekfest) {
-            if (shrekRendered) continue;
-            shrekRendered = true;
-            const box = document.createElement('div');
-            box.className = 'col-span-2 self-start p-3';
-            box.style.backgroundColor = '#8CB04E';
-            box.innerHTML = `
-                <p class="font-oswald text-sm uppercase font-bold text-black mb-2">ShrekFest 2026</p>
-                <div class="grid grid-cols-2 gap-3">
-                    ${shrekItems.map(i => cardHTML(i, true)).join('')}
-                </div>
-            `;
-            grid.appendChild(box);
-        } else {
-            grid.insertAdjacentHTML('beforeend', cardHTML(item, false));
-        }
+            <h2 class="font-oswald text-sm uppercase">${item.title}</h2>
+            <p class="font-inter text-xs text-neutral-400">${taglineText}</p>
+        `;
+        grid.appendChild(link);
     }
 })();
 </script>

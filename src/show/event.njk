@@ -34,10 +34,6 @@ eleventyComputed:
             </p>
             <h1 class="font-oswald font-bold text-5xl uppercase mb-6">{{ eventPage.shortTitle }}</h1>
 
-            {%- if eventPage.shrekfest %}
-            {% include "shrekfest-schedule.njk" %}
-            {%- endif %}
-
             <div class="bg-neutral-900 border border-neutral-700 p-6 mb-8">
                 <p class="font-inter text-xl text-white mb-1">{{ eventPage.date | longDate }}</p>
                 <p class="font-inter text-lg text-neutral-300 mb-4">{{ eventPage.time }}</p>

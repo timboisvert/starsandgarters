@@ -229,8 +229,7 @@
     {
       "date": "2026-08-02",
       "time": "5:00 PM",
-      "show": "tales-from-the-swamp",
-      "shrekfest": true
+      "show": "tales-from-the-swamp"
     },
     {
       "date": "2026-08-02",
@@ -240,8 +239,12 @@
       "tagline": "Watch with Chicago's funniest comedians",
       "poster": "laughalonglive-shrek2.png",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2327540",
-      "shrekfest": true,
       "description": "Come watch Shrek 2 with Chicago’s funniest queer comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink!\n\nShow at 8:00pm.\n\n21+ show\n\nFeaturing: Leah Blevins, fae lily, Seth Lowery\n\nLaugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. A panel of comedians makes jokes throughout a film (à la Mystery Science Theater, but more about having fun than making fun) and run activities for the audience. Follow us @laughalonglive to know which movies we’re doing next (after you’ve bought your tickets for this one, of course.\n\nThis show is part of ShrekFest. You can upgrade to enjoy the rest of the festivities or buy just the ticket to this show."
+    },
+    {
+      "date": "2026-08-05",
+      "time": "8:00 PM",
+      "show": "burly-oke"
     },
     {
       "date": "2026-08-06",
@@ -330,6 +333,11 @@
     },
     {
       "date": "2026-08-15",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-08-15",
       "time": "2:00 PM",
       "show": "mystery-machine"
     },
@@ -381,6 +389,11 @@
     },
     {
       "date": "2026-08-22",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-08-22",
       "time": "2:00 PM",
       "show": "mystery-machine"
     },
@@ -421,6 +434,11 @@
     },
     {
       "date": "2026-08-29",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-08-29",
       "time": "2:00 PM",
       "show": "mystery-machine"
     },
@@ -438,6 +456,11 @@
       "poster": "starletspresents-batlesque.jpg",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2229893",
       "description": "Na na na na na na na na... Batlesque!\n\nJoin us on the Main Stage at Stars and Garters for an unforgettable evening of Batman themed parody burlesque. The Starlets, our resident burlesque troupe, invite you into a playful and provocative reimagining of Gotham City's most iconic heroes and villains.\n\nFeaturing burlesque performances by Gata Habbie, Gemini Blackheart, Manny Schevitz, Raye Mantique, and Ronnie Rouge, this spectacular lineup also showcases the incredible variety talents of Katie Rae Horn and Kayla Janelle. Guiding you through the chaos of Gotham are your hosts, Dizzie Daisie and Lucky Charm, with our fabulous kitten, Chantilly Chantelle.\n\nWatch as your favorite DC characters leap from the pages of comic books and onto the stage in dazzling, unexpected, and delightfully cheeky ways. From Batman and Harley Quinn to The Joker, Catwoman, The Riddler, Poison Ivy, Alfred, Penguin, and Two-Face, these beloved characters are transformed through glitter, glamour, comedy, and tease.\n\nWhether you're a lifelong comic book fan, a burlesque enthusiast, or simply looking for a one-of-a-kind night out, Batlesque promises an evening packed with laughter, spectacle, and Gotham-sized entertainment.\n\nHoly tassels, Batman... you won't want to miss this one!"
+    },
+    {
+      "date": "2026-09-02",
+      "time": "8:00 PM",
+      "show": "burly-oke"
     },
     {
       "date": "2026-09-04",
@@ -458,6 +481,11 @@
       "date": "2026-09-05",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-09-05",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-09-05",
@@ -488,6 +516,11 @@
       "date": "2026-09-12",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-09-12",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-09-12",
@@ -523,6 +556,11 @@
       "date": "2026-09-19",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-09-19",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-09-19",
@@ -566,6 +604,11 @@
     },
     {
       "date": "2026-09-26",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-09-26",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -601,6 +644,11 @@
     },
     {
       "date": "2026-10-03",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-10-03",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -618,6 +666,11 @@
       "date": "2026-10-04",
       "time": "2:00 PM",
       "show": "late-nite-catechism-holy-ghost-bingo"
+    },
+    {
+      "date": "2026-10-07",
+      "time": "8:00 PM",
+      "show": "burly-oke"
     },
     {
       "date": "2026-10-09",
@@ -638,6 +691,11 @@
       "date": "2026-10-10",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-10-10",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-10-10",
@@ -678,6 +736,11 @@
       "date": "2026-10-17",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-10-17",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-10-17",
@@ -716,6 +779,11 @@
     },
     {
       "date": "2026-10-24",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-10-24",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -746,6 +814,11 @@
     },
     {
       "date": "2026-10-31",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-10-31",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -758,6 +831,11 @@
       "date": "2026-10-31",
       "time": "7:00 PM",
       "show": "halloween-2026"
+    },
+    {
+      "date": "2026-11-04",
+      "time": "8:00 PM",
+      "show": "burly-oke"
     },
     {
       "date": "2026-11-06",
@@ -778,6 +856,11 @@
       "date": "2026-11-07",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-11-07",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-11-07",
@@ -811,6 +894,11 @@
     },
     {
       "date": "2026-11-14",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-11-14",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -828,6 +916,11 @@
       "date": "2026-11-21",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-11-21",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-11-21",
@@ -851,8 +944,18 @@
     },
     {
       "date": "2026-11-28",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-11-28",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
+    },
+    {
+      "date": "2026-12-02",
+      "time": "8:00 PM",
+      "show": "burly-oke"
     },
     {
       "date": "2026-12-04",
@@ -873,6 +976,11 @@
       "date": "2026-12-05",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-12-05",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-12-05",
@@ -901,6 +1009,11 @@
     },
     {
       "date": "2026-12-12",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-12-12",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -923,6 +1036,11 @@
       "date": "2026-12-19",
       "time": "12:00 PM",
       "show": "bright-star-circus"
+    },
+    {
+      "date": "2026-12-19",
+      "time": "1:00 PM",
+      "show": "the-family-game-show-show"
     },
     {
       "date": "2026-12-19",

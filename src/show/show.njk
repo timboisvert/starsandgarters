@@ -69,10 +69,6 @@ eleventyComputed:
 
             <p class="font-inter text-2xl text-neutral-300 mb-8">{{ show.tagline }}</p>
 
-            {%- if show.shrekfest %}
-            {% include "shrekfest-schedule.njk" %}
-            {%- endif %}
-
             {%- if show.ticketUrl %}
             <div id="static-ticket-button" class="mb-8">
                 <a href="{{ show.ticketUrl }}" target="_blank" rel="noopener"

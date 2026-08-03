@@ -1,6 +1,18 @@
 {
   "shows": [
     {
+      "slug": "the-family-game-show-show",
+      "title": "The Family Game Show Show",
+      "tagline": "Play 70 years of game show challenges... with real prizes!",
+      "poster": "thefamilygameshowshow.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2301341",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Rouge Room",
+      "description": "Come to The Family Game Show Show where you, the audience, travel through the history of game shows and compete for fabulous prizes!\n\nAre you ready to come on down? Survey says...yes! Every Saturday at 1pm in the Rouge Room of Stars & Garters, come celebrate over 70 years of games shows with us! Don't leave your weekend fun to a game of chance, when you can guarantee no whammies at The Family Game Show Show! Buy tickets and a vowel for your whole family and come compete where the points do matter, because there are prizes on the line!\n\nThis show is family-friendly. Guaranteed fun for the kids, the grandparents, chosen families, and everything in between.\n\nEach show features a rotating cast of energetic hosts and game guides including Carl Luft, Jackie Schmitz, Matt Neff, Thea Anderson, Kendall Wolfe, and Amanda Miller.",
+      "isIndex": true
+    },
+    {
       "slug": "tales-from-the-swamp",
       "title": "Tales From the Swamp",
       "tagline": "A Shrek-Themed Burlesque and Comedy Show",
@@ -10,7 +22,6 @@
       "price": null,
       "room": "Main Stage",
       "description": "Come enjoy a Shrek-themed burlesque parody show complete with seduction, whimsy, and comedy.\n\nBrought to you by Windy City Witches. Featuring Jordan E. Euell.",
-      "shrekfest": true,
       "landingPages": [
         "burlesque"
       ]
