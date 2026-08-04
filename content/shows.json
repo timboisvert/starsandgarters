@@ -1,6 +1,15 @@
 {
   "shows": [
     {
+      "slug": "mouth-matt-brown",
+      "title": "MOUTH: Matt Brown Live Comedy Special",
+      "tagline": "The funniest stories come from the strangest places",
+      "poster": "mattbrown-mouth.jpeg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2293088",
+      "showAllEvents": true,
+      "description": "MOUTH is a fearless stand-up comedy show from Chicago comedian Matt Brown that blends razor-sharp joke writing with unforgettable storytelling. Raised between the trailer parks of rural Illinois and the hills of Eastern Kentucky, Brown turns his experiences as a biracial, bisexual, working-class comic into an hour of hilarious observations about race, masculinity, relationships, religion, family, and modern American life.\n\nFrom outrageous one-liners to Southern Gothic storytelling, MOUTH builds to Hillbilly Barnburner—a hilarious, jaw-dropping true story from Brown's childhood that transforms the evening into something far bigger than a comedy show. Equal parts outrageous, heartfelt, and incisive, MOUTH is a comedy experience unlike anything else on stage today."
+    },
+    {
       "slug": "party-girl",
       "title": "Party Girl",
       "tagline": "The one woman show of your dreams",

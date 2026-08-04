@@ -62,12 +62,12 @@ eleventyComputed:
 <div>
     {%- if show.familySaturday %}
     <a href="/family/" class="block bg-amber-400 text-black p-4 md:p-5 mb-8 hover:bg-amber-300 transition-colors">
-        <div class="flex items-center justify-between gap-4">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
             <div>
                 <p class="font-oswald uppercase text-lg md:text-xl leading-tight">Part of Family Saturdays</p>
-                <p class="font-inter text-sm md:text-base">Live family entertainment every Saturday, 10 AM–3 PM.</p>
+                <p class="font-inter text-sm md:text-base leading-snug">Live family entertainment every Saturday, 10 AM–3 PM.</p>
             </div>
-            <span class="font-inter text-sm font-semibold whitespace-nowrap shrink-0">See all Family Saturday shows &rarr;</span>
+            <span class="font-inter text-sm font-semibold sm:whitespace-nowrap sm:shrink-0">See all Family Saturday shows &rarr;</span>
         </div>
     </a>
     {%- endif %}
