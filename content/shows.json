@@ -1,6 +1,16 @@
 {
   "shows": [
     {
+      "slug": "lshana-tada",
+      "title": "L'shana TADA!",
+      "tagline": "A Happy Jew Year Cabaret",
+      "poster": "lshanatada.png",
+      "ticketUrl": "https://www.eventbrite.com/e/lshana-tada-tickets-1995547170305?aff=oddtdtcreator",
+      "buttonText": "Buy Tickets",
+      "description": "Can’t make it to synagogue, but still want to tell your parents that you observed the holiday this year? Batty Page and Rabbi Manny Schevitz have you covered! This variety show will be complete with everything your Hebrew-school-dropout might remember, and your Shabbat-going chevruta will never forget. Get ready to laugh, sing, and blow (the shofar, of course!) as we welcome Shabbat and the new Jewish year together.\n\nJoin us on Erev Rosh Hashanah 5787 (September 11, 2026) at Stars & Garters Theater for the sluttiest, queerest Jewish new year ever. Doors open at 7:30 pm, show begins at 8:00.",
+      "isIndex": true
+    },
+    {
       "slug": "mouth-matt-brown",
       "title": "MOUTH: Matt Brown Live Comedy Special",
       "tagline": "The funniest stories come from the strangest places",

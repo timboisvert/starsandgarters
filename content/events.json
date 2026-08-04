@@ -519,6 +519,12 @@
     },
     {
       "date": "2026-09-11",
+      "time": "8:00 PM",
+      "show": "lshana-tada",
+      "dateOverride": "1 Tishrei 5787"
+    },
+    {
+      "date": "2026-09-11",
       "time": "9:11 PM",
       "show": "the-incredibly-serious-stand-up-hour"
     },
