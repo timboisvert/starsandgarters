@@ -1,6 +1,15 @@
 {
   "shows": [
     {
+      "slug": "improvised-animorphs",
+      "title": "Improvised Animorphs",
+      "tagline": "Battles of courage, friendship, and full-on chaos",
+      "poster": "improvisedanimorphs.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2325435",
+      "description": "Imagine a world where danger lurks around every corner and a group of unlikely teenagers must band together to save the planet... by morphing into animals!\n\nImprovised Animorphs takes the beloved 90s book series and throws away the script. Alien invasions. Spontaneous morphs. Battles of courage, friendship, and full-on chaos — all made up on the spot.\n\nYou call the shots. We bring the suspense, the nostalgia, and a heavy dose of absurdity. Can these improvisers save the world and turn in their homework on time? Come find out.",
+      "isIndex": true
+    },
+    {
       "slug": "lshana-tada",
       "title": "L'shana TADA!",
       "tagline": "A Happy Jew Year Cabaret",
