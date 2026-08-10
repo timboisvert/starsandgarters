@@ -1,6 +1,16 @@
 {
   "shows": [
     {
+      "slug": "the-magic-toybox",
+      "title": "The Magic Toybox",
+      "tagline": "Magic for kids and kids at heart!",
+      "poster": "themagictoybox.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2343410",
+      "description": "Join magician Dan Feltey for an hour of sleight of hand, playful mischief, and jaw-dropping surprises as the wonders spill right off the shelves. You'll see cards vanish, objects float, and plenty of brave young volunteers called up on stage to help make the magic happen. This family friendly show is packed with laughs, gasps, and that unbeatable \"wait, how did you DO that?\" feeling. All ages are welcome, and it plays best for kids 5 and up. Grown-ups, your imagination is invited too!",
+      "isIndex": true,
+      "familySaturday": true
+    },
+    {
       "slug": "improvised-animorphs",
       "title": "Improvised Animorphs",
       "tagline": "Battles of courage, friendship, and full-on chaos",

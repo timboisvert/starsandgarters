@@ -318,6 +318,11 @@
     },
     {
       "date": "2026-08-15",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
+      "date": "2026-08-15",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
@@ -389,6 +394,11 @@
     },
     {
       "date": "2026-08-22",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
+      "date": "2026-08-22",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
@@ -431,6 +441,11 @@
       "date": "2026-08-29",
       "time": "10:00 AM",
       "show": "stargazers-adventure-club"
+    },
+    {
+      "date": "2026-08-29",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
     },
     {
       "date": "2026-08-29",
@@ -489,6 +504,11 @@
     },
     {
       "date": "2026-09-05",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
+      "date": "2026-09-05",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
@@ -537,6 +557,11 @@
       "date": "2026-09-11",
       "time": "9:11 PM",
       "show": "the-incredibly-serious-stand-up-hour"
+    },
+    {
+      "date": "2026-09-12",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
     },
     {
       "date": "2026-09-12",
@@ -595,6 +620,11 @@
     },
     {
       "date": "2026-09-19",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
+      "date": "2026-09-19",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
@@ -647,6 +677,11 @@
       "date": "2026-09-25",
       "time": "10:00 PM",
       "show": "rising-stars"
+    },
+    {
+      "date": "2026-09-26",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
     },
     {
       "date": "2026-09-26",
@@ -705,6 +740,11 @@
     },
     {
       "date": "2026-10-03",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
+      "date": "2026-10-03",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
@@ -760,6 +800,11 @@
     },
     {
       "date": "2026-10-10",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
+      "date": "2026-10-10",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
@@ -810,6 +855,11 @@
     },
     {
       "date": "2026-10-17",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
+      "date": "2026-10-17",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
@@ -855,6 +905,11 @@
     },
     {
       "date": "2026-10-24",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
+      "date": "2026-10-24",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
@@ -887,6 +942,11 @@
       "date": "2026-10-30",
       "time": "10:00 PM",
       "show": "rising-stars"
+    },
+    {
+      "date": "2026-10-31",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
     },
     {
       "date": "2026-10-31",
