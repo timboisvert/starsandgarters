@@ -1,6 +1,15 @@
 {
   "shows": [
     {
+      "slug": "what-a-year",
+      "title": "What a Year",
+      "tagline": "Improvised World History",
+      "poster": "whatayear.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2341609",
+      "description": "What a Year! brings together three of the greatest historians ever to take high school social studies. These veteran improvisers (iO, Second City, UCB, ImprovBroadway) use their knowledge of world history to show you moments from any year of history suggested by the audience using their signature fast-paced and quick-witted improv.\n\nThe show What A Year! has been performing together for 5 years and in that time they've toured festivals around the country and filmed an improvised comedy special with DryBar Comedy.",
+      "isIndex": true
+    },
+    {
       "slug": "inevitable",
       "title": "Inevitable: A new Magic and Mentalism show",
       "tagline": "Chance, choice, or fate?",
