@@ -73,6 +73,21 @@ eleventyComputed:
     </a>
     {%- endif %}
 
+    {%- if show.createEventPages %}
+    <div class="mb-10">
+        <h1 class="font-oswald font-bold text-5xl uppercase mb-4">{{ show.title }}</h1>
+        {%- if show.tagline %}
+        <p class="font-inter text-2xl text-neutral-300 mb-6">{{ show.tagline }}</p>
+        {%- endif %}
+        {%- if show.description %}
+        <p class="font-inter text-lg text-neutral-400 leading-normal whitespace-pre-line max-w-3xl">{{ show.description }}</p>
+        {%- endif %}
+    </div>
+
+    <h2 class="font-oswald text-2xl uppercase mb-6">Upcoming Shows</h2>
+    <div id="container-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"></div>
+    <p id="container-empty" class="font-inter text-neutral-400 hidden">No upcoming shows scheduled.</p>
+    {%- else %}
     <div class="flex flex-col md:flex-row gap-12">
         {%- if show.poster %}
         <div class="w-full md:w-1/2 shrink-0">
@@ -124,6 +139,7 @@ eleventyComputed:
             {%- endif %}
         </div>
     </div>
+    {%- endif %}
 </div>
 
 <script>
@@ -147,6 +163,43 @@ eleventyComputed:
             month: 'long',
             day: 'numeric'
         });
+    }
+
+    // Container shows (createEventPages, e.g. Laugh-Along Live) are just hubs for
+    // their differently-postered installments — render a poster grid of the
+    // upcoming events instead of the standard single-show layout.
+    if (data.createEventPages) {
+        const grid = document.getElementById('container-grid');
+        const empty = document.getElementById('container-empty');
+        if (grid) {
+            // Collapse multiple dates of the same event into one card.
+            const seen = new Set();
+            const items = [];
+            for (const ev of upcomingEvents) {
+                const key = ev.slug || ev.shortName;
+                if (seen.has(key)) continue;
+                seen.add(key);
+                items.push(ev);
+            }
+            if (items.length) {
+                grid.innerHTML = items.map(ev => {
+                    const url = ev.title ? `/show/${data.slug}/${ev.slug}/` : (ev.ticketUrl || '#');
+                    const dateLabel = ev.dateOverride ? ev.dateOverride : formatLongDate(ev.date);
+                    return `<a href="${url}" class="group block bg-neutral-900 border border-neutral-800 hover:border-neutral-600 transition-colors overflow-hidden">
+                        <div class="aspect-[3/4] bg-neutral-950 overflow-hidden">
+                            ${ev.poster ? `<img src="/posters/${ev.poster}" alt="${ev.shortName}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-oswald text-xl uppercase leading-tight mb-1">${ev.shortName}</h3>
+                            <p class="font-inter text-sm text-neutral-400">${dateLabel}</p>
+                        </div>
+                    </a>`;
+                }).join('');
+            } else if (empty) {
+                empty.classList.remove('hidden');
+            }
+        }
+        return;
     }
 
     // A distinct card for a date that is actually part of another ticketed show
