@@ -9,7 +9,7 @@ eleventyComputed:
   title: "{{ show.title }}"
   meta:
     description: "{{ show.description | default(show.tagline) }}"
-    image: "{{ (show.poster and (site.url ~ '/posters/' ~ show.poster)) or site.logo }}"
+    image: "{{ site.logo if show.createEventPages else ((show.poster and (site.url ~ '/posters/' ~ show.poster)) or site.logo) }}"
     url: "{{ site.url ~ '/show/' ~ show.slug ~ '/' }}"
     ogType: "article"
 ---
