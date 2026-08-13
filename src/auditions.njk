@@ -17,7 +17,7 @@ eleventyComputed:
     <div class="bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col md:flex-row">
         {%- if audition.poster %}
         <div class="w-full md:w-48 shrink-0 bg-neutral-800 overflow-hidden">
-            <img src="/posters/{{ audition.poster }}" alt="{{ audition.title }}" class="w-full h-full object-contain">
+            <img loading="lazy" decoding="async" src="/posters/{{ audition.poster }}" alt="{{ audition.title }}" class="w-full h-full object-contain">
         </div>
         {%- endif %}
         <div class="p-6 flex-1">

@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/posters/:name.png", "destination": "/posters/:name.webp", "permanent": false },
+    { "source": "/posters/:name.jpg", "destination": "/posters/:name.webp", "permanent": false },
+    { "source": "/posters/:name.jpeg", "destination": "/posters/:name.webp", "permanent": false }
+  ]
+}

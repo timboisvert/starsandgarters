@@ -1,4 +1,55 @@
+import sharp from "sharp";
+import { readdirSync, statSync, mkdirSync, existsSync } from "node:fs";
+import path from "node:path";
+import { webpName } from "./lib/posters.js";
+
+// Full-size posters (2-4 MB each) were burning through Vercel's bandwidth
+// allowance. Instead of passthrough-copying them, convert each to a resized
+// WebP (~100 KB). Skips files whose output is already newer than the source,
+// so dev rebuilds stay fast.
+async function optimizeImages(outputDir) {
+    const jobs = [];
+
+    const postersOut = path.join(outputDir, "posters");
+    mkdirSync(postersOut, { recursive: true });
+    for (const file of readdirSync("posters")) {
+        if (!/\.(png|jpe?g)$/i.test(file)) continue;
+        const src = path.join("posters", file);
+        const dest = path.join(postersOut, webpName(file));
+        if (existsSync(dest) && statSync(dest).mtimeMs >= statSync(src).mtimeMs) continue;
+        jobs.push(
+            sharp(src)
+                .resize({ width: 960, withoutEnlargement: true })
+                .webp({ quality: 80 })
+                .toFile(dest)
+        );
+    }
+
+    // Site chrome loaded on every page: same name and format, just resized to
+    // display size (logo shows at 128px tall, map sits in the footer).
+    const chrome = [
+        { file: "logo.png", resize: { height: 320 } },
+        { file: "map.png", resize: { width: 1000 } },
+    ];
+    for (const { file, resize } of chrome) {
+        const dest = path.join(outputDir, file);
+        if (existsSync(dest) && statSync(dest).mtimeMs >= statSync(file).mtimeMs) continue;
+        jobs.push(
+            sharp(file)
+                .resize({ ...resize, withoutEnlargement: true })
+                .png({ palette: true, quality: 90 })
+                .toFile(dest)
+        );
+    }
+
+    await Promise.all(jobs);
+}
+
 export default function (eleventyConfig) {
+    eleventyConfig.on("eleventy.before", async ({ dir }) => {
+        await optimizeImages(dir.output);
+    });
+
     // Helper: format event title based on show config
     // eventTitleFormat: "event-first" = "Event: Show", default = "Show: Event"
     function formatEventTitle(event, show) {
@@ -579,11 +630,9 @@ export default function (eleventyConfig) {
         return eventPages;
     });
 
-    // Copy static assets
-    eleventyConfig.addPassthroughCopy("posters");
+    // Copy static assets (posters, logo.png, and map.png are handled by
+    // optimizeImages() above instead of being copied at full size)
     eleventyConfig.addPassthroughCopy("logos");
-    eleventyConfig.addPassthroughCopy("logo.png");
-    eleventyConfig.addPassthroughCopy("map.png");
     eleventyConfig.addPassthroughCopy("favicon.png");
 
     // Sveltia CMS admin UI (self-hosted at /admin)

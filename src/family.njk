@@ -11,11 +11,11 @@ eleventyComputed:
 ---
 
 {%- set familyShows = [
-  { title: "Stargazers Adventure Club", time: "10:00 AM", slug: "stargazers-adventure-club", poster: "stargazersadventureclub.png", tagline: "An interactive space adventure for kids 4–8 and their people." },
-  { title: "The Magic Toybox", time: "11:00 AM", slug: "the-magic-toybox", poster: "themagictoybox.png", tagline: "Magic for kids and kids at heart!" },
-  { title: "Bright Star Circus", time: "12:00 PM", slug: "bright-star-circus", poster: "bright-star-circus.jpg", tagline: "A dazzling circus-themed variety show for the whole family." },
-  { title: "The Family Game Show Show", time: "1:00 PM", slug: "the-family-game-show-show", poster: "thefamilygameshowshow.png", tagline: "Play 70 years of game show challenges — with real prizes!" },
-  { title: "Mystery Machine", time: "2:00 PM", slug: "mystery-machine", poster: "mysterymachine.png", tagline: "A family-friendly improvised whodunit, solved on the spot." }
+  { title: "Stargazers Adventure Club", time: "10:00 AM", slug: "stargazers-adventure-club", poster: "stargazersadventureclub.webp", tagline: "An interactive space adventure for kids 4–8 and their people." },
+  { title: "The Magic Toybox", time: "11:00 AM", slug: "the-magic-toybox", poster: "themagictoybox.webp", tagline: "Magic for kids and kids at heart!" },
+  { title: "Bright Star Circus", time: "12:00 PM", slug: "bright-star-circus", poster: "bright-star-circus.webp", tagline: "A dazzling circus-themed variety show for the whole family." },
+  { title: "The Family Game Show Show", time: "1:00 PM", slug: "the-family-game-show-show", poster: "thefamilygameshowshow.webp", tagline: "Play 70 years of game show challenges — with real prizes!" },
+  { title: "Mystery Machine", time: "2:00 PM", slug: "mystery-machine", poster: "mysterymachine.webp", tagline: "A family-friendly improvised whodunit, solved on the spot." }
 ] -%}
 
 <!-- HERO -->
@@ -49,7 +49,7 @@ eleventyComputed:
         {%- else %}
         <a href="/show/{{ item.slug }}/" class="group block bg-neutral-900 border border-neutral-800 hover:border-amber-400 transition-colors overflow-hidden">
             <div class="aspect-[3/4] overflow-hidden bg-neutral-950">
-                <img src="/posters/{{ item.poster }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                <img loading="lazy" decoding="async" src="/posters/{{ item.poster }}" alt="{{ item.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
             </div>
             <div class="p-4">
                 <p class="font-inter text-amber-400 text-sm font-semibold mb-1">{{ item.time }}</p>

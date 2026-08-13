@@ -187,7 +187,7 @@ eleventyComputed:
                     const dateLabel = ev.dateOverride ? ev.dateOverride : formatLongDate(ev.date);
                     return `<a href="${url}" class="group block bg-neutral-900 border border-neutral-800 hover:border-neutral-600 transition-colors overflow-hidden">
                         <div class="aspect-[3/4] bg-neutral-950 overflow-hidden">
-                            ${ev.poster ? `<img src="/posters/${ev.poster}" alt="${ev.shortName}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
+                            ${ev.poster ? `<img loading="lazy" decoding="async" src="/posters/${ev.poster}" alt="${ev.shortName}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">` : ''}
                         </div>
                         <div class="p-4">
                             <h3 class="font-oswald text-xl uppercase leading-tight mb-1">${ev.shortName}</h3>
@@ -207,7 +207,7 @@ eleventyComputed:
     function renderCrossPromoCard(event) {
         const poster = event.linkPoster
             ? `<div class="sm:w-40 shrink-0">
-                <img src="/posters/${event.linkPoster}" alt="${event.linkHeader || ''}" class="w-full h-48 sm:h-full object-cover">
+                <img loading="lazy" decoding="async" src="/posters/${event.linkPoster}" alt="${event.linkHeader || ''}" class="w-full h-48 sm:h-full object-cover">
             </div>`
             : '';
         return `<a href="${event.linkUrl}" class="block group overflow-hidden mb-8" style="background-color: #B50D0C;">
@@ -234,7 +234,7 @@ eleventyComputed:
 
         if (showEventPoster) {
             html += `<div class="shrink-0 h-full p-3">
-                <img src="/posters/${event.poster}" alt="${event.shortName}" class="h-full w-auto object-contain">
+                <img loading="lazy" decoding="async" src="/posters/${event.poster}" alt="${event.shortName}" class="h-full w-auto object-contain">
             </div>`;
         }
 

@@ -24,7 +24,7 @@ eleventyComputed:
         {%- if cls.poster and not cls.posterWide %}
         <div class="w-full md:w-1/2 shrink-0">
             <div class="aspect-[3/4] bg-neutral-900 overflow-hidden">
-                <img src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full h-full object-cover">
+                <img loading="lazy" decoding="async" src="/posters/{{ cls.poster }}" alt="{{ cls.title }}" class="w-full h-full object-cover">
             </div>
         </div>
         {%- endif %}

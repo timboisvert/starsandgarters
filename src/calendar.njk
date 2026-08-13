@@ -262,7 +262,7 @@ function openDayModal(dateStr, dayEvents) {
             html += `<a href="${linkUrl}" class="flex items-center gap-4 p-3 bg-neutral-800 hover:bg-neutral-700 transition-colors">`;
             if (poster) {
                 html += `<div class="w-20 h-30 shrink-0 bg-neutral-900 overflow-hidden">`;
-                html += `<img src="/posters/${poster}" alt="${displayName}" class="w-full h-full object-cover">`;
+                html += `<img loading="lazy" decoding="async" src="/posters/${poster}" alt="${displayName}" class="w-full h-full object-cover">`;
                 html += `</div>`;
             }
             html += `<div class="flex-1 min-w-0">`;
