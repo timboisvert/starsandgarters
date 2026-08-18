@@ -563,6 +563,18 @@
       "familySaturday": true
     },
     {
+      "slug": "mystery-machine-bloody-bodies",
+      "title": "Mystery Machine: Bloody Bodies",
+      "tagline": "An Uncensored Improvised Slasher",
+      "poster": "mysterymachine-bloodybodies.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2367443",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "A bloodthirsty haunt. A trail of bodies. Four meddlin’ detectives.\n\nEach performance is a completely original, uncensored, improvised slasher mystery where the clues pile up and the bodies start dropping.\n\nCan the detectives unmask the haunt before they become the next victims?\n\nSolve the mystery. Survive the night.\n\nExpect laughs, chases, gruesome kills, and plenty of fake blood.\n\nThink you can handle the gore? Splatter Zone tickets include a complimentary poncho.",
+      "isIndex": true
+    },
+    {
       "slug": "the-seance",
       "title": "The Séance",
       "tagline": "We play with the dead",
