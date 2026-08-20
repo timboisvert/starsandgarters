@@ -583,7 +583,13 @@
     {
       "date": "2026-09-11",
       "time": "9:11 PM",
-      "show": "the-incredibly-serious-stand-up-hour"
+      "show": "the-incredibly-serious-stand-up-hour",
+      "title": "The 9/11 Show",
+      "displayName": "The Incredibly Serious Stand Up: The 9/11 Show",
+      "tagline": "Cutting-edge comedy. 2/2 doctors recommended.",
+      "poster": "incrediblyserious-911.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2370527",
+      "description": "Please join Ph.D* Professors* of Theater, Emilia Barrosse & Adam O’Dell, as they present a very special 9/11 Memorial Edition of the Incredibly Serious Stand Up Hour, a night of comedy to honor America's Most Serious Day. Hard at work in the comedy lab, The Incredibly Serious Stand-Up Hour brings you the most cutting-edge comedy the greater Chicago area has to offer, presented to you by the two most Incredibly Serious People in the United States*.\n\n*untrue/unverified information"
     },
     {
       "date": "2026-09-12",
