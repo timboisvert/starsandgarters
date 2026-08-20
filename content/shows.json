@@ -111,7 +111,7 @@
     },
     {
       "slug": "stargazers-adventure-club",
-      "title": "Stargazers Adventure Club",
+      "title": "Stargazers Adventure Club: Planetary Games",
       "tagline": "For children aged 4-8 and their people",
       "poster": "stargazersadventureclub.png",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2083963",
@@ -119,6 +119,19 @@
       "price": null,
       "room": "Main Stage",
       "description": "Blast off with Stargazers Adventure Club in Planetary Games, an interactive space spectacular where imagination fuels the fun! You’ll learn planetary facts from out-of-this-world host, Astro the Alien as the Stargazers “bubble port” across all eight planets. This family friendly adventure is packed with music, movement, comedy and audience participation. In Stargazers Adventure Club: Planetary Games, everyone who has fun is a winner! 🚀 🪐 💫",
+      "isIndex": true,
+      "familySaturday": true
+    },
+    {
+      "slug": "stargazers-adventure-club-the-great-sea-adventure",
+      "title": "Stargazers Adventure Club: The Great Sea Adventure",
+      "tagline": "For children aged 4-8 and their people",
+      "poster": "stargazersadventureclub-thegreatseaadventure.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2370410",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "Dive in with Stargazers Adventure Club for The Great Sea Adventure! Join Astro the Alien and the Stargazers as they \u201cbubble port\u201d from the Great Lakes to oceans, rivers and even the deepest trench on Earth. Along the way, you\u2019ll meet amazing sea creatures, learn surprising facts and become part of the adventure. The Great Sea Adventure is packed with improv games, music, movement, comedy and plenty of chances for the audience to join the fun. Come aboard and become an Ocean Explorer!",
       "isIndex": true,
       "familySaturday": true
     },

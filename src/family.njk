@@ -11,7 +11,8 @@ eleventyComputed:
 ---
 
 {%- set familyShows = [
-  { title: "Stargazers Adventure Club", time: "10:00 AM", slug: "stargazers-adventure-club", poster: "stargazersadventureclub.webp", tagline: "An interactive space adventure for kids 4–8 and their people." },
+  { title: "Stargazers Adventure Club: Planetary Games", time: "10:00 AM", slug: "stargazers-adventure-club", poster: "stargazersadventureclub.webp", tagline: "An interactive space adventure for kids 4–8 and their people." },
+  { title: "Stargazers Adventure Club: The Great Sea Adventure", time: "Starting October 3", slug: "stargazers-adventure-club-the-great-sea-adventure", poster: "stargazersadventureclub-thegreatseaadventure.webp", tagline: "Bubble port from the Great Lakes to the deepest trench on Earth." },
   { title: "The Magic Toybox", time: "11:00 AM", slug: "the-magic-toybox", poster: "themagictoybox.webp", tagline: "Magic for kids and kids at heart!" },
   { title: "Bright Star Circus", time: "12:00 PM", slug: "bright-star-circus", poster: "bright-star-circus.webp", tagline: "A dazzling circus-themed variety show for the whole family." },
   { title: "The Family Game Show Show", time: "1:00 PM", slug: "the-family-game-show-show", poster: "thefamilygameshowshow.webp", tagline: "Play 70 years of game show challenges — with real prizes!" },
@@ -33,7 +34,7 @@ eleventyComputed:
 <section class="mb-16">
     <hr class="border-neutral-800 mb-12">
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 md:gap-6">
         {%- for item in familyShows %}
         {%- if item.comingSoon %}
         <div class="block bg-neutral-900 border border-dashed border-neutral-700 overflow-hidden">
