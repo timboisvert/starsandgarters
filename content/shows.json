@@ -583,7 +583,7 @@
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2367443",
       "buttonText": "Buy Tickets",
       "price": null,
-      "room": null,
+      "room": "Main Stage",
       "description": "A bloodthirsty haunt. A trail of bodies. Four meddlin’ detectives.\n\nEach performance is a completely original, uncensored, improvised slasher mystery where the clues pile up and the bodies start dropping.\n\nCan the detectives unmask the haunt before they become the next victims?\n\nSolve the mystery. Survive the night.\n\nExpect laughs, chases, gruesome kills, and plenty of fake blood.\n\nThink you can handle the gore? Splatter Zone tickets include a complimentary poncho.",
       "isIndex": true
     },
@@ -738,6 +738,18 @@
       "poster": "incrediblyserious.png",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2286114",
       "description": "Please join Ph.D* Professors* of Theater, Emilia Barrosse & Adam O’Dell, as they reveal to you the latest in their ongoing research into the fringe form of live theater known as stand-up comedy. Hard at work in the comedy lab, The Incredibly Serious Stand-Up Hour brings you the most cutting-edge comedy the greater Chicago area has to offer, presented to you by the two most Incredibly Serious People in the United States*.\n*untrue/unverified information",
+      "isIndex": true
+    },
+    {
+      "slug": "goofbumps",
+      "title": "Goofbumps: The Unauthorized Goosebumps Parody Show",
+      "tagline": "60 Books in 60 Minutes",
+      "poster": "goofbumps.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2368441",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Rouge Room",
+      "description": "Welcome to the SPOOKIEST comedy show in Chicago! GOOFBUMPS is the Unauthorized Parody Show created by the biggest Goosebumps nerd of all time! Comedian Matt Neff invites you on a terrifying trip through 90s nostalgia as he spoils EVERY Goosebumps book in one hour. Join us for an evening of spooky sing-alongs, monster puppet fights, and the most frightening game of Smash or Pass! Viewer Beware...We're spoiling all the scares!",
       "isIndex": true
     },
     {
