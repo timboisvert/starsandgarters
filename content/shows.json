@@ -745,9 +745,8 @@
       "title": "Tero: A Grand Offering",
       "tagline": "One night only",
       "poster": "tero.png",
-      "ticketUrl": null,
-      "ticketNote": "Tickets on sale Wednesday at 9 AM",
-      "buttonText": null,
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2373751",
+      "buttonText": "Buy Tickets",
       "price": null,
       "room": null,
       "isIndex": true
