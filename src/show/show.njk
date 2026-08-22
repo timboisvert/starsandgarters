@@ -42,6 +42,7 @@ eleventyComputed:
     title: show.title,
     poster: show.poster,
     ticketUrl: show.ticketUrl,
+    ticketNote: show.ticketNote,
     createEventPages: show.createEventPages,
     showAllEvents: show.showAllEvents,
     nextEventLabel: show.nextEventLabel or "Next Show",
@@ -108,6 +109,10 @@ eleventyComputed:
                     class="inline-block bg-white text-black font-inter text-base font-semibold px-6 py-3 hover:bg-neutral-200 transition-colors">
                     {{ show.buttonText or "Buy Tickets" }}
                 </a>
+            </div>
+            {%- elif show.ticketNote %}
+            <div id="static-ticket-button" class="mb-8">
+                <p class="inline-block border border-neutral-600 text-white font-inter text-base font-semibold px-6 py-3">{{ show.ticketNote }}</p>
             </div>
             {%- endif %}
 
@@ -266,6 +271,8 @@ eleventyComputed:
             </a>`;
         } else if (event.freeAtDoor) {
             html += `<p class="font-inter text-base text-white">Free at the door</p>`;
+        } else if (data.ticketNote) {
+            html += `<p class="inline-block border border-neutral-600 font-inter text-base font-semibold text-white px-6 py-3">${data.ticketNote}</p>`;
         }
 
         html += `</div></div></div>`;

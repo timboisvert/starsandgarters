@@ -741,6 +741,18 @@
       "isIndex": true
     },
     {
+      "slug": "tero-a-grand-offering",
+      "title": "Tero: A Grand Offering",
+      "tagline": "One night only",
+      "poster": "tero.png",
+      "ticketUrl": null,
+      "ticketNote": "Tickets on sale Wednesday at 9 AM",
+      "buttonText": null,
+      "price": null,
+      "room": null,
+      "isIndex": true
+    },
+    {
       "slug": "goofbumps",
       "title": "Goofbumps: The Unauthorized Goosebumps Parody Show",
       "tagline": "60 Books in 60 Minutes",
