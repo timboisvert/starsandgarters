@@ -561,11 +561,6 @@
     },
     {
       "date": "2026-09-11",
-      "time": "7:30 PM",
-      "show": "the-re-up"
-    },
-    {
-      "date": "2026-09-11",
       "time": "7:00 PM",
       "show": "a-random-memory"
     },
@@ -645,6 +640,11 @@
       "date": "2026-09-17",
       "time": "7:00 PM",
       "show": "improvised-animorphs"
+    },
+    {
+      "date": "2026-09-18",
+      "time": "7:30 PM",
+      "show": "the-re-up"
     },
     {
       "date": "2026-09-18",
