@@ -643,6 +643,11 @@
     },
     {
       "date": "2026-09-18",
+      "time": "9:30 PM",
+      "show": "hags"
+    },
+    {
+      "date": "2026-09-18",
       "time": "10:00 PM",
       "show": "rising-stars"
     },
@@ -905,6 +910,11 @@
       "date": "2026-10-15",
       "time": "7:30 PM",
       "show": "pee-wees-gayhouse"
+    },
+    {
+      "date": "2026-10-16",
+      "time": "7:00 PM",
+      "show": "hags"
     },
     {
       "date": "2026-10-16",
