@@ -753,6 +753,18 @@
       "isIndex": true
     },
     {
+      "slug": "tragic-mike-variety-show",
+      "title": "Tragic Mike Variety Show",
+      "tagline": "Rockin' comedy variety show with a sexy twist!",
+      "poster": "tragicmike.png",
+      "ticketUrl": "https://www.eventbrite.com/e/1997910733787",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "This rip roaring comedy show features a diverse selection of some of Chicago’s most talented and exciting performers. Produced by the renowned improv team Tragic Mike, the Tragic Mike Variety Show features Improv, Standup, Burlesque, Clown, Music, Drag Kings, Drag Queens, and everything in between.\n\nThis special edition of the show celebrates 4 years of Tragic Mike and the closing of this chapter as Greg, one third of the Tragic Mike trio, departs for the great white north! This grand finale is stacked with a dynamite line-up that’s guaranteed to blow your mind!",
+      "isIndex": true
+    },
+    {
       "slug": "goofbumps",
       "title": "Goofbumps: The Unauthorized Goosebumps Parody Show",
       "tagline": "60 Books in 60 Minutes",
