@@ -793,18 +793,13 @@
     },
     {
       "date": "2026-10-03",
-      "time": "11:00 AM",
-      "show": "the-magic-toybox"
-    },
-    {
-      "date": "2026-10-03",
       "time": "12:00 PM",
       "show": "bright-star-circus"
     },
     {
       "date": "2026-10-03",
-      "time": "1:00 PM",
-      "show": "the-family-game-show-show"
+      "time": "2:00 PM",
+      "show": "mystery-machine"
     },
     {
       "date": "2026-10-03",
@@ -870,6 +865,11 @@
       "date": "2026-10-10",
       "time": "1:00 PM",
       "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-10-10",
+      "time": "2:00 PM",
+      "show": "mystery-machine"
     },
     {
       "date": "2026-10-10",
@@ -945,6 +945,11 @@
       "date": "2026-10-17",
       "time": "1:00 PM",
       "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-10-17",
+      "time": "2:00 PM",
+      "show": "mystery-machine"
     },
     {
       "date": "2026-10-17",
@@ -1028,6 +1033,11 @@
     },
     {
       "date": "2026-10-24",
+      "time": "2:00 PM",
+      "show": "mystery-machine"
+    },
+    {
+      "date": "2026-10-24",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -1080,6 +1090,11 @@
       "date": "2026-10-31",
       "time": "1:00 PM",
       "show": "the-family-game-show-show"
+    },
+    {
+      "date": "2026-10-31",
+      "time": "2:00 PM",
+      "show": "mystery-machine"
     },
     {
       "date": "2026-10-31",
