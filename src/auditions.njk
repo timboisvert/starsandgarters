@@ -27,7 +27,9 @@ eleventyComputed:
             <div id="next-event-{{ audition.showSlug }}" class="hidden"></div>
             {%- else %}
             <p class="font-oswald text-sm uppercase text-neutral-300 mb-3">
-                {%- if audition.deadline -%}
+                {%- if audition.deadlineNote -%}
+                    {{ audition.deadlineNote }}
+                {%- elif audition.deadline -%}
                     Deadline: {{ audition.deadline }}
                 {%- else -%}
                     Revolving audition — no end date

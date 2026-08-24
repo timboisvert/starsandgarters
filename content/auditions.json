@@ -11,11 +11,12 @@
   {
     "slug": "red-velvet-comedy",
     "title": "Red Velvet Comedy",
-    "description": "Bring your best 5 minutes to Red Velvet Comedy, a competition mic in which winners are given paid slots in Stars & Garters' comedy, variety, and burlesque shows. Only 25 slots; pre-registration required using this form.\n\nComics will be judged by two rotating judges plus an audience vote, so bring your friends and pad your stats!\n\nOne-drink minimum.",
-    "poster": "red-velvet-comedy.png",
+    "description": "Bring your best 5 minutes to Red Velvet Comedy, a competition mic in which winners are given cash prizes plus paid slots in Stars & Garters' comedy and variety shows. Only 25 slots; pre-registration required using this form.\n\nComics will be judged by two rotating judges plus an audience vote, so bring your friends and pad your stats!\n\nOne-drink minimum.",
+    "poster": "redvelvetcomedy-performers.png",
     "signupUrl": "https://cocoscout.com/s/TTL9C",
-    "buttonText": "Register",
-    "deadline": null
+    "buttonText": "Sign Up",
+    "deadline": null,
+    "deadlineNote": "Signups open a week ahead of time"
   },
   {
     "slug": "rising-stars",

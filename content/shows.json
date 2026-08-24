@@ -624,13 +624,14 @@
     {
       "slug": "red-velvet-comedy",
       "title": "Red Velvet Comedy",
-      "tagline": "A standup competition mic",
-      "poster": "red-velvet-comedy.png",
-      "ticketUrl": "https://cocoscout.com/s/TTL9C",
-      "buttonText": "Sign Up",
+      "tagline": "A monthly standup competition mic",
+      "poster": "redvelvetcomedy-public.png",
+      "ticketUrl": null,
+      "ticketNote": "$5 at the door, or free with a drink purchase",
+      "buttonText": null,
       "price": null,
       "room": null,
-      "description": "Bring your best 5 minutes to Red Velvet Comedy, a competition mic in which winners are given paid slots in Stars & Garters' comedy, variety, and burlesque shows. Only 25 slots; pre-registration required using this form.\n\nComics will be judged by two rotating judges plus an audience vote, so bring your friends and pad your stats!\n\nOne-drink minimum.",
+      "description": "Twenty-five comics. Five minutes each. One winner, and you help pick them.\n\nRed Velvet Comedy is our monthly standup competition, where Chicago comics go head to head for cash prizes and paid slots in Stars & Garters' comedy and variety shows. Seasoned regulars, total newcomers, and everyone in between get the same five minutes to win the room.\n\nTwo rotating judges score every set, but the audience votes too, so the biggest laughs in the room genuinely decide who takes it home.",
       "isIndex": true
     },
     {
