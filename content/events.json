@@ -643,11 +643,6 @@
     },
     {
       "date": "2026-09-18",
-      "time": "9:00 PM",
-      "show": "masterminds"
-    },
-    {
-      "date": "2026-09-18",
       "time": "10:00 PM",
       "show": "rising-stars"
     },
@@ -803,11 +798,6 @@
     },
     {
       "date": "2026-10-03",
-      "time": "2:00 PM",
-      "show": "mystery-machine"
-    },
-    {
-      "date": "2026-10-03",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -873,11 +863,6 @@
     },
     {
       "date": "2026-10-10",
-      "time": "2:00 PM",
-      "show": "mystery-machine"
-    },
-    {
-      "date": "2026-10-10",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -923,11 +908,6 @@
     },
     {
       "date": "2026-10-16",
-      "time": "9:00 PM",
-      "show": "masterminds"
-    },
-    {
-      "date": "2026-10-16",
       "time": "10:00 PM",
       "show": "rising-stars"
     },
@@ -950,11 +930,6 @@
       "date": "2026-10-17",
       "time": "1:00 PM",
       "show": "the-family-game-show-show"
-    },
-    {
-      "date": "2026-10-17",
-      "time": "2:00 PM",
-      "show": "mystery-machine"
     },
     {
       "date": "2026-10-17",
@@ -1048,11 +1023,6 @@
     },
     {
       "date": "2026-10-24",
-      "time": "2:00 PM",
-      "show": "mystery-machine"
-    },
-    {
-      "date": "2026-10-24",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -1105,11 +1075,6 @@
       "date": "2026-10-31",
       "time": "1:00 PM",
       "show": "the-family-game-show-show"
-    },
-    {
-      "date": "2026-10-31",
-      "time": "2:00 PM",
-      "show": "mystery-machine"
     },
     {
       "date": "2026-10-31",
@@ -1225,11 +1190,6 @@
       "date": "2026-11-19",
       "time": "7:00 PM",
       "show": "improvised-animorphs"
-    },
-    {
-      "date": "2026-11-20",
-      "time": "9:00 PM",
-      "show": "masterminds"
     },
     {
       "date": "2026-11-20",
