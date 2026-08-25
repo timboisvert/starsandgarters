@@ -766,6 +766,18 @@
       "isIndex": true
     },
     {
+      "slug": "partys-here",
+      "title": "Party's Here",
+      "tagline": "A Reality TV Stand-up Comedy Show",
+      "poster": "partyshere.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2332909",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "PARTY'S HEEEEERE!\n\nJoin your host Maureen Nolan and a cast of Chicago's favorite comedians each month as they discuss and dissect your favorite reality TV shows, iconic moments, and hot takes on the hottest shows. From Bravolebrities to Sister Wives and Drag Race to Pauly D, we'll cover it all and you can expect stand-up, clips, prizes, and maybe even some cameos from your favorite stars.\n\nCOME TO CHURCH\nEvery second Sunday at 8pm\nSTARS & GARTERS THEATER",
+      "isIndex": true
+    },
+    {
       "slug": "goofbumps",
       "title": "Goofbumps: The Unauthorized Goosebumps Parody Show",
       "tagline": "60 Books in 60 Minutes",
