@@ -782,6 +782,11 @@
       "show": "improvised-animorphs"
     },
     {
+      "date": "2026-10-01",
+      "time": "7:30 PM",
+      "show": "inevitable"
+    },
+    {
       "date": "2026-10-02",
       "time": "7:30 PM",
       "show": "the-incredibly-serious-stand-up-hour"
@@ -835,6 +840,11 @@
       "date": "2026-10-08",
       "time": "7:00 PM",
       "show": "improvised-animorphs"
+    },
+    {
+      "date": "2026-10-08",
+      "time": "8:30 PM",
+      "show": "inevitable"
     },
     {
       "date": "2026-10-09",
@@ -998,6 +1008,11 @@
     },
     {
       "date": "2026-10-22",
+      "time": "7:30 PM",
+      "show": "inevitable"
+    },
+    {
+      "date": "2026-10-22",
       "time": "9:00 PM",
       "show": "red-velvet-comedy"
     },
@@ -1065,6 +1080,11 @@
       "date": "2026-10-25",
       "time": "7:00 PM",
       "show": "mystery-machine-bloody-bodies"
+    },
+    {
+      "date": "2026-10-29",
+      "time": "7:00 PM",
+      "show": "inevitable"
     },
     {
       "date": "2026-10-30",
