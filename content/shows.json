@@ -798,6 +798,18 @@
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2308537",
       "description": "Do you know what you are? Join us for an energetic tempest of existentialism that spans the full life cycle of self actualization. Exploring multiple genres, forms, and tones- this new scene collection is unrelenting in its effort to identify.",
       "isIndex": true
+    },
+    {
+      "slug": "windy-city-witches-gods-and-monsters",
+      "title": "Windy City Witches present: Gods & Monsters",
+      "tagline": "A Spooky Seduction",
+      "poster": "windycitywitches-godsandmonsters.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2370423",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "Step into spooky season with Chicago’s sluttiest coven. The Windy City Witches (@windycitywitches) invite you to join them for an evening of seduction that blurs the lines between good and evil. Welcome to the season of the witch, where these GODS & MONSTERS will indulge the most wicked of desires. Burlesque performances that are sure to have you under a spell, come within, the veil is thin ✨",
+      "isIndex": true
     }
   ]
 }
