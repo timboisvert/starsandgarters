@@ -822,6 +822,18 @@
       "room": null,
       "description": "A Night of Magical Comedy combines magical effects, comedic brilliance and memorable audience participation.\n\nWhen the doors open you'll be treated to the wonders of long standing Chicago-style close-up magic to help set the mood. Seasoned pros to make you question reality and get you in the right frame of mind.\n\nMain stage promises even more with big laughs and bigger magic from masters of their trade. A perfect blend of entertainment.",
       "isIndex": true
+    },
+    {
+      "slug": "dada-reinvents-the-wheel",
+      "title": "Dada Reinvents The Wheel",
+      "tagline": "An absurd, interactive sketch and variety show",
+      "poster": "dadareinventsthewheel.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2355375",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "Dada Reinvents the Wheel is an absurdist, interactive comedy show with live sketch, digital sketch, improv, music and variety revolving around a live wheel that dictates the running order and arc of each show. No two shows will be the same when Don't Tell Dada lets the audience and fate decide anything and everything with the spin of a wheel. Sketches? Songs? Interactive games? True love? Anything is possible when Dada Reinvents the Wheel.",
+      "isIndex": true
     }
   ]
 }
