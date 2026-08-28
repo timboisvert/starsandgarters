@@ -810,6 +810,18 @@
       "room": null,
       "description": "Step into spooky season with Chicago’s sluttiest coven. The Windy City Witches (@windycitywitches) invite you to join them for an evening of seduction that blurs the lines between good and evil. Welcome to the season of the witch, where these GODS & MONSTERS will indulge the most wicked of desires. Burlesque performances that are sure to have you under a spell, come within, the veil is thin ✨",
       "isIndex": true
+    },
+    {
+      "slug": "night-of-magical-comedy",
+      "title": "Night of Magical Comedy",
+      "tagline": "Believe It or Don't!",
+      "poster": "nightofmagicalcomedy.png",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2382416",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "A Night of Magical Comedy combines magical effects, comedic brilliance and memorable audience participation.\n\nWhen the doors open you'll be treated to the wonders of long standing Chicago-style close-up magic to help set the mood. Seasoned pros to make you question reality and get you in the right frame of mind.\n\nMain stage promises even more with big laughs and bigger magic from masters of their trade. A perfect blend of entertainment.",
+      "isIndex": true
     }
   ]
 }
