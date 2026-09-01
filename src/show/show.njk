@@ -155,8 +155,20 @@ eleventyComputed:
     const data = JSON.parse(dataEl.textContent);
     const today = new Date().toISOString().split('T')[0];
 
-    // Find next upcoming event
-    const upcomingEvents = data.events.filter(e => e.date >= today);
+    function parseTimeTo24(timeStr) {
+        if (!timeStr) return 0;
+        const [timePart = '0:00', ampm] = timeStr.split(' ');
+        let [h = 0, m = 0] = timePart.split(':').map(n => parseInt(n, 10) || 0);
+        if (ampm === 'PM' && h !== 12) h += 12;
+        if (ampm === 'AM' && h === 12) h = 0;
+        return h * 60 + m;
+    }
+
+    // Find next upcoming event. Sort rather than trusting events.json order, so a
+    // date hand-added out of sequence can't make the wrong show the "next" one.
+    const upcomingEvents = data.events
+        .filter(e => e.date >= today)
+        .sort((a, b) => a.date.localeCompare(b.date) || parseTimeTo24(a.time) - parseTimeTo24(b.time));
     const nextEvent = upcomingEvents[0];
 
     // Format date like "Saturday, February 28, 2026"

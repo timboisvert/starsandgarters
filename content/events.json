@@ -783,11 +783,6 @@
     },
     {
       "date": "2026-10-02",
-      "time": "7:30 PM",
-      "show": "the-incredibly-serious-stand-up-hour"
-    },
-    {
-      "date": "2026-10-02",
       "time": "9:00 PM",
       "show": "dks-full-five-fridays"
     },
@@ -1003,18 +998,23 @@
     },
     {
       "date": "2026-10-18",
-      "time": "8:30 PM",
-      "show": "marti-mimis-charity-ball"
+      "time": "7:30 PM",
+      "show": "the-incredibly-serious-stand-up-hour"
     },
     {
-      "date": "2026-10-22",
-      "time": "7:00 PM",
-      "show": "improvised-animorphs"
+      "date": "2026-10-18",
+      "time": "8:30 PM",
+      "show": "marti-mimis-charity-ball"
     },
     {
       "date": "2026-10-19",
       "time": "8:00 PM",
       "show": "tragic-mike-variety-show"
+    },
+    {
+      "date": "2026-10-22",
+      "time": "7:00 PM",
+      "show": "improvised-animorphs"
     },
     {
       "date": "2026-10-22",
