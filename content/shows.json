@@ -371,12 +371,12 @@
       "slug": "boylesque",
       "title": "Boylesque",
       "tagline": "Stars & Garters' all-male burlesque show!",
-      "poster": "boylesque.png",
+      "poster": "boylesque-dollyhorror.png",
       "ticketUrl": "https://buytickets.at/starsgarters/2141197",
       "buttonText": "Buy Tickets",
       "price": null,
       "room": "Main Stage",
-      "description": "Hosted by Lando Graves\nPole performances by Wolfie J",
+      "description": "An all-male burlesque tribute to Dolly Parton and Tim Curry.",
       "landingPages": [
         "burlesque"
       ]
