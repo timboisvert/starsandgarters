@@ -588,11 +588,6 @@
     },
     {
       "date": "2026-09-13",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-trivia-bingo"
-    },
-    {
-      "date": "2026-09-13",
       "time": "5:00 PM",
       "show": "laugh-along-live",
       "title": "O Brother, Where Art Thou?",
@@ -680,11 +675,6 @@
     },
     {
       "date": "2026-09-20",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-trivia-bingo"
-    },
-    {
-      "date": "2026-09-20",
       "time": "7:00 PM",
       "show": "pee-wees-gayhouse"
     },
@@ -760,11 +750,6 @@
     },
     {
       "date": "2026-09-27",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-trivia-bingo"
-    },
-    {
-      "date": "2026-09-27",
       "time": "8:30 PM",
       "show": "party-girl"
     },
@@ -817,11 +802,6 @@
       "date": "2026-10-03",
       "time": "7:30 PM",
       "show": "carded"
-    },
-    {
-      "date": "2026-10-04",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-holy-ghost-bingo"
     },
     {
       "date": "2026-10-07",
@@ -902,11 +882,6 @@
       "poster": "laughalonglive-breakingdawnpart2.png",
       "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2358491",
       "description": "Come watch Twilight: Breaking Dawn Part 2 with Chicago’s funniest comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink!\n\nShow at 9:00pm.\n\n21+ show\n\nLaugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. A panel of comedians makes jokes throughout a film (à la Mystery Science Theater, but more about having fun than making fun) and run activities for the audience. Follow us @laughalonglive to know which movies we’re doing next (after you’ve bought your tickets for this one, of course."
-    },
-    {
-      "date": "2026-10-11",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-holy-ghost-bingo"
     },
     {
       "date": "2026-10-11",
@@ -995,11 +970,6 @@
     },
     {
       "date": "2026-10-18",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-holy-ghost-bingo"
-    },
-    {
-      "date": "2026-10-18",
       "time": "7:30 PM",
       "show": "the-incredibly-serious-stand-up-hour"
     },
@@ -1077,11 +1047,6 @@
       "date": "2026-10-24",
       "time": "7:30 PM",
       "show": "carded"
-    },
-    {
-      "date": "2026-10-25",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-holy-ghost-bingo"
     },
     {
       "date": "2026-10-25",
@@ -1339,11 +1304,6 @@
       "show": "chicago-workshop-mic"
     },
     {
-      "date": "2026-12-06",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-christmas-bingo"
-    },
-    {
       "date": "2026-12-10",
       "time": "7:00 PM",
       "show": "improvised-animorphs"
@@ -1382,11 +1342,6 @@
       "date": "2026-12-12",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
-    },
-    {
-      "date": "2026-12-13",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-christmas-bingo"
     },
     {
       "date": "2026-12-13",
@@ -1430,11 +1385,6 @@
     },
     {
       "date": "2026-12-20",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-christmas-bingo"
-    },
-    {
-      "date": "2026-12-20",
       "time": "8:30 PM",
       "show": "marti-mimis-charity-ball"
     },
@@ -1442,11 +1392,6 @@
       "date": "2026-12-26",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
-    },
-    {
-      "date": "2026-12-27",
-      "time": "2:00 PM",
-      "show": "late-nite-catechism-christmas-bingo"
     }
   ]
 }
