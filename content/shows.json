@@ -807,6 +807,18 @@
       "room": null,
       "description": "Dada Reinvents the Wheel is an absurdist, interactive comedy show with live sketch, digital sketch, improv, music and variety revolving around a live wheel that dictates the running order and arc of each show. No two shows will be the same when Don't Tell Dada lets the audience and fate decide anything and everything with the spin of a wheel. Sketches? Songs? Interactive games? True love? Anything is possible when Dada Reinvents the Wheel.",
       "isIndex": true
+    },
+    {
+      "slug": "sophomoric-songs",
+      "title": "Sophomoric Songs",
+      "tagline": "Featuring Will Clinger and Bill Larkin",
+      "poster": "sophomoricsongs.jpg",
+      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2368428",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Rouge Room",
+      "description": "For six nights only, Will Clinger and Bill Larkin take the stage at the Rouge Room to sing the always funny, sometimes ribald, occasionally offensive songs from their respective repertoires. Performing either individually or together, they'll showcase tunes both old and new, all intended to convulse their audience - hopefully with laughter!",
+      "isIndex": true
     }
   ]
 }
