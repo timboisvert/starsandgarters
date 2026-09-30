@@ -819,6 +819,17 @@
       "room": "Rouge Room",
       "description": "For six nights only, Will Clinger and Bill Larkin take the stage at the Rouge Room to sing the always funny, sometimes ribald, occasionally offensive songs from their respective repertoires. Performing either individually or together, they'll showcase tunes both old and new, all intended to convulse their audience - hopefully with laughter!",
       "isIndex": true
+    },
+    {
+      "slug": "kinky-cabaret-cabinet-of-curiosities",
+      "title": "Kinky Cabaret: Cabinet of Curiosities",
+      "tagline": "Presented by Chicago Rubber Club",
+      "poster": "kinky-cabaret-cabinet.png",
+      "ticketUrl": "https://events.humanitix.com/kinky-cabaret-cabinet-of-curiosities",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": null,
+      "description": "The Chicago Rubber Club is back with another Kinky Cabaret! Unlock our Cabinet of Curiosities featuring the talents of:\n\nAurora Gozmic\nAugust Knights\nMatt Flowz\nProfessor Ai\nSassy Squire\nTender Blossom\nTiny Danger\n\nHosted by Dolly Postpartum. Doors open at 9:30pm and the show starts promptly at 10PM.\n\nVIP tickets are available in limited quantities. These seats will be close to the stage. All other tickets are sliding scale (no one turned away for lack of funds). Suggested donation is $5-$15 and covers space rentals & hiring these incredible entertainers.\n\nThis event is 21+"
     }
   ]
 }
