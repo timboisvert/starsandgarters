@@ -147,6 +147,7 @@ export default function (eleventyConfig) {
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "url": url,
+            "description": description || `${name} at ${site.name} in ${site.address.addressLocality}.`,
             "image": imageUrl,
             "location": buildLocationSchema(site),
             "performer": {
@@ -159,10 +160,6 @@ export default function (eleventyConfig) {
                 "url": site.url
             }
         };
-
-        if (description) {
-            schema.description = description;
-        }
 
         if (ticketUrl) {
             schema.offers = {
