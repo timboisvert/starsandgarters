@@ -164,7 +164,7 @@
       "title": "Laugh-Along, Live!",
       "tagline": "Watch movies with Chicago's funniest comedians",
       "poster": "laughalonglive.png",
-      "ticketUrl": "https://www.tickettailor.com/events/starsgarters/2080129",
+      "ticketUrl": "https://cocoscout.com/t/CV57G",
       "price": "$20",
       "room": "Rouge Room",
       "description": "Laugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. Three comedians make jokes throughout a film (à la Mystery Science Theater) and run activities for the audience. Audience participation is encouraged, as our shows often include drinking games, costume contests, trivia quizzes, dance-offs, and more.",
@@ -863,6 +863,17 @@
       "price": null,
       "room": "Main Stage",
       "description": "An evening of horror-comedy sketches featuring BIPOC comedians from across Chicagoland. Laugh yourself scared with jokes that focus on the existential issues that go bump in the night, filled with real and relatable frights."
+    },
+    {
+      "slug": "it-left-the-group-chat-left-on-dead",
+      "title": "It Left The Group Chat Presents: Left On Dead",
+      "tagline": "WHO KILLED 🔪 🩸⚰️THE GROUP CHAT??",
+      "poster": "itleftthegroupchat-leftondead.png",
+      "ticketUrl": "https://cocoscout.com/t/EKF3B",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "WHO KILLED 🔪 🩸⚰️THE GROUP CHAT?? 📲 😵😵 Sources say a cloaked figure 🥷🏻 has been seen slaying Chicago's finest POC/queer/nb comedians 🎭 live on stage, ass up. 🍑🍑🍑No mercy for the thick. 😔😭 Hate crime 🤬 or just some silly hijinx 🫲🤪🫱? Only 2 nights to find out.🔎 🧐\n\nIt Left the Group Chat (ILTGC) is a monthly sketch-variety show by and for POC, queer, and women/trans/non-binary comedians, a kiki born from the stories that never make it out of the group chat but probably should. Each month we pick a theme, write a brand-new batch of sketches, bring in guest comics, do some improv, and add the audience to the chat for the night."
     }
   ]
 }
