@@ -268,8 +268,9 @@ function openDayModal(dateStr, dayEvents) {
             html += `<div class="flex-1 min-w-0">`;
             html += `<p class="font-oswald text-2xl text-white truncate">${displayName}</p>`;
             html += `<p class="font-inter text-lg text-neutral-400">${event.time}</p>`;
-            if (show.room) {
-                html += `<p class="font-inter text-base text-neutral-500">${show.room}</p>`;
+            const room = event.room || show.room;
+            if (room) {
+                html += `<p class="font-inter text-base text-neutral-500">${room}</p>`;
             }
             html += `</div>`;
             html += `</a>`;
