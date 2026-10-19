@@ -1672,6 +1672,11 @@
       "show": "a-random-memory"
     },
     {
+      "date": "2027-03-27",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
+    },
+    {
       "date": "2027-04-03",
       "time": "11:00 AM",
       "show": "the-magic-toybox"
@@ -1755,6 +1760,11 @@
       "date": "2027-05-28",
       "time": "9:00 PM",
       "show": "a-random-memory"
+    },
+    {
+      "date": "2027-05-29",
+      "time": "11:00 AM",
+      "show": "the-magic-toybox"
     }
   ]
 }
