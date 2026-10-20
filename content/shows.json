@@ -877,6 +877,20 @@
       "room": "Main Stage",
       "description": "WHO KILLED 🔪 🩸⚰️THE GROUP CHAT?? 📲 😵😵 Sources say a cloaked figure 🥷🏻 has been seen slaying Chicago's finest POC/queer/nb comedians 🎭 live on stage, ass up. 🍑🍑🍑No mercy for the thick. 😔😭 Hate crime 🤬 or just some silly hijinx 🫲🤪🫱? Only 2 nights to find out.🔎 🧐\n\nIt Left the Group Chat (ILTGC) is a monthly sketch-variety show by and for POC, queer, and women/trans/non-binary comedians, a kiki born from the stories that never make it out of the group chat but probably should. Each month we pick a theme, write a brand-new batch of sketches, bring in guest comics, do some improv, and add the audience to the chat for the night.",
       "isIndex": true
+    },
+    {
+      "slug": "the-fae-soiree",
+      "title": "The Fae Soirée",
+      "tagline": "Welcome to Wonderland",
+      "poster": "thefaesoiree.jpg",
+      "ticketUrl": "https://thefaesoireewonderland.ticketspice.com/the-fae-soire-wonderland#about-the-event",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "Gaybriel Le Fae: The Mad Hatter\nThe creator and producer of The Fae Soirée, Gaybriel Le Fae is the Faerie Prince of Burlesque, here to enchant you with his elegant and magical whimsy. Specializing in slow burn burlesque, flow and the occasional fire spinning, he will always keep you mesmerized with the unexpected.\n\nLady Steel: Alice\nIntroducing Lady Steel- weapon-wielding temptress, fire-spinner, & aerial enchantress. Blending dark fantasy with fierce sensuality, she brings danger, elegance and spectacle to every stage. With a taste for the theatrical and a presence that commands attention, she blurs the line between beauty and brutality. Sharp, untamed, and impossible to forget.\n\nThorne: The Hookah-Smoking Caterpillar\nThorne is an interdisciplinary artist and entertainer based out of Chicago. Focusing mainly on the art of burlesque, they are also mentor, producer, and designer. Thorne got their start in 2014 and has traveled the globe performing, teaching, and producing. Thorne's performances are over-the-top and down right nasty, infusing acrobatics, musicality, and a playful cheekiness.\n\nNeimo Cristal: The Red Queen\nReigning as Mr. Twin Cities Black Diamond, Neimo Cristal is a shape shifting dive that blends elements of classical dance, drag, circus and burlesque into a theatrical experience bound to tug some emotions.\n\nThe GlaMonster: Tweetle Dee & Tweetle Dum\nStrutting in from Chicago's queer nightlife scene, The GlaMonster injects the art of burlesque with his own ferociously glamorous style. He is known for infusing his acts with dramatic theatricality and show stopping athleticism.\n\nBatty Page: The White Rabbit\nBig top energy in a power bottom body, Batty Page brings their campy theatrical aesthetic to the stage in performances which run the gamut from clown to burlesque to sideshow genres. Their ultimate goal is to make you squirm and send you off with a brand new kink.\n\nFrann Fatale: Abstract Whimsical Wonder\nFrann Fatale is a Chicago based burlesque, kink & flow arts performer, educator, producer and practitioner. Since 2021 she has explored both solo and communal spaces with the intention of healing through the Erotic. She has performed across the Midwest in her intersectional style of the sacred and profane.\n\nÁlonza Sol Sade: The Cheshire Cat\nÁlonza Sol Sade is a Chicago based drag queen, burlesque artist, pole and go-go dancer specializing in the art of seduction and sensuality. Getting her initial start in floor play and heels dance, Álonza is a multitalented sapphic superstar known for being unapologetically sexy, black and Latina.",
+      "landingPages": [
+        "burlesque"
+      ]
     }
   ]
 }
