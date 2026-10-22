@@ -1165,11 +1165,6 @@
     {
       "date": "2026-11-06",
       "time": "9:00 PM",
-      "show": "dks-full-five-fridays"
-    },
-    {
-      "date": "2026-11-06",
-      "time": "9:00 PM",
       "show": "sophomoric-songs"
     },
     {
@@ -1299,6 +1294,11 @@
     },
     {
       "date": "2026-11-20",
+      "time": "9:00 PM",
+      "show": "dks-full-five-fridays"
+    },
+    {
+      "date": "2026-11-20",
       "time": "10:00 PM",
       "show": "rising-stars"
     },
@@ -1386,11 +1386,6 @@
       "date": "2026-12-04",
       "time": "7:30 PM",
       "show": "the-incredibly-serious-stand-up-hour"
-    },
-    {
-      "date": "2026-12-04",
-      "time": "9:00 PM",
-      "show": "dks-full-five-fridays"
     },
     {
       "date": "2026-12-04",
@@ -1491,6 +1486,11 @@
       "date": "2026-12-18",
       "time": "9:00 PM",
       "show": "masterminds"
+    },
+    {
+      "date": "2026-12-18",
+      "time": "9:00 PM",
+      "show": "dks-full-five-fridays"
     },
     {
       "date": "2026-12-18",
