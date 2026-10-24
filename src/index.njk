@@ -115,7 +115,7 @@ eleventyComputed:
     shows.forEach(show => showMap[show.slug] = show);
 
     const todayTs = Date.now();
-    const todayStr = new Date().toISOString().split('T')[0];
+    const todayStr = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
 
     // Format event title helper
     function formatEventTitle(event, show) {

@@ -73,7 +73,7 @@ eleventyComputed:
 (function() {
     var auditionShows = {{ auditionShows | dump | safe }};
     var auditionEvents = {{ auditionEvents | dump | safe }};
-    var today = new Date().toISOString().split('T')[0];
+    var today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
 
     function formatLongDate(dateStr) {
         var date = new Date(dateStr + 'T12:00:00');

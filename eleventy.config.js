@@ -183,7 +183,7 @@ export default function (eleventyConfig) {
     // Get current date in YYYY-MM-DD format (for build time)
     eleventyConfig.addFilter("currentDate", () => {
         const now = new Date();
-        return now.toISOString().split('T')[0];
+        return now.toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
     });
 
     // Custom date filter
@@ -240,7 +240,7 @@ export default function (eleventyConfig) {
 
     // Generate JSON-LD for a show page's upcoming events
     eleventyConfig.addFilter("showEventsSchema", (show, events, site) => {
-        const today = new Date().toISOString().split('T')[0];
+        const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
         const showEvents = events.filter(e => e.show === show.slug && e.date >= today);
 
         if (showEvents.length === 0) return null;
@@ -290,7 +290,7 @@ export default function (eleventyConfig) {
 
     // Generate JSON-LD for homepage/calendar with all upcoming events
     eleventyConfig.addFilter("upcomingEventsSchema", (events, shows, site) => {
-        const today = new Date().toISOString().split('T')[0];
+        const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
         const showMap = {};
         shows.forEach(s => showMap[s.slug] = s);
 
@@ -563,7 +563,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addCollection("eventPages", function (collectionApi) {
         const shows = collectionApi.getAll()[0]?.data?.shows || [];
         const events = collectionApi.getAll()[0]?.data?.events || [];
-        const today = new Date().toISOString().split('T')[0];
+        const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
 
         const eventPages = [];
 
