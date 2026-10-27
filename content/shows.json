@@ -892,6 +892,16 @@
       "landingPages": [
         "burlesque"
       ]
+    },
+    {
+      "slug": "halloween-movie-party",
+      "title": "Halloween Movie Party",
+      "tagline": "Free Halloween movie night!",
+      "poster": "halloweenmovieparty.jpg",
+      "ticketUrl": null,
+      "ticketNote": "Free admission. No reservation needed.",
+      "price": null,
+      "description": "Spend Halloween night at Stars & Garters watching Halloween movies, from 8 PM until 2 AM.\n\nThere is no admission and no reservation required. Just show up and have fun. Come for one movie or stay all night, and bring your friends.\n\nThe popcorn is free and the full bar is open all night.\n\nCostumes are encouraged! The costume contest starts at 11 PM, with a cash prize for the winner."
     }
   ]
 }
