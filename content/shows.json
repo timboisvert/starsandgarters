@@ -902,6 +902,16 @@
       "ticketNote": "Free admission. No reservation needed.",
       "price": null,
       "description": "Halloween night! Don your costume and come hang out at our Halloween Movie Party 8pm-2am. We will be showing movies on both stages, with hangout space, free popcorn, and drinks for sale available in the lobby.\n\nCostume contest at 11pm with prizes.\n\nAdmission is free, and you are welcome to come in and out at any point during your Halloween evening activities.\n\nWe will be showing pure horror films on one screen and less scary Halloween films on the other, so there’s something for everybody. Movie schedule to be announced soon."
+    },
+    {
+      "slug": "underdog-improv",
+      "title": "Underdog Improv: Who Let the Dogs Out?",
+      "tagline": "Two-prov to save the world.",
+      "poster": "underdogimprov.png",
+      "ticketUrl": "https://cocoscout.com/t/JEJ97",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "description": "Underdog Improv is a two person improv team, but here’s the twist: they’re siblings.\n\nDeclan and Colleen Grogan use narrative style improv to take the audience on a journey that is sure to make you belly laugh.\n\nCatch the duo at Stars & Garters for a guaranteed night of good times and improv so great, it might just save the world. Underdog Improv: two-prov to save the world."
     }
   ]
 }
