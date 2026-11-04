@@ -1519,6 +1519,11 @@
     },
     {
       "date": "2027-01-22",
+      "time": "7:00 PM",
+      "show": "i-never-do-this-but"
+    },
+    {
+      "date": "2027-01-22",
       "time": "9:00 PM",
       "show": "a-random-memory"
     },
@@ -1569,6 +1574,11 @@
     },
     {
       "date": "2027-02-26",
+      "time": "7:00 PM",
+      "show": "i-never-do-this-but"
+    },
+    {
+      "date": "2027-02-26",
       "time": "9:00 PM",
       "show": "inevitable"
     },
@@ -1606,6 +1616,11 @@
       "date": "2027-03-20",
       "time": "11:00 AM",
       "show": "the-magic-toybox"
+    },
+    {
+      "date": "2027-03-26",
+      "time": "7:00 PM",
+      "show": "i-never-do-this-but"
     },
     {
       "date": "2027-03-26",
