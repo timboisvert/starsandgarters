@@ -1173,6 +1173,11 @@
       "show": "partys-here"
     },
     {
+      "date": "2026-11-11",
+      "time": "7:00 PM",
+      "show": "the-weirdos-show"
+    },
+    {
       "date": "2026-11-12",
       "time": "7:00 PM",
       "show": "improvised-animorphs"
@@ -1244,6 +1249,11 @@
     },
     {
       "date": "2026-11-18",
+      "time": "7:00 PM",
+      "show": "the-weirdos-show"
+    },
+    {
+      "date": "2026-11-18",
       "time": "7:30 PM",
       "show": "it-left-the-group-chat-left-on-dead"
     },
@@ -1301,6 +1311,11 @@
       "date": "2026-11-21",
       "time": "7:00 PM",
       "show": "inevitable"
+    },
+    {
+      "date": "2026-11-25",
+      "time": "7:00 PM",
+      "show": "the-weirdos-show"
     },
     {
       "date": "2026-11-27",

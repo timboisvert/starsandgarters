@@ -924,6 +924,17 @@
       "price": null,
       "room": "Rouge Room",
       "description": "We never do this but... we decided to let Chicago’s funniest share their honest reviews on the people, places, and, things that grind their gears or get them out of bed in the morning. See your favorite local comics deliver impassioned reviews on everything from their seventh-grade humanities teacher to the concept of sand. All we ask is that you give our show 5 stars!"
+    },
+    {
+      "slug": "the-weirdos-show",
+      "title": "The Weirdos Show",
+      "tagline": "Two immigrants show the weirdest characters",
+      "poster": "theweirdosshow.jpg",
+      "ticketUrl": "https://cocoscout.com/t/VX1R0",
+      "buttonText": "Buy Tickets",
+      "price": "$20",
+      "room": "Rouge Room",
+      "description": "The Weirdos Show is a performance that tells the story of characters like Coco. He is a kid that shares his life in a very innocent, fun, and fantastical way to help himself escape the abuse he suffers, including bullying and being called a weirdo.\nAnother character, Pete, is a sensitive immigrant that uses his survival skills and comedy to confront a confusing new culture that makes him feel like a weirdo.\n\nThe Weirdos Show has songs, dance, improvisation, and interactions with the audience.\nThis comedy explores empathy with the audience and the struggles of the LGBTQ+ and immigrant communities.\n\nYou will experience how weird can be also a magical word.\nDon’t miss it. We would love to have you at our show!"
     }
   ]
 }
