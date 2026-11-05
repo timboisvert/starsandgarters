@@ -935,6 +935,19 @@
       "price": "$20",
       "room": "Rouge Room",
       "description": "The Weirdos Show is a performance that tells the story of characters like Coco. He is a kid that shares his life in a very innocent, fun, and fantastical way to help himself escape the abuse he suffers, including bullying and being called a weirdo.\nAnother character, Pete, is a sensitive immigrant that uses his survival skills and comedy to confront a confusing new culture that makes him feel like a weirdo.\n\nThe Weirdos Show has songs, dance, improvisation, and interactions with the audience.\nThis comedy explores empathy with the audience and the struggles of the LGBTQ+ and immigrant communities.\n\nYou will experience how weird can be also a magical word.\nDon’t miss it. We would love to have you at our show!"
+    },
+    {
+      "slug": "kevin",
+      "title": "KEVIN!!!",
+      "tagline": "An Improvised Holiday Home Invasion",
+      "poster": "kevin.png",
+      "ticketUrl": "https://cocoscout.com/t/VJT46",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "description": "A family-friendly improvised holiday home invasion.\n\nCreated by Clayton R. Smith\nDirected by Cameron Pfeiffer",
+      "isIndex": true,
+      "familySaturday": true
     }
   ]
 }

@@ -1354,6 +1354,11 @@
     },
     {
       "date": "2026-11-28",
+      "time": "2:00 PM",
+      "show": "kevin"
+    },
+    {
+      "date": "2026-11-28",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -1399,6 +1404,11 @@
     },
     {
       "date": "2026-12-05",
+      "time": "2:00 PM",
+      "show": "kevin"
+    },
+    {
+      "date": "2026-12-05",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -1406,6 +1416,11 @@
       "date": "2026-12-05",
       "time": "9:00 PM",
       "show": "inevitable"
+    },
+    {
+      "date": "2026-12-06",
+      "time": "4:00 PM",
+      "show": "kevin"
     },
     {
       "date": "2026-12-10",
@@ -1444,8 +1459,18 @@
     },
     {
       "date": "2026-12-12",
+      "time": "2:00 PM",
+      "show": "kevin"
+    },
+    {
+      "date": "2026-12-12",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
+    },
+    {
+      "date": "2026-12-13",
+      "time": "4:00 PM",
+      "show": "kevin"
     },
     {
       "date": "2026-12-13",
@@ -1499,6 +1524,11 @@
     },
     {
       "date": "2026-12-19",
+      "time": "2:00 PM",
+      "show": "kevin"
+    },
+    {
+      "date": "2026-12-19",
       "time": "4:00 PM",
       "show": "chicago-workshop-mic"
     },
@@ -1506,6 +1536,11 @@
       "date": "2026-12-19",
       "time": "6:00 PM",
       "show": "it-left-the-group-chat-left-on-dead"
+    },
+    {
+      "date": "2026-12-20",
+      "time": "4:00 PM",
+      "show": "kevin"
     },
     {
       "date": "2026-12-20",
