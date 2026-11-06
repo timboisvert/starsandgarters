@@ -1480,11 +1480,6 @@
     {
       "date": "2026-12-18",
       "time": "9:00 PM",
-      "show": "masterminds"
-    },
-    {
-      "date": "2026-12-18",
-      "time": "9:00 PM",
       "show": "dks-full-five-fridays"
     },
     {
@@ -1516,6 +1511,11 @@
       "date": "2026-12-19",
       "time": "6:00 PM",
       "show": "it-left-the-group-chat-left-on-dead"
+    },
+    {
+      "date": "2026-12-19",
+      "time": "7:00 PM",
+      "show": "masterminds"
     },
     {
       "date": "2026-12-20",
