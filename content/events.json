@@ -1558,6 +1558,11 @@
       "show": "the-magic-toybox"
     },
     {
+      "date": "2027-01-21",
+      "time": "7:00 PM",
+      "show": "masterminds"
+    },
+    {
       "date": "2027-01-22",
       "time": "7:00 PM",
       "show": "i-never-do-this-but"
@@ -1601,6 +1606,11 @@
       "date": "2027-02-13",
       "time": "11:00 AM",
       "show": "the-magic-toybox"
+    },
+    {
+      "date": "2027-02-18",
+      "time": "7:00 PM",
+      "show": "masterminds"
     },
     {
       "date": "2027-02-19",
@@ -1648,6 +1658,11 @@
       "show": "the-magic-toybox"
     },
     {
+      "date": "2027-03-18",
+      "time": "7:00 PM",
+      "show": "masterminds"
+    },
+    {
       "date": "2027-03-19",
       "time": "9:00 PM",
       "show": "a-random-memory"
@@ -1691,6 +1706,11 @@
       "date": "2027-04-10",
       "time": "11:00 AM",
       "show": "the-magic-toybox"
+    },
+    {
+      "date": "2027-04-15",
+      "time": "7:00 PM",
+      "show": "masterminds"
     },
     {
       "date": "2027-04-16",
@@ -1743,6 +1763,11 @@
       "show": "the-magic-toybox"
     },
     {
+      "date": "2027-05-20",
+      "time": "7:00 PM",
+      "show": "masterminds"
+    },
+    {
       "date": "2027-05-21",
       "time": "9:00 PM",
       "show": "inevitable"
@@ -1761,6 +1786,11 @@
       "date": "2027-05-29",
       "time": "11:00 AM",
       "show": "the-magic-toybox"
+    },
+    {
+      "date": "2027-06-17",
+      "time": "7:00 PM",
+      "show": "masterminds"
     }
   ]
 }
