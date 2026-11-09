@@ -499,6 +499,7 @@
       "buttonText": "Buy Tickets",
       "price": null,
       "room": "Rouge Room",
+      "isIndex": true,
       "description": "Chicago’s only all non-binary and gender non-conforming improv team; specializing in long form narrative improv with an alternate reality twist and as much gender fuckery as we please."
     },
     {
