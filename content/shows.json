@@ -960,6 +960,18 @@
       "price": "$15",
       "room": "Rouge Room",
       "description": "The Birds have been studying you. The Birds have developed a taste for longform improv. The Birds have invited their friends to emulate human behavior for you. The Birds might be playing fast and loose with copyright law.\n\nWith:\nThat Thing You Pull When You Want To Stop\nSweater Daddies\nBirds!"
+    },
+    {
+      "slug": "the-holly-problem",
+      "title": "The Holly Problem",
+      "tagline": "A Holiday Sketch Show",
+      "poster": "thehollyproblem.png",
+      "ticketUrl": "https://cocoscout.com/t/6APLE",
+      "buttonText": "Buy Tickets",
+      "price": null,
+      "room": "Main Stage",
+      "isIndex": true,
+      "description": "Written by Thea L. Anderson, Josh MacLean, Ben McCauley, Cameron Pfeifer, & Hayley Van Fulpen"
     }
   ]
 }
