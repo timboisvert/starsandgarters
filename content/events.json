@@ -1393,6 +1393,16 @@
     },
     {
       "date": "2026-12-04",
+      "time": "9:30 PM",
+      "show": "laugh-along-live",
+      "title": "The Polar Express",
+      "tagline": "Watch with Chicago's funniest comedians",
+      "poster": "laughalonglive-thepolarexpress.jpg",
+      "ticketUrl": "https://cocoscout.com/t/CV57G/dec-4",
+      "description": "Come watch The Polar Express with Chicago’s funniest comedians, who will be making jokes, running a drinking game, and instigating other shenanigans throughout. Come laugh! Come drink!\n\nShow at 9:30pm.\n\n21+ show\n\nLaugh-Along, Live! is a comedy show, movie screening, and party wrapped in one. A panel of comedians makes jokes throughout a film (à la Mystery Science Theater, but more about having fun than making fun) and run activities for the audience. Follow us @laughalonglive to know which movies we’re doing next (after you’ve bought your tickets for this one, of course)."
+    },
+    {
+      "date": "2026-12-04",
       "time": "10:00 PM",
       "show": "rising-stars"
     },
