@@ -1667,6 +1667,12 @@
       "show": "the-magic-toybox"
     },
     {
+      "date": "2027-01-23",
+      "time": "7:00 PM",
+      "show": "rpg-13",
+      "ticketUrl": "https://cocoscout.com/t/KDV1A/jan-23"
+    },
+    {
       "date": "2027-01-29",
       "time": "9:00 PM",
       "show": "inevitable"
@@ -1733,6 +1739,12 @@
       "show": "the-magic-toybox"
     },
     {
+      "date": "2027-02-27",
+      "time": "7:00 PM",
+      "show": "rpg-13",
+      "ticketUrl": "https://cocoscout.com/t/KDV1A/feb-27"
+    },
+    {
       "date": "2027-03-05",
       "time": "9:00 PM",
       "show": "a-random-memory"
@@ -1781,6 +1793,12 @@
       "date": "2027-03-27",
       "time": "11:00 AM",
       "show": "the-magic-toybox"
+    },
+    {
+      "date": "2027-03-27",
+      "time": "7:00 PM",
+      "show": "rpg-13",
+      "ticketUrl": "https://cocoscout.com/t/KDV1A/mar-27"
     },
     {
       "date": "2027-04-02",
@@ -1834,6 +1852,12 @@
       "show": "the-magic-toybox"
     },
     {
+      "date": "2027-04-24",
+      "time": "7:00 PM",
+      "show": "rpg-13",
+      "ticketUrl": "https://cocoscout.com/t/KDV1A/apr-24"
+    },
+    {
       "date": "2027-04-30",
       "time": "9:00 PM",
       "show": "a-random-memory"
@@ -1879,6 +1903,12 @@
       "show": "the-magic-toybox"
     },
     {
+      "date": "2027-05-22",
+      "time": "7:00 PM",
+      "show": "rpg-13",
+      "ticketUrl": "https://cocoscout.com/t/KDV1A/may-22"
+    },
+    {
       "date": "2027-05-28",
       "time": "9:00 PM",
       "show": "a-random-memory"
@@ -1892,6 +1922,12 @@
       "date": "2027-06-17",
       "time": "7:00 PM",
       "show": "masterminds"
+    },
+    {
+      "date": "2027-06-26",
+      "time": "7:00 PM",
+      "show": "rpg-13",
+      "ticketUrl": "https://cocoscout.com/t/KDV1A/jun-26"
     }
   ]
 }
